@@ -41,7 +41,7 @@ header h1 {
 .hero-section h3.strong {
   font-weight: 500;
 }
-.hero-section button {
+.hero-section .btn {
   font-size: 11px;
   font-weight: 500;
   margin: 10px 5px;
