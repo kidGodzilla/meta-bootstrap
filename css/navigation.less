@@ -1,0 +1,90 @@
+.navbar-clear {
+  color: #e9e9e9;
+  a {
+    color: #e9e9e9;
+    font-weight: 500;
+  }
+  a:hover, a:focus {
+    background-color: transparent !important;
+    color: #fff;
+  }
+
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-collapse {
+    padding-left: 0;
+  }
+  .navbar-right a:last-of-type {
+    padding-right: 0;
+  }
+}
+.navbar-shrink {
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  button {
+    &.btn-xs {
+      margin-top: 10.5px;
+      margin-bottom: 10.5px;
+      padding: 4px 10px;
+    }
+  }
+  .navbar-nav {
+    float: left;
+    a {
+      padding-top: 14.5px;
+      padding-bottom: 14.5px;
+      line-height: 21px;
+    }
+    & > div {
+      padding-top: 14.5px;
+      padding-bottom: 14.5px;
+      line-height: 21px;
+    }
+  }
+}
+.tall-navbar {
+  &.navbar {
+    min-height: 100px;
+  }
+  .navbar-brand {
+    padding: 34px 15px;
+  }
+  .navbar-nav {
+    padding: 26px 0;
+  }
+  .navbar-toggle {
+    padding: 34px 10px;
+  }
+}
+.tall-navbar-contained {
+  .tall-navbar;
+  margin-top: 25px;
+}
+.top-nav-block {
+  .navbar-nav:first-of-type {
+    li {
+      margin: 0 10px;
+    }
+    li:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+.top-nav-block-centered {
+  .top-nav-block;
+  .centered-logo .logo {
+    height: 50px;
+  }
+  .navbar:last-of-type {
+    margin-bottom: 0;
+  }
+}
+nav.opaque {
+  background: #444;
+}
+.navbar-nav.social {
+  a {
+    padding: 10px 7px;
+  }
+}
