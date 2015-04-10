@@ -1,10 +1,11 @@
-button.btn.btn-clear {
+.btn.btn-clear {
   background-color: transparent !important;
   border-color: #e9e9e9 !important;
+  color: #e9e9e9 !important;
   transition: all 0.3s ease-in-out;
 }
-button.btn.btn-clear:hover,
-button.btn.btn-clear:active {
+.btn.btn-clear:hover,
+.btn.btn-clear:active {
   background-color: #008cba !important;
   border-color: #0079a1 !important;
   color: #fff;
