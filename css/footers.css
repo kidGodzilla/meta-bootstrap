@@ -1,0 +1,36 @@
+/*
+ * META BOOTSTRAP v0.0.1
+ * James Futhey, 2015
+ */
+.solid-background {
+  background: #444 !important;
+}
+.pln-i {
+  padding-left: 0 !important;
+}
+.prn-i {
+  padding-right: 0 !important;
+}
+.mw-75-percent {
+  max-width: 75%;
+}
+.footer-links a,
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #e9e9e9;
+  opacity: 0.5;
+  text-decoration: none;
+  padding: 0 15px;
+  transition: all 0.3s ease-in-out;
+}
+.footer-links a:first-of-type,
+.footer-links a:hover:first-of-type,
+.footer-links a:focus:first-of-type {
+  padding-left: 0;
+}
+.footer-links a:hover,
+.footer-links a:hover:hover,
+.footer-links a:focus:hover {
+  color: #fff;
+  opacity: 0.85;
+}
