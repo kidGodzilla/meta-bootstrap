@@ -18,7 +18,7 @@ Components and sections are developed using a selection of popular Bootswatch th
 
 1. At the lowest level, your theme should consist of either vanilla bootstrap, a bootswatch theme, or a full UI kit built with Bootstrap.
 2. Next, you should include meta-bootstrap.css.
-3. `less` files are also included for customizing *meta-bootstrap*. Optionally, you can modify `variables.less` * `style.less` to further customize *meta-bootstrap*.
+3. `less` files are also included for customizing *meta-bootstrap*. Optionally, you can modify `variables.less` & `style.less` to further customize *meta-bootstrap*.
 4. A custom `style.css` should be the next item included with your theme. This will contain theme-specific customization (such as page-specific classes, overrides, & addons).
 5. Next, you should include your vendor CSS for any plugins, components, or extensions you might be including.
 6. Finally, you can setup a build-chain (concat + minify would suffice) to build your production-ready theme.
