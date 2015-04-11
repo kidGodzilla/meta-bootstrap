@@ -1,7 +1,3 @@
-/*
- * META BOOTSTRAP v0.0.1
- * James Futhey, 2015
- */
 .navbar-clear {
   color: #e9e9e9;
 }
@@ -89,6 +85,9 @@
 }
 .top-nav-block-centered .navbar:last-of-type {
   margin-bottom: 0;
+}
+nav.opaque {
+  background: #444;
 }
 .navbar-nav.social a {
   padding: 10px 7px;

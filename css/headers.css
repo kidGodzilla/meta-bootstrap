@@ -1,19 +1,27 @@
-.img-background {
+header.img-background {
   background: #444;
   min-height: 650px;
   height: 100vh;
   min-width: 100%;
 }
-/*
- * META BOOTSTRAP v0.0.1
- * James Futhey, 2015
- */
-.bg-cover {
+header.bg-cover {
   background: url(https://unsplash.imgix.net/photo-1425036458755-dc303a604201?dpr=2&fit=crop&fm=jpg&q=75&w=1050) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+header.flat-background {
+  background: #444;
+  min-height: 650px;
+  height: 100vh;
+  min-width: 100%;
+}
+header.flat-background.red {
+  background: #C51443;
+}
+.white-text {
+  color: #e9e9e9;
 }
 header h1 {
   line-height: 1.25;

@@ -2,10 +2,6 @@
  * META BOOTSTRAP v0.0.1
  * James Futhey, 2015
  */
-/*
- * META BOOTSTRAP v0.0.1
- * James Futhey, 2015
- */
 .btn.btn-clear {
   background-color: transparent !important;
   border-color: #e9e9e9 !important;
@@ -54,22 +50,30 @@
   color: #fff;
   opacity: 0.85;
 }
-.img-background {
+header.img-background {
   background: #444;
   min-height: 650px;
   height: 100vh;
   min-width: 100%;
 }
-/*
- * META BOOTSTRAP v0.0.1
- * James Futhey, 2015
- */
-.bg-cover {
+header.bg-cover {
   background: url(https://unsplash.imgix.net/photo-1425036458755-dc303a604201?dpr=2&fit=crop&fm=jpg&q=75&w=1050) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+header.flat-background {
+  background: #444;
+  min-height: 650px;
+  height: 100vh;
+  min-width: 100%;
+}
+header.flat-background.red {
+  background: #C51443;
+}
+.white-text {
+  color: #e9e9e9;
 }
 header h1 {
   line-height: 1.25;
@@ -101,10 +105,6 @@ header h1 {
 .centered-hero-with-image {
   margin-top: 7% !important;
 }
-/*
- * META BOOTSTRAP v0.0.1
- * James Futhey, 2015
- */
 .navbar-clear {
   color: #e9e9e9;
 }
@@ -193,14 +193,14 @@ header h1 {
 .top-nav-block-centered .navbar:last-of-type {
   margin-bottom: 0;
 }
+nav.opaque {
+  background: #444;
+}
 .navbar-nav.social a {
   padding: 10px 7px;
 }
 /*
- * META BOOTSTRAP v0.0.1
- * James Futhey, 2015
-
-   #SPACING
+   SPACING
 
    An eight step powers of two scale ranging from 0 to 16rem.
 
@@ -591,43 +591,15 @@ header h1 {
   margin-left: 16rem;
   margin-right: 16rem;
 }
-/*
- * META BOOTSTRAP v0.0.1
- * James Futhey, 2015
+/**
+ * SMALL CAPS
  */
-.text-inverse {
-  color: #e9e9e9;
-}
-a.text-inverse:hover {
-  color: #fff;
-}
-.text-inverse h1,
-.text-inverse h2,
-.text-inverse h3,
-.text-inverse h4,
-.text-inverse h5,
-.text-inverse h6 {
-  color: #e9e9e9 !important;
-}
-.small-text {
-  font-size: 1.1rem;
-}
 .small-caps {
-  font-size: 1.1rem;
+  font-size: 11px;
   letter-spacing: 1px;
   font-weight: 500;
   text-transform: uppercase;
 }
-.strong {
-  font-weight: 700;
-}
-.subdued {
-  opacity: 0.5;
-}
-/*
- * META BOOTSTRAP v0.0.1
- * James Futhey, 2015
- */
 body {
   overflow-x: hidden;
 }
@@ -646,13 +618,4 @@ body {
 }
 .margin-top-28-px {
   margin-top: 28px;
-}
-ul.ul-inline li {
-  display: inline-block;
-}
-.invisible-input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #fff;
 }
