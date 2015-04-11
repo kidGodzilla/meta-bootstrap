@@ -22,3 +22,7 @@ Components and sections are developed using a selection of popular Bootswatch th
 4. A custom `style.css` should be the next item included with your theme. This will contain theme-specific customization (such as page-specific classes, overrides, & addons).
 5. Next, you should include your vendor CSS for any plugins, components, or extensions you might be including.
 6. Finally, you can setup a build-chain (concat + minify would suffice) to build your production-ready theme.
+
+### Contributing
+
+Feel free to submit a pull request at any time. As a courtesy, please <a href="https://github.com/kidGodzilla/meta-bootstrap/issues">Open an issue</a> to discuss the changes you would like to make before proceeding.
