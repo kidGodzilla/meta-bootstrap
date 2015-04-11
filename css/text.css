@@ -8,6 +8,14 @@
 a.text-inverse:hover {
   color: #fff;
 }
+.text-inverse h1,
+.text-inverse h2,
+.text-inverse h3,
+.text-inverse h4,
+.text-inverse h5,
+.text-inverse h6 {
+  color: #e9e9e9 !important;
+}
 .small-text {
   font-size: 1.1rem;
 }
