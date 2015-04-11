@@ -199,6 +199,34 @@ nav.opaque {
 .navbar-nav.social a {
   padding: 10px 7px;
 }
+/**
+ * SMALL CAPS
+ */
+.small-caps {
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+body {
+  overflow-x: hidden;
+}
+.margin-15-px {
+  margin: 15px;
+}
+.display-inline-block {
+  display: inline-block;
+}
+.pull-up-21-px {
+  position: relative;
+  top: -21px;
+}
+.margin-10-percent-top {
+  margin-top: 10%;
+}
+.margin-top-28-px {
+  margin-top: 28px;
+}
 /*
    SPACING
 
@@ -590,32 +618,4 @@ nav.opaque {
 .mhxxl {
   margin-left: 16rem;
   margin-right: 16rem;
-}
-/**
- * SMALL CAPS
- */
-.small-caps {
-  font-size: 11px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-body {
-  overflow-x: hidden;
-}
-.margin-15-px {
-  margin: 15px;
-}
-.display-inline-block {
-  display: inline-block;
-}
-.pull-up-21-px {
-  position: relative;
-  top: -21px;
-}
-.margin-10-percent-top {
-  margin-top: 10%;
-}
-.margin-top-28-px {
-  margin-top: 28px;
 }
