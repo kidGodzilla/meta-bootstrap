@@ -260,6 +260,20 @@ ul.ul-inline li {
   outline: none;
   color: #fff;
 }
+.pull-down {
+  display: table-cell;
+  vertical-align: bottom;
+}
+.pull-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+.height-500-px {
+  height: 500px;
+}
+.display-table {
+  display: table;
+}
 /*
    SPACING
 
