@@ -274,6 +274,12 @@ ul.ul-inline li {
 .display-table {
   display: table;
 }
+.list-style-type-none {
+  list-style-type: none;
+}
+.margin-0-auto {
+  margin: 0 auto;
+}
 /*
    SPACING
 
