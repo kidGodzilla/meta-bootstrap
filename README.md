@@ -26,3 +26,27 @@ Components and sections are developed using a selection of popular Bootswatch th
 ### Contributing
 
 Feel free to submit a pull request at any time. As a courtesy, please <a href="https://github.com/kidGodzilla/meta-bootstrap/issues">Open an issue</a> to discuss the changes you would like to make before proceeding.
+
+### Development Methodology
+
+*Process should be implemented by those who use it, at the moment in which it becomes necessary. Not before.*
+
+##### How does this influence meta-bootstrap?
+
+Instead of planning for things we might eventually need, we aim to create new global LESS/CSS when code is being refactored.
+
+To support this, we will create a large number of *“Temporary structures”*, or CSS classes which perform only one function.
+
+For example:
+
+        .list-style-type-none {
+            list-style-type: none;
+        }
+
+Has been created as a temporary structure to facilitate the creation of new layouts.
+
+Over time, the codebase will evolve to the point that either *many UI components or sections depend upon this class*, or *very few elements depend upon this class*.
+
+In the event of the first case, patterns will emerge over time. For example, there may be two larger, common use-cases in which this functionality is necessary, and it may be useful to refactor the existing code to abstract several smaller classes into a higher-level one.
+
+Since there is now a sufficient context for creating this abstraction, it becomes appropriate to refactor this specific class.
