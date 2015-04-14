@@ -31,7 +31,7 @@ Feel free to submit a pull request at any time. As a courtesy, please <a href="h
 
 *Process should be implemented by those who use it, at the moment in which it becomes necessary. Not before.*
 
-#### How does this influence meta-bootstrap?
+##### How does this influence meta-bootstrap?
 
 Instead of planning for things we might eventually need, we aim to create new global LESS/CSS when code is being refactored.
 
