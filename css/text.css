@@ -31,3 +31,7 @@ a.text-inverse:hover {
 .subdued {
   opacity: 0.5;
 }
+.small-light-text {
+  font-size: 13px;
+  font-weight: 300;
+}
