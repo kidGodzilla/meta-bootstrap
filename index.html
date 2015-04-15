@@ -19,12 +19,28 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img class="logo" style="top:-6px" src="https://static.bittitan.com/Logos/2014/BitTitan_100_white.png" alt=""/>
+                    <h3 style="margin-top:-4px;font-weight:700">META-BOOTSTRAP</h3>
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Change Bootswatch Theme <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <!-- vanilla, cosmo, darkly, flatly, lumen, paper, sandstone, superhero, united, yeti -->
+                            <li><a href="#" onclick="localStorage.setItem('theme', 'vanilla');window.location.reload()">Vanilla Bootstrap</a></li>
+                            <li><a href="#" onclick="localStorage.setItem('theme', 'cosmo');window.location.reload()">Bootswatch Cosmo</a></li>
+                            <li><a href="#" onclick="localStorage.setItem('theme', 'darkly');window.location.reload()">Bootswatch Darkly</a></li>
+                            <li><a href="#" onclick="localStorage.setItem('theme', 'flatly');window.location.reload()">Bootswatch Flatly</a></li>
+                            <li><a href="#" onclick="localStorage.setItem('theme', 'lumen');window.location.reload()">Bootswatch Lumen</a></li>
+                            <li><a href="#" onclick="localStorage.setItem('theme', 'paper');window.location.reload()">Bootswatch Paper</a></li>
+                            <li><a href="#" onclick="localStorage.setItem('theme', 'sandstone');window.location.reload()">Bootswatch Sandstone</a></li>
+                            <li><a href="#" onclick="localStorage.setItem('theme', 'superhero');window.location.reload()">Bootswatch Superhero</a></li>
+                            <li><a href="#" onclick="localStorage.setItem('theme', 'united');window.location.reload()">Bootswatch United</a></li>
+                            <li><a href="#" onclick="localStorage.setItem('theme', 'yeti');window.location.reload()">Bootswatch Yeti</a></li>
+                        </ul>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sections <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -68,7 +84,7 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#">
-                            <h3 style="margin-top:-4px;font-weight:700">META-BOOTSTRAP</h3>
+                            <h3 class="text-inverse" style="margin-top:-4px;font-weight:700">META-BOOTSTRAP</h3>
                         </a>
                     </div>
 

@@ -56,9 +56,6 @@ body {
   position: relative;
   top: -21px;
 }
-.margin-10-percent-top {
-  margin-top: 10%;
-}
 .margin-top-28-px {
   margin-top: 28px;
 }
@@ -505,22 +502,6 @@ ul.ul-inline li {
  * META BOOTSTRAP v0.0.1
  * James Futhey, 2015
  */
-.btn.btn-clear {
-  background-color: transparent !important;
-  border-color: #e9e9e9 !important;
-  color: #e9e9e9 !important;
-  transition: all 0.3s ease-in-out;
-}
-.btn.btn-clear:hover,
-.btn.btn-clear:active {
-  background-color: #008cba !important;
-  border-color: #0079a1 !important;
-  color: #fff;
-}
-/*
- * META BOOTSTRAP v0.0.1
- * James Futhey, 2015
- */
 .solid-background {
   background: #444 !important;
 }
@@ -574,7 +555,6 @@ ul.ul-inline li {
 }
 .fancy-blocks .fancy-block:hover {
   -webkit-transform: scale(1.05);
-  /* Safari */
   transform: scale(1.05);
 }
 .img-background {
@@ -719,4 +699,58 @@ nav.opaque {
 }
 .navbar-nav.social a {
   padding: 10px 7px;
+}
+/*
+ * META BOOTSTRAP v0.0.1
+ * James Futhey, 2015
+ */
+.btn.btn-clear {
+  background-color: transparent !important;
+  border-color: #e9e9e9 !important;
+  color: #e9e9e9 !important;
+  transition: all 0.3s ease-in-out;
+}
+.btn.btn-clear:hover,
+.btn.btn-clear:active {
+  background-color: #e9e9e9 !important;
+  border-color: #e9e9e9 !important;
+  color: #222 !important;
+}
+/*
+ * META BOOTSTRAP v0.0.1
+ * James Futhey, 2015
+ */
+.btn {
+  border-radius: 3px;
+}
+.logo {
+  height: 32px;
+  position: relative;
+  top: -5.5px;
+}
+.top-minus-11-5-px {
+  top: -11.5px;
+}
+.no-background {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+nav.opaque {
+  background: #444;
+}
+.flat-background {
+  background: #444;
+  min-height: 650px;
+  height: 100vh;
+  min-width: 100%;
+}
+.red {
+  background-color: #C51443 !important;
+}
+.white-text {
+  color: #e9e9e9;
+}
+.margin-10-percent-top {
+  margin-top: 10%;
 }
