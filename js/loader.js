@@ -84,7 +84,7 @@
         /**
          * jQuery (v2.1.3)
          */
-        if (!window.$) loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js");
+        if (!window.$) loadScript(protocol + "$");
 
 
         /**
@@ -154,6 +154,16 @@
          */
         if (theme === "vanilla") {
             loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
+            loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+        }
+
+
+        /**
+         * Bootstrap (BitSwatch theme)
+         * BitTitan, Rawr...
+         */
+        if (theme === "bitswatch") {
+            loadStylesheet("../bitswatch/lumen/bootstrap.min.css");
             loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
         }
 
