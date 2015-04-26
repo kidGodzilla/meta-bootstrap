@@ -686,7 +686,8 @@ header h1 {
   font-weight: 500;
 }
 .navbar-clear .navbar-nav > li > a:hover,
-.navbar-clear .navbar-nav > li > a:focus {
+.navbar-clear .navbar-nav > li > a:focus,
+.navbar-clear .navbar-nav > li > a:active {
   background-color: transparent;
   color: #fff;
 }
