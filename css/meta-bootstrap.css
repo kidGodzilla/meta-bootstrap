@@ -771,7 +771,8 @@ nav.opaque {
   background: #444;
 }
 .navbar-nav.social a {
-  padding: 10px 7px;
+  font-size: 14px !important;
+  padding: 14px 7px;
 }
 /*
  * META BOOTSTRAP v0.0.1
