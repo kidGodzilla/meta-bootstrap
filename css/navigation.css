@@ -69,16 +69,16 @@
 .tall-navbar-contained .navbar-toggle {
   padding: 34px 10px;
 }
-.top-nav-block .navbar-nav:first-of-type li {
+.top-nav-block .navbar-nav:first-of-type > li {
   margin: 0 10px;
 }
-.top-nav-block .navbar-nav:first-of-type li:last-of-type {
+.top-nav-block .navbar-nav:first-of-type > li:last-of-type {
   margin-right: 0;
 }
-.top-nav-block-centered .navbar-nav:first-of-type li {
+.top-nav-block-centered .navbar-nav:first-of-type > li {
   margin: 0 10px;
 }
-.top-nav-block-centered .navbar-nav:first-of-type li:last-of-type {
+.top-nav-block-centered .navbar-nav:first-of-type > li:last-of-type {
   margin-right: 0;
 }
 .top-nav-block-centered .centered-logo .logo {
