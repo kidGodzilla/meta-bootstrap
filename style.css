@@ -1,0 +1,129 @@
+section {
+    padding: 8rem 0;
+    background: #fff;
+}
+.header {
+    padding: 0;
+}
+.background-dk-blue {
+    background: #232838;
+}
+.background-white {
+    background: #fff;
+}
+.background-dk-blue .text-inverse a {
+    color: #ccc !important;
+}
+.background-dk-blue .text-inverse a:hover, .background-dk-blue .text-inverse a:hover i {
+    color: #fff !important;
+}
+.navbar a {
+    font-weight: bold;
+}
+.navbar li {
+    padding: 0 12px;
+}
+.navbar button {
+    margin: 7px 0;
+    font-weight: bold;
+}
+.hero-section h4.text-inverse {
+    color: #1e9fb4;
+}
+.blue-section {
+    background: #1e9fb4;
+}
+.logo-carousel {
+    background: #fff;
+}
+h1, h2, h3 {
+    font-weight: bold !important;
+}
+.accent-line::after {
+    content: '';
+    display: block;
+    padding-top: 0.4em;
+    border-bottom: 6px solid #aaa;
+    max-width: 85px;
+}
+.centered-accent-line::after {
+    content: '';
+    display: block;
+    padding-top: 3px;
+    border-bottom: 6px solid #1e9fb4;
+    max-width: 85px;
+    margin: 0 auto;
+}
+.icon-circle i {
+    color: #1e9fb4;
+}
+.rocket-exhaust {
+    position: relative;
+    top: 100px;
+}
+@media (min-width: 992px) {
+    .rocket-exhaust {
+        top: 180px;
+    }
+}
+.city {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+}
+.bittitan-rocket {
+    width: 160px;
+    position: relative;
+    top: 120px;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: rotate(-90deg);
+}
+.position-relative {
+    position: relative;
+}
+.blue-rectangle {
+    width: 105%;
+    height: 250px;
+    position: absolute;
+    bottom: -330px;
+    left: 0;
+    right: 0;
+}
+.homepage-header {
+    background: url(not-grey.png);
+}
+footer .social-links a {
+    margin: 15px;
+}
+footer .fa-map-marker.one {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    top: 3.75%;
+    left: 7.5%;
+}
+footer .fa-map-marker.two {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    top: 22%;
+    right: 16.5%;
+}
+#dollar-circle {
+    width: 75px;
+}
+#dollar-circle path {
+    fill: #fff;
+}
+header h1 {
+    color: #232838;
+}
+footer .footer-links-vertical a {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+}

@@ -33,17 +33,45 @@
   font-size: 13px;
   font-weight: 300;
 }
-.giant-text {
-  h1& {
-    font-size: 5em;
+
+// Responsive text
+.text-xs-left { text-align: left; }
+.text-xs-right { text-align: right; }
+.text-xs-center { text-align: center; }
+.text-xs-justify { text-align: justify; }
+
+@media (min-width: 768px) {
+  .text-sm-left { text-align: left; }
+  .text-sm-right { text-align: right; }
+  .text-sm-center { text-align: center; }
+  .text-sm-justify { text-align: justify; }
+}
+
+@media (min-width: 992px) {
+  .text-md-left { text-align: left; }
+  .text-md-right { text-align: right; }
+  .text-md-center { text-align: center; }
+  .text-md-justify { text-align: justify; }
+
+  .giant-text {
+    h1& {
+      font-size: 5em;
+    }
+    h2& {
+      font-size: 3.6em;
+    }
+    h3& {
+      font-size: 2.4em;
+    }
+    h4& {
+      font-size: 1.5em;
+    }
   }
-  h2& {
-    font-size: 3.6em;
-  }
-  h3& {
-    font-size: 2.4em;
-  }
-  h4& {
-    font-size: 1.5em;
-  }
+}
+
+@media (min-width: 1200px) {
+  .text-lg-left { text-align: left; }
+  .text-lg-right { text-align: right; }
+  .text-lg-center { text-align: center; }
+  .text-lg-justify { text-align: justify; }
 }

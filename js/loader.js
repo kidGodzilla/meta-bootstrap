@@ -10,6 +10,8 @@
      */
     var protocol = "http://";
 
+    window.pathToRoot = window.pathToRoot || "";
+
 
     /**
      * Unique name for this instance of the script loader
@@ -84,7 +86,7 @@
         /**
          * jQuery (v2.1.3)
          */
-        if (!window.$) loadScript(protocol + "$");
+        if (!window.$) loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js");
 
 
         /**
@@ -163,7 +165,17 @@
          * BitTitan, Rawr...
          */
         if (theme === "bitswatch") {
-            loadStylesheet("../bitswatch/lumen/bootstrap.min.css");
+            loadStylesheet(pathToRoot + "../bitswatch/lumen/bootstrap.min.css");
+            loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+        }
+
+
+        /**
+         * Hacker Bootstrap
+         * https://github.com/brobin/hacker-bootstrap
+         */
+        if (theme === "hax0r") {
+            loadStylesheet("http://brobin.github.io/hacker-bootstrap/css/hacker.css");
             loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
         }
 
@@ -275,14 +287,17 @@
         }
 
 
-
         /**
          * Local Development
          */
-        loadStylesheet('css/meta-bootstrap.css');
+        loadStylesheet(pathToRoot + 'css/meta-bootstrap.css');
 
         // Application Styles
-        loadStylesheet("css/style.css");
+        loadStylesheet(pathToRoot + "css/style.css");
+
+        // Application Dependencies
+        loadScript(pathToRoot + 'js/core.js');
+        loadScript(pathToRoot + 'js/includes.js');
 
 
 
