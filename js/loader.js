@@ -301,6 +301,7 @@
      */
     if (theme === "bitswatch") {
       loadStylesheet(protocol + "www.bittitan.com/website-redesign/bootstrap.min.css");
+      loadStylesheet(protocol + "www.bittitan.com/website-redesign/style.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
 
