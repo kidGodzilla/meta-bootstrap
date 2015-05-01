@@ -244,6 +244,41 @@
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
 
+    /**
+     * Metro Bootstrap
+     * Another Ode to Metro
+     *
+     * See: https://github.com/olton/Metro-UI-CSS
+     */
+    if (theme === "metro-bootstrap") {
+      loadStylesheet(pathToRoot + "themes/metro/metro.min.css");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+    }
+
+
+    /**
+     * Geo Bootstrap
+     * An Ode to Geocities
+     *
+     * See: http://code.divshot.com/geo-bootstrap/
+     */
+    if (theme === "geo-bootstrap") {
+      loadStylesheet(pathToRoot + "themes/geo/geo.min.css");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+    }
+
+    /**
+     * Bootstrap Bootflat
+     * An well-developed flat theme
+     *
+     * See: https://github.com/bootflat/bootflat.github.io
+     */
+    if (theme === "bootflat") {
+      loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
+      loadStylesheet(pathToRoot + "themes/bootflat/bootflat.min.css");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+    }
+
 
     /**
      * Local Development
