@@ -119,16 +119,6 @@
 
 
     /**
-     * Bootstrap (BitSwatch theme)
-     * BitTitan, Rawr...
-     */
-    if (theme === "bitswatch") {
-      loadStylesheet(pathToRoot + "../bitswatch/lumen/bootstrap.min.css");
-      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
-    }
-
-
-    /**
      * Hacker Bootstrap
      * https://github.com/brobin/hacker-bootstrap
      */
@@ -294,6 +284,19 @@
 
 
     /**
+     * Bitswatch
+     * A Fun, Flat, Corporate feel
+     *
+     * See: https://github.com/kidgodzilla
+     */
+    if (theme === "bitswatch") {
+      loadStylesheet(protocol + "www.bittitan.com/website-redesign/bootstrap.min.css");
+      loadStylesheet(protocol + "www.bittitan.com/website-redesign/style.css");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+    }
+
+
+    /**
      * Local Development
      */
     loadStylesheet(pathToRoot + 'css/meta-bootstrap.css');
@@ -311,7 +314,7 @@
     document.write("<link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>");
 
     // Bootswatch-style code preview
-    document.write('<div id="source-modal" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">Source Code</h4></div><div class="modal-body"><pre></pre></div></div></div></div>');
+    document.write('<div id="source-modal" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">Layout Source Code</h4></div><div class="modal-body"><pre></pre></div></div></div></div>');
     loadStylesheet(pathToRoot + 'meta/view-source.css');
     loadScript(pathToRoot + 'js/view-source.js');
 
