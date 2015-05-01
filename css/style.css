@@ -36,3 +36,6 @@ nav.opaque {
 .margin-10-percent-top {
   margin-top: 10%;
 }
+.lead {
+  letter-spacing: 1px;
+}

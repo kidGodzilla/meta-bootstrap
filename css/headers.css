@@ -31,12 +31,12 @@ header h1 {
 }
 .hero-section h1,
 .hero-section p {
-  font-weight: 300;
+  font-weight: 500;
 }
 .hero-section h1.strong,
 .hero-section h2.strong,
 .hero-section h3.strong {
-  font-weight: 500;
+  font-weight: bold;
 }
 .hero-section .btn {
   font-size: 11px;
