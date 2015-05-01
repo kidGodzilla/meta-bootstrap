@@ -294,6 +294,18 @@
 
 
     /**
+     * Bitswatch
+     * A Fun, Flat, Corporate feel
+     *
+     * See: https://github.com/kidgodzilla
+     */
+    if (theme === "bitswatch") {
+      loadStylesheet(protocol + "www.bittitan.com/website-redesign/bootstrap.min.css");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+    }
+
+
+    /**
      * Local Development
      */
     loadStylesheet(pathToRoot + 'css/meta-bootstrap.css');
