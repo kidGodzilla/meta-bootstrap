@@ -267,6 +267,7 @@
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
 
+
     /**
      * Bootstrap Bootflat
      * An well-developed flat theme
@@ -276,6 +277,18 @@
     if (theme === "bootflat") {
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
       loadStylesheet(pathToRoot + "themes/bootflat/bootflat.min.css");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+    }
+
+
+    /**
+     * 100% Organic Bootstrap
+     * A theme for all-natural, organic webpages
+     *
+     * See: https://github.com/kidgodzilla
+     */
+    if (theme === "organic") {
+      loadStylesheet(pathToRoot + "themes/organic/organic.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
 
@@ -293,6 +306,9 @@
     loadScript(pathToRoot + 'js/core.js');
     loadScript(pathToRoot + 'js/includes.js');
     loadScript(pathToRoot + 'js/fix-urls.js');
+
+    // Logo
+    document.write("<link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>");
 
     // Bootswatch-style code preview
     document.write('<div id="source-modal" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">Source Code</h4></div><div class="modal-body"><pre></pre></div></div></div></div>');

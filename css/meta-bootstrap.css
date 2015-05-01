@@ -2599,3 +2599,14 @@ nav.opaque {
 .lead {
   letter-spacing: 1px;
 }
+.metabootstrap-logo {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 20px;
+  position: relative;
+  top: -2px;
+}
+.metabootstrap-logo i {
+  position: relative;
+  top: -2px;
+}
