@@ -92,3 +92,17 @@ ul.ul-inline li {
   -webkit-flex: 2;
   flex: 2;
 }
+.flat-background {
+  background: #444;
+  min-height: 650px;
+  height: 100vh;
+  min-width: 100%;
+}
+.solid-background {
+  background: #444;
+}
+.no-background {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}

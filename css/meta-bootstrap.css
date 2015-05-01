@@ -3,140 +3,7 @@
  * James Futhey, 2015
  */
 /* Flat UI Colors */
-.bg-turquoise {
-  background: #1abc9c;
-}
-.bg-emerland {
-  background: #2ecc71;
-}
-.bg-peterriver {
-  background: #3498db;
-}
-.bg-amethyst {
-  background: #9b59b6;
-}
-.bg-wetasphalt {
-  background: #34495e;
-}
-.bg-greensea {
-  background: #16a085;
-}
-.bg-nephritis {
-  background: #27ae60;
-}
-.bg-belizehole {
-  background: #2980b9;
-}
-.bg-wisteria {
-  background: #8e44ad;
-}
-.bg-midnightblue {
-  background: #2c3e50;
-}
-.bg-sunflower {
-  background: #f1c40f;
-}
-.bg-carrot {
-  background: #e67e22;
-}
-.bg-alizarin {
-  background: #e74c3c;
-}
-.bg-clouds {
-  background: #ecf0f1;
-}
-.bg-concrete {
-  background: #95a5a6;
-}
-.bg-orange {
-  background: #f39c12;
-}
-.bg-pumpkin {
-  background: #d35400;
-}
-.bg-pomegranate {
-  background: #c0392b;
-}
-.bg-silver {
-  background: #bdc3c7;
-}
-.bg-asbestos {
-  background: #7f8c8d;
-}
-.text-turquoise {
-  color: #1abc9c;
-}
-.text-emerland {
-  color: #2ecc71;
-}
-.text-peterriver {
-  color: #3498db;
-}
-.text-amethyst {
-  color: #9b59b6;
-}
-.text-wetasphalt {
-  color: #34495e;
-}
-.text-greensea {
-  color: #16a085;
-}
-.text-nephritis {
-  color: #27ae60;
-}
-.text-belizehole {
-  color: #2980b9;
-}
-.text-wisteria {
-  color: #8e44ad;
-}
-.text-midnightblue {
-  color: #2c3e50;
-}
-.text-sunflower {
-  color: #f1c40f;
-}
-.text-carrot {
-  color: #e67e22;
-}
-.text-alizarin {
-  color: #e74c3c;
-}
-.text-clouds {
-  color: #ecf0f1;
-}
-.text-concrete {
-  color: #95a5a6;
-}
-.text-orange {
-  color: #f39c12;
-}
-.text-pumpkin {
-  color: #d35400;
-}
-.text-pomegranate {
-  color: #c0392b;
-}
-.text-silver {
-  color: #bdc3c7;
-}
-.text-asbestos {
-  color: #7f8c8d;
-}
 /* Meta-Bootstrap Colors */
-.bg-metabootstrap-red {
-  background: #c51443;
-}
-.text-metabootstrap-red {
-  color: #c51443;
-}
-/* Basic Colors */
-.bg-white {
-  background: #fff;
-}
-.text-white {
-  color: #fff;
-}
 /*
  * META BOOTSTRAP v0.0.1
  * James Futhey, 2015
@@ -349,6 +216,20 @@ ul.ul-inline li {
   display: flex;
   -webkit-flex: 2;
   flex: 2;
+}
+.flat-background {
+  background: #444;
+  min-height: 650px;
+  height: 100vh;
+  min-width: 100%;
+}
+.solid-background {
+  background: #444;
+}
+.no-background {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
 }
 /*
    SPACING
@@ -2210,9 +2091,6 @@ ul.ul-inline li {
  * META BOOTSTRAP v0.0.1
  * James Futhey, 2015
  */
-.solid-background {
-  background: #444 !important;
-}
 .pln-i {
   padding-left: 0 !important;
 }
@@ -2228,7 +2106,7 @@ ul.ul-inline li {
 .footer-links a,
 .footer-links a:hover,
 .footer-links a:focus {
-  color: #e9e9e9;
+  color: #f3f3f3;
   opacity: 0.5;
   text-decoration: none;
   padding: 0 7px;
@@ -2518,7 +2396,7 @@ ul.caret-bullets.cb-white li:before {
   max-width: 85px;
 }
 .accent-line-wide::after {
-  max-width: 150px;
+  max-width: 200px;
 }
 .centered-accent-line-wide::after {
   content: '';
@@ -2558,6 +2436,139 @@ ul.caret-bullets.cb-white li:before {
 .centered-accent-line-wide-dark::after {
   max-width: 150px;
 }
+/* Flat UI Colors */
+.bg-turquoise {
+  background: #1abc9c;
+}
+.bg-emerland {
+  background: #2ecc71;
+}
+.bg-peterriver {
+  background: #3498db;
+}
+.bg-amethyst {
+  background: #9b59b6;
+}
+.bg-wetasphalt {
+  background: #34495e;
+}
+.bg-greensea {
+  background: #16a085;
+}
+.bg-nephritis {
+  background: #27ae60;
+}
+.bg-belizehole {
+  background: #2980b9;
+}
+.bg-wisteria {
+  background: #8e44ad;
+}
+.bg-midnightblue {
+  background: #2c3e50;
+}
+.bg-sunflower {
+  background: #f1c40f;
+}
+.bg-carrot {
+  background: #e67e22;
+}
+.bg-alizarin {
+  background: #e74c3c;
+}
+.bg-clouds {
+  background: #ecf0f1;
+}
+.bg-concrete {
+  background: #95a5a6;
+}
+.bg-orange {
+  background: #f39c12;
+}
+.bg-pumpkin {
+  background: #d35400;
+}
+.bg-pomegranate {
+  background: #c0392b;
+}
+.bg-silver {
+  background: #bdc3c7;
+}
+.bg-asbestos {
+  background: #7f8c8d;
+}
+.bg-metabootstrap-red {
+  background: #c51443;
+}
+.bg-white {
+  background: #fff;
+}
+.text-turquoise {
+  color: #1abc9c;
+}
+.text-emerland {
+  color: #2ecc71;
+}
+.text-peterriver {
+  color: #3498db;
+}
+.text-amethyst {
+  color: #9b59b6;
+}
+.text-wetasphalt {
+  color: #34495e;
+}
+.text-greensea {
+  color: #16a085;
+}
+.text-nephritis {
+  color: #27ae60;
+}
+.text-belizehole {
+  color: #2980b9;
+}
+.text-wisteria {
+  color: #8e44ad;
+}
+.text-midnightblue {
+  color: #2c3e50;
+}
+.text-sunflower {
+  color: #f1c40f;
+}
+.text-carrot {
+  color: #e67e22;
+}
+.text-alizarin {
+  color: #e74c3c;
+}
+.text-clouds {
+  color: #ecf0f1;
+}
+.text-concrete {
+  color: #95a5a6;
+}
+.text-orange {
+  color: #f39c12;
+}
+.text-pumpkin {
+  color: #d35400;
+}
+.text-pomegranate {
+  color: #c0392b;
+}
+.text-silver {
+  color: #bdc3c7;
+}
+.text-asbestos {
+  color: #7f8c8d;
+}
+.text-metabootstrap-red {
+  color: #c51443;
+}
+.text-white {
+  color: #fff;
+}
 /*
  * META BOOTSTRAP v0.0.1
  * James Futhey, 2015
@@ -2573,19 +2584,8 @@ ul.caret-bullets.cb-white li:before {
 .top-minus-11-5-px {
   top: -11.5px;
 }
-.no-background {
-  background: transparent !important;
-  background-color: transparent !important;
-  border-color: transparent !important;
-}
 nav.opaque {
   background: #444;
-}
-.flat-background {
-  background: #444;
-  min-height: 650px;
-  height: 100vh;
-  min-width: 100%;
 }
 .red {
   background-color: #C51443 !important;
@@ -2598,4 +2598,15 @@ nav.opaque {
 }
 .lead {
   letter-spacing: 1px;
+}
+.metabootstrap-logo {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 20px;
+  position: relative;
+  top: -2px;
+}
+.metabootstrap-logo i {
+  position: relative;
+  top: -2px;
 }

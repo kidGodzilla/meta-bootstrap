@@ -1,4 +1,6 @@
 /* Flat UI Colors */
+/* Flat UI Colors */
+/* Meta-Bootstrap Colors */
 .bg-turquoise {
   background: #1abc9c;
 }
@@ -58,6 +60,12 @@
 }
 .bg-asbestos {
   background: #7f8c8d;
+}
+.bg-metabootstrap-red {
+  background: #c51443;
+}
+.bg-white {
+  background: #fff;
 }
 .text-turquoise {
   color: #1abc9c;
@@ -119,16 +127,8 @@
 .text-asbestos {
   color: #7f8c8d;
 }
-/* Meta-Bootstrap Colors */
-.bg-metabootstrap-red {
-  background: #c51443;
-}
 .text-metabootstrap-red {
   color: #c51443;
-}
-/* Basic Colors */
-.bg-white {
-  background: #fff;
 }
 .text-white {
   color: #fff;
