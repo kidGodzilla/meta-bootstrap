@@ -2,8 +2,16 @@
  * META BOOTSTRAP v0.0.1
  * James Futhey, 2015
  */
+.text-inverse h1,
+.text-inverse h2,
+.text-inverse h3,
+.text-inverse h4,
+.text-inverse h5,
+.text-inverse h6 {
+  color: #fff !important;
+}
 .text-inverse {
-  color: #e9e9e9;
+  color: #fff;
 }
 a.text-inverse:hover {
   color: #fff;
@@ -14,7 +22,15 @@ a.text-inverse:hover {
 .text-inverse h4,
 .text-inverse h5,
 .text-inverse h6 {
-  color: #e9e9e9 !important;
+  color: #fff !important;
+}
+.text-inverse li > a {
+  color: #fff !important;
+}
+h1,
+h2,
+h3 {
+  font-weight: bold !important;
 }
 .small-text {
   font-size: 1.1rem;
@@ -33,5 +49,71 @@ a.text-inverse:hover {
 }
 .small-light-text {
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 500;
+}
+.text-xs-left {
+  text-align: left;
+}
+.text-xs-right {
+  text-align: right;
+}
+.text-xs-center {
+  text-align: center;
+}
+.text-xs-justify {
+  text-align: justify;
+}
+@media (min-width: 768px) {
+  .text-sm-left {
+    text-align: left;
+  }
+  .text-sm-right {
+    text-align: right;
+  }
+  .text-sm-center {
+    text-align: center;
+  }
+  .text-sm-justify {
+    text-align: justify;
+  }
+}
+@media (min-width: 992px) {
+  .text-md-left {
+    text-align: left;
+  }
+  .text-md-right {
+    text-align: right;
+  }
+  .text-md-center {
+    text-align: center;
+  }
+  .text-md-justify {
+    text-align: justify;
+  }
+  h1.giant-text {
+    font-size: 5em;
+  }
+  h2.giant-text {
+    font-size: 3.6em;
+  }
+  h3.giant-text {
+    font-size: 2.4em;
+  }
+  h4.giant-text {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .text-lg-left {
+    text-align: left;
+  }
+  .text-lg-right {
+    text-align: right;
+  }
+  .text-lg-center {
+    text-align: center;
+  }
+  .text-lg-justify {
+    text-align: justify;
+  }
 }

@@ -1,3 +1,7 @@
+.navbar {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .img-background {
   background: #444;
   min-height: 650px;
@@ -23,17 +27,16 @@ header h1 {
   color: #e9e9e9;
 }
 .hero-section {
-  max-width: 75%;
   margin: 0 auto;
 }
 .hero-section h1,
 .hero-section p {
-  font-weight: 300;
+  font-weight: 500;
 }
 .hero-section h1.strong,
 .hero-section h2.strong,
 .hero-section h3.strong {
-  font-weight: 500;
+  font-weight: bold;
 }
 .hero-section .btn {
   font-size: 11px;
@@ -46,4 +49,22 @@ header h1 {
 }
 .centered-hero-with-image {
   margin-top: 7% !important;
+}
+/* Cover-style header */
+.height-100-percent-viewport {
+  height: 100vh;
+  position: relative;
+}
+.container-fullscreen-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container-fullscreen-contained {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
 }
