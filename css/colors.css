@@ -119,3 +119,17 @@
 .text-asbestos {
   color: #7f8c8d;
 }
+/* Meta-Bootstrap Colors */
+.bg-metabootstrap-red {
+  background: #c51443;
+}
+.text-metabootstrap-red {
+  color: #c51443;
+}
+/* Basic Colors */
+.bg-white {
+  background: #fff;
+}
+.text-white {
+  color: #fff;
+}
