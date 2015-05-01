@@ -1,5 +1,5 @@
 /**
- * LOAD-DEPENDENCIES.JS
+ * MBS.JS – Easy MetaBootstrap CDN Loader
  * A naive dependency loader which loads scripts & stylesheets on page load.
  */
 (function() {
@@ -70,7 +70,7 @@
     head.appendChild(link);
   }
 
-  var theme = localStorage.getItem('theme');
+  var theme = window.bootstrapTheme || localStorage.getItem('theme');
 
   /**
    * User-extendable dependency loader
