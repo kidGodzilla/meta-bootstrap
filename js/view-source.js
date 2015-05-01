@@ -9,7 +9,7 @@ function cleanSource (html) {
 
   lines = lines.map(function (line) {
     if (line.match(regex)) line = line.substring(indentSize);
-    return line;
+    return line.trim();
   });
 
   return lines.join("\n");
