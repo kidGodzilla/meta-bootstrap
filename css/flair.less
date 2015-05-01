@@ -1,0 +1,82 @@
+/* Caret Bullets */
+ul.caret-bullets {
+  list-style: none;
+  li:before {
+    content: "";
+    border-color: transparent #ccc;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+  }
+  li.lead:before {
+    top: 1.075em;
+  }
+  &.cb-white li {
+    color: #fff;
+    &:before {
+      border-color: transparent #fff !important;
+    }
+  }
+}
+
+/* Accent lines */
+.accent-line {
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 0.4em;
+    border-bottom: 6px solid rgba(255,255,255,0.5);
+    max-width: 85px;
+  }
+}
+.accent-line-dark {
+  .accent-line;
+  &::after {
+    border-bottom: 6px solid rgba(0,0,0,0.5);
+  }
+}
+.centered-accent-line {
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 3px;
+    border-bottom: 6px solid rgba(255,255,255,0.5);
+    max-width: 85px;
+    margin: 0 auto;
+  }
+}
+.centered-accent-line-dark {
+  .centered-accent-line;
+  &::after {
+    border-bottom: 6px solid rgba(0,0,0,0.5);
+  }
+}
+.accent-line-wide {
+  .accent-line;
+  &::after {
+    max-width: 150px;
+  }
+}
+.centered-accent-line-wide {
+  .centered-accent-line;
+  &::after {
+    max-width: 150px;
+  }
+}
+.accent-line-wide-dark {
+  .accent-line-dark;
+  &::after {
+    max-width: 150px;
+  }
+}
+.centered-accent-line-wide-dark {
+  .centered-accent-line-dark;
+  &::after {
+    max-width: 150px;
+  }
+}
