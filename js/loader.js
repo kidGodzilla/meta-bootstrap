@@ -119,16 +119,6 @@
 
 
     /**
-     * Bootstrap (BitSwatch theme)
-     * BitTitan, Rawr...
-     */
-    if (theme === "bitswatch") {
-      loadStylesheet(pathToRoot + "../bitswatch/lumen/bootstrap.min.css");
-      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
-    }
-
-
-    /**
      * Hacker Bootstrap
      * https://github.com/brobin/hacker-bootstrap
      */
