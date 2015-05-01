@@ -1,9 +1,9 @@
 {
   "name": "meta-bootstrap",
-  "description": "Meta-bootstrap is a layout framework that extends Bootstrap.",
+  "description": "Meta-bootstrap is a layout framework that extends Bootstrap, adding hundreds of layouts & components.",
   "version": "0.0.2",
   "author": "James Futhey",
-  "homepage": "http://metabootstrap.com",
+  "homepage": "http://www.metabootstrap.com",
   "license": "MIT",
   "repository": {
     "type": "git",
