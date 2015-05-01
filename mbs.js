@@ -112,7 +112,7 @@
      * This is vanilla bootstrap.
      * It is not a required dependency when using a bootstrap or bootswatch theme.
      */
-    if (theme === "vanilla") {
+    if (theme === "vanilla" || !theme) {
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -229,7 +229,7 @@
      *
      * See: https://bootswatch.com/yeti/
      */
-    if (theme === "yeti" || !theme) {
+    if (theme === "yeti") {
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/yeti/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -241,7 +241,7 @@
      * See: https://github.com/olton/Metro-UI-CSS
      */
     if (theme === "metro-bootstrap") {
-      loadStylesheet(pathToRoot + "themes/metro/metro.min.css");
+      loadStylesheet(protocol + "www.metabootstrap.com/themes/metro/metro.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
 
@@ -253,7 +253,7 @@
      * See: http://code.divshot.com/geo-bootstrap/
      */
     if (theme === "geo-bootstrap") {
-      loadStylesheet(pathToRoot + "themes/geo/geo.min.css");
+      loadStylesheet(protocol + "www.metabootstrap.com/themes/geo/geo.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
 
@@ -266,7 +266,7 @@
      */
     if (theme === "bootflat") {
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
-      loadStylesheet(pathToRoot + "themes/bootflat/bootflat.min.css");
+      loadStylesheet(protocol + "www.metabootstrap.com/themes/bootflat/bootflat.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
 
@@ -278,7 +278,7 @@
      * See: https://github.com/kidgodzilla
      */
     if (theme === "organic") {
-      loadStylesheet(pathToRoot + "themes/organic/organic.css");
+      loadStylesheet(protocol + "www.metabootstrap.com/themes/organic/organic.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
 
@@ -299,24 +299,24 @@
     /**
      * Local Development
      */
-    loadStylesheet(pathToRoot + 'css/meta-bootstrap.css');
+    loadStylesheet(protocol + 'www.metabootstrap.com/css/meta-bootstrap.css');
 
     // Application Styles
-    loadStylesheet(pathToRoot + "css/style.css");
+    loadStylesheet(protocol + "www.metabootstrap.com/css/style.css");
 
     // Application Dependencies
-    loadScript(pathToRoot + 'js/jquery.outer-html.js');
-    loadScript(pathToRoot + 'js/core.js');
-    loadScript(pathToRoot + 'js/includes.js');
-    loadScript(pathToRoot + 'js/fix-urls.js');
+    loadScript(protocol + 'www.metabootstrap.com/js/jquery.outer-html.js');
+    loadScript(protocol + 'www.metabootstrap.com/js/core.js');
+    loadScript(protocol + 'www.metabootstrap.com/js/includes.js');
+    loadScript(protocol + 'www.metabootstrap.com/js/fix-urls.js');
 
-    // Logo
+    // MetaBootstrap Logo
     document.write("<link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>");
 
     // Bootswatch-style code preview
     document.write('<div id="source-modal" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">Layout Source Code</h4></div><div class="modal-body"><pre></pre></div></div></div></div>');
-    loadStylesheet(pathToRoot + 'meta/view-source.css');
-    loadScript(pathToRoot + 'js/view-source.js');
+    loadStylesheet(protocol + 'www.metabootstrap.com/meta/view-source.css');
+    loadScript(protocol + 'www.metabootstrap.com/js/view-source.js');
 
     // Once completed, set an identifier to true to avoid running the script loader twice
     window[loaderName] = true;
