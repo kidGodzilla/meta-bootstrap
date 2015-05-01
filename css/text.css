@@ -2,8 +2,16 @@
  * META BOOTSTRAP v0.0.1
  * James Futhey, 2015
  */
+.text-inverse h1,
+.text-inverse h2,
+.text-inverse h3,
+.text-inverse h4,
+.text-inverse h5,
+.text-inverse h6 {
+  color: #fff !important;
+}
 .text-inverse {
-  color: #e9e9e9;
+  color: #fff;
 }
 a.text-inverse:hover {
   color: #fff;
@@ -14,10 +22,15 @@ a.text-inverse:hover {
 .text-inverse h4,
 .text-inverse h5,
 .text-inverse h6 {
-  color: #e9e9e9 !important;
+  color: #fff !important;
 }
 .text-inverse li > a {
-  color: #e9e9e9 !important;
+  color: #fff !important;
+}
+h1,
+h2,
+h3 {
+  font-weight: bold !important;
 }
 .small-text {
   font-size: 1.1rem;
@@ -36,7 +49,7 @@ a.text-inverse:hover {
 }
 .small-light-text {
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 500;
 }
 .text-xs-left {
   text-align: left;

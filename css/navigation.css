@@ -1,14 +1,13 @@
 .navbar-clear {
   color: #e9e9e9;
 }
-.navbar-clear .navbar-nav > li > a {
+.navbar-clear a {
   color: #e9e9e9;
   font-weight: 500;
 }
-.navbar-clear .navbar-nav > li > a:hover,
-.navbar-clear .navbar-nav > li > a:focus,
-.navbar-clear .navbar-nav > li > a:active {
-  background-color: transparent;
+.navbar-clear a:hover,
+.navbar-clear a:focus {
+  background-color: transparent !important;
   color: #fff;
 }
 .navbar-clear .container-fluid {
@@ -69,16 +68,16 @@
 .tall-navbar-contained .navbar-toggle {
   padding: 34px 10px;
 }
-.top-nav-block .navbar-nav:first-of-type > li {
+.top-nav-block .navbar-nav:first-of-type li {
   margin: 0 10px;
 }
-.top-nav-block .navbar-nav:first-of-type > li:last-of-type {
+.top-nav-block .navbar-nav:first-of-type li:last-of-type {
   margin-right: 0;
 }
-.top-nav-block-centered .navbar-nav:first-of-type > li {
+.top-nav-block-centered .navbar-nav:first-of-type li {
   margin: 0 10px;
 }
-.top-nav-block-centered .navbar-nav:first-of-type > li:last-of-type {
+.top-nav-block-centered .navbar-nav:first-of-type li:last-of-type {
   margin-right: 0;
 }
 .top-nav-block-centered .centered-logo .logo {
@@ -91,6 +90,5 @@ nav.opaque {
   background: #444;
 }
 .navbar-nav.social a {
-  font-size: 14px !important;
-  padding: 14px 7px;
+  padding: 10px 7px;
 }
