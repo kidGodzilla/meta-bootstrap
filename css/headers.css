@@ -50,3 +50,21 @@ header h1 {
 .centered-hero-with-image {
   margin-top: 7% !important;
 }
+/* Cover-style header */
+.height-100-percent-viewport {
+  height: 100vh;
+  position: relative;
+}
+.container-fullscreen-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container-fullscreen-contained {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+}
