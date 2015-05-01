@@ -1,10 +1,7 @@
 function cleanSource (html) {
   var lines = html.split(/\n/);
   var indentSize, regex;
-
-  lines.shift();
-  lines.splice(-1, 1);
-
+  
   indentSize = lines[0].length - lines[0].trim().length;
   regex = new RegExp(" {" + indentSize + "}");
 
@@ -19,7 +16,9 @@ function cleanSource (html) {
 $(document).ready(function () {
 
   var $button = $("<div id='source-button' class='btn btn-primary btn-xs'>&lt; &gt;</div>").click(function () {
-    var html = $(this).parent().html();
+    var html = $(this).parent();
+    html.find('#source-button').remove();
+    html = html.outerHTML();
     html = cleanSource(html);
     $("#source-modal pre").text(html);
     $("#source-modal").modal();

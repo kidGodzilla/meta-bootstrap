@@ -254,6 +254,7 @@
     loadStylesheet(pathToRoot + "css/style.css");
 
     // Application Dependencies
+    loadScript(pathToRoot + 'js/jquery.outer-html.js');
     loadScript(pathToRoot + 'js/core.js');
     loadScript(pathToRoot + 'js/includes.js');
     loadScript(pathToRoot + 'js/fix-urls.js');
