@@ -27,6 +27,14 @@ Components and sections are developed using a selection of popular Bootswatch th
 
 Feel free to submit a pull request at any time. As a courtesy, please <a href="https://github.com/kidGodzilla/meta-bootstrap/issues">Open an issue</a> to discuss the changes you would like to make before proceeding.
 
+### Running a local server (for development only)
+
+1. `npm install && bower install`
+
+Once these tasks are completed successfully, you can type `grunt` to run the server on `localhost:3000` with auto-reload.
+
+**This gruntfile isn't finished. Other tasks have not yet been implemented, including less, clean, concat, etc. However, this is still useful since MetaBootstrap relies on HTML Includes, which present CORS issues without a webserver.**
+
 ### Development Methodology
 
 *Process should be implemented by those who use it, at the moment in which it becomes necessary. Not before.*
