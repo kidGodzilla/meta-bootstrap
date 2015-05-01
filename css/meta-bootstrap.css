@@ -123,6 +123,20 @@
 .text-asbestos {
   color: #7f8c8d;
 }
+/* Meta-Bootstrap Colors */
+.bg-metabootstrap-red {
+  background: #c51443;
+}
+.text-metabootstrap-red {
+  color: #c51443;
+}
+/* Basic Colors */
+.bg-white {
+  background: #fff;
+}
+.text-white {
+  color: #fff;
+}
 /*
  * META BOOTSTRAP v0.0.1
  * James Futhey, 2015
@@ -2496,9 +2510,6 @@ ul.caret-bullets.cb-white li:before {
 .centered-accent-line-dark::after {
   border-bottom: 6px solid rgba(0, 0, 0, 0.5);
 }
-.accent-line-wide {
-  max-width: 200px;
-}
 .accent-line-wide::after {
   content: '';
   display: block;
@@ -2506,8 +2517,8 @@ ul.caret-bullets.cb-white li:before {
   border-bottom: 6px solid rgba(255, 255, 255, 0.5);
   max-width: 85px;
 }
-.centered-accent-line-wide {
-  max-width: 200px;
+.accent-line-wide::after {
+  max-width: 150px;
 }
 .centered-accent-line-wide::after {
   content: '';
@@ -2517,8 +2528,8 @@ ul.caret-bullets.cb-white li:before {
   max-width: 85px;
   margin: 0 auto;
 }
-.accent-line-wide-dark {
-  max-width: 200px;
+.centered-accent-line-wide::after {
+  max-width: 150px;
 }
 .accent-line-wide-dark::after {
   content: '';
@@ -2530,8 +2541,8 @@ ul.caret-bullets.cb-white li:before {
 .accent-line-wide-dark::after {
   border-bottom: 6px solid rgba(0, 0, 0, 0.5);
 }
-.centered-accent-line-wide-dark {
-  max-width: 200px;
+.accent-line-wide-dark::after {
+  max-width: 150px;
 }
 .centered-accent-line-wide-dark::after {
   content: '';
@@ -2543,6 +2554,9 @@ ul.caret-bullets.cb-white li:before {
 }
 .centered-accent-line-wide-dark::after {
   border-bottom: 6px solid rgba(0, 0, 0, 0.5);
+}
+.centered-accent-line-wide-dark::after {
+  max-width: 150px;
 }
 /*
  * META BOOTSTRAP v0.0.1
