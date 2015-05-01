@@ -25,26 +25,50 @@ ul.caret-bullets {
 }
 
 /* Accent lines */
-.accent-line::after {
-  content: '';
-  display: block;
-  padding-top: 0.4em;
-  border-bottom: 6px solid #aaa;
-  max-width: 85px;
+.accent-line {
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 0.4em;
+    border-bottom: 6px solid rgba(255,255,255,0.5);
+    max-width: 85px;
+  }
 }
-.centered-accent-line::after {
-  content: '';
-  display: block;
-  padding-top: 3px;
-  border-bottom: 6px solid #1e9fb4;
-  max-width: 85px;
-  margin: 0 auto;
+.accent-line-dark {
+  .accent-line;
+  &::after {
+    border-bottom: 6px solid rgba(0,0,0,0.5);
+  }
 }
-.centered-accent-line-dark::after {
-  content: '';
-  display: block;
-  padding-top: 10px;
-  border-bottom: 6px solid #136a78;
+.centered-accent-line {
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 3px;
+    border-bottom: 6px solid rgba(255,255,255,0.5);
+    max-width: 85px;
+    margin: 0 auto;
+  }
+}
+.centered-accent-line-dark {
+  .centered-accent-line;
+  &::after {
+    border-bottom: 6px solid rgba(0,0,0,0.5);
+  }
+}
+.accent-line-wide {
+  .accent-line;
   max-width: 200px;
-  margin: 0 auto;
+}
+.centered-accent-line-wide {
+  .centered-accent-line;
+  max-width: 200px;
+}
+.accent-line-wide-dark {
+  .accent-line-dark;
+  max-width: 200px;
+}
+.centered-accent-line-wide-dark {
+  .centered-accent-line-dark;
+  max-width: 200px;
 }
