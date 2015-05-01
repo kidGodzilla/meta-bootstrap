@@ -2157,7 +2157,7 @@ section {
   min-width: 100%;
 }
 .bg-cover {
-  background: url(https://unsplash.imgix.net/photo-1425036458755-dc303a604201?dpr=2&fit=crop&fm=jpg&q=75&w=1050) no-repeat center center fixed;
+  background: url(/meta/streaks.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
