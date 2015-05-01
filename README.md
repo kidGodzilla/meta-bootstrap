@@ -33,7 +33,7 @@ Feel free to submit a pull request at any time. As a courtesy, please <a href="h
 
 Once these tasks are completed successfully, you can type `grunt` to run the server on `localhost:3000` with auto-reload.
 
-**The gruntfile isn't finished. Other tasks have not yet been implemented, including less, clean, & concat. However, this is still useful since metabootstrap relies on HTML Includes (CORS).**
+**This gruntfile isn't finished. Other tasks have not yet been implemented, including less, clean, concat, etc. However, this is still useful since MetaBootstrap relies on HTML Includes, which present CORS issues without a webserver.**
 
 ### Development Methodology
 
