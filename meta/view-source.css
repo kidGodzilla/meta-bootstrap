@@ -19,10 +19,15 @@
   width: 220px;
   margin: 20px;
 }
-#source-button {
+.source-button {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 9999;
   font-weight: 700;
+  visibility: hidden;
+}
+.bs-layout:hover .source-button,
+.source-button.visible {
+  visibility: visible;
 }

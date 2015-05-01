@@ -1,3 +1,5 @@
+"use strict";
+
 function cleanSource (html) {
   var lines = html.split(/\n/);
   var indentSize, regex;
@@ -22,12 +24,16 @@ $(document).ready(function () {
   $('.bs-component [data-toggle="popover"]').popover();
   $('.bs-component [data-toggle="tooltip"]').tooltip();
 
-  var $button = $("<div id='source-button' class='btn btn-primary btn-xs' data-toggle='modal' data-target='#source-modal'><i class='fa fa-code'></i></div>").click(function () {
-    var html = $(this).parent();
-    html.find('#source-button').remove();
+  var $button = $("<div class='source-button btn btn-primary btn-xs' data-toggle='modal' data-target='#source-modal'><i class='fa fa-code'></i></div>").click(function () {
+    var html = $(this).parent().clone();
+    html.find('.source-button').remove();
     html = html.outerHTML();
     html = cleanSource(html);
     $("#source-modal pre").text(html);
+  });
+
+  $(".bs-layout").click(function () {
+    $(this).find('.source-button').toggleClass('visible');
   });
 
   $(".bs-layout").hover(function () {
