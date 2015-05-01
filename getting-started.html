@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🙋Meta Bootstrap: Getting Started Guide – A User-Interface Library adding Hundreds of Bootstrap Layouts & Features to Twitter Bootstrap</title>
+  <script src="js/loader.js"></script>
+</head>
+<body class="">
+<header class="img-background bg-cover bs-layout ptn" style="background: url(meta/cat_programmer.jpg) no-repeat center center fixed;">
+  <!-- FIXED NAVBAR -->
+  <nav class="navbar navbar-default navbar-fixed-top" data-source-url="../meta/navigation.html"></nav>
+
+  <!-- CENTERED HERO WITH IMAGE -->
+  <div class="hero-section ptxxl row">
+    <div class="col-md-8 col-md-offset-2 text-white text-center">
+      <p class="lead" style="margin-top:0%"><img src="../meta/metabootstrap-logo-dark-glow.png" style="max-width:100%" alt=""></p>
+      <!--<hr style="width:200px">-->
+      <h2 class="text-inverse dark-text-glow" style="margin-top:-14%">Getting Started Guide</h2>
+      <p class="mtm dark-text-glow">
+        The easiest way of creating new websites based on Twitter Bootstrap!
+      </p>
+      <!--<p class="mtl">-->
+        <!--<button class="btn btn-default">LEARN MORE</button>-->
+        <!--<button class="btn btn-primary">CLICK HERE</button>-->
+      <!--</p>-->
+    </div>
+  </div>
+
+</header>
+<section class="bg-belizehole text-white">
+  <div class="container pbxl">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 class="text-sunflower pvx">Getting Started with MetaBootstrap</h1>
+        <p>
+          MetaBootstrap is a library designed to fit between your existing Bootstrap theme and any custom CSS your wish to add to your website, providing numerous UI elements and ready-to-use layouts to kickstart your project and reduce development time.
+        </p>
+        <p>
+          MetaBootstrap depends on underlaying Bootstrap themes which follow mainstream Bootstrap conventions, (a 12-column grid, conventional breakpoints & font-sizes). We assume that you will use Bootstrap to define your website's Branding (Fonts & Colors) as well as your website's primitives (your UI kit). Making major revisions that affect layouts in your Bootstrap theme can degrade MetaBootstrap's performance (and break compatibility with future Bootstrap releases). These should be made in your custom styles, which come after MetaBootstrap.
+        </p>
+      </div>
+      <div class="col-md-4 col-md-offset-1 bg-alizarin mtxl ptl pbx phl">
+        <h4 class="strong">Looking for a Quickstart?</h4>
+        <p style="line-height: 2em;">
+          Just paste<div class="mvl"><span class="text-midnightblue bg-clouds pvs" style="line-height: 2em">&lt;script src="//www.metabootstrap.com/mbs.js">&lt;/script></span></div>on your page before the closing <span class="text-midnightblue bg-clouds pas">&lt;/head></span> tag.
+        </p>
+        <br>
+        <p>This will load Vanilla Bootstrap & MetaBootstrap.</p>
+      </div>
+    </div>
+    <h2 class="text-orange ptxl pbl">What to include</h2>
+    <p>
+      We host MetaBootstrap in a CDN for your convenience, with a dependency-loader to help you get started with the most common themes and features. Alternatively, a package on NPM is coming soon, or you can roll your own by following the instructions in the next section.
+    </p>
+    <h2 class="text-orange ptxl pbl">Using the MetaBootstrap CDN</h2>
+    <p>
+      To use MetaBootstrap via the CDN, simply include this line of code before your <span class="text-midnightblue bg-clouds pas">&lt;/head></span> tag.
+    </p>
+    <br>
+
+    <pre class="text-midnightblue">&lt;script src="//www.metabootstrap.com/mbs.js">&lt;/script></pre>
+
+    <br>
+    <p>
+      Examples and options are available when previewing Bootstrap themes included in the MetaBootstrap project.
+    </p>
+
+    <h2 class="text-orange ptxl pbl">Rolling your Own MetaBootstrap stack</h2>
+    <p style="line-height: 2em">
+      MetaBootstrap consists of a single dependency, <span class="text-midnightblue bg-clouds pas">metabootstrap.min.css</span>, which should be included in your header after <span class="text-midnightblue bg-clouds pas">bootstrap.min.css</span> and any additional modifications you have made to extend your UI kit.
+    </p>
+    <br>
+    <p>
+      Website or layout-specific styles which may interfere with MetaBootstrap layouts should go in a <span class="text-midnightblue bg-clouds pas">style.css</span> after MetaBootstrap, overriding MetaBootstrap defaults.
+    </p>
+
+    <h2 class="text-orange ptxl pbl">Installing via NPM</h2>
+    <p>
+      An NPM module is coming soon. More details will be available once it is released.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER WITH CENTERED LINKS -->
+<footer class="solid-background red bs-layout">
+  <div class="container phl pvx">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2 text-center text-inverse">
+        <ul class="text-center footer-links mtl ul-inline list-style-type-none">
+          <li class="mhm"><a href="/">HOME</a></li>
+          <li class="mhm"><a href="/navigation">NAVIGATION</a></li>
+          <li class="mhm"><a href="/footers">FOOTERS</a></li>
+          <li class="mhm"><a href="/content">CONTENT</a></li>
+          <li class="mhm"><a href="/headers">HEADERS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container pal text-center text-inverse small-text">
+      &copy; 2015 Meta Bootstrap. All Rights Reserved. <a class="text-inverse" href="#">Privacy Policy</a>.
+    </div>
+  </div>
+</footer>
+</body>
+</html>

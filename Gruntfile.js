@@ -21,12 +21,6 @@ module.exports = function (grunt) {
             ' * Licensed under <%= pkg.license %>\n' +
             ' * Based on Bootstrap\n' +
             '*/\n',
-    swatch: {
-      amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, darkly:{},
-      flatly:{}, journal:{}, lumen:{}, paper:{}, readable:{},
-      sandstone:{}, simplex:{}, slate:{}, spacelab:{}, superhero:{},
-      united:{}, yeti:{}, custom:{}
-    },
     clean: {
       build: {
         //src: ['*/build.less', '*/build.scss', '!global/build.less', '!global/build.scss']
@@ -60,7 +54,7 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ['*/index.html', '**/index.html'],
+      files: ['css/*', 'content/*', 'footers/*', 'headers/*', 'navigation/*'],
       //tasks: 'build',
       options: {
         livereload: true,
@@ -88,72 +82,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('none', function() {});
 
-  grunt.registerTask('build', 'build a regular theme', function(theme, compress) {
-    var theme = theme == undefined ? grunt.config('buildtheme') : theme;
-    var compress = compress == undefined ? true : compress;
-
-    var isValidTheme = grunt.file.exists(theme, 'variables.less') && grunt.file.exists(theme, 'bootswatch.less');
-
-     // cancel the build (without failing) if this directory is not a valid theme
-    if (!isValidTheme) {
-      return;
-    }
-
-    var concatSrc;
-    var concatDest;
-    var lessDest;
-    var lessSrc;
-    var files = {};
-    var dist = {};
-    concatSrc = 'global/build.less';
-    concatDest = theme + '/build.less';
-    lessDest = '<%=builddir%>/' + theme + '/bootstrap.css';
-    lessSrc = [ theme + '/' + 'build.less' ];
-
-    dist = {src: concatSrc, dest: concatDest};
-    grunt.config('concat.dist', dist);
-    files = {}; files[lessDest] = lessSrc;
-    grunt.config('less.dist.files', files);
-    grunt.config('less.dist.options.compress', false);
-
-    grunt.task.run(['concat', 'less:dist', 'prefix:' + lessDest, 'clean:build',
-      compress ? 'compress:'+lessDest+':'+'<%=builddir%>/' + theme + '/bootstrap.min.css':'none']);
-  });
-
-grunt.registerTask('build_scss', 'build a regular theme from scss', function(theme, compress) {
-    var theme = theme == undefined ? grunt.config('buildtheme') : theme;
-    var compress = compress == undefined ? true : compress;
-
-    var isValidTheme = grunt.file.exists(theme, '_variables.scss') && grunt.file.exists(theme, '_bootswatch.scss');
-
-     // cancel the build (without failing) if this directory is not a valid theme
-    if (!isValidTheme) {
-      return;
-    }
-    var concatSrc;
-    var concatDest;
-    var scssDest;
-    var scssSrc;
-    var files = {};
-    var dist = {};
-    concatSrc = 'global/build.scss';
-    concatDest = theme + '/build.scss';
-    scssDest = '<%=builddir%>/' + theme + '/bootstrap.css';
-    scssSrc = [theme + '/' + 'build.scss'];
-
-    dist = {src: concatSrc, dest: concatDest};
-    grunt.config('concat.dist', dist);
-    files = {};
-    files[scssDest] = scssSrc;
-    grunt.config('sass.dist.files', files);
-    grunt.config('sass.dist.options.style', 'expanded');
-    grunt.config('sass.dist.options.precision', 8);
-    grunt.config('sass.dist.options.unix-newlines', true);
-
-    grunt.task.run(['concat', 'sass:dist', 'prefix:' + scssDest, 'clean:build',
-        compress ? 'compress_scss:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none']);
-  });
-
   grunt.registerTask('prefix', 'autoprefix a generic css', function(fileSrc) {
     grunt.config('autoprefixer.dist.src', fileSrc);
     grunt.task.run('autoprefixer');
@@ -168,29 +96,9 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
     grunt.task.run(['less:dist']);
   });
 
-  grunt.registerTask('compress_scss', 'compress a generic css with sass', function(fileSrc, fileDst) {
-    var files = {}; files[fileDst] = fileSrc;
-    grunt.log.writeln('compressing file ' + fileSrc);
-
-    grunt.config('sass.dist.files', files);
-    grunt.config('sass.dist.options.style', 'compressed');
-    grunt.task.run(['sass:dist']);
-  });
-
   grunt.registerMultiTask('swatch', 'build a theme', function() {
     var t = this.target;
     grunt.task.run('build:'+t);
-  });
-
-  grunt.registerTask('swatch_scss', 'build a theme from scss ', function (theme) {
-    var t = theme;
-    if (!t) {
-      for (var t in grunt.config('swatch')) {
-        grunt.task.run('build_scss:' + t);
-      }
-    } else {
-      grunt.task.run('build_scss:' + t);
-    }
   });
 
   grunt.event.on('watch', function(action, filepath) {

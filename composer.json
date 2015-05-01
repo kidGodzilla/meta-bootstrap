@@ -1,11 +1,11 @@
 {
-    "name": "thomaspark/bootswatch",
-    "description": "Themes for Bootstrap",
+    "name": "kidgodzilla/meta-bootstrap",
+    "description": "MetaBootstrap: Layouts for Bootstrap",
     "license": "MIT",
     "authors": [
         {
-            "name": "thomaspark",
-            "email": "thomas@bootswatch.com"
+            "name": "kidgodzilla",
+            "email": "futhey@gmail.com"
         }
     ],
     "type": "component",
@@ -14,28 +14,14 @@
     },
     "extra": {
         "component": {
-            "name": "bootswatch",
+            "name": "metabootstrap",
             "files": [
                 "README.md",
                 "LICENSE",
-                "amelia/*",
-                "cerulean/*",
-                "cosmo/*",
-                "cyborg/*",
-                "darkly/*",
-                "flatly/*",
-                "fonts/*",
-                "journal/*",
-                "lumen/*",
-                "paper/*",
-                "readable/*",
-                "sandstone/*",
-                "simplex/*",
-                "slate/*",
-                "spacelab/*",
-                "superhero/*",
-                "united/*",
-                "yeti/*"
+                "css/*",
+                "js/*",
+                "meta/*",
+                "themes/*",
             ]
         }
     }
