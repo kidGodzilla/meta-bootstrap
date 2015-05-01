@@ -314,7 +314,7 @@
     document.write("<link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>");
 
     // Bootswatch-style code preview
-    document.write('<div id="source-modal" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">Source Code</h4></div><div class="modal-body"><pre></pre></div></div></div></div>');
+    document.write('<div id="source-modal" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">Layout Source Code</h4></div><div class="modal-body"><pre></pre></div></div></div></div>');
     loadStylesheet(pathToRoot + 'meta/view-source.css');
     loadScript(pathToRoot + 'js/view-source.js');
 
