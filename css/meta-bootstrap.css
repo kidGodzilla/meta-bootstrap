@@ -2163,7 +2163,7 @@ section {
   min-width: 100%;
 }
 .bg-cover {
-  background: url(/meta/streaks.jpg) no-repeat center center fixed;
+  background: url(http://kidgodzilla.github.io/meta-bootstrap/meta/streaks.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
