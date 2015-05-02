@@ -67,6 +67,9 @@
 .bg-white {
   background: #fff;
 }
+.bg-black {
+  background: #000;
+}
 .text-turquoise {
   color: #1abc9c;
 }
@@ -132,4 +135,7 @@
 }
 .text-white {
   color: #fff;
+}
+.text-black {
+  color: #000;
 }

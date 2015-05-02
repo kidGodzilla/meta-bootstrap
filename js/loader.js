@@ -297,6 +297,18 @@
 
 
     /**
+     * Bitstrap
+     * A blue-grey corporate feel
+     *
+     * See: https://github.com/kidgodzilla
+     */
+    if (theme === "bitstrap") {
+      loadStylesheet(protocol + "www.bittitan.com/internal-bootstrap/bt_internal/bootstrap.css");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+    }
+
+
+    /**
      * Material Design for Bootstrap
      * Google's Material Design Framework
      *
@@ -338,6 +350,9 @@
     document.write('<div id="source-modal" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">Layout Source Code</h4></div><div class="modal-body"><pre></pre></div></div></div></div>');
     loadStylesheet(pathToRoot + 'meta/view-source.css');
     loadScript(pathToRoot + 'js/view-source.js');
+
+    // Generate Code Button
+    document.write('<button class="btn btn-primary" data-toggle="modal" data-target="#source-modal" style="position:fixed;z-index:9999;right: 50px;bottom:50px" onclick="window.generateMetaBootstrapCode()">Get Started with this Theme</button>');
 
     // Once completed, set an identifier to true to avoid running the script loader twice
     window[loaderName] = true;

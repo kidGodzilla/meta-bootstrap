@@ -2244,6 +2244,10 @@ header h1 {
 .navbar-clear .navbar-right a:last-of-type {
   padding-right: 0;
 }
+.navbar-clear.navbar {
+  background: transparent !important;
+  background-color: transparent !important;
+}
 .navbar-shrink {
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
@@ -2509,6 +2513,9 @@ ul.caret-bullets.cb-white li:before {
 .bg-white {
   background: #fff;
 }
+.bg-black {
+  background: #000;
+}
 .text-turquoise {
   color: #1abc9c;
 }
@@ -2574,6 +2581,9 @@ ul.caret-bullets.cb-white li:before {
 }
 .text-white {
   color: #fff;
+}
+.text-black {
+  color: #000;
 }
 /*
  * META BOOTSTRAP v0.0.1
