@@ -19,10 +19,6 @@
         The easiest way of creating new websites based on Twitter Bootstrap!
       </p>
       <h2 class="text-inverse dark-text-glow">Getting Started Guide</h2>
-      <!--<p class="mtl">-->
-        <!--<button class="btn btn-default">LEARN MORE</button>-->
-        <!--<button class="btn btn-primary">CLICK HERE</button>-->
-      <!--</p>-->
     </div>
   </div>
 
@@ -42,10 +38,16 @@
       <div class="col-md-4 col-md-offset-1 bg-alizarin mtxl ptl pbx phl">
         <h4 class="strong text-white">Looking for a Quickstart?</h4>
         <p style="line-height: 2em;">
-          Just paste<div class="mvl"><span class="text-midnightblue bg-clouds pvs" style="line-height: 2em">&lt;script src="//www.metabootstrap.com/mbs.js">&lt;/script></span></div>on your page before the closing <span class="text-midnightblue bg-clouds pas">&lt;/head></span> tag.
+          Just paste
+        </p>
+
+        <pre class="quickstart-code"></pre>
+
+        <p>
+          on your page before the closing <span class="text-midnightblue bg-clouds pas">&lt;/head></span> tag.
         </p>
         <br>
-        <p>This will load Vanilla Bootstrap & MetaBootstrap.</p>
+        <p>This will load your current Bootstrap theme, jQuery, Font-Awesome, & MetaBootstrap.</p>
       </div>
     </div>
     <h2 class="text-orange ptxl pbl">How to Use this Guide</h2>
@@ -64,15 +66,15 @@
     </p>
     <h2 class="text-orange ptxl pbl">Using the MetaBootstrap CDN</h2>
     <p>
-      To use MetaBootstrap via the CDN, simply include this line of code before your <span class="text-midnightblue bg-clouds pas">&lt;/head></span> tag.
+      To use MetaBootstrap via the CDN, simply include this code before your <span class="text-midnightblue bg-clouds pas">&lt;/head></span> tag.
     </p>
     <br>
 
-    <pre class="text-midnightblue">&lt;script src="//www.metabootstrap.com/mbs.js">&lt;/script></pre>
+    <pre class="quickstart-code text-midnightblue"></pre>
 
     <br>
     <p>
-      Examples and options are available when previewing Bootstrap themes included in the MetaBootstrap project.
+      Examples and options are available at any time when previewing Bootstrap themes included in the MetaBootstrap project. Just click the <span class="text-midnightblue bg-clouds pas">GET STARTED WITH THIS THEME</span> button in the lower-right corner.
     </p>
 
     <h2 class="text-orange ptxl pbl">Rolling your Own MetaBootstrap stack</h2>
@@ -118,5 +120,10 @@
     </div>
   </div>
 </footer>
+<script>
+  $(document).ready(function () {
+    $('.quickstart-code').text(window.metabootstrapCode());
+  });
+</script>
 </body>
 </html>

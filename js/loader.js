@@ -351,6 +351,9 @@
     loadStylesheet(pathToRoot + 'meta/view-source.css');
     loadScript(pathToRoot + 'js/view-source.js');
 
+    // Generate Code Button
+    document.write('<button class="btn btn-primary" data-toggle="modal" data-target="#source-modal" style="position:fixed;z-index:9999;right: 50px;bottom:50px" onclick="window.generateMetaBootstrapCode()">Get Started with this Theme</button>');
+
     // Once completed, set an identifier to true to avoid running the script loader twice
     window[loaderName] = true;
   }

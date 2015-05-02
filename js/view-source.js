@@ -15,6 +15,17 @@ function cleanSource (html) {
   return lines.join("\n");
 }
 
+window.metabootstrapCode = function () {
+  var btc = localStorage.getItem("theme") ? "<script>window.bootstrapTheme=\""+localStorage.getItem("theme")+"\";</script>\n" : "";
+  return btc + "<script src=\"//www.metabootstrap.com/mbs.js\"></script>";
+};
+
+window.generateMetaBootstrapCode = function () {
+
+  $("#source-modal .modal-title").html("Paste this code into your header to get started");
+  return $("#source-modal pre").text(window.metabootstrapCode());
+};
+
 $(document).ready(function () {
 
   $("a[href='#']").click(function(e) {
@@ -29,6 +40,7 @@ $(document).ready(function () {
     html.find('.source-button').remove();
     html = html.outerHTML();
     html = cleanSource(html);
+    $("#source-modal .modal-title").text("Layout Source Code");
     $("#source-modal pre").text(html);
   });
 
