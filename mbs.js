@@ -70,7 +70,7 @@
     head.appendChild(link);
   }
 
-  var theme = window.bootstrapTheme || localStorage.getItem('theme');
+  var theme = window.bootstrapTheme || localStorage.getItem('theme') || "vanilla";
 
   /**
    * User-extendable dependency loader
