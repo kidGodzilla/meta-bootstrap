@@ -53,6 +53,9 @@ h3 {
 .subdued {
   opacity: 0.5;
 }
+img.subdued:hover {
+  opacity: 0.85;
+}
 .small-light-text {
   font-size: 13px;
   font-weight: 500;
@@ -128,6 +131,15 @@ h3 {
 }
 .white-text-glow {
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.line-height-1-5-em {
+  line-height: 1.5em;
+}
+.line-height-1-75-em {
+  line-height: 1.75em;
+}
+.line-height-2-em {
+  line-height: 2em;
 }
 /*
  * META BOOTSTRAP v0.0.1
@@ -2151,6 +2163,10 @@ ul.ul-inline li {
 }
 section {
   padding: 8rem 0;
+}
+.height-45-px {
+  max-width: 100%;
+  max-height: 45px;
 }
 .navbar {
   -webkit-box-shadow: none;
