@@ -21,8 +21,8 @@ $(document).ready(function () {
     e.preventDefault();
   });
 
-  $('.bs-component [data-toggle="popover"]').popover();
-  $('.bs-component [data-toggle="tooltip"]').tooltip();
+  //$('.bs-component [data-toggle="popover"]').popover();
+  //$('.bs-component [data-toggle="tooltip"]').tooltip();
 
   var $button = $("<div class='source-button btn btn-primary btn-xs' data-toggle='modal' data-target='#source-modal'><i class='fa fa-code'></i></div>").click(function () {
     var html = $(this).parent().clone();
