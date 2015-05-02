@@ -297,6 +297,27 @@
 
 
     /**
+     * Material Design for Bootstrap
+     * Google's Material Design Framework
+     *
+     * See: https://fezvrasta.github.io/bootstrap-material-design
+     */
+    if (theme === "material") {
+      loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
+      loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.min.css");
+      loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css");
+      loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css");
+      loadStylesheet(protocol + "cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js");
+      loadScript(protocol + "cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.js");
+      document.write("<script>$.material.init();$('.material-dropdown select').dropdown();</script>");
+    }
+
+
+    /**
      * Local Development
      */
     loadStylesheet(pathToRoot + 'css/meta-bootstrap.css');
