@@ -297,6 +297,18 @@
 
 
     /**
+     * Bitstrap
+     * A blue-grey corporate feel
+     *
+     * See: https://github.com/kidgodzilla
+     */
+    if (theme === "bitstrap") {
+      loadStylesheet(protocol + "www.bittitan.com/internal-bootstrap/bt_internal/bootstrap.css");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+    }
+
+
+    /**
      * Material Design for Bootstrap
      * Google's Material Design Framework
      *
