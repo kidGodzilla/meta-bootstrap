@@ -20,6 +20,10 @@
 .navbar-clear .navbar-right a:last-of-type {
   padding-right: 0;
 }
+.navbar-clear.navbar {
+  background: transparent !important;
+  background-color: transparent !important;
+}
 .navbar-shrink {
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
