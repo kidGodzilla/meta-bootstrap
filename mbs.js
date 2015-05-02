@@ -301,22 +301,12 @@
      */
     loadStylesheet(protocol + 'www.metabootstrap.com/css/meta-bootstrap.css');
 
-    // Application Styles
+    // Application Styles (don't worry, this is temporary)
     loadStylesheet(protocol + "www.metabootstrap.com/css/style.css");
 
     // Application Dependencies
-    loadScript(protocol + 'www.metabootstrap.com/js/jquery.outer-html.js');
     loadScript(protocol + 'www.metabootstrap.com/js/core.js');
     loadScript(protocol + 'www.metabootstrap.com/js/includes.js');
-    loadScript(protocol + 'www.metabootstrap.com/js/fix-urls.js');
-
-    // MetaBootstrap Logo
-    document.write("<link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>");
-
-    // Bootswatch-style code preview
-    document.write('<div id="source-modal" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">Layout Source Code</h4></div><div class="modal-body"><pre></pre></div></div></div></div>');
-    loadStylesheet(protocol + 'www.metabootstrap.com/meta/view-source.css');
-    loadScript(protocol + 'www.metabootstrap.com/js/view-source.js');
 
     // Once completed, set an identifier to true to avoid running the script loader twice
     window[loaderName] = true;
