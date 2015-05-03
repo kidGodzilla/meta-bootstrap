@@ -2169,11 +2169,6 @@ ul.ul-inline li {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#2885d1', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
-  transition: all 0.3s ease-in-out;
-}
-.fancy-blocks .fancy-block:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
 }
 section {
   padding: 8rem 0;
