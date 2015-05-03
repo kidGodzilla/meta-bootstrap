@@ -255,6 +255,14 @@ ul.ul-inline li {
   background-color: transparent !important;
   border-color: transparent !important;
 }
+.hover-scale-5-percent {
+  transition: transform 0.3s ease-in-out;
+}
+.hover-scale-5-percent:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  z-index: 99;
+}
 /*
    SPACING
 
