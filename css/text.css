@@ -141,12 +141,27 @@ img.subdued:hover {
 .white-text-glow {
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
+.line-height-1-25 {
+  line-height: 1.25;
+}
+.line-height-1-5 {
+  line-height: 1.5;
+}
+.line-height-1-75 {
+  line-height: 1.75;
+}
+.line-height-2 {
+  line-height: 2;
+}
+.line-height-1-25-em {
+  line-height: 1.25;
+}
 .line-height-1-5-em {
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 .line-height-1-75-em {
-  line-height: 1.75em;
+  line-height: 1.75;
 }
 .line-height-2-em {
-  line-height: 2em;
+  line-height: 2;
 }
