@@ -277,7 +277,7 @@
      *
      * See: http://designmodo.github.io/Flat-UI/
      */
-    if (bootstrapTheme === "bootflat-ui") {
+    if (theme === "bootflat-ui") {
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
       loadStylesheet(protocol + "designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
