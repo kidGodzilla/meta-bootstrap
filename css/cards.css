@@ -1,0 +1,81 @@
+.card {
+  position: relative;
+  border: 4px solid #e9e9e9;
+  border-radius: 14px;
+  overflow: hidden;
+  width: 750px;
+  height: 300px;
+  background: #95a5a6;
+  color: #f6f6f6;
+  margin: 25px auto;
+  line-height: 1.75em;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  border: 4px solid #ccc;
+}
+.card.purple {
+  background: #8e44ad;
+}
+.card img {
+  height: 300px;
+}
+.card h2 {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  bottom: 75px;
+  padding: 24px 20px;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.card.card-left h2 {
+  left: 0;
+  right: 300px;
+}
+.card-content {
+  position: absolute;
+  right: 0;
+  top: 75px;
+  bottom: 0;
+  left: 300px;
+  font-weight: 500;
+  background: #bdc3c7;
+  padding: 20px;
+}
+.card-left .card-content {
+  position: absolute;
+  right: 300px;
+  top: 75px;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background: #9b59b6;
+}
+.card-content:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+}
+.card-right .card-content:after {
+  left: -13px;
+  top: -51px;
+  border-right: 14px solid #95a5a6;
+}
+.card-left .card-content:after {
+  right: -14px;
+  z-index: 9;
+  top: -51px;
+  border-left: 14px solid #8e44ad;
+}
+.card-left img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
