@@ -254,6 +254,33 @@
 .display-table-column-group {
   display: table-column-group;
 }
+.Display-none {
+  display: none !important;
+}
+.Display-inline {
+  display: inline !important;
+}
+.Display-block {
+  display: block !important;
+}
+.Display-inline-block {
+  display: inline-block !important;
+}
+.Display-inline-table {
+  display: inline-table !important;
+}
+.Display-table {
+  display: table !important;
+}
+.Display-table-cell {
+  display: table-cell !important;
+}
+.Display-table-column {
+  display: table-column !important;
+}
+.Display-table-column-group {
+  display: table-column-group !important;
+}
 .float-left {
   float: left;
   display: inline;
