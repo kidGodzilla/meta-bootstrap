@@ -8,7 +8,7 @@
    * Sets the protocol for loading scripts, when the option is available (useful for local development)
    * Options: "http://", "https://", "file://", and "//"
    */
-  var protocol = "//";
+  var protocol = window.location.protocol === "https:" ? "https://" : "http://";
 
   window.pathToRoot = window.pathToRoot || "";
 
