@@ -326,6 +326,14 @@ img.subdued:hover {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
+.Br-0-top {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.Br-0-bottom {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
 .border {
   border-style: solid;
 }
