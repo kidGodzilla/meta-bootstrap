@@ -5,12 +5,6 @@
 body {
   overflow-x: hidden;
 }
-.margin-15-px {
-  margin: 15px;
-}
-.display-inline-block {
-  display: inline-block;
-}
 .pull-up-21-px {
   position: relative;
   top: -21px;
@@ -46,6 +40,10 @@ ul.ul-inline li {
 }
 .margin-0-auto {
   margin: 0 auto;
+}
+.centered {
+  margin-left: auto;
+  margin-right: auto;
 }
 .blue-gradient-background {
   background: #2989d8;
@@ -105,4 +103,7 @@ ul.ul-inline li {
   background: transparent !important;
   background-color: transparent !important;
   border-color: transparent !important;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
