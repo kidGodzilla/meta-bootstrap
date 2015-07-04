@@ -634,6 +634,48 @@ img {
 .width-100 {
   width: 100%;
 }
+.height-1 {
+  height: 1rem;
+}
+.height-2 {
+  height: 2rem;
+}
+.height-3 {
+  height: 4rem;
+}
+.height-4 {
+  height: 8rem;
+}
+.height-5 {
+  height: 16rem;
+}
+.height-10 {
+  height: 10%;
+}
+.height-20 {
+  height: 20%;
+}
+.height-25 {
+  height: 25%;
+}
+.height-40 {
+  height: 40%;
+}
+.height-50 {
+  height: 50%;
+}
+.height-60 {
+  height: 60%;
+}
+.height-75 {
+  height: 75%;
+}
+.height-80 {
+  height: 80%;
+}
+.height-100 {
+  height: 100%;
+}
 /* Width String Properties */
 .width-border-box {
   width: border-box;
