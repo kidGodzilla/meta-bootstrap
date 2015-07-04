@@ -172,6 +172,14 @@
 .br-100 {
   border-radius: 100%;
 }
+.br-0-top {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.br-0-bottom {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
 .border {
   border-style: solid;
 }
