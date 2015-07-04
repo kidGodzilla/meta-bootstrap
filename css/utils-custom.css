@@ -23,7 +23,7 @@ ul.ul-inline li {
 }
 .pull-down {
   display: table-cell;
-  vertical-align: bottom;
+  verticclal-align: bottom;
 }
 .pull-middle {
   display: table-cell;
