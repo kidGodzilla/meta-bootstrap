@@ -56,9 +56,6 @@ h3 {
   font-weight: 500;
   text-transform: uppercase;
 }
-.strong {
-  font-weight: 700;
-}
 .subdued {
   opacity: 0.5;
 }
@@ -207,6 +204,42 @@ img.subdued:hover {
 }
 .black {
   font-weight: 900;
+}
+.Bolder {
+  font-weight: bolder !important;
+}
+.Lighter {
+  font-weight: lighter !important;
+}
+.Hairline {
+  font-weight: 100 !important;
+}
+.Extra-light {
+  font-weight: 200 !important;
+}
+.Light {
+  font-weight: 300 !important;
+}
+.Normal {
+  font-weight: 400 !important;
+}
+.Medium {
+  font-weight: 500 !important;
+}
+.Semi-bold {
+  font-weight: 600 !important;
+}
+.Bold {
+  font-weight: 700 !important;
+}
+.Strong {
+  font-weight: 700 !important;
+}
+.Extra-bold {
+  font-weight: 800 !important;
+}
+.Black {
+  font-weight: 900 !important;
 }
 .text-decoration-none {
   text-decoration: none;
@@ -706,12 +739,6 @@ img {
 body {
   overflow-x: hidden;
 }
-.margin-15-px {
-  margin: 15px;
-}
-.display-inline-block {
-  display: inline-block;
-}
 .pull-up-21-px {
   position: relative;
   top: -21px;
@@ -747,6 +774,10 @@ ul.ul-inline li {
 }
 .margin-0-auto {
   margin: 0 auto;
+}
+.centered {
+  margin-left: auto;
+  margin-right: auto;
 }
 .blue-gradient-background {
   background: #2989d8;
