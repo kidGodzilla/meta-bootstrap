@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn Something</title>
+
+    <script>window.bootstrapTheme="yeti";</script>
+    <script src="http://www.metabootstrap.com/mbs.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+    <style>
+        /* Base */
+        a:hover {
+            text-decoration: none;
+        }
+        a.text-white:hover {
+            color: #e0e0e0;
+        }
+        a:hover .text-turquoise {
+            color: #00526e;
+        }
+
+        /* Layout */
+        .navbar {
+            border-top: 4px solid #37b34a;
+        }
+        .navbar-brand {
+            left: calc(50% - 90px);
+            margin-top: 4px;
+        }
+        .metabootstrap-logo {
+            color: #37b34a;
+        }
+        .shadow-card {
+            border:1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Modules */
+        .navbar form {
+            margin-top: 5px;
+        }
+        .navbar form input {
+            background-color: #ccc;
+            border-radius: 3px;
+            color: #222;
+            font-weight: 500;
+        }
+        .navbar form button {
+            background: transparent;
+            position: relative;
+            left: -38px;
+        }
+
+        .left-links a span {
+            width: 18px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* Elements */
+        footer {
+            font-size: 0.85em;
+        }
+
+        /* Modifiers */
+        .decoration-bottom {
+            border-bottom: 6px solid rgba(255,255,255,0.5);
+        }
+        .featured-one {
+            background: #e5e5e5;
+            margin-left: 15px;
+            margin-right:-15px;
+            height: 241.5px;
+            overflow: hidden;
+        }
+        .mtm-90 {
+            margin-top: -90px;
+        }
+    </style>
+</head>
+<body class="bg-clouds">
+<nav class="navbar thin-navbar bg-white bs-layout pvs mbn">
+    <div class="container-fluid pln">
+        <div class="navbar-header postition-relative">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand position-absolute" href="#">
+                <span class="metabootstrap-logo"><i class="fa fa-file-code-o"></i> &nbsp;MetaBootstrap</span>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse pln">
+            <ul class="nav navbar-nav pls">
+                <li><a href="#"><i class="fa fa-bars"></i> Browse Courses</a></li>
+                <form class="navbar-form navbar-left" role="search" _lpchecked="1">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-sm"><i class="fa fa-search"></i></button>
+                </form>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Become an Instructor</a></li>
+                    <li><a href="#">My Courses</a></li>
+                    <li><a href="#"><i class="fa fa-bell"></i><span class="badge">3</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i> <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="bg-turquoise ptl pbm">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-white light">
+                    <a class="text-white" href="#"><i class="fa fa-home"></i></a> / <a class="text-white" href="#">Development</a> / Web Development
+                </p>
+                <h2 class="Medium text-white">Web Development</h2>
+                <div class="pts"></div>
+                <a class="text-white mrl pbs decoration-bottom" href="#">Featured</a>
+                <a class="text-white subdued" href="#">All Courses</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 ptx mtl left-links">
+            <small class=""><strong>Related Topics</strong></small>
+            <div class="mts"></div>
+
+            <a class="text-turquoise" href="#">
+                <h4 class="mvn">
+                    <span><i class="fa fa-mobile"></i></span>
+                    <small class="text-turquoise"> &nbsp;Mobile Apps</small>
+                </h4>
+            </a>
+
+            <a class="text-turquoise" href="#">
+                <h4 class="mvn">
+                    <span><i class="fa fa-code"></i></span>
+                    <small class="text-turquoise"> &nbsp;Programming Languages</small>
+                </h4>
+            </a>
+
+            <a class="text-turquoise" href="#">
+                <h4 class="mvn">
+                    <span><i class="fa fa-pencil-square-o"></i></span>
+                    <small class="text-turquoise"> &nbsp;Design Tools</small>
+                </h4>
+            </a>
+
+            <a class="text-turquoise" href="#">
+                <h4 class="mvn">
+                    <span><i class="fa fa-server"></i></span>
+                    <small class="text-turquoise"> &nbsp;Security</small>
+                </h4>
+            </a>
+
+            <a class="text-turquoise" href="#">
+                <h4 class="mvn">
+                    <span><i class="fa fa-play-circle-o"></i></span>
+                    <small class="text-turquoise"> &nbsp;Media</small>
+                </h4>
+            </a>
+
+        </div>
+        <div class="col-sm-9 pvx">
+            <h4 class="Medium text-turquoise mln">Featured</h4>
+            <div class="row">
+                <div class="col-sm-6 pan featured-one">
+                    <img class="mtm-90" src="http://us.123rf.com/450wm/burntime555/burntime5551502/burntime555150200094/36657990-map-of-the-world-flat-web-icon-sign-or-button-isolated-on-grey-background-collection-modern-trend-co.jpg" alt="">
+                </div>
+                <div class="col-sm-6 bg-white ptm pbm">
+                    <span class="label label-info">Top Student Pick</span>
+                    <h5 class="bold">
+                        The Complete Web Developer Course
+                    </h5>
+                    <p class="light">
+                        <small>Rob Percival, Web Developer and Teacher</small>
+                    </p>
+                    <p class="light">
+                        <small>238 Lectures, 28 Hours of Video</small>
+                    </p>
+                    <p class="light">
+                        <small>114,053 Students</small>
+                    </p>
+                    <p class="text-alizarin">
+                        <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                    </p>
+                    <p class="text-turquoise">
+                        $199.99
+                    </p>
+                </div>
+            </div>
+            <h4 class="Medium text-turquoise ptx pln">Become a Web Developer</h4>
+            <div class="row">
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/11475_9dac_12.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">Become a Certified Web Developer</h5>
+                            <p>
+                                <small>Learn to Program, Inc.</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(310)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $199.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/30240_8bff_16.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">The Ultimate Web Developer Course</h5>
+                            <p>
+                                <small>Richard Stibbard</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(77)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $199.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/80940_2664_8.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">
+                                Build Websites from Scratch with HTML</h5>
+                            <p>
+                                <small>Brad Hussey</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(324)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $149.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/28295_6948_6.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">
+                                Learn Web Designing &amp; HTML5 Essentials
+                            </h5>
+                            <p>
+                                <small>Brad Hussey</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(219)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $79.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <h4 class="Medium text-turquoise ptx pln">Become a Web Person</h4>
+            <div class="row">
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/11475_9dac_12.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">Become a Certified Web Developer</h5>
+                            <p>
+                                <small>Learn to Program, Inc.</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(310)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $199.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/30240_8bff_16.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">The Ultimate Web Developer Course</h5>
+                            <p>
+                                <small>Richard Stibbard</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(77)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $199.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/80940_2664_8.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">
+                                Build Websites from Scratch with HTML</h5>
+                            <p>
+                                <small>Brad Hussey</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(324)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $149.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/28295_6948_6.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">
+                                Learn Web Designing &amp; HTML5 Essentials
+                            </h5>
+                            <p>
+                                <small>Brad Hussey</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(219)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $79.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <h4 class="Medium text-turquoise ptx pln">Become a Something Else</h4>
+            <div class="row">
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/11475_9dac_12.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">Become a Certified Web Developer</h5>
+                            <p>
+                                <small>Learn to Program, Inc.</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(310)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $199.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/30240_8bff_16.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">The Ultimate Web Developer Course</h5>
+                            <p>
+                                <small>Richard Stibbard</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(77)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $199.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/80940_2664_8.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">
+                                Build Websites from Scratch with HTML</h5>
+                            <p>
+                                <small>Brad Hussey</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(324)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $149.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/28295_6948_6.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">
+                                Learn Web Designing &amp; HTML5 Essentials
+                            </h5>
+                            <p>
+                                <small>Brad Hussey</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(219)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $79.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <h4 class="Medium text-turquoise ptx pln">Become a Something Developer</h4>
+            <div class="row">
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/11475_9dac_12.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">Become a Certified Web Developer</h5>
+                            <p>
+                                <small>Learn to Program, Inc.</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(310)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $199.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/30240_8bff_16.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">The Ultimate Web Developer Course</h5>
+                            <p>
+                                <small>Richard Stibbard</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(77)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $199.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/80940_2664_8.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">
+                                Build Websites from Scratch with HTML</h5>
+                            <p>
+                                <small>Brad Hussey</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(324)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $149.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/28295_6948_6.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">
+                                Learn Web Designing &amp; HTML5 Essentials
+                            </h5>
+                            <p>
+                                <small>Brad Hussey</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(219)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $79.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <h4 class="Medium text-turquoise ptx pln">Become a Nice Developer</h4>
+            <div class="row">
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/11475_9dac_12.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">Become a Certified Web Developer</h5>
+                            <p>
+                                <small>Learn to Program, Inc.</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(310)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $199.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/30240_8bff_16.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">The Ultimate Web Developer Course</h5>
+                            <p>
+                                <small>Richard Stibbard</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(77)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $199.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/80940_2664_8.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">
+                                Build Websites from Scratch with HTML</h5>
+                            <p>
+                                <small>Brad Hussey</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(324)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $149.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 prn">
+                    <div class="bg-white shadow-card phn">
+                        <img class="" src="https://dujk9xa5fr1wz.cloudfront.net/course/480x270/28295_6948_6.jpg" alt="">
+                        <div class="phl">
+                            <h5 class="Medium">
+                                Learn Web Designing &amp; HTML5 Essentials
+                            </h5>
+                            <p>
+                                <small>Brad Hussey</small>
+                            </p>
+                            <p class="text-alizarin">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="text-concrete">(219)</span>
+                            </p>
+                            <p class="text-turquoise">
+                                $79.99
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-midnightblue pvl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="#" class="text-white phm">About Us</a>
+                <a href="#" class="text-white phm">Business</a>
+                <a href="#" class="text-white phm">Nonprofits</a>
+                <a href="#" class="text-white phm">Become an Instructor</a>
+                <a href="#" class="text-white phm">Affiliates</a>
+                <a href="#" class="text-white phm">Blog</a>
+                <a href="#" class="text-white phm">Topics</a>
+                <a href="#" class="text-white phm">Mobile Apps</a>
+                <a href="#" class="text-white phm">Support</a>
+                <a href="#" class="text-white phm">Careers</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 ptm">
+                <a href="#" class="text-white subdued phm"><i class="fa fa-globe"></i> &nbsp;English (US)</a>
+                <a href="#" class="text-white subdued phm">Not &copy; 2015 MetaBootstrap</a>
+                <a href="#" class="text-white subdued phm">Terms of Use</a>
+                <a href="#" class="text-white subdued phm">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
