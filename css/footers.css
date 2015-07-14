@@ -2,15 +2,6 @@
  * META BOOTSTRAP v0.0.1
  * James Futhey, 2015
  */
-.pln-i {
-  padding-left: 0 !important;
-}
-.prn-i {
-  padding-right: 0 !important;
-}
-.mw-75-percent {
-  max-width: 75%;
-}
 .footer-links li:first-of-type a {
   padding-left: 0;
 }
