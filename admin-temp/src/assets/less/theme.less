@@ -1,0 +1,79 @@
+@bgColor:#428bca;
+@fgColor:#ffffff;
+@bgImage:'arches';
+@bgImageRoute : '../img/pattern';
+
+body.boxed {
+    background: url("@{bgImageRoute}/@{bgImage}.png") repeat;
+}
+
+#top > .navbar {
+  border-top: 3px solid @bgColor;
+  .dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus {
+    background-color: @bgColor;
+    color: @fgColor;
+  }
+}
+#menu {
+  background-color: @bgColor !important;
+  > li > a {
+    color: @fgColor;
+    text-shadow: none !important;
+  }
+}
+.sidebar-left-mini #menu > li > a > .link-title {
+  background-color:darken(@bgColor,4%) !important;
+}
+
+.yeti {
+  .navbar-nav,
+  .navbar-brand {
+    margin-top: 3px;
+  }
+  .navbar-brand img {
+    height: 32px;
+    padding: 5px;
+    position: relative;
+    top: 7px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+.flatly {
+  .navbar-brand img {
+    height: 32px;
+    padding: 5px;
+    position: relative;
+    top: 14px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .navbar .topnav {
+    position: relative;
+    top: 4px;
+  }
+}
+
+#left {
+  font-size: 12px;
+  line-height: 1.5em;
+  font-weight: lighter;
+}
+#menu > li > a {
+  padding: 13px 0 12px 15px;
+}
+#menu .fa.arrow:before {
+  content: "\f105";
+}
+.btn-nav-clear {
+  color: #fff;
+  opacity: 0.9;
+}
+.btn-nav-clear:hover {
+  color: #fff !important;
+  opacity: 1;
+}
+.modal-dialog {
+  z-index: 1041;
+}

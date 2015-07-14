@@ -1,0 +1,74 @@
+/**
+* MetaBootstrap - Bootstrap-Admin-Template v2.3.2
+* Author : James Futhey
+* Copyright 2015
+* Licensed under MIT (https://github.com/James Futhey/Bootstrap-Admin-Template/blob/master/LICENSE.md)
+*/
+
+body.boxed {
+  background: url("../img/pattern/arches.png") repeat;
+}
+#top > .navbar {
+  border-top: 3px solid #428bca;
+}
+#top > .navbar .dropdown-menu > li > a:hover,
+#top > .navbar .dropdown-menu > li > a:focus {
+  background-color: #428bca;
+  color: #ffffff;
+}
+#menu {
+  background-color: #428bca !important;
+}
+#menu > li > a {
+  color: #ffffff;
+  text-shadow: none !important;
+}
+.sidebar-left-mini #menu > li > a > .link-title {
+  background-color: #3681c1 !important;
+}
+.yeti .navbar-nav,
+.yeti .navbar-brand {
+  margin-top: 3px;
+}
+.yeti .navbar-brand img {
+  height: 32px;
+  padding: 5px;
+  position: relative;
+  top: 7px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.flatly .navbar-brand img {
+  height: 32px;
+  padding: 5px;
+  position: relative;
+  top: 14px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.flatly .navbar .topnav {
+  position: relative;
+  top: 4px;
+}
+#left {
+  font-size: 12px;
+  line-height: 1.5em;
+  font-weight: lighter;
+}
+#menu > li > a {
+  padding: 13px 0 12px 15px;
+}
+#menu .fa.arrow:before {
+  content: "\f105";
+}
+.btn-nav-clear {
+  color: #fff;
+  opacity: 0.9;
+}
+.btn-nav-clear:hover {
+  color: #fff !important;
+  opacity: 1;
+}
+.modal-dialog {
+  z-index: 1041;
+}
