@@ -96,10 +96,10 @@ module.exports = function (grunt) {
     grunt.task.run(['less:dist']);
   });
 
-  //grunt.registerMultiTask('swatch', 'build a theme', function() {
-  //  var t = this.target;
-  //  grunt.task.run('build:'+t);
-  //});
+  grunt.registerMultiTask('swatch', 'build a theme', function() {
+    var t = this.target;
+    grunt.task.run('build:'+t);
+  });
 
   grunt.event.on('watch', function(action, filepath) {
     var path = require('path');

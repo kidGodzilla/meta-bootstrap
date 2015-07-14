@@ -8,7 +8,7 @@
    * Sets the protocol for loading scripts, when the option is available (useful for local development)
    * Options: "http://", "https://", "file://", and "//"
    */
-  var protocol = window.location.protocol === "https:" ? "https://" : "http://";
+  var protocol = "//";
 
   window.pathToRoot = window.pathToRoot || "";
 
@@ -272,19 +272,6 @@
 
 
     /**
-     * Bootstrap FlatUI
-     * Another well-developed flat theme
-     *
-     * See: http://designmodo.github.io/Flat-UI/
-     */
-    if (bootstrapTheme === "bootflat-ui") {
-      loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
-      loadStylesheet(protocol + "designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css");
-      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
-    }
-
-
-    /**
      * 100% Organic Bootstrap
      * A theme for all-natural, organic webpages
      *
@@ -314,12 +301,22 @@
      */
     loadStylesheet(protocol + 'www.metabootstrap.com/css/meta-bootstrap.css');
 
-    // Application Styles (don't worry, this is temporary)
+    // Application Styles
     loadStylesheet(protocol + "www.metabootstrap.com/css/style.css");
 
     // Application Dependencies
+    loadScript(protocol + 'www.metabootstrap.com/js/jquery.outer-html.js');
     loadScript(protocol + 'www.metabootstrap.com/js/core.js');
     loadScript(protocol + 'www.metabootstrap.com/js/includes.js');
+    loadScript(protocol + 'www.metabootstrap.com/js/fix-urls.js');
+
+    // MetaBootstrap Logo
+    document.write("<link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>");
+
+    // Bootswatch-style code preview
+    document.write('<div id="source-modal" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">Layout Source Code</h4></div><div class="modal-body"><pre></pre></div></div></div></div>');
+    loadStylesheet(protocol + 'www.metabootstrap.com/meta/view-source.css');
+    loadScript(protocol + 'www.metabootstrap.com/js/view-source.js');
 
     // Once completed, set an identifier to true to avoid running the script loader twice
     window[loaderName] = true;
