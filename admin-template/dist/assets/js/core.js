@@ -6,7 +6,7 @@
       isTouchDevice = Modernizr ? Modernizr.touch : !!('ontouchstart' in window || 'onmsgesturechange' in window),
       // Are we expecting a touch or a click?
       buttonPressedEvent = (isTouchDevice) ? 'touchstart' : 'click',
-      MetaBootstrap = function() {
+      Metis = function() {
           this.init();
       };
 
@@ -40,8 +40,8 @@
             return client;
     };
 
-    // Creates a MetaBootstrap object.
-    window.MetaBootstrap = new Metis();
+    // Creates a Metis object.
+    window.Metis = new Metis();
 })(this);
 ;(function($) {
     "use strict";
@@ -160,7 +160,7 @@
     });
   };
   return Metis;
-})(jQuery, MetaBootstrap || {});
+})(jQuery, Metis || {});
 
 ;(function($, Metis) {
     var $body = $('body'),
@@ -214,7 +214,7 @@
       }
     };
     return Metis;
-})(jQuery, MetaBootstrap || {});
+})(jQuery, Metis || {});
 ;(function($) {
    $(document).ready(function() {
     

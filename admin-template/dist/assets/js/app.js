@@ -11,7 +11,7 @@
         });
     };
     return Metis;
-})(jQuery, MetaBootstrap || {});
+})(jQuery, Metis || {});
 ;(function($, Metis) {
   "use strict";
   
@@ -139,7 +139,7 @@
       ]);
     }
   return Metis;
-})(jQuery, MetaBootstrap || {});
+})(jQuery, Metis || {});
 ;(function($){
   "use strict";
   Metis.dashboard = function() {
@@ -732,7 +732,7 @@
 };
   
   return Metis;
-})(jQuery, MetaBootstrap || {});
+})(jQuery, Metis || {});
 ;(function($){
   "use strict";
   Metis.formWysiwyg = function() {
@@ -1025,7 +1025,7 @@ return Metis;
     }).disableSelection();
   };
   return Metis;
-})(jQuery, MetaBootstrap || {});
+})(jQuery, Metis || {});
 
 ;(function($){
   "use strict";
@@ -1098,7 +1098,7 @@ return Metis;
         });
     };
     return Metis;
-})(jQuery, MetaBootstrap || {});
+})(jQuery, Metis || {});
 ;(function($, Metis){
   Metis.MetisProgress = function() {
     var $bar = $('.progress .progress-bar');

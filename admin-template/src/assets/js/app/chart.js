@@ -125,4 +125,4 @@
       ]);
     }
   return Metis;
-})(jQuery, MetaBootstrap || {});
+})(jQuery, Metis || {});
