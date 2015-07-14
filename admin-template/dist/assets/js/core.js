@@ -1,3 +1,10 @@
+/**
+* MetaBootstrap - Bootstrap-Admin-Template v0.0.2
+* Author : kidgodzilla 
+* Copyright 2015
+* Licensed under MIT (https://github.com/kidgodzilla/Bootstrap-Admin-Template/blob/master/LICENSE.md)
+*/
+
 ;(function(window) {
     var
       // Is Modernizr defined on the global scope

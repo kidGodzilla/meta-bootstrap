@@ -191,7 +191,7 @@
 	height:96px;
 	float:left;
 	margin-right:1em;
-	background:url('http://metabootstrap.com/meta/metabootstrap-logo.png') center center no-repeat;
+	background:url('../img/logo.png') center center no-repeat;
 }
 
 .elfinder-help h3 { font-size:1.5em; margin:.2em 0 .3em 0; }

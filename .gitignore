@@ -1,2 +1,5 @@
 /.idea
 .idea/workspace.xml
+/admin-template/node_modules
+/admin-template/bower_components
+/admin-template/.idea

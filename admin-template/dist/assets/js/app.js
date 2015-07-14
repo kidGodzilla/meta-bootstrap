@@ -1,3 +1,10 @@
+/**
+* MetaBootstrap - Bootstrap-Admin-Template v0.0.2
+* Author : kidgodzilla 
+* Copyright 2015
+* Licensed under MIT (https://github.com/kidgodzilla/Bootstrap-Admin-Template/blob/master/LICENSE.md)
+*/
+
 ;(function($, Metis) {
     var $button = $('.inner a.btn');
     Metis.metisButton = function() {
