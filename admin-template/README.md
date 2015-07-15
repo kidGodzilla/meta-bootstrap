@@ -33,7 +33,6 @@ required [node.js](http://nodejs.org/) & [bower](http://bower.io/) & [grunt](htt
  * [Colorpicker for Bootstrap](http://www.eyecon.ro/bootstrap-colorpicker/)
  * [Data Tables](http://www.datatables.net)
  * [Datepicker for Bootstrap](http://www.eyecon.ro/bootstrap-datepicker)
- * [elFinder](http://elfinder.org)
  * [Input Limiter](http://rustyjeans.com/jquery-plugins/input-limiter)
  * [Jasny Bootstrap](http://jasny.github.com/bootstrap)
  * [jQuery Validation](http://jqueryvalidation.org/)

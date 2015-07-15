@@ -1,0 +1,14 @@
+/* BEGIN PROGRESSBAR STYLES */
+.progress.xs {
+  height: 6px;
+}
+.progress.sm {
+  height: 10px;
+}
+.progress.md {
+  height: 12px;
+}
+.progress.lg {
+  height: 28px;
+}
+/* END PROGRESSBAR STYLES */

@@ -25,34 +25,17 @@ body.boxed {
 .sidebar-left-mini #menu > li > a > .link-title {
   background-color:darken(@bgColor,4%) !important;
 }
-
-.yeti {
-  .navbar-nav,
-  .navbar-brand {
-    margin-top: 3px;
-  }
-  .navbar-brand img {
-    height: 32px;
-    padding: 5px;
-    position: relative;
-    top: 7px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+/* Vanilla Bootstrap */
+.navbar {
+  border-top: 0 !important;
 }
-.flatly {
-  .navbar-brand img {
-    height: 32px;
-    padding: 5px;
-    position: relative;
-    top: 14px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .navbar .topnav {
-    position: relative;
-    top: 4px;
-  }
+.navbar-brand img {
+  height: 32px;
+  padding: 5px;
+  position: relative;
+  top: 7px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 #left {
@@ -76,4 +59,68 @@ body.boxed {
 }
 .modal-dialog {
   z-index: 1041;
+}
+
+/* Bootswatch Cosmo */
+.cosmo {
+  .navbar {
+    height: 50px;
+  }
+  .navbar-brand img {
+    top: 10px;
+  }
+}
+
+/* Bootswatch Paper */
+.paper {
+  .navbar-brand img {
+    top: 17px;
+  }
+  .navbar .btn-group {
+    top: 7px;
+  }
+}
+/* Bootswatch Sandstone */
+.sandstone {
+  .navbar-brand img {
+    top: 17px;
+  }
+  .navbar .btn-group {
+    top: 7px;
+  }
+}
+
+/* Bootswatch Darkly */
+.darkly {
+  .navbar-brand img {
+    top: 15px;
+  }
+}
+
+/* Bootswatch Yeti */
+.yeti {
+  .navbar {
+    height: 51px;
+  }
+  .navbar-nav,
+  .navbar-brand {
+    margin-top: 3px;
+  }
+  .navbar-brand img {
+  }
+}
+/* Bootswatch Flatly */
+.flatly {
+  .navbar-brand img {
+    height: 32px;
+    padding: 5px;
+    position: relative;
+    top: 14px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .navbar .topnav {
+    position: relative;
+    top: 4px;
+  }
 }
