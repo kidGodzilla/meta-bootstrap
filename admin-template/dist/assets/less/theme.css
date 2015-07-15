@@ -86,6 +86,14 @@ body.boxed {
 .yeti .navbar-brand {
   margin-top: 3px;
 }
+/* Bootswatch Superhero */
+.superhero .navbar-nav,
+.superhero .navbar-brand {
+  margin-top: 5px;
+}
+.superhero .navbar-brand img {
+  top: 5px;
+}
 /* Bootswatch Flatly */
 .flatly .navbar-brand img {
   height: 32px;
