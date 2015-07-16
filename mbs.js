@@ -318,6 +318,11 @@
     loadStylesheet(protocol + 'www.metabootstrap.com/meta/view-source.css');
     loadScript(protocol + 'www.metabootstrap.com/js/view-source.js');
 
+    // Namespace theme
+    setTimeout(function () {
+      if (document && document.body && document.body.classList) document.body.classList.add(theme);
+    }, 1000);
+
     // Once completed, set an identifier to true to avoid running the script loader twice
     window[loaderName] = true;
   }

@@ -297,6 +297,16 @@
 
 
     /**
+     * MW Bootstrap
+     * A Bootstrap Theme
+     */
+    if (theme === "mw") {
+      loadStylesheet(pathToRoot + "themes/mw/bootstrap.min.css");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+    }
+
+
+    /**
      * Bitswatch
      * A Fun, Flat, Corporate feel
      *
