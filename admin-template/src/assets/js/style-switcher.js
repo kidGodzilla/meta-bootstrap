@@ -124,14 +124,14 @@ StyleSwitcher.prototype.build = function () {
         '</div>';
     $('body').append(modalHTML);
     var switchDiv = $('<div />').attr('id', 'style-switcher').addClass('style-switcher hidden-xs');
-    var h5Ai = $('<i />').addClass('fa fa-cogs fa-2x');
+    var h5Ai = $('<i />').addClass('fa fa-cogs');
     var h5A = $('<a />').attr({
         'href': '#',
         'id': 'switcher-link'
     }).on(Metis.buttonPressedEvent, function (e) {
         e.preventDefault();
         switchDiv.toggleClass('open');
-        $(this).find('i').toggleClass('fa-spin');
+        //$(this).find('i').toggleClass('fa-spin');
     }).append(h5Ai);
     var h5 = $('<h5 />').html('Style Switcher').append(h5A);
     var colorList = $('<ul />').addClass('options').attr('data-type', 'colors');
@@ -250,7 +250,7 @@ StyleSwitcher.prototype.build = function () {
 
     var styleSwitcherWrap = $('<div />')
         .addClass('style-switcher-wrap')
-        .append($('<h6 />').html('Background Colors'), colorList, $('<hr/>'));
+        .append($('<h6 />').html('Navigation Colors'), colorList, $('<hr/>'));
 
     var fgwbtn = $('<input/>').attr({
         'type': 'radio',

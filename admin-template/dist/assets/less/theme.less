@@ -46,6 +46,14 @@ body.boxed {
 #menu > li > a {
   padding: 13px 0 12px 15px;
 }
+.sidebar-left-mini #menu>li:hover>a>.link-title {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.sidebar-left-mini #menu>li>a>i {
+  width: 20px;
+  text-align: center;
+}
 #menu .fa.arrow:before {
   content: "\f105";
 }
@@ -59,6 +67,18 @@ body.boxed {
 }
 .modal-dialog {
   z-index: 1041;
+}
+.toolbar {
+  a {
+    padding: 0 4px;
+    &:hover {
+      text-decoration: none;
+    }
+    .fa-minus {
+      position: relative;
+      top: 1px;
+    }
+  }
 }
 
 /* Bootswatch Cosmo */
@@ -82,11 +102,18 @@ body.boxed {
 }
 /* Bootswatch Sandstone */
 .sandstone {
+  .navbar-nav,
+  .navbar-brand {
+    margin-top: 5px;
+  }
   .navbar-brand img {
-    top: 17px;
+    top: 12px;
   }
   .navbar .btn-group {
     top: 7px;
+  }
+  .main-bar {
+    margin-top: 5px;
   }
 }
 
@@ -135,3 +162,8 @@ body.boxed {
     top: 4px;
   }
 }
+
+/* Theme */
+//header.head {
+//  display: none;
+//}

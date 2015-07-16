@@ -1,0 +1,17 @@
+/* BEGIN SORTABLETABLE STYLES */
+.sortableTable th {
+  cursor: pointer;
+}
+.sortableTable th:hover {
+  color: #888;
+}
+.sortableTable th.tablesorter-header .fa.sort:before {
+  content: "\f0dc";
+}
+.sortableTable th.tablesorter-header.tablesorter-headerDesc .fa.sort:before {
+  content: "\f0de";
+}
+.sortableTable th.tablesorter-header.tablesorter-headerAsc .fa.sort:before {
+  content: "\f0dd";
+}
+/* END SORTABLETABLE STYLES */
