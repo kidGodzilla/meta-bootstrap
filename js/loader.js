@@ -123,7 +123,7 @@
      * https://github.com/brobin/hacker-bootstrap
      */
     if (theme === "hax0r") {
-      $('body').addClass('hax0r');
+      //$('body').addClass('hax0r');
       loadStylesheet("http://brobin.github.io/hacker-bootstrap/css/hacker.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -136,7 +136,7 @@
      * See: https://bootswatch.com/cosmo/
      */
     if (theme === "cosmo") {
-      $('body').addClass('cosmo');
+      //$('body').addClass('cosmo');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/cosmo/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -149,7 +149,7 @@
      * See: https://bootswatch.com/darkly/
      */
     if (theme === "darkly") {
-      $('body').addClass('darkly');
+      //$('body').addClass('darkly');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/darkly/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -162,7 +162,7 @@
      * See: https://bootswatch.com/flatly/
      */
     if (theme === "flatly") {
-      $('body').addClass('flatly');
+      //$('body').addClass('flatly');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -175,7 +175,7 @@
      * See: https://bootswatch.com/lumen/
      */
     if (theme === "lumen") {
-      $('body').addClass('lumen');
+      //$('body').addClass('lumen');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/lumen/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -188,7 +188,7 @@
      * See: https://bootswatch.com/paper/
      */
     if (theme === "paper") {
-      $('body').addClass('paper');
+      //$('body').addClass('paper');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/paper/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -201,7 +201,7 @@
      * See: https://bootswatch.com/sandstone/
      */
     if (theme === "sandstone") {
-      $('body').addClass('sandstone');
+      //$('body').addClass('sandstone');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/sandstone/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -214,7 +214,7 @@
      * See: https://bootswatch.com/sandstone/
      */
     if (theme === "superhero") {
-      $('body').addClass('superhero');
+      //$('body').addClass('superhero');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/superhero/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -227,7 +227,7 @@
      * See: https://bootswatch.com/united/
      */
     if (theme === "united") {
-      $('body').addClass('united');
+      //$('body').addClass('united');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/united/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -239,7 +239,7 @@
      * See: https://bootswatch.com/yeti/
      */
     if (theme === "yeti" || !theme) {
-      $('body').addClass('yeti');
+      //$('body').addClass('yeti');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/yeti/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -251,7 +251,7 @@
      * See: https://github.com/olton/Metro-UI-CSS
      */
     if (theme === "metro-bootstrap") {
-      $('body').addClass('metro-bootstrap');
+      //$('body').addClass('metro-bootstrap');
       loadStylesheet(pathToRoot + "themes/metro/metro.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -264,7 +264,7 @@
      * See: http://code.divshot.com/geo-bootstrap/
      */
     if (theme === "geo-bootstrap") {
-      $('body').addClass('geo-bootstrap');
+      //$('body').addClass('geo-bootstrap');
       loadStylesheet(pathToRoot + "themes/geo/geo.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -277,7 +277,7 @@
      * See: https://github.com/bootflat/bootflat.github.io
      */
     if (theme === "bootflat") {
-      $('body').addClass('bootflat');
+      //$('body').addClass('bootflat');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
       loadStylesheet(pathToRoot + "themes/bootflat/bootflat.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
@@ -291,7 +291,7 @@
      * See: http://designmodo.github.io/Flat-UI/
      */
     if (theme === "bootflat-ui") {
-      $('body').addClass('bootflat-ui');
+      //$('body').addClass('bootflat-ui');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
       loadStylesheet(protocol + "designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
@@ -305,7 +305,7 @@
      * See: https://github.com/kidgodzilla
      */
     if (theme === "organic") {
-      $('body').addClass('organic');
+      //$('body').addClass('organic');
       loadStylesheet(pathToRoot + "themes/organic/organic.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -318,7 +318,7 @@
      * See: https://github.com/kidgodzilla
      */
     if (theme === "bitswatch") {
-      $('body').addClass('bitswatch');
+      //$('body').addClass('bitswatch');
       loadStylesheet(protocol + "www.bittitan.com/website-redesign/bootstrap.min.css");
       loadStylesheet(protocol + "www.bittitan.com/website-redesign/style.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
@@ -332,7 +332,7 @@
      * See: https://github.com/kidgodzilla
      */
     if (theme === "bitstrap") {
-      $('body').addClass('bitstrap');
+      //$('body').addClass('bitstrap');
       loadStylesheet(protocol + "www.bittitan.com/internal-bootstrap/bt_internal/bootstrap.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -345,7 +345,7 @@
      * See: https://fezvrasta.github.io/bootstrap-material-design
      */
     if (theme === "material") {
-      $('body').addClass('material');
+      //$('body').addClass('material');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.min.css");
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css");
