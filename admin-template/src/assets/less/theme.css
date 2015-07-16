@@ -136,3 +136,6 @@ body.boxed {
   top: 4px;
 }
 /* Theme */
+header.head {
+  display: none;
+}
