@@ -228,7 +228,10 @@
         border-radius: 4px 0px 0px 4px;
         display: inline-block;
         text-align: center;
-        box-sizing: border-box;
+        opacity: 0.9;
+      }
+      .stat-card .icon:hover {
+        opacity: 1;
       }
       .stat-card .icon.red {
         background: #ff6c60;
@@ -259,6 +262,9 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
+      #left li ul {
+        margin-left: -999px;
+      }
       .lefty {
         position: fixed;
         z-index: 99999;
@@ -272,6 +278,21 @@
         width: 250px;
         opacity: 1;
       }
+      #left:hover li ul,
+      .lefty:hover + #wrap #left li ul{
+        margin-left: 0;
+      }
+      .w-30 {
+        width: 45px;
+        text-align: center;
+      }
+      .project-list td {
+        text-align: center;
+      }
+      .project-list td:first-of-type {
+        text-align: left;
+      }
+
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -605,15 +626,15 @@
                       <thead>
                       <tr>
                         <th><script id="metamorph-1438-start" type="text/x-placeholder"></script>Project Name<script id="metamorph-1438-end" type="text/x-placeholder"></script></th>
-                        <th><i class="i-source" title="Source"></i></th>
-                        <th><i class="i-destination" title="Destination"></i></th>
-                        <th><script id="metamorph-1439-start" type="text/x-placeholder"></script>Items<script id="metamorph-1439-end" type="text/x-placeholder"></script></th>
-                        <th><i class="i-stop text-grey-md" title="Not Migrated"></i></th>
-                        <th><i class="i-user-waiting text-primary-md" title="Waiting for User"></i></th>
-                        <th><i class="i-play text-info-md" title="Migrating"></i></th>
-                        <th><i class="i-pause text-warning-md" title="Paused"></i></th>
-                        <th><i class="i-check text-success-md" title="Completed"></i></th>
-                        <th><i class="i-danger text-danger-md" title="Failed"></i></th>
+                        <th class="w-30"><i class="i-source" title="Source"></i></th>
+                        <th class="w-30"><i class="i-destination" title="Destination"></i></th>
+                        <th class="w-30"><script id="metamorph-1439-start" type="text/x-placeholder"></script>Items<script id="metamorph-1439-end" type="text/x-placeholder"></script></th>
+                        <th class="w-30"><i class="i-stop text-grey-md" title="Not Migrated"></i></th>
+                        <th class="w-30"><i class="i-user-waiting text-primary-md" title="Waiting for User"></i></th>
+                        <th class="w-30"><i class="i-play text-info-md" title="Migrating"></i></th>
+                        <th class="w-30"><i class="i-pause text-warning-md" title="Paused"></i></th>
+                        <th class="w-30"><i class="i-check text-success-md" title="Completed"></i></th>
+                        <th class="w-30"><i class="i-danger text-danger-md" title="Failed"></i></th>
                       </tr>
                       </thead>
                       <tbody>
