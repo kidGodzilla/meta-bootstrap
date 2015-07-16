@@ -330,7 +330,7 @@
 
     // Namespace theme
     setTimeout(function () {
-      if (document && document.body && document.body.classList) document.body.classList.add(theme);
+      if (document && document.body && document.body.classList) document.body.classList.add(bootstrapTheme);
     }, 1000);
 
     // Once completed, set an identifier to true to avoid running the script loader twice
