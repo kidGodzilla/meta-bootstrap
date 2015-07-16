@@ -123,7 +123,6 @@
      * https://github.com/brobin/hacker-bootstrap
      */
     if (theme === "hax0r") {
-      document.body.classList.add('hax0r');
       loadStylesheet("http://brobin.github.io/hacker-bootstrap/css/hacker.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -136,7 +135,6 @@
      * See: https://bootswatch.com/cosmo/
      */
     if (theme === "cosmo") {
-      document.body.classList.add('cosmo');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/cosmo/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -149,7 +147,6 @@
      * See: https://bootswatch.com/darkly/
      */
     if (theme === "darkly") {
-      document.body.classList.add('darkly');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/darkly/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -162,7 +159,6 @@
      * See: https://bootswatch.com/flatly/
      */
     if (theme === "flatly") {
-      document.body.classList.add('flatly');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -175,7 +171,6 @@
      * See: https://bootswatch.com/lumen/
      */
     if (theme === "lumen") {
-      document.body.classList.add('lumen');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/lumen/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -188,7 +183,6 @@
      * See: https://bootswatch.com/paper/
      */
     if (theme === "paper") {
-      document.body.classList.add('paper');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/paper/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -201,7 +195,6 @@
      * See: https://bootswatch.com/sandstone/
      */
     if (theme === "sandstone") {
-      document.body.classList.add('sandstone');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/sandstone/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -214,7 +207,6 @@
      * See: https://bootswatch.com/superhero/
      */
     if (theme === "superhero") {
-      document.body.classList.add('superhero');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/superhero/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -227,7 +219,6 @@
      * See: https://bootswatch.com/united/
      */
     if (theme === "united") {
-      document.body.classList.add('united');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/united/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -239,7 +230,6 @@
      * See: https://bootswatch.com/yeti/
      */
     if (theme === "yeti" || !theme) {
-      document.body.classList.add('yeti');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/yeti/bootstrap.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -251,7 +241,6 @@
      * See: https://github.com/olton/Metro-UI-CSS
      */
     if (theme === "metro-bootstrap") {
-      document.body.classList.add('metro-bootstrap');
       loadStylesheet(pathToRoot + "themes/metro/metro.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -264,7 +253,6 @@
      * See: http://code.divshot.com/geo-bootstrap/
      */
     if (theme === "geo-bootstrap") {
-      document.body.classList.add('geo-bootstrap');
       loadStylesheet(pathToRoot + "themes/geo/geo.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -277,7 +265,6 @@
      * See: https://github.com/bootflat/bootflat.github.io
      */
     if (theme === "bootflat") {
-      document.body.classList.add('bootflat');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
       loadStylesheet(pathToRoot + "themes/bootflat/bootflat.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
@@ -291,7 +278,6 @@
      * See: http://designmodo.github.io/Flat-UI/
      */
     if (theme === "bootflat-ui") {
-      document.body.classList.add('bootflat-ui');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
       loadStylesheet(protocol + "designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
@@ -305,7 +291,6 @@
      * See: https://github.com/kidgodzilla
      */
     if (theme === "organic") {
-      document.body.classList.add('organic');
       loadStylesheet(pathToRoot + "themes/organic/organic.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -318,7 +303,6 @@
      * See: https://github.com/kidgodzilla
      */
     if (theme === "bitswatch") {
-      document.body.classList.add('bitswatch');
       loadStylesheet(protocol + "www.bittitan.com/website-redesign/bootstrap.min.css");
       loadStylesheet(protocol + "www.bittitan.com/website-redesign/style.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
@@ -332,7 +316,6 @@
      * See: https://github.com/kidgodzilla
      */
     if (theme === "bitstrap") {
-      document.body.classList.add('bitstrap');
       loadStylesheet(protocol + "www.bittitan.com/internal-bootstrap/bt_internal/bootstrap.css");
       loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
     }
@@ -345,7 +328,6 @@
      * See: https://fezvrasta.github.io/bootstrap-material-design
      */
     if (theme === "material") {
-      document.body.classList.add('material');
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css");
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.min.css");
       loadStylesheet(protocol + "cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css");
@@ -384,6 +366,11 @@
 
     // Generate Code Button
     document.write('<button class="btn btn-primary" data-toggle="modal" data-target="#source-modal" style="position:fixed;z-index:9999;right: 50px;bottom:50px" onclick="window.generateMetaBootstrapCode()">Get Started with this Theme</button>');
+
+    // Namespace theme
+    setTimeout(function () {
+      if (document && document.body && document.body.classList) document.body.classList.add(theme);
+    }, 1000);
 
     // Once completed, set an identifier to true to avoid running the script loader twice
     window[loaderName] = true;
