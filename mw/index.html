@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="UTF-8">
-    <title>Fixed Header</title>
+    <title>MigrationWiz Concept</title>
 
     <!--IE Compatibility modes-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,22 +35,28 @@
         padding-top: 50px;
       }
       #top > .navbar {
-        border-top: 3px solid #e05048;
+        border-top: 3px solid #F63723;
       }
       #top > .navbar .dropdown-menu > li > a:hover,
       #top > .navbar .dropdown-menu > li > a:focus {
-        background-color: #e05048;
+        background-color: #35404D;
         color: #ffffff;
       }
       #menu {
-        background-color: #e05048 !important;
+        background-color: #35404D !important;
       }
       #menu > li > a {
-        color: #ffffff;
+        color: #ccc;
         text-shadow: none !important;
       }
+      #menu > li ul {
+        background-color: #2A3542;
+      }
+      #menu>li ul a {
+        padding: 11px 0 11px 15px;
+      }
       .sidebar-left-mini #menu > li > a > .link-title {
-        background-color: #dd3f37 !important;
+        background-color: #F63723 !important;
       }
       /* Vanilla Bootstrap */
       .navbar {
@@ -72,6 +78,9 @@
       #menu > li > a {
         padding: 13px 0 12px 15px;
       }
+      #menu>li a + ul a {
+        font-size: 11px;
+      }
       .sidebar-left-mini #menu > li:hover > a > .link-title {
         padding-top: 14px;
         padding-bottom: 14px;
@@ -82,6 +91,16 @@
       }
       #menu .fa.arrow:before {
         content: "\f105";
+      }
+      #menu, #menu ul, #menu li, #menu a {
+        color: #ddd;
+      }
+      #menu>li>a {
+        border-top: 1px solid rgba(0,0,0,0.075);
+        -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.025);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.025);
+        text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+        padding: 10px 0 10px 15px;
       }
       .btn-nav-clear {
         color: #fff;
@@ -126,12 +145,13 @@
         box-shadow: none !important;
       }
       .dropdown-menu.right {
-        right: -15px !important;
+        right: -10px !important;
         left: initial;
         padding-top: 5px;
         top: 40px;
       }
       .dropdown-menu.right li > strong {
+        color: #000;
         padding: 15px;
         line-height: 2.5;
       }
@@ -142,7 +162,89 @@
         margin-top: 5px;
       }
       .dropdown-menu.right .divider:last-of-type {
-        padding: 4px;
+        padding: 2px;
+      }
+      .truncate {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .panel {
+        border: 0 !important;
+      }
+      .panel-body,
+      .panel-body a {
+        color: #797979;
+      }
+      .panel-body a:hover {
+        color: #428BCA;
+        text-decoration: none;
+      }
+      .panel-heading {
+        border-radius: 5px 5px 0 0;
+      }
+      .panel-danger > .panel-heading {
+        background-color: #FF6C60;
+        border-color: #FF6C60;
+      }
+      .panel-default > .panel-heading {
+        background-color: #FFF;
+        border-color: #FFF;
+      }
+      .panel-success > .panel-heading {
+        background-color: #A9D96C;
+        border-color: #A9D96C;
+      }
+      .bg-light.lter, .bg-light>.lter {
+        background-color: #F1F2F7 !important;
+      }
+      .bg-dark.dk, .bg-dark>.dk {
+        background-color: #212635 !important;
+      }
+      table thead th {
+        border-style: none !important;
+      }
+      .panel {
+        background-color: #F1F2F7;
+      }
+      table {
+        background-color: #fff;
+      }
+      .stat-card {
+        border: 0;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        position: relative;
+      }
+      .stat-card .icon {
+        background: #bbb;
+        width: 40%;
+        padding: 25px 15px;
+        -webkit-border-radius: 4px 0px 0px 4px;
+        border-radius: 4px 0px 0px 4px;
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .stat-card .icon.red {
+        background: #ff6c60;
+      }
+      .stat-card .icon.blue {
+        background: #2A3542;
+      }
+      .stat-card .icon i {
+        color: #fff;
+        font-size: 3rem;
+      }
+      .stat-card .value {
+        width: 58%;
+        float: right;
+        display: inline-block;
+        text-align: center;
       }
     </style>
 
@@ -296,225 +398,692 @@
 
         <!-- #menu -->
         <ul id="menu" class="bg-blue dker">
-          <li class="nav-header">Menu</li>
+          <!--<li class="nav-header">Menu</li>-->
 
           <!--<li class="nav-divider"></li>-->
           <li class="">
-            <a href="dashboard.html">
-              <i class="fa fa-dashboard"></i>
-              <span class="link-title">&nbsp; Dashboard</span> 
-            </a> 
-          </li>
-          <li class="active">
-            <a href="javascript:;">
-              <i class="fa fa-building "></i>
-              <span class="link-title">&nbsp; Layouts</span> 
-              <span class="fa arrow"></span> 
-            </a> 
-            <ul>
-              <li> <a href="boxed.html">Boxed Layout </a>  </li>
-              <li> <a href="fixed-header-boxed.html">Boxed Layout &amp; Fixed Header </a>  </li>
-              <li> <a href="fixed-header-fixed-mini-sidebar.html">Fixed Header and Fixed Mini Menu </a>  </li>
-              <li> <a href="fixed-header-menu.html">Fixed Header &amp; Menu </a>  </li>
-              <li> <a href="fixed-header-mini-sidebar.html">Fixed Header &amp; Mini Menu </a>  </li>
-              <li> <a href="fixed-header.html">Fixed Header </a>  </li>
-              <li> <a href="fixed-menu-boxed.html">Boxed Layout &amp; Fixed Menu </a>  </li>
-              <li> <a href="fixed-menu.html">Fixed Menu </a>  </li>
-              <li> <a href="fixed-mini-sidebar.html">Fixed &amp; Mini Menu </a>  </li>
-              <li> <a href="fxhmoxed.html">Boxed and Fixed Header &amp; Nav </a>  </li>
-              <li> <a href="no-header-sidebar.html">No Header &amp; Sidebars </a>  </li>
-              <li> <a href="no-header.html">No Header </a>  </li>
-              <li> <a href="no-left-right-sidebar.html">No Left &amp; Right Sidebar </a>  </li>
-              <li> <a href="no-left-sidebar-main-search.html">No Left Sidebar &amp; Main Search </a>  </li>
-              <li> <a href="no-left-sidebar.html">No Left Sidebar </a>  </li>
-              <li> <a href="no-main-search.html">No Main Search </a>  </li>
-              <li> <a href="no-right-sidebar.html">No Right Sidebar </a>  </li>
-              <li> <a href="sm.html">Mini Sidebar </a>  </li>
+            <a href="#">
+              <i class="i-project"></i>
+              <span class="link-title">&nbsp; My Projects</span>
+            </a>
+            <ul class="collapse">
+              <li>
+                <a href="#" class="truncate">
+                  <i class="i-archive"></i> &nbsp;BitTitan Archive Migration Project #3245
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-mailbox"></i> &nbsp;Exchange 2007 to Office 365
+                </a>
+              </li>
             </ul>
           </li>
           <li class="">
-            <a href="javascript:;">
-              <i class="fa fa-tasks"></i>
-              <span class="link-title">&nbsp; Components</span> 
-              <span class="fa arrow"></span> 
-            </a> 
-            <ul>
-              <li> <a href="bgcolor.html">Bg Color</a>  </li>
-              <li> <a href="bgimage.html">Bg Image</a>  </li>
-              <li> <a href="button.html">Buttons</a>  </li>
-              <li> <a href="icon.html">Icon</a>  </li>
-              <li> <a href="pricing.html">Pricing Table</a>  </li>
-              <li> <a href="progress.html">Progress</a>  </li>
+            <a href="#">
+              <i class="i-plus"></i>
+              <span class="link-title"> &nbsp;Create New Project</span>
+            </a>
+            <ul class="collapse">
+              <li>
+                <a href="#">
+                  <i class="i-mailbox"></i> &nbsp;Mailbox Project
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-public-folder"></i> &nbsp;Public Folder Project
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-document"></i> &nbsp;Document Project
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-archive"></i> &nbsp;Archive Project
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-enterprise-archive"></i> &nbsp;Enterprise Archive Project
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="">
+            <a href="#">
+              <i class="i-credit"></i>
+              <span class="link-title">&nbsp; Billing</span>
+            </a>
+            <ul class="collapse">
+              <li>
+                <a href="#">
+                  <i class="i-dollar"></i> &nbsp;Purchase Licenses
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-license"></i> &nbsp;License Summary
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-credit"></i> &nbsp;Purchase History
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-discount"></i> &nbsp;Redeem Coupon
+                </a>
+              </li>
             </ul>
           </li>
           <li class="">
-            <a href="javascript:;">
-              <i class="fa fa-pencil"></i>
-              <span class="link-title">&nbsp;
-                Forms
-            </span> 
-              <span class="fa arrow"></span> 
-            </a> 
-            <ul>
-              <li> <a href="form-general.html">Form General</a>  </li>
-              <li> <a href="form-validation.html">Form Validation</a>  </li>
-              <li> <a href="form-wizard.html">Form Wizard</a>  </li>
-              <li> <a href="form-wysiwyg.html">Form WYSIWYG</a>  </li>
-            </ul>
-          </li>
-          <li>
-            <a href="table.html">
-              <i class="fa fa-table"></i>
-              <span class="link-title">&nbsp; Tables</span> 
-            </a> 
-          </li>
-          <li>
-            <a href="typography.html">
-              <i class="fa fa-font"></i>
-              <span class="link-title">&nbsp;
-                Typography
-            </span> 
-            </a> 
-          </li>
-          <li>
-            <a href="maps.html">
-              <i class="fa fa-map-marker"></i>
-              <span class="link-title">&nbsp;
-                Maps
-            </span> 
-            </a> 
-          </li>
-          <li>
-            <a href="chart.html">
-              <i class="fa fa fa-bar-chart-o"></i>
-              <span class="link-title">&nbsp;
-                Charts
-            </span> 
-            </a> 
-          </li>
-          <li>
-            <a href="calendar.html">
-              <i class="fa fa-calendar"></i>
-              <span class="link-title">&nbsp;
-                Calendar
-            </span> 
-            </a> 
-          </li>
-          <li>
-            <a href="javascript:;">
-              <i class="fa fa-exclamation-triangle"></i>
-              <span class="link-title">&nbsp;
-                Error Pages
-            </span> 
-              <span class="fa arrow"></span> 
-            </a> 
-            <ul>
-              <li> <a href="403.html">403</a>  </li>
-              <li> <a href="404.html">404</a>  </li>
-              <li> <a href="405.html">405</a>  </li>
-              <li> <a href="500.html">500</a>  </li>
-              <li> <a href="503.html">503</a>  </li>
-              <li> <a href="offline.html">offline</a>  </li>
-              <li> <a href="countdown.html">Under Construction</a>  </li>
-            </ul>
-          </li>
-          <li>
-            <a href="grid.html">
-              <i class="fa fa-columns"></i>
-              <span class="link-title">&nbsp;
-                Grid
-            </span> 
-            </a> 
-          </li>
-          <li>
-            <a href="blank.html">
-              <i class="fa fa-square-o"></i>
-              <span class="link-title">&nbsp;
-                Blank Page
-            </span> 
-            </a> 
-          </li>
-          <li class="nav-divider"></li>
-          <li>
-            <a href="login.html">
-              <i class="fa fa-sign-in"></i>
-              <span class="link-title">&nbsp;
-                Login Page
-            </span> 
-            </a> 
-          </li>
-          <li>
-            <a href="javascript:;">
-              <i class="fa fa-code"></i>
-              <span class="link-title">&nbsp;
-                Unlimited Level Menu
-            </span> 
-              <span class="fa arrow"></span> 
-            </a> 
-            <ul>
+            <a href="#">
+              <i class="i-support"></i>
+              <span class="link-title">&nbsp; Support</span>
+            </a>
+            <ul class="collapse">
               <li>
-                <a href="javascript:;">
-                  Level 1 <span class="fa arrow"></span> 
-                </a> 
-                <ul>
-                  <li>
-                    <a href="javascript:;">
-                      Level 2
-                    </a> 
-                  </li>
-                  <li>
-                    <a href="javascript:;">
-                      Level 2
-                    </a> 
-                  </li>
-                  <li>
-                    <a href="javascript:;">
-                      Level 2 <span class="fa arrow"></span> 
-                    </a> 
-                    <ul>
-                      <li> <a href="javascript:;">Level 3</a>  </li>
-                      <li> <a href="javascript:;">Level 3</a>  </li>
-                      <li>
-                        <a href="javascript:;">Level 3  <span class="fa arrow"></span>  </a> 
-                        <ul>
-                          <li> <a href="javascript:;">Level 4</a>  </li>
-                          <li> <a href="javascript:;">Level 4</a>  </li>
-                          <li>
-                            <a href="javascript:;">Level 4  <span class="fa arrow"></span>  </a> 
-                            <ul>
-                              <li> <a href="javascript:;">Level 5</a>  </li>
-                              <li> <a href="javascript:;">Level 5</a>  </li>
-                              <li> <a href="javascript:;">Level 5</a>  </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li> <a href="javascript:;">Level 4</a>  </li>
-                    </ul>
-                  </li>
-                  <li> <a href="javascript:;">Level 2</a>  </li>
-                </ul>
+                <a href="#">
+                  <i class="i-at"></i> &nbsp;New Ticket
+                </a>
               </li>
-              <li> <a href="javascript:;">Level 1</a>  </li>
               <li>
-                <a href="javascript:;">Level 1  <span class="fa arrow"></span>  </a> 
-                <ul>
-                  <li> <a href="javascript:;">Level 2</a>  </li>
-                  <li> <a href="javascript:;">Level 2</a>  </li>
-                  <li> <a href="javascript:;">Level 2</a>  </li>
-                </ul>
+                <a href="#">
+                  <i class="i-phone-24"></i> &nbsp;Phone Support
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-phone"></i> &nbsp;Advisor Hours
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-communicate"></i> &nbsp;Feedback
+                </a>
               </li>
             </ul>
+          </li>
+          <li class="">
+            <a href="#">
+              <i class="i-user-alt"></i>
+              <span class="link-title">&nbsp; Account</span>
+            </a>
           </li>
         </ul><!-- /#menu -->
       </div><!-- /#left -->
       <div id="content">
-        <div class="outer">
-          <div class="inner bg-light lter">
-            <h2>Code</h2>
-            <pre><code class="language-markup">&lt;nav class=&quot;navbar navbar-inverse navbar-fixed-top&quot;&gt;
-...
-&lt;/nav&gt;</code></pre>
+        <div class="">
+          <div class="bg-light lter pam">
+
+            <!-- Content Goes Here -->
+
+            <div class="row mtm">
+              <div class="col-sm-6 col-md-3">
+                <div class="stat-card">
+                  <div class="icon red">
+                    <i class="i-numbered"></i>
+                  </div>
+                  <div class="value ptm">
+                    <h3 class="man Light">1,443</h3>
+                    <p class="Light">Items Migrating</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-3">
+                <div class="stat-card">
+                  <div class="icon blue">
+                    <i class="i-project"></i>
+                  </div>
+                  <div class="value ptm">
+                    <h3 class="man Light">2</h3>
+                    <p class="Light">Active Projects</p>
+                  </div>
+                </div>
+              </div><div class="col-sm-6 col-md-3">
+              <div class="stat-card">
+                <div class="icon red">
+                  <i class="i-numbered"></i>
+                </div>
+                <div class="value ptm">
+                  <h3 class="man Light">1,443</h3>
+                  <p class="Light">Items Migrating</p>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-sm-6 col-md-3">
+                <div class="stat-card">
+                  <div class="icon blue">
+                    <i class="i-project"></i>
+                  </div>
+                  <div class="value ptm">
+                    <h3 class="man Light">1</h3>
+                    <p class="Light">Active Projects</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title mtn Medium"><i class="i-project"></i> &nbsp;Recent Projects</h3>
+                  </div>
+                  <div class="panel-body pan">
+                    <table class="table table-hover project-list mbn">
+                      <thead>
+                      <tr>
+                        <th><script id="metamorph-1438-start" type="text/x-placeholder"></script>Project Name<script id="metamorph-1438-end" type="text/x-placeholder"></script></th>
+                        <th><i class="i-source" title="Source"></i></th>
+                        <th><i class="i-destination" title="Destination"></i></th>
+                        <th><script id="metamorph-1439-start" type="text/x-placeholder"></script>Items<script id="metamorph-1439-end" type="text/x-placeholder"></script></th>
+                        <th><i class="i-stop text-grey-md" title="Not Migrated"></i></th>
+                        <th><i class="i-user-waiting text-primary-md" title="Waiting for User"></i></th>
+                        <th><i class="i-play text-info-md" title="Migrating"></i></th>
+                        <th><i class="i-pause text-warning-md" title="Paused"></i></th>
+                        <th><i class="i-check text-success-md" title="Completed"></i></th>
+                        <th><i class="i-danger text-danger-md" title="Failed"></i></th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td><a href="/app/projects/228485bc-fe6a-11e4-9437-00155dc22c82" title="BitTitan Storage?" data-bindattr-6297="6297"><i class="i-archive" data-bindattr-6298="6298" title="Archive"></i><span><script id="metamorph-1443-start" type="text/x-placeholder"></script> &nbsp;BitTitan Storage?<script id="metamorph-1443-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-pst" data-bindattr-6299="6299"></i>
+                        </td>
+                        <td>
+                          <i class="i-google" data-bindattr-6300="6300"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1444-start" type="text/x-placeholder"></script>-<script id="metamorph-1444-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1445-start" type="text/x-placeholder"></script>-<script id="metamorph-1445-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1446-start" type="text/x-placeholder"></script>-<script id="metamorph-1446-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1447-start" type="text/x-placeholder"></script>-<script id="metamorph-1447-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1448-start" type="text/x-placeholder"></script>-<script id="metamorph-1448-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1449-start" type="text/x-placeholder"></script>-<script id="metamorph-1449-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1450-start" type="text/x-placeholder"></script>-<script id="metamorph-1450-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19" title="asdf" data-bindattr-6301="6301"><i class="i-mailbox" data-bindattr-6302="6302" title="Mailbox"></i><span><script id="metamorph-1451-start" type="text/x-placeholder"></script> &nbsp;asdf<script id="metamorph-1451-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6303="6303"></i>
+                        </td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6304="6304"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1452-start" type="text/x-placeholder"></script>103<script id="metamorph-1452-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1453-start" type="text/x-placeholder"></script>99<script id="metamorph-1453-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1454-start" type="text/x-placeholder"></script>-<script id="metamorph-1454-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1455-start" type="text/x-placeholder"></script>-<script id="metamorph-1455-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1456-start" type="text/x-placeholder"></script>-<script id="metamorph-1456-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1457-start" type="text/x-placeholder"></script>-<script id="metamorph-1457-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1458-start" type="text/x-placeholder"></script>4<script id="metamorph-1458-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/app/projects/228485bc-fe6a-11e4-9437-00155dc22c82" title="BitTitan Storage?" data-bindattr-6297="6297"><i class="i-archive" data-bindattr-6298="6298" title="Archive"></i><span><script id="metamorph-1443-start" type="text/x-placeholder"></script> &nbsp;BitTitan Storage?<script id="metamorph-1443-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-pst" data-bindattr-6299="6299"></i>
+                        </td>
+                        <td>
+                          <i class="i-google" data-bindattr-6300="6300"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1444-start" type="text/x-placeholder"></script>-<script id="metamorph-1444-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1445-start" type="text/x-placeholder"></script>-<script id="metamorph-1445-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1446-start" type="text/x-placeholder"></script>-<script id="metamorph-1446-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1447-start" type="text/x-placeholder"></script>-<script id="metamorph-1447-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1448-start" type="text/x-placeholder"></script>-<script id="metamorph-1448-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1449-start" type="text/x-placeholder"></script>-<script id="metamorph-1449-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1450-start" type="text/x-placeholder"></script>-<script id="metamorph-1450-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19" title="asdf" data-bindattr-6301="6301"><i class="i-mailbox" data-bindattr-6302="6302" title="Mailbox"></i><span><script id="metamorph-1451-start" type="text/x-placeholder"></script> &nbsp;asdf<script id="metamorph-1451-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6303="6303"></i>
+                        </td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6304="6304"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1452-start" type="text/x-placeholder"></script>103<script id="metamorph-1452-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1453-start" type="text/x-placeholder"></script>99<script id="metamorph-1453-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1454-start" type="text/x-placeholder"></script>-<script id="metamorph-1454-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1455-start" type="text/x-placeholder"></script>-<script id="metamorph-1455-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1456-start" type="text/x-placeholder"></script>-<script id="metamorph-1456-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1457-start" type="text/x-placeholder"></script>-<script id="metamorph-1457-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1458-start" type="text/x-placeholder"></script>4<script id="metamorph-1458-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/app/projects/228485bc-fe6a-11e4-9437-00155dc22c82" title="BitTitan Storage?" data-bindattr-6297="6297"><i class="i-archive" data-bindattr-6298="6298" title="Archive"></i><span><script id="metamorph-1443-start" type="text/x-placeholder"></script> &nbsp;BitTitan Storage?<script id="metamorph-1443-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-pst" data-bindattr-6299="6299"></i>
+                        </td>
+                        <td>
+                          <i class="i-google" data-bindattr-6300="6300"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1444-start" type="text/x-placeholder"></script>-<script id="metamorph-1444-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1445-start" type="text/x-placeholder"></script>-<script id="metamorph-1445-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1446-start" type="text/x-placeholder"></script>-<script id="metamorph-1446-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1447-start" type="text/x-placeholder"></script>-<script id="metamorph-1447-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1448-start" type="text/x-placeholder"></script>-<script id="metamorph-1448-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1449-start" type="text/x-placeholder"></script>-<script id="metamorph-1449-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1450-start" type="text/x-placeholder"></script>-<script id="metamorph-1450-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19" title="asdf" data-bindattr-6301="6301"><i class="i-mailbox" data-bindattr-6302="6302" title="Mailbox"></i><span><script id="metamorph-1451-start" type="text/x-placeholder"></script> &nbsp;asdf<script id="metamorph-1451-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6303="6303"></i>
+                        </td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6304="6304"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1452-start" type="text/x-placeholder"></script>103<script id="metamorph-1452-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1453-start" type="text/x-placeholder"></script>99<script id="metamorph-1453-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1454-start" type="text/x-placeholder"></script>-<script id="metamorph-1454-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1455-start" type="text/x-placeholder"></script>-<script id="metamorph-1455-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1456-start" type="text/x-placeholder"></script>-<script id="metamorph-1456-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1457-start" type="text/x-placeholder"></script>-<script id="metamorph-1457-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1458-start" type="text/x-placeholder"></script>4<script id="metamorph-1458-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/app/projects/228485bc-fe6a-11e4-9437-00155dc22c82" title="BitTitan Storage?" data-bindattr-6297="6297"><i class="i-archive" data-bindattr-6298="6298" title="Archive"></i><span><script id="metamorph-1443-start" type="text/x-placeholder"></script> &nbsp;BitTitan Storage?<script id="metamorph-1443-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-pst" data-bindattr-6299="6299"></i>
+                        </td>
+                        <td>
+                          <i class="i-google" data-bindattr-6300="6300"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1444-start" type="text/x-placeholder"></script>-<script id="metamorph-1444-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1445-start" type="text/x-placeholder"></script>-<script id="metamorph-1445-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1446-start" type="text/x-placeholder"></script>-<script id="metamorph-1446-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1447-start" type="text/x-placeholder"></script>-<script id="metamorph-1447-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1448-start" type="text/x-placeholder"></script>-<script id="metamorph-1448-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1449-start" type="text/x-placeholder"></script>-<script id="metamorph-1449-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1450-start" type="text/x-placeholder"></script>-<script id="metamorph-1450-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19" title="asdf" data-bindattr-6301="6301"><i class="i-mailbox" data-bindattr-6302="6302" title="Mailbox"></i><span><script id="metamorph-1451-start" type="text/x-placeholder"></script> &nbsp;asdf<script id="metamorph-1451-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6303="6303"></i>
+                        </td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6304="6304"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1452-start" type="text/x-placeholder"></script>103<script id="metamorph-1452-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1453-start" type="text/x-placeholder"></script>99<script id="metamorph-1453-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1454-start" type="text/x-placeholder"></script>-<script id="metamorph-1454-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1455-start" type="text/x-placeholder"></script>-<script id="metamorph-1455-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1456-start" type="text/x-placeholder"></script>-<script id="metamorph-1456-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1457-start" type="text/x-placeholder"></script>-<script id="metamorph-1457-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1458-start" type="text/x-placeholder"></script>4<script id="metamorph-1458-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="panel panel-success">
+                  <div class="panel-heading">
+                    <h3 class="panel-title Medium"><i class="i-check"></i> &nbsp;Recently Completed Migrations</h3>
+                  </div>
+                  <div class="panel-body pan">
+                    <div class="list-group" style="margin-bottom:1px;">
+                      <script id="metamorph-1429-start" type="text/x-placeholder"></script>
+                      <script id="metamorph-1459-start" type="text/x-placeholder"></script>
+                      <script id="metamorph-1464-start" type="text/x-placeholder"></script><script id="metamorph-1460-start" type="text/x-placeholder"></script>
+                      <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/06931935-6c56-11e4-942a-00155dc71f19" data-bindattr-6345="6345" class="list-group-item">
+                        <div class="text-overflow">
+                          <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6346="6346"></i>
+                          <b>
+                            <script id="metamorph-1465-start" type="text/x-placeholder"></script>
+                            <script id="metamorph-1466-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1466-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-1465-end" type="text/x-placeholder"></script>
+                          </b>
+                          <small><script id="metamorph-1467-start" type="text/x-placeholder"></script>succeeded<script id="metamorph-1467-end" type="text/x-placeholder"></script> <script id="metamorph-1468-start" type="text/x-placeholder"></script>2 months ago<script id="metamorph-1468-end" type="text/x-placeholder"></script></small>
+                        </div>
+                      </a>
+                      <script id="metamorph-1460-end" type="text/x-placeholder"></script><script id="metamorph-1461-start" type="text/x-placeholder"></script>
+                      <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/5c065a9b-a333-11e4-942c-00155d001986" data-bindattr-6349="6349" class="list-group-item">
+                        <div class="text-overflow">
+                          <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6350="6350"></i>
+                          <b>
+                            <script id="metamorph-1469-start" type="text/x-placeholder"></script>
+                            <script id="metamorph-1470-start" type="text/x-placeholder"></script>test10@bittitan.com<script id="metamorph-1470-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-1469-end" type="text/x-placeholder"></script>
+                          </b>
+                          <small><script id="metamorph-1471-start" type="text/x-placeholder"></script>succeeded<script id="metamorph-1471-end" type="text/x-placeholder"></script> <script id="metamorph-1472-start" type="text/x-placeholder"></script>5 months ago<script id="metamorph-1472-end" type="text/x-placeholder"></script></small>
+                        </div>
+                      </a>
+                      <script id="metamorph-1461-end" type="text/x-placeholder"></script><script id="metamorph-1462-start" type="text/x-placeholder"></script>
+                      <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/0c937dda-6c56-11e4-942a-00155dc71f19" data-bindattr-6353="6353" class="list-group-item">
+                        <div class="text-overflow">
+                          <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6354="6354"></i>
+                          <b>
+                            <script id="metamorph-1473-start" type="text/x-placeholder"></script>
+                            <script id="metamorph-1474-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1474-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-1473-end" type="text/x-placeholder"></script>
+                          </b>
+                          <small><script id="metamorph-1475-start" type="text/x-placeholder"></script>succeeded<script id="metamorph-1475-end" type="text/x-placeholder"></script> <script id="metamorph-1476-start" type="text/x-placeholder"></script>7 months ago<script id="metamorph-1476-end" type="text/x-placeholder"></script></small>
+                        </div>
+                      </a>
+                      <script id="metamorph-1462-end" type="text/x-placeholder"></script><script id="metamorph-1463-start" type="text/x-placeholder"></script>
+                      <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/0c937cd7-6c56-11e4-942a-00155dc71f19" data-bindattr-6357="6357" class="list-group-item">
+                        <div class="text-overflow">
+                          <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6358="6358"></i>
+                          <b>
+                            <script id="metamorph-1477-start" type="text/x-placeholder"></script>
+                            <script id="metamorph-1478-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1478-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-1477-end" type="text/x-placeholder"></script>
+                          </b>
+                          <small><script id="metamorph-1479-start" type="text/x-placeholder"></script>succeeded<script id="metamorph-1479-end" type="text/x-placeholder"></script> <script id="metamorph-1480-start" type="text/x-placeholder"></script>8 months ago<script id="metamorph-1480-end" type="text/x-placeholder"></script></small>
+                        </div>
+                      </a>
+                      <script id="metamorph-1463-end" type="text/x-placeholder"></script><script id="metamorph-1464-end" type="text/x-placeholder"></script>
+                      <script id="metamorph-1459-end" type="text/x-placeholder"></script>
+                      <script id="metamorph-1429-end" type="text/x-placeholder"></script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="panel panel-danger">
+                  <div class="panel-heading">
+                    <h3 class="panel-title Medium"><i class="i-danger"></i> &nbsp;Recently Failed Migrations</h3>
+                  </div>
+                  <div class="panel-body pan">
+                    <div class="list-group" style="margin-bottom:1px;">
+                      <script id="metamorph-1429-start" type="text/x-placeholder"></script>
+                      <script id="metamorph-1459-start" type="text/x-placeholder"></script>
+                      <script id="metamorph-1464-start" type="text/x-placeholder"></script><script id="metamorph-1460-start" type="text/x-placeholder"></script>
+                      <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/06931935-6c56-11e4-942a-00155dc71f19" data-bindattr-6345="6345" class="list-group-item">
+                        <div class="text-overflow">
+                          <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6346="6346"></i>
+                          <b>
+                            <script id="metamorph-1465-start" type="text/x-placeholder"></script>
+                            <script id="metamorph-1466-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1466-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-1465-end" type="text/x-placeholder"></script>
+                          </b>
+                          <small><script id="metamorph-1467-start" type="text/x-placeholder"></script>failed<script id="metamorph-1467-end" type="text/x-placeholder"></script> <script id="metamorph-1468-start" type="text/x-placeholder"></script>2 months ago<script id="metamorph-1468-end" type="text/x-placeholder"></script></small>
+                        </div>
+                      </a>
+                      <script id="metamorph-1460-end" type="text/x-placeholder"></script><script id="metamorph-1461-start" type="text/x-placeholder"></script>
+                      <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/5c065a9b-a333-11e4-942c-00155d001986" data-bindattr-6349="6349" class="list-group-item">
+                        <div class="text-overflow">
+                          <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6350="6350"></i>
+                          <b>
+                            <script id="metamorph-1469-start" type="text/x-placeholder"></script>
+                            <script id="metamorph-1470-start" type="text/x-placeholder"></script>test10@bittitan.com<script id="metamorph-1470-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-1469-end" type="text/x-placeholder"></script>
+                          </b>
+                          <small><script id="metamorph-1471-start" type="text/x-placeholder"></script>failed<script id="metamorph-1471-end" type="text/x-placeholder"></script> <script id="metamorph-1472-start" type="text/x-placeholder"></script>5 months ago<script id="metamorph-1472-end" type="text/x-placeholder"></script></small>
+                        </div>
+                      </a>
+                      <script id="metamorph-1461-end" type="text/x-placeholder"></script><script id="metamorph-1462-start" type="text/x-placeholder"></script>
+                      <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/0c937dda-6c56-11e4-942a-00155dc71f19" data-bindattr-6353="6353" class="list-group-item">
+                        <div class="text-overflow">
+                          <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6354="6354"></i>
+                          <b>
+                            <script id="metamorph-1473-start" type="text/x-placeholder"></script>
+                            <script id="metamorph-1474-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1474-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-1473-end" type="text/x-placeholder"></script>
+                          </b>
+                          <small><script id="metamorph-1475-start" type="text/x-placeholder"></script>failed<script id="metamorph-1475-end" type="text/x-placeholder"></script> <script id="metamorph-1476-start" type="text/x-placeholder"></script>7 months ago<script id="metamorph-1476-end" type="text/x-placeholder"></script></small>
+                        </div>
+                      </a>
+                      <script id="metamorph-1462-end" type="text/x-placeholder"></script><script id="metamorph-1463-start" type="text/x-placeholder"></script>
+                      <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/0c937cd7-6c56-11e4-942a-00155dc71f19" data-bindattr-6357="6357" class="list-group-item">
+                        <div class="text-overflow">
+                          <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6358="6358"></i>
+                          <b>
+                            <script id="metamorph-1477-start" type="text/x-placeholder"></script>
+                            <script id="metamorph-1478-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1478-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-1477-end" type="text/x-placeholder"></script>
+                          </b>
+                          <small><script id="metamorph-1479-start" type="text/x-placeholder"></script>failed<script id="metamorph-1479-end" type="text/x-placeholder"></script> <script id="metamorph-1480-start" type="text/x-placeholder"></script>8 months ago<script id="metamorph-1480-end" type="text/x-placeholder"></script></small>
+                        </div>
+                      </a>
+                      <script id="metamorph-1463-end" type="text/x-placeholder"></script><script id="metamorph-1464-end" type="text/x-placeholder"></script>
+                      <script id="metamorph-1459-end" type="text/x-placeholder"></script>
+                      <script id="metamorph-1429-end" type="text/x-placeholder"></script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+
           </div><!-- /.inner -->
         </div><!-- /.outer -->
       </div><!-- /#content -->
@@ -572,9 +1141,9 @@
         </div>
       </div><!-- /#right -->
     </div><!-- /#wrap -->
-    <footer class="Footer bg-dark dker">
-      <p>2015 &copy; MetaBootstrap Admin Template</p>
-    </footer><!-- /#footer -->
+    <!--<footer class="Footer bg-dark dker">-->
+      <!--<p>2015 &copy; BitTitan, Inc</p>-->
+    <!--</footer>&lt;!&ndash; /#footer &ndash;&gt;-->
 
     <!-- #helpModal -->
     <div id="helpModal" class="modal fade">
