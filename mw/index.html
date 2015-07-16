@@ -20,6 +20,13 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
 
+    <!-- MetaBootstrap -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/themes/mw/bootstrap.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/meta-bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/style.css" media="all">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet" type="text/css">
+
     <style>
       body.boxed {
         /*background: url("../img/pattern/arches.png") repeat;*/
@@ -113,14 +120,31 @@
         display: none;
       }
 
-      .btn-nav-clear:active {
+      .btn-nav-clear:active,
+      .btn-group.open .btn-nav-clear.dropdown-toggle {
         -webkit-box-shadow: none !important;
         box-shadow: none !important;
       }
+      .dropdown-menu.right {
+        right: -15px !important;
+        left: initial;
+        padding-top: 5px;
+        top: 40px;
+      }
+      .dropdown-menu.right li > strong {
+        padding: 15px;
+        line-height: 2.5;
+      }
+      .dropdown-menu.right .divider {
+        margin: 0;
+      }
+      .dropdown-menu.right .divider.first {
+        margin-top: 5px;
+      }
+      .dropdown-menu.right .divider:last-of-type {
+        padding: 4px;
+      }
     </style>
-
-    <script>window.bootstrapTheme="mw";</script>
-    <script src="//metabootstrap.com/mbs.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
@@ -139,7 +163,7 @@
         rootpath: "../assets/"
       };
     </script>
-    <link rel="stylesheet" href="assets/css/style-switcher.css">
+    <!--<link rel="stylesheet" href="assets/css/style-switcher.css">-->
     <!--<link rel="stylesheet/less" type="text/css" href="assets/less/theme.less">-->
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script>-->
 
@@ -167,30 +191,6 @@
               </a>
             </header>
             <div class="topnav">
-              <!--<div class="btn-group">-->
-                <!--<a data-placement="bottom" data-original-title="Fullscreen" data-toggle="tooltip" class="btn btn-nav-clear btn-sm" id="toggleFullScreen">-->
-                  <!--<i class="glyphicon glyphicon-fullscreen"></i>-->
-                <!--</a> -->
-              <!--</div>-->
-              <!--<div class="btn-group">-->
-                <!--<a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" class="btn btn-nav-clear btn-sm">-->
-                  <!--<i class="fa fa-envelope"></i>-->
-                  <!--<span class="label label-warning">5</span> -->
-                <!--</a> -->
-                <!--<a data-placement="bottom" data-original-title="Messages" href="#" data-toggle="tooltip" class="btn btn-nav-clear btn-sm">-->
-                  <!--<i class="fa fa-comments"></i>-->
-                  <!--<span class="label label-danger">4</span> -->
-                <!--</a> -->
-                <!--<a data-toggle="modal" data-original-title="Help" data-placement="bottom" class="btn btn-nav-clear btn-sm" href="#helpModal">-->
-                  <!--<i class="fa fa-question"></i>-->
-                <!--</a> -->
-              <!--</div>-->
-              <!--<div class="btn-group">-->
-                <!--<a href="login.html" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom" class="btn btn-nav-clear btn-sm">-->
-                  <!--<i class="fa fa-power-off"></i>-->
-                <!--</a> -->
-              <!--</div>-->
-
 
               <div class="btn-group">
                 <a class="btn btn-nav-clear btn-sm">
@@ -221,6 +221,36 @@
                   <i class="i-user-alt"></i> &nbsp;Account
                   <span class="i-down"></span>
                 </a>
+                <ul class="dropdown-menu right">
+                  <li>
+                    <strong>
+                      Welcome, James Futhey
+                    </strong>
+                  </li>
+                  <li class="divider first"></li>
+                  <li>
+                    <a href="#">Account Profile</a>
+                  </li>
+                  <li>
+                    <a href="#">Purchase Licenses</a>
+                  </li>
+                  <li>
+                    <a href="#">Support Center</a>
+                  </li>
+                  <li class="divider">
+                  <li>
+                    <a href="#">Partner Center</a>
+                  </li>
+                  <li class="divider">
+                  <li>
+                    <a href="#">Select Another Product</a>
+                  </li>
+                  <li class="divider">
+                  <li>
+                    <a href="#"><i class="i-exit icon-space"></i> &nbsp;Sign Out</a>
+                  </li>
+                  <li class="divider"></li>
+                </ul>
               </div>
 
             </div>
@@ -237,18 +267,6 @@
                   <a>
                     <i class="i-user-alt"></i> &nbsp;Account Profile
                   </a>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    Form Elements
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li> <a href="form-general.html">General</a>  </li>
-                    <li> <a href="form-validation.html">Validation</a>  </li>
-                    <li> <a href="form-wysiwyg.html">WYSIWYG</a>  </li>
-                    <li> <a href="form-wizard.html">Wizard &amp; File Upload</a>  </li>
-                  </ul>
                 </li>
               </ul><!-- /.nav -->
             </div>
@@ -597,7 +615,7 @@
 
     <!-- MetaBootstrap demo scripts -->
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/style-switcher.min.js"></script>
+    <!--<script src="assets/js/style-switcher.min.js"></script>-->
     <script>
       $(document).ready(function () {
         $('body').attr('style', '');
