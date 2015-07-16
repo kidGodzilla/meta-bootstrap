@@ -110,12 +110,15 @@ body.boxed {
 .darkly .navbar-brand img {
   top: 15px;
 }
-/* Bootswatch Yeti */
-.yeti .navbar {
+/* Bootswatch Yeti, MW */
+.yeti .navbar,
+.mw .navbar {
   height: 51px;
 }
 .yeti .navbar-nav,
-.yeti .navbar-brand {
+.mw .navbar-nav,
+.yeti .navbar-brand,
+.mw .navbar-brand {
   margin-top: 3px;
 }
 /* Bootswatch Superhero */
