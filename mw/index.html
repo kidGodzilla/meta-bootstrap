@@ -246,6 +246,32 @@
         display: inline-block;
         text-align: center;
       }
+      #left {
+        transition: all 300ms ease-in-out;
+        width: 0;
+        opacity: 0;
+      }
+      #left li {
+        position: relative;
+      }
+      #left .link-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .lefty {
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 5px;
+      }
+      #left:hover,
+      .lefty:hover + #wrap #left {
+        width: 250px;
+        opacity: 1;
+      }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -273,6 +299,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   </head>
   <body class="mw">
+    <div class="lefty"></div>
     <div class="bg-dark dk" id="wrap">
       <div id="top">
 
@@ -325,7 +352,7 @@
                 </a>
                 <ul class="dropdown-menu right">
                   <li>
-                    <strong>
+                    <strong class="truncate">
                       Welcome, James Futhey
                     </strong>
                   </li>
@@ -365,11 +392,11 @@
                     <!--<i class="fa fa-arrow-left"></i> &nbsp;Back-->
                   <!--</a>-->
                 <!--</li>-->
-                <li>
-                  <a>
-                    <i class="i-user-alt"></i> &nbsp;Account Profile
-                  </a>
-                </li>
+                <!--<li>-->
+                  <!--<a>-->
+                    <!--<i class="i-user-alt"></i> &nbsp;Dashboard-->
+                  <!--</a>-->
+                <!--</li>-->
               </ul><!-- /.nav -->
             </div>
           </div><!-- /.container-fluid -->
@@ -403,8 +430,7 @@
           <!--<li class="nav-divider"></li>-->
           <li class="">
             <a href="#">
-              <i class="i-project"></i>
-              <span class="link-title">&nbsp; My Projects</span>
+              <span class="link-title"><i class="i-project"></i>&nbsp; My Projects</span>
             </a>
             <ul class="collapse">
               <li>
@@ -421,8 +447,7 @@
           </li>
           <li class="">
             <a href="#">
-              <i class="i-plus"></i>
-              <span class="link-title"> &nbsp;Create New Project</span>
+              <span class="link-title"><i class="i-plus"></i> &nbsp;Create New Project</span>
             </a>
             <ul class="collapse">
               <li>
@@ -455,8 +480,8 @@
 
           <li class="">
             <a href="#">
-              <i class="i-credit"></i>
-              <span class="link-title">&nbsp; Billing</span>
+
+              <span class="link-title"><i class="i-credit"></i>&nbsp; Billing</span>
             </a>
             <ul class="collapse">
               <li>
@@ -483,8 +508,7 @@
           </li>
           <li class="">
             <a href="#">
-              <i class="i-support"></i>
-              <span class="link-title">&nbsp; Support</span>
+              <span class="link-title"><i class="i-support"></i>&nbsp; Support</span>
             </a>
             <ul class="collapse">
               <li>
@@ -511,8 +535,7 @@
           </li>
           <li class="">
             <a href="#">
-              <i class="i-user-alt"></i>
-              <span class="link-title">&nbsp; Account</span>
+              <span class="link-title"><i class="i-user-alt"></i>&nbsp; Account</span>
             </a>
           </li>
         </ul><!-- /#menu -->
@@ -1069,18 +1092,6 @@
             </div>
 
 
-            <br><br><br><br><br>
-            <br><br><br><br><br>
-            <br><br><br><br><br>
-            <br><br><br><br><br>
-            <br><br><br><br><br>
-            <br><br><br><br><br>
-            <br><br><br><br><br>
-            <br><br><br><br><br>
-            <br><br><br><br><br>
-            <br><br><br><br><br>
-            <br><br><br><br><br>
-            <br><br><br><br><br>
             <br><br><br><br><br>
             <br><br><br><br><br>
 
