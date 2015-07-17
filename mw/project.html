@@ -974,6 +974,12 @@
 
     <script>
       $(document).ready(function () {
+        $('body').addClass('fade-in');
+
+        $(window).unload(function () {
+          $('body').removeClass('fade-in');
+        });
+
         $('body').attr('style', '');
         $('.nav-search input').focus(function () {
           $('.nav-search').addClass('open');

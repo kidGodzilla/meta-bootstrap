@@ -1,4 +1,11 @@
 /* Global, Dashboard */
+body {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+.fade-in {
+    opacity: 1;
+}
 .navbar-fixed-second {
     position: fixed;
     top: 50px;
