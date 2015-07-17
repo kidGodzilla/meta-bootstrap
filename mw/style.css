@@ -359,11 +359,12 @@ input[type=text]:focus {
     box-shadow: none;
 }
 .navbar-thin {
-    height: 40px !important;
+    height: 42.5px !important;
+    min-height: 42.5px !important;
     /*margin-top: -5px;*/
 }
 .navbar-thin > div {
-    margin-top: -2.5px;
+    margin-top: -3px;
 }
 .navbar-thin .navbar-nav>li>a {
     padding-bottom: 8px !important;
