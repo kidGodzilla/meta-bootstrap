@@ -307,6 +307,16 @@
 
 
     /**
+     * UA Bootstrap
+     * A Bootstrap Theme
+     */
+    if (theme === "ua") {
+      loadStylesheet(pathToRoot + "themes/ua/bootstrap.min.css");
+      loadScript(protocol + "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js");
+    }
+
+
+    /**
      * Bitswatch
      * A Fun, Flat, Corporate feel
      *
