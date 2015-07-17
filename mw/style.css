@@ -357,6 +357,9 @@ table {
 .live-chat.open {
     bottom: 0;
 }
+.topnav {
+    padding-top: 1px;
+}
 @media screen and (max-width: 768px) {
     .topnav {
         display: none;
