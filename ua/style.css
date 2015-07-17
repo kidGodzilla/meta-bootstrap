@@ -278,6 +278,9 @@ table {
 .stat-card .icon.red {
     background: #ff6c60;
 }
+.stat-card .icon.green {
+    background: #A9D96C;
+}
 .stat-card .icon.blue {
     background: #2A3542;
 }
