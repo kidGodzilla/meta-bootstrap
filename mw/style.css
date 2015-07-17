@@ -315,13 +315,25 @@ table {
 }
 .live-chat {
     position: fixed;
-    bottom: 0;
+    bottom: -200px;
     right: 20px;
-    width: 240px;
-    padding: 5px 10px;
+    /*width: 232px;*/
+    transition: all 300ms ease-in-out;
+}
+.live-chat .header {
+    padding: 9px 21px 6px;
     border-radius: 5px 5px 0 0;
     color: #fff;
     background-color: #3F4955;
+    font-size: 15px;
+    font-weight: 300;
+}
+.live-chat .body {
+    height: 200px;
+    background: #fff;
+}
+.live-chat.open {
+    bottom: 0;
 }
 @media screen and (max-width: 768px) {
     .topnav {

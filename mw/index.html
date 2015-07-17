@@ -896,7 +896,8 @@
     </div><!-- /.modal --><!-- /#helpModal -->
 
     <div class="live-chat">
-      <i class="fa fa-comments"></i> &nbsp; Stuck? We're here to help!
+      <div class="header"><i class="fa fa-comments"></i>&nbsp; Stuck? We're here to help!&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div class="body"></div>
     </div>
 
     <!--jQuery -->
@@ -930,6 +931,10 @@
         });
         $('.nav-search input').blur(function () {
           $('.nav-search').removeClass('open');
+        });
+
+        $('.live-chat *').mousedown(function () {
+          $('.live-chat').toggleClass('open');
         });
       });
     </script>

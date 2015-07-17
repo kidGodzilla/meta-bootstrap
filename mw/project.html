@@ -825,7 +825,8 @@
     </div><!-- /.modal --><!-- /#helpModal -->
 
     <div class="live-chat">
-      <i class="fa fa-comments"></i> &nbsp; Stuck? We're here to help!
+      <div class="header"><i class="fa fa-comments"></i>&nbsp; Stuck? We're here to help!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div class="body"></div>
     </div>
 
     <!--jQuery -->
@@ -908,6 +909,10 @@
               $(this).find('input[type=checkbox]').prop('checked', true);
             });
           }
+        });
+
+        $('.live-chat *').mousedown(function () {
+          $('.live-chat').toggleClass('open');
         });
       });
     </script>
