@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-
       input[type=text]:focus {
         outline: none;
         -webkit-box-shadow: none;
@@ -36,7 +35,9 @@
       .navbar-thin {
         height: 40px !important;
         margin-top: -5px;
-        overflow: hidden;
+      }
+      .navbar-thin .navbar-nav>li>a {
+        padding-bottom: 8px !important;
       }
     </style>
 
@@ -188,15 +189,30 @@
                 <!--<li><a href="#">Link</a></li>-->
                 <!--<li><a href="#">Link</a></li>-->
                 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-edit"></i> &nbsp;Edit Project <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Edit Project</a></li>
+                    <li><a href="#">Clone Project</a></li>
+                    <li><a href="#">Advanced Options</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-action-plus"></i> &nbsp;Add <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Quick Add</a></li>
+                    <li><a href="#">Bulk Add</a></li>
+                    <li><a href="#">Autodiscover Items</a></li>
                   </ul>
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-play"></i> &nbsp;Start <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Verify Credentials</a></li>
+                    <li><a href="#">Trial Migration</a></li>
+                    <li><a href="#">Pre-Stage Migration</a></li>
+                    <li><a href="#">Full Migration</a></li>
+                    <li><a href="#">Retry Errors</a></li>
                   </ul>
                 </li>
                 <li><a href="#"><i class="i-pause"></i> &nbsp;Pause</a></li>
@@ -204,7 +220,7 @@
 
                 <li><a href="#"><i class="i-trash"></i> &nbsp;Delete</a></li>
                 <li><a href="#"><i class="i-history"></i> &nbsp;Reset</a></li>
-                <li><a href="#"><i class="i-move"></i> &nbsp;Move</a></li>
+                <li><a href="#"><i class="i-move"></i> &nbsp;Change Project</a></li>
                 <li><a href="#"><i class="i-creds"></i> &nbsp;Clear Credentials</a></li>
                 <li><a href="#"><i class="i-refresh"></i> &nbsp;Refresh</a></li>
 
@@ -421,7 +437,7 @@
                     <table class="table table-hover project-items mbn">
                       <thead>
                       <tr>
-                        <th class="w-30" style="width:25px"></th>
+                        <th class="w-30" style="width:35px"></th>
                         <th class="w-30" style="width:25px"><i class="i-star"></i></th>
                         <th>Source Item Identifier</th>
                         <th>Destination Item Identifier</th>
