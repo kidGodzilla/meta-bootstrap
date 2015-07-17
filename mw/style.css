@@ -4,7 +4,7 @@
     top: 50px;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 999;
 }
 body {
     padding-top: 50px;
@@ -119,6 +119,7 @@ section {
     left: initial;
     padding-top: 5px;
     top: 40px;
+    z-index: 9999;
 }
 .dropdown-menu.right li > strong {
     color: #000;
@@ -180,6 +181,15 @@ table thead th {
 table {
     background-color: #fff;
 }
+
+.btn {
+    border: none;
+    border-color: transparent;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
 .stat-card {
     border: none !important;
     margin-bottom: 20px;
@@ -415,7 +425,7 @@ input[type=text]:focus {
     display: none;
     z-index: 10001;
     position: fixed;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.5);
     top: 0;
     bottom: 0;
     left: 0;
@@ -438,6 +448,7 @@ input[type=text]:focus {
     padding: 15px 30px;
     background-color: #00A8B3;
     color: #fff;
+    height: 93px;
 }
 .context-panel .body {
     background-color: #F4F8FF;
@@ -452,4 +463,51 @@ input[type=text]:focus {
     position: absolute;
     width: calc(100% - 15px);
     padding: 10px 15px;
+}
+
+.stat-widget-sm {
+    width: 100%;
+    display: table;
+    height: auto;
+    opacity: 0.9;
+}
+.stat-widget-sm:hover {
+    opacity: 1;
+}
+.stat-widget-sm .icon {
+    display: table-cell;
+    vertical-align: middle;
+    width: 2em;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 5px 0 0 5px;
+    background: #ccc;
+    color: #fff;
+}
+.stat-widget-sm .content {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    width: calc(100% - 2.5em);
+    padding: 5px 15px;
+    background: #fff;
+    border-radius: 0 5px 5px 0;
+}
+.stat-widget-sm.success .icon {
+    background-color: #A9D96C
+}
+.help {
+    font-size: 1.5rem;
+}
+.help:hover {
+    text-decoration: none;
+}
+
+.accordion .content {
+    height: 0;
+    overflow: hidden;
+    transition: height 500ms ease-in-out;
+}
+.accordion .open .content {
+    height: inherit;
 }
