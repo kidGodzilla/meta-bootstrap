@@ -439,7 +439,7 @@ input[type=text]:focus {
     position: absolute;
     background-color: #fff;
     border: 1px solid rgba(0,0,0,0.2);
-    font-size: 14px;
+    font-size: 13px;
     display: none;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
     box-shadow: 0 6px 12px rgba(0,0,0,0.175);
