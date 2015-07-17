@@ -200,7 +200,7 @@ table {
     text-align: center;
     opacity: 0.9;
 }
-.stat-card .icon:hover {
+.stat-card:hover .icon {
     opacity: 1;
 }
 .stat-card .icon.red {
