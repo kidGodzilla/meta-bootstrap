@@ -186,6 +186,8 @@ table {
     border: none;
     border-color: transparent;
     border-radius: 5px;
+}
+.btn-default,.btn-primary,.btn-success,.btn-warning,.btn-info {
     text-transform: uppercase;
     font-size: 14px;
 }
