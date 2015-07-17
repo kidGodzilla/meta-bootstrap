@@ -1,6 +1,4 @@
-body.boxed {
-
-}
+/* Global, Dashboard */
 body {
     padding-top: 50px;
 }
@@ -93,20 +91,12 @@ body {
     position: relative;
     top: 1px;
 }
-/* Bootswatch Yeti, MW */
-.yeti .navbar,
 .mw .navbar {
     height: 51px;
 }
-.yeti .navbar-nav,
 .mw .navbar-nav,
-.yeti .navbar-brand,
 .mw .navbar-brand {
     margin-top: 3px;
-}
-/* Theme */
-header.head {
-    display: none;
 }
 
 .btn-nav-clear:active,
@@ -337,4 +327,59 @@ table {
     .topnav {
         display: none;
     }
+}
+
+/* Project Page */
+
+input[type=text]:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.navbar-thin {
+    height: 40px !important;
+    margin-top: -5px;
+}
+.navbar-thin .navbar-nav>li>a {
+    padding-bottom: 8px !important;
+}
+.caret {
+    position: relative;
+    top: -1px;
+    left: 2px;
+}
+
+#selectable .ui-selecting { background: #FFB8AC; }
+#selectable .ui-selected { background: #FF9086; color: #fff !important; }
+#selectable .ui-selected a { color: #fff !important; }
+
+
+.custom-menu {
+    z-index: 999999;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 14px;
+    display: none;
+}
+.custom-menu .strong {
+    display: block;
+    padding: 4px 10px;
+    width: 100%;
+    background: #f6f6f6;
+}
+.custom-menu a {
+    display: block;
+    text-align: left;
+    padding: 4px 10px;
+}
+.custom-menu a:hover {
+    text-decoration: none;
+    background: #f9f9f9;
+}
+.custom-menu .row-divider {
+    width: 100%;
+    background: rgba(0,0,0,0.1);
+    margin: 3px 0;
+    height: 1px;
 }
