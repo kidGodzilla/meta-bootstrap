@@ -4,7 +4,7 @@
     $('[data-toggle="tooltip"]').tooltip();
  
     $('#menu').metisMenu();
-    Metis.navBar();
+    //Metis.navBar();
     Metis.metisAnimatePanel();
     Metis.toggleFullScreen();
     Metis.boxFullScreen();

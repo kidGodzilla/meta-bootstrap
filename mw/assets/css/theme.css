@@ -78,71 +78,11 @@ body.boxed {
   position: relative;
   top: 1px;
 }
-/* Bootswatch Cosmo */
-.cosmo .navbar {
-  height: 50px;
-}
-.cosmo .navbar-brand img {
-  top: 10px;
-}
-/* Bootswatch Paper */
-.paper .navbar-brand img {
-  top: 17px;
-}
-.paper .navbar .btn-group {
-  top: 7px;
-}
-/* Bootswatch Sandstone */
-.sandstone .navbar-nav,
-.sandstone .navbar-brand {
-  margin-top: 5px;
-}
-.sandstone .navbar-brand img {
-  top: 12px;
-}
-.sandstone .navbar .btn-group {
-  top: 7px;
-}
-.sandstone .main-bar {
-  margin-top: 5px;
-}
-/* Bootswatch Darkly */
-.darkly .navbar-brand img {
-  top: 15px;
-}
-/* Bootswatch Yeti, MW */
-.yeti .navbar,
+/* Bootswatch MW */
 .mw .navbar {
   height: 51px;
 }
-.yeti .navbar-nav,
 .mw .navbar-nav,
-.yeti .navbar-brand,
 .mw .navbar-brand {
-  margin-top: 3px;
-}
-/* Bootswatch Superhero */
-.superhero .navbar-nav,
-.superhero .navbar-brand {
-  margin-top: 5px;
-}
-.superhero .navbar-brand img {
-  top: 5px;
-}
-/* Bootswatch Flatly */
-.flatly .navbar-brand img {
-  height: 32px;
-  padding: 5px;
-  position: relative;
-  top: 14px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-.flatly .navbar .topnav {
-  position: relative;
-  top: 4px;
-}
-/* Theme */
-header.head {
-  display: none;
+  margin-top: 0;
 }
