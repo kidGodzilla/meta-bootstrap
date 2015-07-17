@@ -1,6 +1,6 @@
 /* Global, Dashboard */
 body {
-    opacity: 0;
+    opacity: 0.65;
     transition: opacity 200ms ease-in-out;
 }
 .fade-in {
