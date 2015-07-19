@@ -96,3 +96,8 @@ nav.opaque {
 .navbar-nav.social a {
   padding: 10px 7px;
 }
+/* Fixes issues when nav dropdowns contain too many elements */
+ul.navbar-nav {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
