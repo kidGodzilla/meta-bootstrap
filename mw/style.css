@@ -475,18 +475,27 @@ input[type=text]:focus {
     left: 0;
     right: 0;
 }
+.underlay.two {
+    z-index: 10010;
+}
 .context-panel {
     opacity: 0;
     z-index: 10002;
     /*padding-top: 50px;*/
     position: fixed;
-    left: -54%;
     width: 50%;
     top: 0;
     bottom: 0;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
     box-shadow: 0 6px 12px rgba(0,0,0,0.175);
     transition: all 400ms ease-in-out;
+}
+.context-panel.left {
+    left: -54%;
+}
+.context-panel.right {
+    z-index: 10012;
+    right: -54%;
 }
 .context-panel > header {
     padding: 15px 30px;
@@ -499,8 +508,11 @@ input[type=text]:focus {
     padding: 15px;
     min-height: 100%;
 }
-.context-panel.open {
+.context-panel.left.open {
     left: 0;
+}
+.context-panel.right.open {
+    right: 0;
 }
 .context-panel .body > .footer {
     bottom: 0;
