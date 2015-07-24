@@ -1,0 +1,88 @@
+/**
+* MetaBootstrap - Bootstrap-Admin-Template v0.0.2
+* Author : kidgodzilla 
+* Copyright 2015
+* Licensed under MIT (https://github.com/kidgodzilla/Bootstrap-Admin-Template/blob/master/LICENSE.md)
+*/
+
+body.boxed {
+  background: url("../img/pattern/arches.png") repeat;
+}
+#top > .navbar {
+  border-top: 3px solid #428bca;
+}
+#top > .navbar .dropdown-menu > li > a:hover,
+#top > .navbar .dropdown-menu > li > a:focus {
+  background-color: #428bca;
+  color: #ffffff;
+}
+#menu {
+  background-color: #428bca !important;
+}
+#menu > li > a {
+  color: #ffffff;
+  text-shadow: none !important;
+}
+.sidebar-left-mini #menu > li > a > .link-title {
+  background-color: #3681c1 !important;
+}
+/* Vanilla Bootstrap */
+.navbar {
+  border-top: 0 !important;
+}
+.navbar-brand img {
+  height: 32px;
+  padding: 5px;
+  position: relative;
+  top: 7px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#left {
+  font-size: 12px;
+  line-height: 1.5em;
+  font-weight: lighter;
+}
+#menu > li > a {
+  padding: 13px 0 12px 15px;
+}
+.sidebar-left-mini #menu > li:hover > a > .link-title {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.sidebar-left-mini #menu > li > a > i {
+  width: 20px;
+  text-align: center;
+}
+#menu .fa.arrow:before {
+  content: "\f105";
+}
+.btn-nav-clear {
+  color: #fff;
+  opacity: 0.9;
+}
+.btn-nav-clear:hover {
+  color: #fff !important;
+  opacity: 1;
+}
+.modal-dialog {
+  z-index: 1041;
+}
+.toolbar a {
+  padding: 0 4px;
+}
+.toolbar a:hover {
+  text-decoration: none;
+}
+.toolbar a .fa-minus {
+  position: relative;
+  top: 1px;
+}
+/* Bootswatch MW */
+.mw .navbar {
+  height: 51px;
+}
+.mw .navbar-nav,
+.mw .navbar-brand {
+  margin-top: 0;
+}
