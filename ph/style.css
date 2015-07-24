@@ -247,7 +247,7 @@ table {
     border-color: transparent;
     border-radius: 5px;
 }
-.btn-default,.btn-primary,.btn-success,.btn-warning,.btn-info {
+.btn-default,.btn-primary,.btn-success,.btn-warning,.btn-info,.btn-danger {
     text-transform: uppercase;
     font-size: 12px;
 }
@@ -280,6 +280,9 @@ table {
 }
 .stat-card .icon.blue {
     background: #2A3542;
+}
+.stat-card .icon.green {
+    background: #A9D96C;
 }
 .stat-card .icon i {
     color: #fff;
