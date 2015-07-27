@@ -189,14 +189,14 @@
           <!--</div>&lt;!&ndash; /.main-bar &ndash;&gt;-->
         <!--</header>&lt;!&ndash; /.head &ndash;&gt;-->
       </div><!-- /#top -->
-      <div id="left" class="open">
+      <div id="left" class="">
         <div class="expander cursor-pointer" style="height: 15px;">
           <div class="" style="position:absolute;width: 16px">
-            <i class="fa fa-step-backward toggle-menu" style="padding: 2px 5px;opacity: 0.75;"></i>
+            <i class="fa fa-step-forward toggle-menu" style="padding: 2px 5px;opacity: 0.75;"></i>
           </div>
           <div class="text-center">
-            <small class="subdued uppercase hidden" style="position:relative;top:-1px">Using Collapsing Menu</small>
-            <small class="subdued uppercase" style="position:relative;top:-1px">Using Fixed Menu</small>
+            <small class="subdued uppercase hidden" style="position:relative;top:-1px">Dashboard Menu</small>
+            <small class="subdued uppercase" style="position:relative;top:-1px">Dashboard Menu</small>
           </div>
         </div>
         <!-- #menu -->
@@ -256,7 +256,6 @@
 
           <li class="">
             <a href="#">
-
               <span class="link-title"><i class="i-credit"></i>&nbsp; Billing</span>
             </a>
             <ul class="collapse">
@@ -947,7 +946,9 @@
         });
 
         $('.expander, .toggle-menu').click(function () {
-          $('.toggle-menu').toggleClass('fa-step-forward fa-step-backward');$('.expander small').toggleClass('hidden');$('#left').toggleClass('open');
+          $('.toggle-menu').toggleClass('fa-step-forward fa-step-backward');
+          $('.expander small').toggleClass('hidden');
+          $('#left').toggleClass('open');
         });
       });
     </script>

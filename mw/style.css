@@ -11,7 +11,7 @@ body {
     top: 50px;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 99999;
 }
 body {
     padding-top: 50px;
@@ -469,7 +469,7 @@ input[type=text]:focus {
 }
 .underlay {
     display: none;
-    z-index: 10001;
+    z-index: 100000;
     position: fixed;
     background: rgba(0,0,0,0.5);
     top: 0;
@@ -482,7 +482,7 @@ input[type=text]:focus {
 }
 .context-panel {
     opacity: 0;
-    z-index: 10002;
+    z-index: 100001;
     /*padding-top: 50px;*/
     position: fixed;
     width: 50%;
@@ -568,4 +568,16 @@ input[type=text]:focus {
 }
 .accordion .open .content {
     height: inherit;
+}
+.navbar {
+    transition: all 300ms ease-in-out;
+}
+.navbar-collapsed .navbar {
+    top: -51px;
+}
+.navbar-collapsed .navbar-fixed-second {
+    top: 0px;
+}
+.expander:hover {
+    background: rgba(255,255,255,0.025);
 }

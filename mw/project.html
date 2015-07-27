@@ -113,7 +113,7 @@
                   <i class="i-user-alt"></i> &nbsp;Account
                   <span class="i-down"></span>
                 </a>
-                <ul class="dropdown-menu right">
+                <ul class="dropdown-menu right" style="top: 82px;">
                   <li>
                     <strong class="truncate">
                       Welcome, MigrationWiz User
@@ -241,7 +241,17 @@
         </nav>
 
       </div><!-- /#top -->
-      <div id="left">
+      <div id="left" class="open">
+
+        <div class="expander cursor-pointer" style="height: 15px;">
+          <div class="" style="position:absolute;width: 16px">
+            <i class="fa fa-step-backward toggle-menu" style="padding: 2px 5px;opacity: 0.75;"></i>
+          </div>
+          <div class="text-center">
+            <small class="subdued uppercase hidden" style="position:relative;top:-1px">Projects Menu</small>
+            <small class="subdued uppercase" style="position:relative;top:-1px">Projects Menu</small>
+          </div>
+        </div>
 
         <!-- #menu -->
         <ul id="menu" class="bg-blue dker">
@@ -298,71 +308,71 @@
             </ul>
           </li>
 
-          <li class="">
-            <a href="#">
+          <!--<li class="">-->
+            <!--<a href="#">-->
 
-              <span class="link-title"><i class="i-credit"></i>&nbsp; Billing</span>
-            </a>
-            <ul class="collapse">
-              <li>
-                <a href="#">
-                  <i class="i-dollar"></i> &nbsp;Purchase Licenses
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="i-license"></i> &nbsp;License Summary
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="i-credit"></i> &nbsp;Purchase History
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="i-discount"></i> &nbsp;Redeem Coupon
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="">
-            <a href="#">
-              <span class="link-title"><i class="i-support"></i>&nbsp; Support</span>
-            </a>
-            <ul class="collapse">
-              <li>
-                <a href="#">
-                  <i class="i-at"></i> &nbsp;New Ticket
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="i-phone-24"></i> &nbsp;Phone Support
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="i-phone"></i> &nbsp;Advisor Hours
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="i-communicate"></i> &nbsp;Feedback
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="">
-            <a href="#">
-              <span class="link-title"><i class="i-user-alt"></i>&nbsp; Account</span>
-            </a>
-          </li>
+              <!--<span class="link-title"><i class="i-credit"></i>&nbsp; Billing</span>-->
+            <!--</a>-->
+            <!--<ul class="collapse">-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-dollar"></i> &nbsp;Purchase Licenses-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-license"></i> &nbsp;License Summary-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-credit"></i> &nbsp;Purchase History-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-discount"></i> &nbsp;Redeem Coupon-->
+                <!--</a>-->
+              <!--</li>-->
+            <!--</ul>-->
+          <!--</li>-->
+          <!--<li class="">-->
+            <!--<a href="#">-->
+              <!--<span class="link-title"><i class="i-support"></i>&nbsp; Support</span>-->
+            <!--</a>-->
+            <!--<ul class="collapse">-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-at"></i> &nbsp;New Ticket-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-phone-24"></i> &nbsp;Phone Support-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-phone"></i> &nbsp;Advisor Hours-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-communicate"></i> &nbsp;Feedback-->
+                <!--</a>-->
+              <!--</li>-->
+            <!--</ul>-->
+          <!--</li>-->
+          <!--<li class="">-->
+            <!--<a href="#">-->
+              <!--<span class="link-title"><i class="i-user-alt"></i>&nbsp; Account</span>-->
+            <!--</a>-->
+          <!--</li>-->
         </ul><!-- /#menu -->
       </div><!-- /#left -->
       <div id="content">
         <div class="">
-          <div class="bg-light lter pvm phx mtm ptx">
+          <div class="bg-light lter phx ptxl">
 
             <!-- Content Goes Here -->
 
@@ -1078,6 +1088,21 @@
         $('.accordion .list-group-item').click(function () {
           $('.accordion .list-group-item').removeClass('open');
           $(this).addClass('open');
+        });
+
+        $('.expander, .toggle-menu').click(function () {
+          $('.toggle-menu').toggleClass('fa-step-forward fa-step-backward');
+          $('.expander small').toggleClass('hidden');
+          $('#left').toggleClass('open');
+        });
+
+        $(window).scroll(function () {
+          if ($(window).scrollTop() === 0) {
+            $('body').removeClass('navbar-collapsed');
+          } else {
+            $('body').addClass('navbar-collapsed');
+          }
+
         });
 
       });
