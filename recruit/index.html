@@ -335,10 +335,17 @@
       title: 'BitTitan'
     });
 
+    var image = {
+      url: 'bt.png',
+      // This marker is 20 pixels wide by 32 pixels tall.
+      scaledSize: new google.maps.Size(36, 36)
+    };
+
     var marker2 = new google.maps.Marker({
       position: new google.maps.LatLng(47.6417817, -122.2008691),
       map: map,
-      title: 'BitTitan'
+      title: 'BitTitan',
+      icon: image
     });
   }
 </script>
