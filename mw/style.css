@@ -111,6 +111,7 @@ section {
     width: 250px;
     opacity: 1;
 }
+#left.open li ul,
 #left:hover li ul,
 .lefty:hover + #wrap #left li ul{
     margin-left: 0;
@@ -580,4 +581,7 @@ input[type=text]:focus {
 }
 .expander:hover {
     background: rgba(255,255,255,0.025);
+}
+.rotate-90-degs {
+    transform: rotate(90deg);
 }

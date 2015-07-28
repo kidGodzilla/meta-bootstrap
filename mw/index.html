@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -191,12 +192,12 @@
       </div><!-- /#top -->
       <div id="left" class="">
         <div class="expander cursor-pointer" style="height: 15px;">
-          <div class="" style="position:absolute;width: 16px">
-            <i class="fa fa-step-forward toggle-menu" style="padding: 2px 5px;opacity: 0.75;"></i>
+          <div class="pull-right expander-pin" style="width: 16px;margin-right:4px">
+            <i class="fa fa-thumb-tack toggle-menu" style="padding: 2px 5px;opacity: 0.75;"></i>
           </div>
           <div class="text-center">
-            <small class="subdued uppercase hidden" style="position:relative;top:-1px">Dashboard Menu</small>
-            <small class="subdued uppercase" style="position:relative;top:-1px">Dashboard Menu</small>
+            <small class="subdued uppercase hidden" style="position:relative;top:-1px;margin-left:8px">Dashboard Menu</small>
+            <small class="subdued uppercase" style="position:relative;top:-1px;margin-left:8px">Dashboard Menu</small>
           </div>
         </div>
         <!-- #menu -->
@@ -945,8 +946,8 @@
           $('.live-chat').toggleClass('open');
         });
 
-        $('.expander, .toggle-menu').click(function () {
-          $('.toggle-menu').toggleClass('fa-step-forward fa-step-backward');
+        $('.expander, .toggle-menu, .expander-pin').click(function () {
+          $('.toggle-menu').toggleClass('rotate-90-degs');
           $('.expander small').toggleClass('hidden');
           $('#left').toggleClass('open');
         });

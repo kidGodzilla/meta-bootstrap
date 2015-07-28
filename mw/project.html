@@ -244,12 +244,11 @@
       <div id="left" class="open">
 
         <div class="expander cursor-pointer" style="height: 15px;">
-          <div class="" style="position:absolute;width: 16px">
-            <i class="fa fa-step-backward toggle-menu" style="padding: 2px 5px;opacity: 0.75;"></i>
+          <div class="pull-right expander-pin" style="width: 16px;margin-right:4px">
+            <i class="fa fa-thumb-tack rotate-90-degs toggle-menu" style="padding: 2px 5px;opacity: 0.75;"></i>
           </div>
           <div class="text-center">
-            <small class="subdued uppercase hidden" style="position:relative;top:-1px">Projects Menu</small>
-            <small class="subdued uppercase" style="position:relative;top:-1px">Projects Menu</small>
+            <small class="subdued uppercase" style="position:relative;top:-1px;margin-left:8px">Projects Menu</small>
           </div>
         </div>
 
@@ -258,7 +257,7 @@
           <!--<li class="nav-header">Menu</li>-->
 
           <!--<li class="nav-divider"></li>-->
-          <li class="">
+          <li class="active">
             <a href="#">
               <span class="link-title"><i class="i-project"></i>&nbsp; My Projects</span>
             </a>
@@ -376,55 +375,7 @@
 
             <!-- Content Goes Here -->
 
-            <div class="row mtm">
-              <div class="col-sm-6 col-md-3">
-                <div class="stat-card">
-                  <div class="icon red">
-                    <i class="i-numbered"></i>
-                  </div>
-                  <div class="value ptm">
-                    <h3 class="man Light">1,443</h3>
-                    <p class="Light">Items Migrating</p>
-                  </div>
-                </div>
-              </div>
 
-              <div class="col-sm-6 col-md-3">
-                <div class="stat-card">
-                  <div class="icon blue">
-                    <i class="i-project"></i>
-                  </div>
-                  <div class="value ptm">
-                    <h3 class="man Light">542</h3>
-                    <p class="Light">Items Completed</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-md-3">
-              <div class="stat-card">
-                <div class="icon red">
-                  <i class="i-numbered"></i>
-                </div>
-                <div class="value ptm">
-                  <h3 class="man Light">14</h3>
-                  <p class="Light">Items with Errors</p>
-                </div>
-              </div>
-            </div>
-
-              <div class="col-sm-6 col-md-3">
-                <div class="stat-card">
-                  <div class="icon blue">
-                    <i class="i-project"></i>
-                  </div>
-                  <div class="value ptm">
-                    <h3 class="man Light">1,443</h3>
-                    <p class="Light">Items in Queue</p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <div class="row">
               <div class="col-xs-12">
@@ -1090,9 +1041,9 @@
           $(this).addClass('open');
         });
 
-        $('.expander, .toggle-menu').click(function () {
-          $('.toggle-menu').toggleClass('fa-step-forward fa-step-backward');
-          $('.expander small').toggleClass('hidden');
+        $('.expander, .toggle-menu, .expander-pin').click(function () {
+          $('.toggle-menu').toggleClass('rotate-90-degs');
+//          $('.expander small').toggleClass('hidden');
           $('#left').toggleClass('open');
         });
 
