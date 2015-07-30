@@ -1,0 +1,1088 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <title>MigrationWiz Concept</title>
+
+    <!--IE Compatibility modes-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Mobile first-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- MetaBootstrap -->
+    <link rel="stylesheet" type="text/css" href="theme.css" media="all">
+    <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/meta-bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//www.bittitan.com/css/bittitan-icons.css">
+    <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/style.css" media="all">
+
+    <!-- MetaBootstrap Admin core stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.min.css">
+
+    <!-- metisMenu stylesheet -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+      <script src="assets/lib/html5shiv/html5shiv.js"></script>
+        <script src="assets/lib/respond/respond.min.js"></script>
+      <![endif]-->
+
+    <!--For Development Only. Not required -->
+    <script>
+      less = {
+        env: "development",
+        relativeUrls: false,
+        rootpath: "../assets/"
+      };
+    </script>
+    <!--<link rel="stylesheet" href="assets/css/style-switcher.css">-->
+    <!--<link rel="stylesheet/less" type="text/css" href="assets/less/theme.less">-->
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script>-->
+
+    <!--Modernizr-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  </head>
+  <body class="mw has-second-navbar">
+    <div class="lefty"></div>
+    <div class="bg-dark dk" id="wrap">
+      <div id="top">
+
+        <!-- .navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <header class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="index.html" class="navbar-brand">
+                <img src="//static.bittitan.com/Logos/2014/migrationwiz_100_alt_white.png" alt="">
+              </a>
+            </header>
+            <div class="topnav">
+
+              <div class="btn-group">
+                <a class="btn btn-nav-clear btn-sm">
+                  <i class="i-plus"></i> &nbsp;New Project
+                </a>
+              </div>
+
+              <div class="btn-group">
+                <a class="btn btn-nav-clear btn-sm">
+                  <i class="i-project"></i> &nbsp;Projects
+                </a>
+              </div>
+
+              <div class="btn-group">
+                <a class="btn btn-nav-clear btn-sm">
+                  <i class="i-credit"></i> &nbsp;Billing
+                </a>
+              </div>
+
+              <!--<div class="btn-group">-->
+                <!--<a class="btn btn-nav-clear btn-sm">-->
+                  <!--<i class="i-support"></i> &nbsp;Support-->
+                <!--</a>-->
+              <!--</div>-->
+
+              <div class="btn-group">
+                <a class="btn btn-nav-clear btn-sm">
+                  <i class="i-notification"></i> &nbsp;Messages
+                  <span class="label label-warning">5</span>
+                </a>
+              </div>
+
+              <div class="btn-group">
+                <a class="btn btn-nav-clear btn-sm dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  <i class="i-user-alt"></i> &nbsp;Account
+                  <span class="i-down"></span>
+                </a>
+                <ul class="dropdown-menu right" style="top: 82px;">
+                  <li>
+                    <strong class="truncate">
+                      Welcome, MigrationWiz User
+                    </strong>
+                  </li>
+                  <li class="divider first"></li>
+                  <li>
+                    <a href="#">Account Profile</a>
+                  </li>
+                  <li>
+                    <a href="#">Purchase Licenses</a>
+                  </li>
+                  <li>
+                    <a href="#">Support Center</a>
+                  </li>
+                  <li class="divider">
+                  <li>
+                    <a href="#">Partner Center</a>
+                  </li>
+                  <li class="divider">
+                  <li>
+                    <a href="#">Select Another Product</a>
+                  </li>
+                  <li class="divider">
+                  <li>
+                    <a href="#"><i class="i-exit icon-space"></i> &nbsp;Sign Out</a>
+                  </li>
+                  <li class="divider"></li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+              <!-- .nav -->
+              <ul class="nav navbar-nav">
+                <li class="nav-search">
+                  <a>
+                    <input type="text" class="form-control search">
+                    <i class="fa fa-search"></i>
+                  </a>
+                </li>
+                <!--<li>-->
+                  <!--<a href="#">-->
+                    <!--<i class="fa fa-arrow-left"></i> &nbsp;Back-->
+                  <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                  <!--<a>-->
+                    <!--<i class="i-user-alt"></i> &nbsp;Dashboard-->
+                  <!--</a>-->
+                <!--</li>-->
+              </ul><!-- /.nav -->
+            </div>
+          </div><!-- /.container-fluid -->
+        </nav><!-- /.navbar -->
+
+        <nav class="navbar navbar-default navbar-fixed-second navbar-thin">
+          <div class="">
+            <div class="collapse navbar-collapse" style="margin-left:-15px;margin-right:-15px">
+              <ul class="nav navbar-nav">
+                <!--<li><a href="#">Link</a></li>-->
+                <!--<li><a href="#">Link</a></li>-->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-edit"></i> &nbsp;Edit Project <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Edit Project</a></li>
+                    <li><a href="#">Clone Project</a></li>
+                    <li><a href="#">Advanced Options</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-action-plus"></i> &nbsp;Add <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Quick Add</a></li>
+                    <li><a href="#">Bulk Add</a></li>
+                    <li><a href="#">Autodiscover Items</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-play"></i> &nbsp;Start <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Verify Credentials</a></li>
+                    <li><a href="#">Trial Migration</a></li>
+                    <li><a href="#">Pre-Stage Migration</a></li>
+                    <li><a href="#">Full Migration</a></li>
+                    <li><a href="#">Retry Errors</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="i-pause"></i> &nbsp;Pause</a></li>
+                <li class="divider"></li>
+
+                <li><a href="#"><i class="i-trash"></i> &nbsp;Delete</a></li>
+                <li><a href="#"><i class="i-history"></i> &nbsp;Reset</a></li>
+                <li><a href="#"><i class="i-move"></i> &nbsp;Change Project</a></li>
+                <li><a href="#"><i class="i-creds"></i> &nbsp;Clear Credentials</a></li>
+                <li><a href="#"><i class="i-refresh"></i> &nbsp;Refresh</a></li>
+
+              </ul>
+              <form class="navbar-form navbar-left pull-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search Project" style="margin-top:3px;background:transparent;border:0;">
+                </div>
+                <button type="submit" class="btn btn-clear" style="margin-top:1px;  border-color: transparent !important"><i class="i-search" style="position: relative;top: 1px;"></i></button>
+              </form>
+              <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-sort"></i> &nbsp;Sort <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-filter"></i> &nbsp;Filter <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div><!-- /#top -->
+      <div id="left" class="open">
+
+        <div class="expander cursor-pointer" style="height: 15px;">
+          <div class="pull-right expander-pin" style="width: 16px;margin-right:4px">
+            <i class="fa fa-thumb-tack rotate-90-degs toggle-menu" style="padding: 2px 5px;opacity: 0.75;"></i>
+          </div>
+          <div class="text-center">
+            <small class="subdued uppercase" style="position:relative;top:-1px;margin-left:8px">Projects Menu</small>
+          </div>
+        </div>
+
+        <!-- #menu -->
+        <ul id="menu" class="bg-blue dker">
+          <!--<li class="nav-header">Menu</li>-->
+
+          <!--<li class="nav-divider"></li>-->
+          <li class="active">
+            <a href="#">
+              <span class="link-title"><i class="i-project"></i>&nbsp; My Projects</span>
+            </a>
+            <ul class="collapse">
+              <li>
+                <a href="project.html" class="truncate">
+                  <i class="i-archive"></i> &nbsp;BitTitan Archive Migration Project #3245
+                </a>
+              </li>
+              <li>
+                <a href="project.html">
+                  <i class="i-mailbox"></i> &nbsp;Exchange 2007 to Office 365
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#">
+              <span class="link-title"><i class="i-plus"></i> &nbsp;Create New Project</span>
+            </a>
+            <ul class="collapse">
+              <li>
+                <a href="#">
+                  <i class="i-mailbox"></i> &nbsp;Mailbox Project
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-public-folder"></i> &nbsp;Public Folder Project
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-document"></i> &nbsp;Document Project
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-archive"></i> &nbsp;Archive Project
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="i-enterprise-archive"></i> &nbsp;Enterprise Archive Project
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!--<li class="">-->
+            <!--<a href="#">-->
+
+              <!--<span class="link-title"><i class="i-credit"></i>&nbsp; Billing</span>-->
+            <!--</a>-->
+            <!--<ul class="collapse">-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-dollar"></i> &nbsp;Purchase Licenses-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-license"></i> &nbsp;License Summary-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-credit"></i> &nbsp;Purchase History-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-discount"></i> &nbsp;Redeem Coupon-->
+                <!--</a>-->
+              <!--</li>-->
+            <!--</ul>-->
+          <!--</li>-->
+          <!--<li class="">-->
+            <!--<a href="#">-->
+              <!--<span class="link-title"><i class="i-support"></i>&nbsp; Support</span>-->
+            <!--</a>-->
+            <!--<ul class="collapse">-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-at"></i> &nbsp;New Ticket-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-phone-24"></i> &nbsp;Phone Support-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-phone"></i> &nbsp;Advisor Hours-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#">-->
+                  <!--<i class="i-communicate"></i> &nbsp;Feedback-->
+                <!--</a>-->
+              <!--</li>-->
+            <!--</ul>-->
+          <!--</li>-->
+          <!--<li class="">-->
+            <!--<a href="#">-->
+              <!--<span class="link-title"><i class="i-user-alt"></i>&nbsp; Account</span>-->
+            <!--</a>-->
+          <!--</li>-->
+        </ul>
+        <!-- /#menu -->
+
+      </div>
+      <!-- /#left -->
+      <div id="content">
+        <div class="">
+          <div class="bg-light lter phx ptxl">
+
+            <!-- Content Goes Here -->
+
+
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title"><i class="i-mailbox"></i> &nbsp;Exchange 2007 to Office 365 Migration</h3>
+                  </div>
+                  <div class="panel-body Pan">
+                    <table class="table table-hover project-items Mbn">
+                      <thead>
+                      <tr>
+                        <th class="w-30" style="width:35px"><input id="checkbox-master" class="ember-view ember-checkbox" type="checkbox"></th>
+                        <th class="w-30" style="width:25px"><i class="i-star"></i></th>
+                        <th>Source Item Identifier</th>
+                        <th>Destination Item Identifier</th>
+                        <th class="w-30"><i class="i-source" title="Source"></i></th>
+                        <th class="w-30"><i class="i-destination" title="Destination"></i></th>
+                        <th class="w-30"><script id="metamorph-1439-start" type="text/x-placeholder"></script>Items<script id="metamorph-1439-end" type="text/x-placeholder"></script></th>
+                        <th class="w-30"><i class="i-stop text-grey-md" title="Not Migrated"></i></th>
+                        <th class="w-30"><i class="i-user-waiting text-primary-md" title="Waiting for User"></i></th>
+                        <th class="w-30"><i class="i-play text-info-md" title="Migrating"></i></th>
+                        <th class="w-30"><i class="i-pause text-warning-md" title="Paused"></i></th>
+                        <th class="w-30"><i class="i-check text-success-md" title="Completed"></i></th>
+                        <th class="w-30"><i class="i-danger text-danger-md" title="Failed"></i></th>
+                      </tr>
+                      </thead>
+                      <tbody id="selectable">
+                      <tr><td><input id="ember5705" class="ember-view ember-checkbox" type="checkbox"></td><td><a href="#" class="i-star category-tag dropdown-toggle tag-0" data-bindattr-5707="5707" data-toggle="dropdown"></a></td>                  <td><a href="#"><span>foo@bar.co</span></a></td>
+                        <td><a href="#"><span>foo@bar.co</span></a></td>
+                        <td>
+                          <i class="i-pst" data-bindattr-6299="6299"></i>
+                        </td>
+                        <td>
+                          <i class="i-google" data-bindattr-6300="6300"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1444-start" type="text/x-placeholder"></script>-<script id="metamorph-1444-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1445-start" type="text/x-placeholder"></script>-<script id="metamorph-1445-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1446-start" type="text/x-placeholder"></script>-<script id="metamorph-1446-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1447-start" type="text/x-placeholder"></script>-<script id="metamorph-1447-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1448-start" type="text/x-placeholder"></script>-<script id="metamorph-1448-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1449-start" type="text/x-placeholder"></script>-<script id="metamorph-1449-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1450-start" type="text/x-placeholder"></script>-<script id="metamorph-1450-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr><td><input id="ember5705" class="ember-view ember-checkbox" type="checkbox"></td><td><a href="#" class="i-star category-tag dropdown-toggle tag-0" data-bindattr-5707="5707" data-toggle="dropdown"></a></td>                         <td><a href="#"><span>foo@bar.co</span></a></td>
+                        <td><a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19" title="asdf" data-bindattr-6301="6301"><i class="i-mailbox" data-bindattr-6302="6302" title="Mailbox"></i><span><script id="metamorph-1451-start" type="text/x-placeholder"></script> &nbsp;asdf<script id="metamorph-1451-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6303="6303"></i>
+                        </td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6304="6304"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1452-start" type="text/x-placeholder"></script>103<script id="metamorph-1452-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1453-start" type="text/x-placeholder"></script>99<script id="metamorph-1453-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1454-start" type="text/x-placeholder"></script>-<script id="metamorph-1454-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1455-start" type="text/x-placeholder"></script>-<script id="metamorph-1455-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1456-start" type="text/x-placeholder"></script>-<script id="metamorph-1456-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1457-start" type="text/x-placeholder"></script>-<script id="metamorph-1457-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1458-start" type="text/x-placeholder"></script>4<script id="metamorph-1458-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr><td><input id="ember5705" class="ember-view ember-checkbox" type="checkbox"></td><td><a href="#" class="i-star category-tag dropdown-toggle tag-0" data-bindattr-5707="5707" data-toggle="dropdown"></a></td>                         <td><a href="#"><span>foo@bar.co</span></a></td>
+                        <td><a href="/app/projects/228485bc-fe6a-11e4-9437-00155dc22c82" title="BitTitan Storage?" data-bindattr-6297="6297"><i class="i-archive" data-bindattr-6298="6298" title="Archive"></i><span><script id="metamorph-1443-start" type="text/x-placeholder"></script> &nbsp;BitTitan Storage?<script id="metamorph-1443-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-pst" data-bindattr-6299="6299"></i>
+                        </td>
+                        <td>
+                          <i class="i-google" data-bindattr-6300="6300"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1444-start" type="text/x-placeholder"></script>-<script id="metamorph-1444-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1445-start" type="text/x-placeholder"></script>-<script id="metamorph-1445-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1446-start" type="text/x-placeholder"></script>-<script id="metamorph-1446-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1447-start" type="text/x-placeholder"></script>-<script id="metamorph-1447-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1448-start" type="text/x-placeholder"></script>-<script id="metamorph-1448-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1449-start" type="text/x-placeholder"></script>-<script id="metamorph-1449-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1450-start" type="text/x-placeholder"></script>-<script id="metamorph-1450-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr><td><input id="ember5705" class="ember-view ember-checkbox" type="checkbox"></td><td><a href="#" class="i-star category-tag dropdown-toggle tag-0" data-bindattr-5707="5707" data-toggle="dropdown"></a></td>                         <td><a href="#"><span>foo@bar.co</span></a></td>
+                        <td><a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19" title="asdf" data-bindattr-6301="6301"><i class="i-mailbox" data-bindattr-6302="6302" title="Mailbox"></i><span><script id="metamorph-1451-start" type="text/x-placeholder"></script> &nbsp;asdf<script id="metamorph-1451-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6303="6303"></i>
+                        </td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6304="6304"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1452-start" type="text/x-placeholder"></script>103<script id="metamorph-1452-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1453-start" type="text/x-placeholder"></script>99<script id="metamorph-1453-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1454-start" type="text/x-placeholder"></script>-<script id="metamorph-1454-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1455-start" type="text/x-placeholder"></script>-<script id="metamorph-1455-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1456-start" type="text/x-placeholder"></script>-<script id="metamorph-1456-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1457-start" type="text/x-placeholder"></script>-<script id="metamorph-1457-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1458-start" type="text/x-placeholder"></script>4<script id="metamorph-1458-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr><td><input id="ember5705" class="ember-view ember-checkbox" type="checkbox"></td><td><a href="#" class="i-star category-tag dropdown-toggle tag-0" data-bindattr-5707="5707" data-toggle="dropdown"></a></td>                         <td><a href="#"><span>foo@bar.co</span></a></td>
+                        <td><a href="/app/projects/228485bc-fe6a-11e4-9437-00155dc22c82" title="BitTitan Storage?" data-bindattr-6297="6297"><i class="i-archive" data-bindattr-6298="6298" title="Archive"></i><span><script id="metamorph-1443-start" type="text/x-placeholder"></script> &nbsp;BitTitan Storage?<script id="metamorph-1443-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-pst" data-bindattr-6299="6299"></i>
+                        </td>
+                        <td>
+                          <i class="i-google" data-bindattr-6300="6300"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1444-start" type="text/x-placeholder"></script>-<script id="metamorph-1444-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1445-start" type="text/x-placeholder"></script>-<script id="metamorph-1445-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1446-start" type="text/x-placeholder"></script>-<script id="metamorph-1446-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1447-start" type="text/x-placeholder"></script>-<script id="metamorph-1447-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1448-start" type="text/x-placeholder"></script>-<script id="metamorph-1448-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1449-start" type="text/x-placeholder"></script>-<script id="metamorph-1449-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1450-start" type="text/x-placeholder"></script>-<script id="metamorph-1450-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr><td><input id="ember5705" class="ember-view ember-checkbox" type="checkbox"></td><td><a href="#" class="i-star category-tag dropdown-toggle tag-0" data-bindattr-5707="5707" data-toggle="dropdown"></a></td>                         <td><a href="#"><span>foo@bar.co</span></a></td>
+                        <td><a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19" title="asdf" data-bindattr-6301="6301"><i class="i-mailbox" data-bindattr-6302="6302" title="Mailbox"></i><span><script id="metamorph-1451-start" type="text/x-placeholder"></script> &nbsp;asdf<script id="metamorph-1451-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6303="6303"></i>
+                        </td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6304="6304"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1452-start" type="text/x-placeholder"></script>103<script id="metamorph-1452-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1453-start" type="text/x-placeholder"></script>99<script id="metamorph-1453-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1454-start" type="text/x-placeholder"></script>-<script id="metamorph-1454-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1455-start" type="text/x-placeholder"></script>-<script id="metamorph-1455-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1456-start" type="text/x-placeholder"></script>-<script id="metamorph-1456-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1457-start" type="text/x-placeholder"></script>-<script id="metamorph-1457-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1458-start" type="text/x-placeholder"></script>4<script id="metamorph-1458-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr><td><input id="ember5705" class="ember-view ember-checkbox" type="checkbox"></td><td><a href="#" class="i-star category-tag dropdown-toggle tag-0" data-bindattr-5707="5707" data-toggle="dropdown"></a></td>                         <td><a href="#"><span>foo@bar.co</span></a></td>
+                        <td><a href="/app/projects/228485bc-fe6a-11e4-9437-00155dc22c82" title="BitTitan Storage?" data-bindattr-6297="6297"><i class="i-archive" data-bindattr-6298="6298" title="Archive"></i><span><script id="metamorph-1443-start" type="text/x-placeholder"></script> &nbsp;BitTitan Storage?<script id="metamorph-1443-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-pst" data-bindattr-6299="6299"></i>
+                        </td>
+                        <td>
+                          <i class="i-google" data-bindattr-6300="6300"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1444-start" type="text/x-placeholder"></script>-<script id="metamorph-1444-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1445-start" type="text/x-placeholder"></script>-<script id="metamorph-1445-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1446-start" type="text/x-placeholder"></script>-<script id="metamorph-1446-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1447-start" type="text/x-placeholder"></script>-<script id="metamorph-1447-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1448-start" type="text/x-placeholder"></script>-<script id="metamorph-1448-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1449-start" type="text/x-placeholder"></script>-<script id="metamorph-1449-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1450-start" type="text/x-placeholder"></script>-<script id="metamorph-1450-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      <tr><td><input id="ember5705" class="ember-view ember-checkbox" type="checkbox"></td><td><a href="#" class="i-star category-tag dropdown-toggle tag-0" data-bindattr-5707="5707" data-toggle="dropdown"></a></td>                         <td><a href="#"><span>foo@bar.co</span></a></td>
+                        <td><a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19" title="asdf" data-bindattr-6301="6301"><i class="i-mailbox" data-bindattr-6302="6302" title="Mailbox"></i><span><script id="metamorph-1451-start" type="text/x-placeholder"></script> &nbsp;asdf<script id="metamorph-1451-end" type="text/x-placeholder"></script></span></a></td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6303="6303"></i>
+                        </td>
+                        <td>
+                          <i class="i-office-365" data-bindattr-6304="6304"></i>
+                        </td>
+                        <td>
+                          <script id="metamorph-1452-start" type="text/x-placeholder"></script>103<script id="metamorph-1452-end" type="text/x-placeholder"></script>
+                        </td>
+                        <td>
+                      <span class="text-grey-md" title="Not Migrated">
+                        <script id="metamorph-1453-start" type="text/x-placeholder"></script>99<script id="metamorph-1453-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-primary-md" title="Waiting for User">
+                        <script id="metamorph-1454-start" type="text/x-placeholder"></script>-<script id="metamorph-1454-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-info-md" title="Migrating">
+                        <script id="metamorph-1455-start" type="text/x-placeholder"></script>-<script id="metamorph-1455-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-warning-md" title="Paused">
+                        <script id="metamorph-1456-start" type="text/x-placeholder"></script>-<script id="metamorph-1456-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-success-md" title="Completed">
+                        <script id="metamorph-1457-start" type="text/x-placeholder"></script>-<script id="metamorph-1457-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                        <td>
+                      <span class="text-danger-md" title="Failed">
+                        <script id="metamorph-1458-start" type="text/x-placeholder"></script>4<script id="metamorph-1458-end" type="text/x-placeholder"></script>
+                      </span>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+          </div><!-- /.inner -->
+        </div><!-- /.outer -->
+      </div><!-- /#content -->
+      <div id="right" class="bg-light lter">
+
+      </div><!-- /#right -->
+    </div><!-- /#wrap -->
+    <!--<footer class="Footer bg-dark dker">-->
+      <!--<p>2015 &copy; BitTitan, Inc</p>-->
+    <!--</footer>&lt;!&ndash; /#footer &ndash;&gt;-->
+
+    <!-- #helpModal -->
+    <div id="helpModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal --><!-- /#helpModal -->
+
+    <div class="live-chat">
+      <div class="header"><i class="fa fa-comments"></i>&nbsp; Stuck? We're here to help!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div class="body"></div>
+    </div>
+
+    <div class="underlay one"></div>
+    <div class="context-panel left">
+      <header>
+        <div class="row">
+          <div class="col-xs-12">
+            <h3 class="mtm ptxs Light"><i class="i-play Light"></i>&nbsp; Start a Full Migration to Office 365</h3>
+          </div>
+        </div>
+      </header>
+      <div class="body">
+        <h4 class="mtn">What is a Full Migration? <a class="help" href="#"><i class="i-help"></i></a></h4>
+        <p>
+          <small>
+            Use this type of migration for "big bang" (single pass) migrations, or following an earlier pre-stage migration. Use this type of migration after MX record cutover, to make sure you are not missing any data.
+          </small>
+        </p>
+
+        <div class="row mtl">
+
+          <div class="col-xs-6 pvs">
+            <div class="stat-widget-sm success">
+              <div class="icon">
+                <i class="i-action-check"></i>
+              </div>
+              <div class="content">
+                <strong>1</strong> Item Selected
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 pvs">
+            <div class="stat-widget-sm success">
+              <div class="icon">
+                <i class="i-action-plus"></i>
+              </div>
+              <div class="content">
+                <strong>1</strong> Item Will Migrate
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 pvs">
+            <div class="stat-widget-sm success">
+              <div class="icon">
+                <i class="i-action-x"></i>
+              </div>
+              <div class="content">
+                <strong>120</strong> Licenses Available
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xs-6 pvs">
+            <div class="stat-widget-sm success">
+              <div class="icon">
+                <i class="i-action-x"></i>
+              </div>
+              <div class="content">
+                <strong>1</strong> Licenses Required
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <h4 class=" mtx">Required Steps</h4>
+
+        <div class="list-group accordion">
+          <div class="list-group-item open">
+            <header>
+              <div class="row">
+                <div class="col-xs-12">
+                  <h4 class="mtm Light"><i class="i-play Light"></i>&nbsp; Select What to Migrate</h4>
+                </div>
+              </div>
+            </header>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet architecto cum cumque, doloremque dolores esse explicabo fugiat inventore laboriosam libero neque officiis provident quibusdam quo quos reprehenderit soluta vitae.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolorum excepturi magnam molestias quasi qui sed. Ab aspernatur magni maiores neque nobis placeat rerum suscipit vel. Dignissimos eius ex quaerat!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aperiam, beatae delectus dignissimos, ea eius hic id minima nobis officiis possimus quasi qui repellat repudiandae sunt tempore temporibus totam!
+              </p>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <header>
+              <div class="row">
+                <div class="col-xs-12">
+                  <h4 class="mtm Light"><i class="i-play Light"></i>&nbsp; Select When to Migrate</h4>
+                </div>
+              </div>
+            </header>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At delectus est quia? Atque dicta, dignissimos, eius ex, fuga illum labore libero nostrum omnis pariatur qui quibusdam ratione similique totam voluptatem!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aspernatur corporis, cumque dicta dignissimos dolor ex exercitationem explicabo molestiae mollitia natus nisi non odio officiis quisquam reprehenderit sint suscipit ut.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, consequuntur cupiditate deserunt dolorem exercitationem fuga incidunt ipsa maxime, nemo nihil non officia quis quisquam quo recusandae saepe, sapiente voluptate.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      <div class="footer text-right">
+        <a href="#" class="btn btn-default">Cancel</a>
+        <a href="#" class="btn btn-primary">Start</a>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="underlay two"></div>
+    <div class="context-panel right">
+      <header>
+        <div class="row">
+          <div class="col-xs-12">
+            <h3 class="mtm ptxs Light"><i class="i-help Light"></i>&nbsp; What are the different migration types?</h3>
+          </div>
+        </div>
+      </header>
+      <div class="body">
+
+        <div class="modal-body" style="font-size:0.85em">
+          <p>What are the descriptions of the different migration types?</p><h2>Answer:</h2><p><strong>1. Trial migration</strong></p><p>A trial migration will migrate a very small amount of data in order to test that your project has been created properly and that the mailboxes have been entered correctly.&nbsp;It is completely free and you can perform an unlimited number of trial migrations. Each trial migration will perform the following:</p><ul><li>It will verify credentials at the source and destination.</li><li>It will re-create the entire&nbsp;folder hierarchy on the destination, based on what&nbsp;is defined at the source.</li><li>It will migrate a few sample items in some folders. It will migrate up to 5 items in each folder and up to a total of 10MB in size, in terms of size of total data migrated.</li></ul><p dir="ltr" style="margin-right:0px;"><strong>2. Pre Stage migration</strong></p><p>A pre-stage migration pre fills a destination mailbox with migrated items, as defined by the pre stage migration settings chosen. A pre stage migration is typically part of&nbsp;a<span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;"> multi-pass migration strategy. It occurs before your MX record cutover and is a great way to pre-fill&nbsp;the majority of the end users' data into their future destination mailboxes whilst they are still using their old email system. It has no impact on the end users' and is a highly recommended strategy to follow since the majority of data is migrated over prior to MX record cutover. Typically only mail items older than 3 months are included in the pre stage migration because these items are unlikely to change. </span></p><p style="font:13px/1.6 &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;margin:0px 0px 10px;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;white-space:normal;font-size-adjust:none;font-stretch:normal;"><span class="ms-rteThemeForeColor-2-0" style="color:#444444;">When performing a pre stage migration it is important to understand that MigrationWiz is a migration solution and not a synchronization solution.&nbsp;With this in mind, it&nbsp;will <strong>not</strong> propagate updates, deletes or moves of the items previously migrated in the first migration pass because we do not have “live” monitoring of changes (as with a sync agent) and we cannot handle scenarios such as conflict resolution without user interaction.</span></p><p style="font:13px/1.6 &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;margin:0px 0px 10px;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;white-space:normal;font-size-adjust:none;font-stretch:normal;"><span class="ms-rteThemeForeColor-2-0" style="color:#444444;">Here is what would happen after a delta pass, if items previously migrated to destination have been:</span></p><ul style="font:13px/normal &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;white-space:normal;font-size-adjust:none;font-stretch:normal;"><li style="margin:0.75em 0px;"><div><span class="ms-rteThemeForeColor-2-0" style="color:#444444;">Deleted at source: then destination will keep containing these deleted items. We cannot propagate deletes (e.g. if an item is archived at the source, it will look like a delete and we can’t delete the item at the destination).</span></div></li><li style="margin:0.75em 0px;"><div><span class="ms-rteThemeForeColor-2-0" style="color:#444444;">Moved from folder A to another folder B: then these items will be duplicated at destination, they will be both in folder A and in folder B at destination.</span></div></li><li style="margin:0.75em 0px;"><div><span class="ms-rteThemeForeColor-2-0" style="color:#444444;">Updated at source: then these items will not be updated at destination. There is no process by which the calendars, contacts, tasks, etc. can be updated. This would require conflict resolution which is only possible with a synchronization solution.</span></div></li></ul><p style="margin:0.75em 0px;">Instead, MigrationWiz watermarks all migrated items so as to avoid re-migrating any items in subsequent passes.</p><p><span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;">This multi-pass migration strategy typically follows an order&nbsp;of events similar to this:</span></p><ul><li><span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;">1st pass (<strong>pre stage</strong>): Migrate ONLY mail items that are older than 3 months. Performed 1 to 2 weeks before MX record cutover (times vary dependant upon number of mailboxes being migrated and size of mailboxes).</span></li><li><span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;">Perform MX record cutover</span></li><li><span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;">2nd pass (<strong>delta</strong>): migrate ALL items, with no date filters. Performed after TTL expires.</span></li></ul><p><span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;">Note: c<span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;">hanging MX records in DNS to point to the new system is not effective immediately and is subject to replication delays. You will have to</span><strong style="color:#444444;text-transform:none;line-height:20.79px;text-indent:0px;letter-spacing:normal;font-family:&quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;font-size:13px;font-style:normal;font-variant:normal;word-spacing:0px;white-space:normal;"><span class="Apple-converted-space">&nbsp;</span>wait for the TTL</strong><span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;"><span class="Apple-converted-space">&nbsp;</span>(aka Time To Live)<span class="Apple-converted-space">&nbsp;</span></span><strong style="color:#444444;text-transform:none;line-height:20.79px;text-indent:0px;letter-spacing:normal;font-family:&quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;font-size:13px;font-style:normal;font-variant:normal;word-spacing:0px;white-space:normal;">to expire</strong><span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;"><span class="Apple-converted-space">&nbsp;</span>(- until then, email systems on the internet may continue to deliver to your old system).</span></span></p><ul><li><span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;">Optional 3rd pass (<strong>delta</strong>): migrate ALL items, with no date filters. Performed 2 or 3 days after MX record cutover. This picks up any residual mail that was still delivered to the old mail system after MX record cutover due to slow DNS internet propagation.</span></li></ul><p><strong>3. Full/Delta migration</strong></p><p>Both full and delta migrations have the same settings in MigrationWiz. With both migration types you are performing a migration with <strong>no </strong>date filters and <strong>all </strong>items are migrated.</p><ul><li><div>With a&nbsp;<strong>full</strong> migration, you would be migrating everything in one pass.&nbsp;I.e. a<span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;"> single pass migration (Big Bang) strategy will<span class="Apple-converted-space">&nbsp;</span></span><strong style="color:#444444;text-transform:none;line-height:20.79px;text-indent:0px;letter-spacing:normal;font-family:&quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;font-size:13px;font-style:normal;font-variant:normal;word-spacing:0px;white-space:normal;">move the entire mailbox in one pass,<span class="Apple-converted-space">&nbsp;</span></strong><strong style="color:#444444;text-transform:none;line-height:20.79px;text-indent:0px;letter-spacing:normal;font-family:&quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;font-size:13px;font-style:normal;font-variant:normal;word-spacing:0px;white-space:normal;">after MX records are cut-over</strong><span style="font:13px/20.79px &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;float:none;display:inline !important;white-space:normal;font-size-adjust:none;font-stretch:normal;">. A typical scenario consists in cutting over on a Friday evening and migrating during the weekend.</span></div></li><li><div style="margin:0px 0px 10px;color:#444444;text-transform:none;line-height:1.6;text-indent:0px;letter-spacing:normal;font-family:&quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;font-size:13px;font-style:normal;font-variant:normal;word-spacing:0px;white-space:normal;font-size-adjust:none;font-stretch:normal;">With a <strong>delta </strong>migration, you would be performing this after a pre stage migration, and it is part of a multi pass migration strategy. A&nbsp;delta migration pass&nbsp;allows you to resubmit a mailbox/mailboxes so as to perform a&nbsp;differential&nbsp;migration pass. MigrationWiz will automatically find items that haven't yet been migrated since the first pass, and migrate only those. In other words, a delta pass will find and migrate&nbsp;residual items. In most cases, a delta pass will complete much faster than the initial pass. In a delta pass, MigrationWiz will continue the migration from where it left off and cause&nbsp;no duplicates to be created at the destination -&nbsp;which means that all items which were not migrated in the first pass or were created after/during the first pass, will be migrated.</div></li></ul><p><strong></strong>&nbsp;<strong>4. Retry errors</strong></p><p>This will perform another attempt to migrate any items that previously failed to migrate - it will not migrate any previously successfully migrated items. </p><p>It will not consume any more licenses.</p><p class="solution" style="font:13px/1.6 &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;margin:0px 0px 10px;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;white-space:normal;font-size-adjust:none;font-stretch:normal;">You may only submit mailboxes in this mode&nbsp;if they satisfy both of the following conditions:</p><div class="solution" style="font:13px/normal &quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;color:#444444;text-transform:none;text-indent:0px;letter-spacing:normal;word-spacing:0px;white-space:normal;font-size-adjust:none;font-stretch:normal;"><ul><li style="margin:0.75em 0px;">The last migration completed successfully.</li><li style="margin:0.75em 0px;">The mailbox contains at least one error.</li></ul></div><p><strong>5. Verify credentials</strong></p><p>This will check the credentials for migration at&nbsp;both the source and destination. Verifying credentials will not migrate any data nor consume any licenses.</p><p>This will perform the following actions:</p><ul><li>Check that the mailbox exists on the source.</li><li>If using admin credentials at the source (- these are entered when creating your project), then verify those credentials.</li><li>If not using admin credentials at the source and instead entering passwords for each mailbox, then verify those credentials.</li><li>Check that the mailbox exists on the destination.</li><li>If using admin credentials at the&nbsp;destination (- these are entered when creating your project), then verify those credentials.</li><li>If not using admin credentials at the&nbsp;destination and instead entering passwords for each mailbox, then verify those credentials.</li></ul><script id="metamorph-13079-end" type="text/x-placeholder"></script>
+        </div>
+
+        <div class="footer text-right">
+          <a href="#" class="btn btn-default">Close</a>
+        </div>
+      </div>
+    </div>
+
+    <!--jQuery -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+
+    <!--Bootstrap -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <!-- MetisMenu -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.min.js"></script>
+
+    <!-- Screenfull -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/screenfull.js/2.0.0/screenfull.min.js"></script>
+
+    <!-- MetaBootstrap core scripts -->
+    <script src="assets/js/core.min.js"></script>
+
+    <!-- MetaBootstrap demo scripts -->
+    <script src="assets/js/app.js"></script>
+    <!--<script src="assets/js/style-switcher.min.js"></script>-->
+
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('body').addClass('fade-in');
+
+        $(window).unload(function () {
+          $('body').removeClass('fade-in');
+        });
+
+        $('body').attr('style', '');
+        $('.nav-search input').focus(function () {
+          $('.nav-search').addClass('open');
+        });
+        $('.nav-search .fa-search').click(function () {
+          $('.nav-search').addClass('open');
+          $('.nav-search input').focus();
+        });
+        $('.nav-search input').blur(function () {
+          $('.nav-search').removeClass('open');
+        });
+
+        $('#checkbox-master').click(function () {
+          if ($('#checkbox-master').is(':checked')) {
+            $('input[type=checkbox]').prop('checked', true);
+          } else {
+            $('input[type=checkbox]').prop('checked', false);
+          }
+        });
+
+        $("#selectable").bind("contextmenu", function(event) {
+          event.preventDefault();
+          $('.custom-menu').show().css({top: event.pageY + "px", left: event.pageX + "px"});
+        });
+
+        $("<div class='custom-menu'>" +
+                "<small class='strong'>MENU</small>" +
+                "<a href='#'><i class='i-play'></i> &nbsp;Trial Migration</a>" +
+                "<a href='#'><i class='i-play'></i> &nbsp;Pre-Stage Migration</a>" +
+                "<a href='#'><i class='i-play'></i> &nbsp;Full Migration</a>" +
+                "<a href='#'><i class='i-creds'></i> &nbsp;Verify Credentials</a>" +
+                "<a href='#'><i class='i-play'></i> &nbsp;Retry Errors</a>" +
+                "<div class='row-divider'></div>" +
+                "<a href='#'><i class='i-pause'></i> &nbsp;Pause</a>" +
+                "<a href='#'><i class='i-trash'></i> &nbsp;Delete</a>" +
+                "<a href='#'><i class='i-reset'></i> &nbsp;Reset</a>" +
+                "<div class='row-divider'></div>" +
+                "<a href='#'><i class='i-move'></i> &nbsp;Change Project</a>" +
+                "<a href='#'><i class='i-creds'></i> &nbsp;Clear Credentials</a>" +
+                "<div class='row-divider'></div>" +
+                "<a href=''><i class='i-refresh'></i> &nbsp;Refresh</a>" +
+                "</div>").appendTo("body");
+
+        $('*').click(function () {
+          $('.custom-menu').hide();
+        });
+
+        $("#selectable").selectable({
+          selecting: function( event, ui ) {
+            $('input[type=checkbox]').prop('checked', false);
+          },
+          stop: function() {
+            $( ".ui-selected", this ).each(function() {
+              $(this).find('input[type=checkbox]').prop('checked', true);
+            });
+          }
+        });
+
+        $('.live-chat *').mousedown(function () {
+          $('.live-chat').toggleClass('open');
+        });
+
+        $('.custom-menu a').click(function () {
+          $('.underlay.one').fadeIn();
+          $('#wrap').css('overflow-y', 'hidden');
+          $('.context-panel.left').addClass('open').css('opacity', 1);
+        });
+        $('.underlay, .context-panel a.btn').click(function () {
+          $('.underlay').fadeOut();
+          $('#wrap').css('overflow-y', 'initial');
+          $('.context-panel').removeClass('open').css('opacity', 0);
+        });
+
+        $('.accordion .list-group-item').click(function () {
+          $('.accordion .list-group-item').removeClass('open');
+          $(this).addClass('open');
+        });
+
+        $('.expander, .toggle-menu, .expander-pin').click(function () {
+          $('.toggle-menu').toggleClass('rotate-90-degs');
+          // $('.expander small').toggleClass('hidden');
+          $('#left').toggleClass('open');
+        });
+
+        var $table = $('table').first();
+
+        $table.clone().addClass('floating-table-header').css('position', 'fixed').css('top', '43px')
+                .insertAfter('table').find('tbody').remove();
+        $table.parent().css('position', 'relative');
+
+        // var tableOffsetTop = $table.offset().top;
+
+        $(window).scroll(function () {
+          var scrollTop = $(window).scrollTop();
+
+          if (scrollTop === 0) {
+            $('body').removeClass('navbar-collapsed');
+          } else {
+            $('body').addClass('navbar-collapsed');
+          }
+
+          if (scrollTop > 120) {
+            $('.floating-table-header').show();
+          } else {
+            $('.floating-table-header').hide();
+          }
+        });
+
+        setInterval(function () {
+
+          $('.floating-table-header').css('left', $table.offset().left + 'px').css('width', $table.width() + 'px');
+          // if (scrollTop > (tableOffsetTop + 70)) $('.floating-table-header').show();
+        }, 16);
+
+      });
+    </script>
+  </body>
