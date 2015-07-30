@@ -82,7 +82,7 @@
                 $('.live-chat').toggleClass('open');
             });
 
-            $('.expander, .toggle-menu, .expander-pin').click(function () {
+            $('.expander, .toggle-menu, .expander-pin, #menu > .nav-header').click(function () {
                 $('.toggle-menu').toggleClass('rotate-90-degs');
                 $('#left').toggleClass('open');
             });
@@ -187,7 +187,6 @@
             });
 
             setInterval(function () {
-
                 $('.floating-table-header').css('left', $table.offset().left + 'px').css('width', $table.width() + 'px');
                 // if (scrollTop > (tableOffsetTop + 70)) $('.floating-table-header').show();
             }, 16);
