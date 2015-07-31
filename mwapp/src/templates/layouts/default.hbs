@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- MetaBootstrap -->
-    <link rel="stylesheet" type="text/css" href="{{assets}}/css/theme.css" media="all">
+    <link rel="stylesheet" type="text/css" href="{{assets}}/css/theme2.css" media="all">
     <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/meta-bootstrap.css" media="all">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//www.bittitan.com/css/bittitan-icons.css">
@@ -83,7 +83,7 @@
             });
 
             $('.expander, .toggle-menu, .expander-pin, #menu > .nav-header').click(function () {
-                $('.toggle-menu').toggleClass('rotate-90-degs');
+                $('.toggle-menu').toggleClass('active');
                 $('#left').toggleClass('open');
             });
 
@@ -162,11 +162,19 @@
 
 
 
-            var $table = $('table').first();
+            var $table = $('table.headstuck').first();
 
-            $table.clone().addClass('floating-table-header').css('position', 'fixed').css('top', '43px')
-                    .insertAfter('table').find('tbody').remove();
-            $table.parent().css('position', 'relative');
+            if ($table.length) {
+                console.log($table)
+                $table.clone().addClass('floating-table-header').css('position', 'fixed').css('top', '43px')
+                        .insertAfter('table.headstuck').find('tbody').remove();
+                $table.parent().css('position', 'relative');
+
+                setInterval(function () {
+                    $('.floating-table-header').css('left', $table.offset().left + 'px').css('width', $table.width() + 'px');
+                    // if (scrollTop > (tableOffsetTop + 70)) $('.floating-table-header').show();
+                }, 16);
+            }
 
             // var tableOffsetTop = $table.offset().top;
 
@@ -186,10 +194,6 @@
                 }
             });
 
-            setInterval(function () {
-                $('.floating-table-header').css('left', $table.offset().left + 'px').css('width', $table.width() + 'px');
-                // if (scrollTop > (tableOffsetTop + 70)) $('.floating-table-header').show();
-            }, 16);
         });
     </script>
 </head>
