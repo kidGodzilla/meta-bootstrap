@@ -207,21 +207,30 @@
     <!-- #top -->
     <div id="top">
       {{> navbar-fixed-top }}
-        {{#if inner-navbar}}
-          {{> inner-navbar }}
-        {{/if}}
+      {{#if inner-navbar}}
+        {{> inner-navbar }}
+      {{/if}}
+      {{#if inner-navbar-2}}
+        {{> inner-navbar-2 }}
+      {{/if}}
     </div>
     <!-- /#top -->
 
     <!-- #left -->
-    <div id="left" class="">
+    <div id="left" class="{{#if left-open}}open{{/if}}">
         {{#if project}}
           {{> left-nav-project }}
         {{/if}}
 
-        {{#if default}}
-          {{> left-nav }}
-        {{/if}}
+      {{#if default}}
+        {{> left-nav }}
+      {{/if}}
+
+      {{#if createProject}}
+        {{> left-nav-create-project }}
+      {{/if}}
+
+
     </div>
     <!-- /#left -->
 

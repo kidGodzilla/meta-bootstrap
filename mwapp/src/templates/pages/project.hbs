@@ -2,7 +2,37 @@
 title: Project
 inner-navbar: true
 project: true
+left-open: true
 ---
+
+<style>
+    .category-tag {
+        padding: 4px 7px;
+        cursor: pointer;
+    }
+    .tag-0 {
+        color: #ccc;
+    }
+    .tag-1 {
+        color: #f63723 !important;
+    }
+    .tag-2 {
+        color: #80b856 !important;
+    }
+    .tag-3 {
+        color: #4ba3ff !important;
+    }
+    .tag-4 {
+        color: #ffa62f !important;
+    }
+    .tag-5 {
+        color: #5254a3 !important;
+    }
+    .tag-6 {
+        color: #00cca3 !important;
+    }
+</style>
+
 <div class="row">
     <div class="col-xs-12">
         <div class="panel panel-default">
@@ -34,17 +64,18 @@ project: true
                         <th>
                             Migrated
                         </th>
-                        <th>
+                        <th style="text-align:center">
                             Errors
                         </th>
                         <th class="width-15">
                             Status
                         </th>
-                        <th class="action extra-wide">&nbsp;</th>
+                        <th class="" style="width: 60px">&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody id="selectable">
-                    <tr style="height: 37px"><td class="display-none"></td>
+
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
                                 <input type="checkbox" style="margin-left:0">
@@ -53,34 +84,6 @@ project: true
                         <td class="w-30" style="overflow: visible;">
 
                             <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
-
-                                <style>
-                                    .category-tag {
-                                        padding: 4px 7px;
-                                        cursor: pointer;
-                                    }
-                                    .tag-0 {
-                                        color: #ccc;
-                                    }
-                                    .tag-1 {
-                                        color: #f63723 !important;
-                                    }
-                                    .tag-2 {
-                                        color: #80b856 !important;
-                                    }
-                                    .tag-3 {
-                                        color: #4ba3ff !important;
-                                    }
-                                    .tag-4 {
-                                        color: #ffa62f !important;
-                                    }
-                                    .tag-5 {
-                                        color: #5254a3 !important;
-                                    }
-                                    .tag-6 {
-                                        color: #00cca3 !important;
-                                    }
-                                </style>
 
                                 <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
                                     <li>
@@ -105,31 +108,31 @@ project: true
                         <td class="">
                             <a href="#">asdf@af.co</a>
                         </td>
-                        <td class="text-left">
+                        <td class="" style="text-align: left">
                             <a href="#">asdf@af.co</a>
                         </td>
 
-                        <td class="">
+                        <td class="" style="text-align: left">
                             Dec 17th, 2014 5:29pm
                         </td>
-                        <td class="">
+                        <td class="" style="text-align: left">
                             0 bytes
                         </td>
-                        <td>
+                        <td style="text-align:center">
                             <a class="text-decoration-none" href="#">
                                 -
                             </a>
                         </td>
-                        <td class="width-15">
+                        <td class="width-15" style="text-align: left">
                             <span class="text-danger" title="Failed" data-bindattr-5755="5755">
                                 <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
                                 <a href="#">Failed</a>
                             </span>
                         </td>
-                        <td class="action extra-wide">
-                            <a class="i-edit" href="#" title="Edit Item"></a>
-                            <a class="i-trash" href="#" title="Delete Item"></a>
-                            <a href="#" class="i-journal" target="_blank" title="View Logs"></a>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
                     </tbody>
@@ -140,14 +143,13 @@ project: true
 </div>
 
 
-
-<br><br><br><br><br>
-<br><br><br><br><br>
-<br><br><br><br><br>
-<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <script>
-    $('#left').addClass('open');
+    var $trRow = $('.tr-row');
+    for (var i = 0; i < 5; i++) {
+        $trRow.clone().insertAfter('.tr-row');
+    }
 </script>
