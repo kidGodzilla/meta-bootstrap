@@ -1,0 +1,187 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0px;
+}
+/* Begin FeatureKit CSS */
+.featurekit {
+  color: #000 !important;
+}
+.featurekit a {
+  color: #008cba;
+}
+.featurekit a:hover {
+  color: #008cba;
+}
+.featurekit h4 {
+  font-size: 19px;
+}
+.featurekit .pull-right {
+  float: right;
+}
+.featurekit .cursor-pointer {
+  cursor: pointer;
+}
+.featurekit .mtn {
+  margin-top: 0 !important;
+}
+.featurekit .mbn {
+  margin-bottom: 0 !important;
+}
+.featurekit .mll {
+  margin-left: 20px;
+}
+.featurekit .mbl {
+  margin-bottom: 20px;
+}
+.featurekit .bg-peterriver {
+  background: #3498db;
+}
+.featurekit .text-white {
+  color: #fff;
+}
+.featurekit .pts {
+  padding-top: 5px;
+}
+.featurekit .Medium {
+  font-weight: 500 !important;
+}
+.featurekit .medium {
+  font-weight: 500;
+}
+.featurekit .pll {
+  padding-left: 20px;
+}
+.featurekit .pts {
+  padding-top: 5px;
+}
+.featurekit .mtxs {
+  margin-top: 2.5px;
+}
+.featurekit .subdued {
+  opacity: 0.5;
+}
+.featurekit .text-asbestos {
+  color: #7f8c8d;
+}
+.featurekit .light {
+  font-weight: 300;
+}
+.featurekit .text-center {
+  text-align: center;
+}
+.featurekit .col-xs-2 {
+  width: 16.66666667%;
+  float: left;
+}
+.featurekit .col-xs-10 {
+  width: 83.33333333%;
+  float: left;
+}
+.featurekit .mtxs {
+  margin-top: 2.5px;
+}
+.featurekit .btn {
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 8px 12px;
+  font-size: 15px;
+  line-height: 1.4;
+  border-radius: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.featurekit .btn-primary {
+  color: #ffffff;
+  background-color: #008cba;
+  border-color: #0079a1;
+}
+.featurekit .well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.featurekit-underlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 9999999;
+}
+.featurekit a,
+.featurekit a:hover {
+  text-decoration: none !important;
+}
+.featurekit .btn {
+  border-radius: 5px;
+  border-width: 0;
+  font-size: 0.9em;
+}
+.featurekit-new-features-container {
+  position: absolute;
+  width: 100%;
+  z-index: 10000000;
+}
+.featurekit-new-features-box {
+  width: 60vw;
+  min-height: 60vh;
+  padding: 15px;
+  padding-bottom: 0;
+  height: 100%;
+  margin: 15vh auto 0;
+  background: #eee;
+}
+@media screen and (max-width: 319px) {
+  .featurekit,
+  .featurekit-underlay {
+    display: none;
+  }
+}
+@media screen and (min-width: 320px) {
+  .featurekit-new-features-box {
+    min-width: 320px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .featurekit-new-features-box {
+    min-width: 480px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .featurekit-new-features-box {
+    min-width: 640px;
+  }
+}
+.featurekit .foo {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  background: red;
+}

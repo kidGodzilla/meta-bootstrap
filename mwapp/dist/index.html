@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- MetaBootstrap -->
-    <link rel="stylesheet" type="text/css" href="assets/css/theme2.css" media="all">
+    <link rel="stylesheet" type="text/css" href="assets/css/theme3.css" media="all">
     <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/meta-bootstrap.css" media="all">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//www.bittitan.com/css/bittitan-icons.css">
@@ -26,6 +26,19 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        body {
+            margin: 0 !important;
+        }
+        #content {
+            margin-bottom: -21px !important;
+        }
+        #content > div {
+            min-height: 100vh;
+        }
+
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
@@ -146,13 +159,16 @@
 
             $('.custom-menu a').click(function () {
                 $('.underlay.one').fadeIn();
-                $('#wrap').css('overflow-y', 'hidden');
                 $('.context-panel.left').addClass('open').css('opacity', 1);
+//                $('#wrap').css('overflow-y', 'hidden');
+//                $('#content >').css('overflow-y', 'hidden');
+                $('body').css('overflow-y', 'hidden');
             });
             $('.underlay, .context-panel a.btn').click(function () {
                 $('.underlay').fadeOut();
-                $('#wrap').css('overflow-y', 'initial');
+//                $('#wrap').css('overflow-y', 'initial');
                 $('.context-panel').removeClass('open').css('opacity', 0);
+                $('body').css('overflow-y', 'initial');
             });
 
             $('.accordion .list-group-item').click(function () {
@@ -275,7 +291,7 @@
                         <a href="#">Purchase Licenses</a>
                     </li>
                     <li>
-                        <a href="#">Support Center</a>
+                        <a href="contact-support.html">Support Center</a>
                     </li>
                     <li class="divider">
                     <li>
@@ -467,7 +483,7 @@
 
       
 
-
+      
     </div>
     <!-- /#left -->
 
@@ -485,107 +501,8 @@
 </style>
 <div class="container">
 
+
     <div class="row ptl">
-        <div class="col-md-6">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><i class="i-star"></i> &nbsp;Special Offers</h3>
-                </div>
-                <div class="panel-body bg-white ptl" style="min-height: 194px;">
-                    <a href="#">
-                        <strong><i class="i-office-365"></i> &nbsp;OFFICE 365 ACTIVATION BUNDLE</strong>
-                    </a>
-                    <p class="light pts">
-                        MigrationWiz and DeploymentPro are now available as a bundle for $13.99.
-                    </p>
-
-                    <div class="ptm"></div>
-                    <a href="#">
-                        <strong><i class="i-bittitan" style="position:relative;top:1px"></i> &nbsp;BITTITAN YAMMER NETWORK</strong>
-                    </a>
-                    <p class="light pts">
-                        Want to have direct access to product owners?
-                        Want to provide feedback and ask questions about our products?
-                        What to get notifications about new features and capabilities?
-                        <br>This is the place for you!
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-            <div class="stat-card">
-                <div class="icon red">
-                    <i class="i-numbered"></i>
-                </div>
-                <div class="value ptm">
-                    <h3 class="man Light">1,443</h3>
-                    <p class="Light">Items Migrating</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-            <div class="stat-card">
-                <div class="icon blue">
-                    <i class="i-project"></i>
-                </div>
-                <div class="value ptm">
-                    <h3 class="man Light">2</h3>
-                    <p class="Light">Active Projects</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="panel panel-danger">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><i class="i-license"></i> &nbsp;No Licenses Remaining</h3>
-                </div>
-                <div class="panel-body bg-white ptl">
-                    <p class="pts pull-right">
-                        <button class="btn btn-primary" href="#"><i class="i-license"></i> &nbsp;Purchase Licenses</button>
-                    </p>
-                    <p class="ptxs">
-                        <small>
-                            <em>
-                                You currently do not have any MigrationWiz licenses.
-                                <br>Without active licenses, you can only perform trial migrations (5mb or less).
-                            </em>
-                        </small>
-                    </p>
-
-                </div>
-            </div>
-        </div>
-
-        <!--<div class="col-sm-6 col-md-3">-->
-        <!--<div class="stat-card">-->
-        <!--<div class="icon red">-->
-        <!--<i class="i-numbered"></i>-->
-        <!--</div>-->
-        <!--<div class="value ptm">-->
-        <!--<h3 class="man Light">1,443</h3>-->
-        <!--<p class="Light">Items Migrating</p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-sm-6 col-md-3">-->
-        <!--<div class="stat-card">-->
-        <!--<div class="icon blue">-->
-        <!--<i class="i-project"></i>-->
-        <!--</div>-->
-        <!--<div class="value ptm">-->
-        <!--<h3 class="man Light">1</h3>-->
-        <!--<p class="Light">Active Projects</p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-
-    </div>
-
-    <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -826,6 +743,111 @@
     </div>
 
     <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="i-star"></i> &nbsp;Special Offers</h3>
+                </div>
+                <div class="panel-body bg-white ptl" style="min-height: 213px;">
+                    <a href="#">
+                        <strong><i class="i-office-365"></i> &nbsp;OFFICE 365 ACTIVATION BUNDLE</strong>
+                    </a>
+                    <p class="light pts">
+                        <small>
+                            MigrationWiz and DeploymentPro are now available as a bundle for $13.99.
+                        </small>
+                    </p>
+
+                    <div class="ptm"></div>
+                    <a href="#">
+                        <strong><i class="i-bittitan" style="position:relative;top:1px"></i> &nbsp;BITTITAN YAMMER NETWORK</strong>
+                    </a>
+                    <p class="light pts">
+                        <small>
+                            Want to have direct access to product owners?
+                            Want to provide feedback and ask questions about our products?
+                            What to get notifications about new features and capabilities?
+                            <br>This is the place for you!
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+            <div class="stat-card">
+                <div class="icon Bg-secondary-3">
+                    <i class="i-numbered"></i>
+                </div>
+                <div class="value ptm">
+                    <h3 class="man Light">1,443</h3>
+                    <p class="Light">Items Migrating</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+            <div class="stat-card">
+                <div class="icon Bg-secondary-5">
+                    <i class="i-project"></i>
+                </div>
+                <div class="value ptm">
+                    <h3 class="man Light">2</h3>
+                    <p class="Light">Active Projects</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-danger">
+                <div class="panel-heading Bg-slate">
+                    <h3 class="panel-title"><i class="i-license"></i> &nbsp;No Licenses Remaining</h3>
+                </div>
+                <div class="panel-body bg-white ptl">
+                    <p class="pts pull-right">
+                        <button class="btn btn-primary" href="#"><i class="i-license"></i> &nbsp;Purchase Licenses</button>
+                    </p>
+                    <p class="ptxs">
+                        <small>
+                            <em>
+                                You currently do not have any MigrationWiz licenses.
+                                <br>Without active licenses, you can only perform<br>trial migrations (5mb or less).
+                            </em>
+                        </small>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="col-sm-6 col-md-3">-->
+        <!--<div class="stat-card">-->
+        <!--<div class="icon red">-->
+        <!--<i class="i-numbered"></i>-->
+        <!--</div>-->
+        <!--<div class="value ptm">-->
+        <!--<h3 class="man Light">1,443</h3>-->
+        <!--<p class="Light">Items Migrating</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="col-sm-6 col-md-3">-->
+        <!--<div class="stat-card">-->
+        <!--<div class="icon blue">-->
+        <!--<i class="i-project"></i>-->
+        <!--</div>-->
+        <!--<div class="value ptm">-->
+        <!--<h3 class="man Light">1</h3>-->
+        <!--<p class="Light">Active Projects</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+    </div>
+
+
+    <div class="row">
         <div class="col-sm-6">
             <div class="panel panel-success">
                 <div class="panel-heading">
@@ -1011,6 +1033,22 @@
 </div>
 <!-- /.live-chat -->
 
+
+<style>
+    .context-panel {
+        overflow-y: scroll;
+    }
+    .context-panel .body {
+        padding-bottom: 50px;
+    }
+    .context-panel .body > .footer {
+        left: 0;
+        position: fixed;
+        width: 50%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+</style>
 
 <div class="underlay one"></div>
 <div class="context-panel left">

@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- MetaBootstrap -->
-    <link rel="stylesheet" type="text/css" href="assets/css/theme2.css" media="all">
+    <link rel="stylesheet" type="text/css" href="assets/css/theme3.css" media="all">
     <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/meta-bootstrap.css" media="all">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//www.bittitan.com/css/bittitan-icons.css">
@@ -26,6 +26,19 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        body {
+            margin: 0 !important;
+        }
+        #content {
+            margin-bottom: -21px !important;
+        }
+        #content > div {
+            min-height: 100vh;
+        }
+
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
@@ -146,13 +159,16 @@
 
             $('.custom-menu a').click(function () {
                 $('.underlay.one').fadeIn();
-                $('#wrap').css('overflow-y', 'hidden');
                 $('.context-panel.left').addClass('open').css('opacity', 1);
+//                $('#wrap').css('overflow-y', 'hidden');
+//                $('#content >').css('overflow-y', 'hidden');
+                $('body').css('overflow-y', 'hidden');
             });
             $('.underlay, .context-panel a.btn').click(function () {
                 $('.underlay').fadeOut();
-                $('#wrap').css('overflow-y', 'initial');
+//                $('#wrap').css('overflow-y', 'initial');
                 $('.context-panel').removeClass('open').css('opacity', 0);
+                $('body').css('overflow-y', 'initial');
             });
 
             $('.accordion .list-group-item').click(function () {
@@ -275,7 +291,7 @@
                         <a href="#">Purchase Licenses</a>
                     </li>
                     <li>
-                        <a href="#">Support Center</a>
+                        <a href="contact-support.html">Support Center</a>
                     </li>
                     <li class="divider">
                     <li>
@@ -446,7 +462,7 @@
 
       
 
-
+      
     </div>
     <!-- /#left -->
 
@@ -468,8 +484,8 @@
 </style>
 
 <div class="ptx">
-    <div class="panel panel-primary">
-        <div class="panel-heading">
+    <div class="panel panel-info">
+        <div class="panel-heading Bg-secondary">
             <h3 class="panel-title"><i class="i-project"></i> &nbsp;Create a New Project</h3>
         </div>
         <div class="panel-body bg-white">
@@ -604,6 +620,22 @@
 </div>
 <!-- /.live-chat -->
 
+
+<style>
+    .context-panel {
+        overflow-y: scroll;
+    }
+    .context-panel .body {
+        padding-bottom: 50px;
+    }
+    .context-panel .body > .footer {
+        left: 0;
+        position: fixed;
+        width: 50%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+</style>
 
 <div class="underlay one"></div>
 <div class="context-panel left">

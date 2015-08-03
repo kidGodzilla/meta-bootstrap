@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- MetaBootstrap -->
-    <link rel="stylesheet" type="text/css" href="assets/css/theme2.css" media="all">
+    <link rel="stylesheet" type="text/css" href="assets/css/theme3.css" media="all">
     <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/meta-bootstrap.css" media="all">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//www.bittitan.com/css/bittitan-icons.css">
@@ -26,6 +26,19 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        body {
+            margin: 0 !important;
+        }
+        #content {
+            margin-bottom: -21px !important;
+        }
+        #content > div {
+            min-height: 100vh;
+        }
+
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
@@ -146,13 +159,16 @@
 
             $('.custom-menu a').click(function () {
                 $('.underlay.one').fadeIn();
-                $('#wrap').css('overflow-y', 'hidden');
                 $('.context-panel.left').addClass('open').css('opacity', 1);
+//                $('#wrap').css('overflow-y', 'hidden');
+//                $('#content >').css('overflow-y', 'hidden');
+                $('body').css('overflow-y', 'hidden');
             });
             $('.underlay, .context-panel a.btn').click(function () {
                 $('.underlay').fadeOut();
-                $('#wrap').css('overflow-y', 'initial');
+//                $('#wrap').css('overflow-y', 'initial');
                 $('.context-panel').removeClass('open').css('opacity', 0);
+                $('body').css('overflow-y', 'initial');
             });
 
             $('.accordion .list-group-item').click(function () {
@@ -275,7 +291,7 @@
                         <a href="#">Purchase Licenses</a>
                     </li>
                     <li>
-                        <a href="#">Support Center</a>
+                        <a href="contact-support.html">Support Center</a>
                     </li>
                     <li class="divider">
                     <li>
@@ -390,41 +406,6 @@
 </nav>
 
       
-      
-        <nav class="navbar navbar-default navbar-fixed-second navbar-thin">
-    <div class="">
-        <div class="collapse navbar-collapse" style="margin-left:-15px;margin-right:-15px">
-            <ul class="nav navbar-nav">
-                <li><a href="create-project.html"><i class="i-plus"></i> &nbsp;Create Project</a></li>
-                <li><a href="#"><i class="i-refresh"></i> &nbsp;Refresh</a></li>
-
-            </ul>
-            <form class="navbar-form navbar-left pull-right" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search Project" style="color:#fff;margin-top:3px;background:transparent;border:0;">
-                </div>
-                <button type="submit" class="btn btn-clear" style="margin-top:1px;  border-color: transparent !important"><i class="i-search" style="position: relative;top: 1px;"></i></button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-sort"></i> &nbsp;Sort <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-filter"></i> &nbsp;Filter <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
       
     </div>
     <!-- /#top -->
@@ -571,7 +552,7 @@
 
       
 
-
+      
     </div>
     <!-- /#left -->
 
@@ -721,10 +702,6 @@
 </div>
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
 <script>
     var $trRow = $('.tr-row');
     for (var i = 0; i < 5; i++) {
@@ -782,6 +759,22 @@
 </div>
 <!-- /.live-chat -->
 
+
+<style>
+    .context-panel {
+        overflow-y: scroll;
+    }
+    .context-panel .body {
+        padding-bottom: 50px;
+    }
+    .context-panel .body > .footer {
+        left: 0;
+        position: fixed;
+        width: 50%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+</style>
 
 <div class="underlay one"></div>
 <div class="context-panel left">
