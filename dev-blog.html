@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dev Blog Demo</title>
+    <script>window.bootstrapTheme="yeti";</script>
+    <script src="//www.metabootstrap.com/mbs.js"></script>
+    <style>
+        @import url(//fonts.googleapis.com/css?family=Josefin+Slab:400,700italic,700,600italic,600,400italic,300,100);
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Josefin Slab', serif;
+        }
+        .bottom::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid white;
+            position: absolute;
+            top: -3px;
+        }
+        .bottom::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid #f6f6f6;
+            position: absolute;
+            top: 0;
+        }
+        .post-header {
+            border-bottom: 2px solid #f6f6f6;
+        }
+        .post-header .bottom {
+            position: absolute;
+            bottom: 0;
+        }
+        .post-header h2 {
+            width: 100%;
+        }
+        .ellipsis {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .post-content {
+            font-size: 17px;
+            line-height: 1.75;
+            color: #a6a6a6;
+            border-bottom: #f6f6f6;
+        }
+        .post > footer {
+            background-color: #f3f3f3;
+            border: 1px solid #f0f0f0;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        a {
+            /*color: #c0392b;*/
+            opacity: 0.9;
+        }
+        a:hover {
+            text-decoration: none;
+            /*color: #c0392b;*/
+            opacity: 1;
+        }
+        .container {
+            max-width: 830px
+        }
+        .post {
+            box-shadow: 6px 6px 6px rgba(0,0,0,0.025);
+        }
+        .opacity-0-7 {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="bg-clouds">
+
+<header class="pvx bg-black">
+    <div class="container">
+        <h1 class="text-clouds pts uppercase pll">BitTitan Development Blog</h1>
+    </div>
+</header>
+
+<section class="posts">
+    <div class="container">
+        <div class="post bg-white br-4">
+            <header class="position-relative post-header pvx phxl">
+                <h2 class="man ptm uppercase Medium">Added Three New Connectors asdf ad fasdfads fadsfasdfadsf adfasdf </h2>
+                <div class="bottom"></div>
+            </header>
+            <div class="post-content pvxl phxl">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cumque, distinctio eius ex expedita impedit laudantium minima modi molestiae odit praesentium quasi quo recusandae repudiandae sint sit tenetur ut vel?
+                </p>
+                <p class="ptm">
+                    <a class="medium" href="#"><i class="fa fa-thumbs-o-up"></i> &nbsp;Like</a>
+                    <a class="medium pll" href="#"><i class="fa fa-thumbs-o-down"></i> &nbsp;Dislike</a>
+                </p>
+
+
+
+
+
+                
+                <p class="ptxl">
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    var disqus_shortname = 'featurekit';
+
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                </p>
+                <!--<p class="ptl">-->
+                <!--<a href="#">Continue Reading →</a>-->
+                <!--</p>-->
+            </div>
+            <footer class="pvl phxl">
+                <a class="pull-right" href="#"><i class="fa fa-thumbs-o-up"></i> &nbsp;4 people like this</a>
+                <!--<a class="mrl" href="#"><i class="fa fa-file-text-o"></i> &nbsp;Standard</a>-->
+                <a href="#"><i class="fa fa-clock-o"></i> &nbsp;5 days ago</a>
+
+            </footer>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-black pvxl">
+    <div class="container pll">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <h4 class="text-clouds Bold opacity-0-7">Powered by Featurekit</h4>
+                <p class="text-white subdued">Featurekit is a simple-to-use platform for publishing your updates and features etc. and stuff</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
