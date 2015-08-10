@@ -160,13 +160,20 @@
             $('.custom-menu a').click(function () {
                 $('.underlay.one').fadeIn();
                 $('.context-panel.left').addClass('open').css('opacity', 1);
-//                $('#wrap').css('overflow-y', 'hidden');
-//                $('#content >').css('overflow-y', 'hidden');
                 $('body').css('overflow-y', 'hidden');
             });
-            $('.underlay, .context-panel a.btn').click(function () {
+            $('.help-modal').click(function () {
+                $('.underlay.two').fadeIn();
+                $('.context-panel.right.errors').addClass('open').css('opacity', 1);
+                $('body').css('overflow-y', 'hidden');
+            });
+            $('.kb-modal').click(function () {
+                $('.underlay.two').fadeIn();
+                $('.context-panel.kb').addClass('open').css('opacity', 1);
+                $('body').css('overflow-y', 'hidden');
+            });
+            $('.underlay, .context-panel a.btn.close-modal').click(function () {
                 $('.underlay').fadeOut();
-//                $('#wrap').css('overflow-y', 'initial');
                 $('.context-panel').removeClass('open').css('opacity', 0);
                 $('body').css('overflow-y', 'initial');
             });
@@ -254,7 +261,7 @@
             </div>
 
             <div class="btn-group">
-                <a class="btn btn-nav-clear btn-sm">
+                <a href="purchase-licenses.html" class="btn btn-nav-clear btn-sm">
                     <i class="i-credit"></i> &nbsp;Billing
                 </a>
             </div>
@@ -288,7 +295,7 @@
                         <a href="#">Account Profile</a>
                     </li>
                     <li>
-                        <a href="#">Purchase Licenses</a>
+                        <a href="purchase-licenses.html">Purchase Licenses</a>
                     </li>
                     <li>
                         <a href="contact-support.html">Support Center</a>
@@ -553,13 +560,15 @@
       
 
       
+
+      
     </div>
     <!-- /#left -->
 
     <!-- #content -->
     <div id="content">
         <!-- inner -->
-        <div class="bg-light lter phx ptxl">
+        <div class="bg-light lter">
 
             <!-- Page Content -->
             
@@ -592,10 +601,10 @@
     }
 </style>
 
-<div class="row">
+<div class="row" style="padding-top:44px">
     <div class="col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
+        <div class="panel panel-default" style="border-radius:0">
+            <div class="panel-heading" style="border-radius:0">
                 <h3 class="panel-title"><i class="i-mailbox"></i> &nbsp;Exchange 2007 to Office 365 Migration</h3>
             </div>
             <div class="panel-body Pan">
@@ -633,7 +642,6 @@
                     </tr>
                     </thead>
                     <tbody id="selectable">
-
                     <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
@@ -677,10 +685,1516 @@
                         <td class="" style="text-align: left">
                             0 bytes
                         </td>
-                        <td style="text-align:center">
-                            <a class="text-decoration-none" href="#">
-                                -
-                            </a>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
+                        </td>
+                        <td class="width-15" style="text-align: left">
+                            <span class="text-danger" title="Failed" data-bindattr-5755="5755">
+                                <i class="icon-space i-danger" data-bindattr-5756="5756"></i>
+                                <a href="#">Failed</a>
+                            </span>
+                        </td>
+                        <td class="action extra-wide" style="text-align:right">
+                            <a class="i-edit" href="#" title="Edit Item" style="padding: 2px 3px"></a>
+                            <a class="i-trash" href="#" title="Delete Item" style="padding: 2px 3px"></a>
+                            <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
+                        </td>
+                    </tr>
+                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                        <td class="w-30">
+                            <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
+                                <input type="checkbox" style="margin-left:0">
+                            </label>
+                        </td>
+                        <td class="w-30" style="overflow: visible;">
+
+                            <div class="category-tag-selector dropdown"><a id="dropdownMenu1" href="#" class="i-star category-tag dropdown-toggle tag-1" data-toggle="dropdown"></a>
+
+                                <ul id="dropdown" class="dropdown-menu category-tags text-center" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#" class="text-center">Remove</a>
+                                        <span class="i-star category-tag tag-1 active"></span>
+                                        <span class="i-star category-tag tag-2"></span>
+                                        <span class="i-star category-tag tag-3"></span>
+                                        <span class="i-star category-tag tag-4"></span>
+                                        <span class="i-star category-tag tag-5"></span>
+                                        <span class="i-star category-tag tag-6"></span>
+                                        <p class="text-center mts">
+                                            <small>
+                                                <a href="http://www.bittitan.com/kb/KB005059" title="What are the stars in MigrationWiz dashboard used for?">
+                                                    What's this?
+                                                </a>
+                                            </small>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+                        <td class="" style="text-align: left">
+                            <a href="#">asdf@af.co</a>
+                        </td>
+
+                        <td class="" style="text-align: left">
+                            Dec 17th, 2014 5:29pm
+                        </td>
+                        <td class="" style="text-align: left">
+                            0 bytes
+                        </td>
+                        <td class="cursor-pointer help-modal" style="text-align:center">
+                            1
                         </td>
                         <td class="width-15" style="text-align: left">
                             <span class="text-danger" title="Failed" data-bindattr-5755="5755">
@@ -703,10 +2217,10 @@
 
 
 <script>
-    var $trRow = $('.tr-row');
-    for (var i = 0; i < 5; i++) {
-        $trRow.clone().insertAfter('.tr-row');
-    }
+//    var $trRow = $('.tr-row');
+//    for (var i = 0; i < 5; i++) {
+//        $trRow.clone().insertAfter('.tr-row');
+//    }
 </script>
 
             <!-- /Page Content -->
@@ -891,8 +2405,161 @@
 
 
         <div class="footer text-right">
-            <a href="#" class="btn btn-default">Cancel</a>
-            <a href="#" class="btn btn-primary">Start</a>
+            <a href="#" class="btn btn-default close-modal">Cancel</a>
+            <a href="#" class="btn btn-primary close-modal">Start</a>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .context-panel {
+        overflow-y: scroll;
+    }
+    .context-panel .body {
+        padding-bottom: 50px;
+    }
+    .context-panel .body > .footer {
+        left: 0;
+        position: fixed;
+        width: 50%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+</style>
+
+<div class="underlay two"></div>
+<div class="context-panel right errors">
+    <header>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="mtm ptxs Light"><i class="i-play Light"></i>&nbsp; View Migration Errors</h3>
+            </div>
+        </div>
+    </header>
+    <div class="body">
+        <!--<h4 class="mtn">What is a Full Migration? <a class="help" href="#"><i class="i-help"></i></a></h4>-->
+        <!--<p>-->
+            <!--<small>-->
+                <!--Use this type of migration for "big bang" (single pass) migrations, or following an earlier pre-stage migration. Use this type of migration after MX record cutover, to make sure you are not missing any data.-->
+            <!--</small>-->
+        <!--</p>-->
+
+        <div class="row mtl">
+            <div class="col-xs-12">
+                <ul id="ember4046" class="ember-view list-group box-scroll box-static box-static-md box-static-w-foot">
+                    <script id="metamorph-788-start" type="text/x-placeholder"></script><script id="metamorph-950-start" type="text/x-placeholder"></script>
+                    <li class="list-group-item">
+                        <div class="error-title">
+                            <script id="metamorph-951-start" type="text/x-placeholder"></script>Your migration failed checking source credentials. Office 365 user names should always be specified as email addresses. Ensure user names are specified as email addresses.<script id="metamorph-951-end" type="text/x-placeholder"></script>
+                        </div>
+                        <button id="ember4447" class="kb-modal btn btn-xs btn-primary pull-right" href="http://www.bittitan.com/kb/KB004191" title="Office 365 user names should always be specified as email addresses">
+                            <i class="i-help"></i> &nbsp;<script id="metamorph-960-start" type="text/x-placeholder"></script>Learn more<script id="metamorph-960-end" type="text/x-placeholder"></script>
+                        </button>
+                        <div class="error-meta ptm">
+
+                            <span class=""><script id="metamorph-952-start" type="text/x-placeholder"></script>6 months ago<script id="metamorph-952-end" type="text/x-placeholder"></script></span>
+                            <script id="metamorph-953-start" type="text/x-placeholder"></script>
+                            <span class="icon-space-lg"><script id="metamorph-954-start" type="text/x-placeholder"></script>Source Server<script id="metamorph-954-end" type="text/x-placeholder"></script></span>
+                            <script id="metamorph-953-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-955-start" type="text/x-placeholder"></script><script id="metamorph-955-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-956-start" type="text/x-placeholder"></script><script id="metamorph-956-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-957-start" type="text/x-placeholder"></script><script id="metamorph-957-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-958-start" type="text/x-placeholder"></script><script id="metamorph-958-end" type="text/x-placeholder"></script>
+                            <script id="metamorph-959-start" type="text/x-placeholder"></script>
+
+                            <script id="metamorph-959-end" type="text/x-placeholder"></script>
+                        </div>
+                    </li>
+                    <script id="metamorph-950-end" type="text/x-placeholder"></script><script id="metamorph-788-end" type="text/x-placeholder"></script>
+                    <script id="metamorph-790-start" type="text/x-placeholder"></script><script id="metamorph-790-end" type="text/x-placeholder"></script>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="footer text-right">
+            <a href="#" class="btn btn-default close-modal">Back</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .context-panel {
+        overflow-y: scroll;
+    }
+    .context-panel .body {
+        padding-bottom: 50px;
+    }
+    .context-panel .body > .footer {
+        left: 0;
+        position: fixed;
+        width: 50%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+       $('.back-to-errors').click(function () {
+           $('.context-panel.kb').removeClass('open').css('opacity', 0);
+       });
+    });
+</script>
+
+<div class="context-panel right kb" style="z-index:999999999999999">
+    <header>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="mtm Light">
+
+                    <a href="#" class="btn btn-xs btn-warning pull-right mtm">OPEN IN NEW WINDOW&nbsp; <i class="fa fa-external-link"></i></a>
+                    <a class="btn cursor-pointer btn-default back-to-errors">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>&nbsp;
+                    <span style="position:relative;top:3px">Back to Errors List</span>
+                </h3>
+            </div>
+        </div>
+    </header>
+    <div class="body">
+        <h4 class="mtn">
+            Office 365 user names should always be specified as email addresses </h4>
+
+      <div class="row mtl pal">
+          <div class="problem">
+              <p>
+                  Office 365 user names should always be specified as email addresses: This error indicates that the specified Office
+                  365 user name is invalid. Office 365 requires users to login with an email address, not a user name as in "John Doe"
+                  or "domain\johndoe".
+              </p>
+          </div>
+          <strong>Resolution:</strong>
+          <div class="solution">
+              <p>
+                  We recommend the following:
+              </p>
+              <ol>
+                  <li>If using administrative credentials for Office 365, check the admin user name specified on your connector</li>
+                  <li>If not using administrative credentials for Office 365, check the mailbox owner user name specified on the mailbox</li>
+                  <li>In all cases, make sure the user name work when logging in at
+          <a href="https://login.microsoftonline.com/" target="_blank">https://login.microsoftonline.com</a></li>
+              </ol>
+          </div>
+      </div>
+
+
+
+
+
+
+        <div class="footer text-right">
+            <a href="#" class="btn btn-default close-modal">Back</a>
         </div>
     </div>
 </div>

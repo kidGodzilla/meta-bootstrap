@@ -444,10 +444,10 @@ input[type=text]:focus {
  * UI Selectable
    -------------------------------------------------- */
 #selectable .ui-selecting {
-  background: #ffbfb9;
+  background: #cad5d9;
 }
 #selectable .ui-selected {
-  background: #ff9086;
+  background: #adbec3;
   color: #ffffff !important;
 }
 #selectable .ui-selected a {

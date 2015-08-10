@@ -1,0 +1,75 @@
+<style>
+    .context-panel {
+        overflow-y: scroll;
+    }
+    .context-panel .body {
+        padding-bottom: 50px;
+    }
+    .context-panel .body > .footer {
+        left: 0;
+        position: fixed;
+        width: 50%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+       $('.back-to-errors').click(function () {
+           $('.context-panel.kb').removeClass('open').css('opacity', 0);
+       });
+    });
+</script>
+
+<div class="context-panel right kb" style="z-index:999999999999999">
+    <header>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="mtm Light">
+
+                    <a href="#" class="btn btn-xs btn-warning pull-right mtm">OPEN IN NEW WINDOW&nbsp; <i class="fa fa-external-link"></i></a>
+                    <a class="btn cursor-pointer btn-default back-to-errors">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>&nbsp;
+                    <span style="position:relative;top:3px">Back to Errors List</span>
+                </h3>
+            </div>
+        </div>
+    </header>
+    <div class="body">
+        <h4 class="mtn">
+            Office 365 user names should always be specified as email addresses </h4>
+
+      <div class="row mtl pal">
+          <div class="problem">
+              <p>
+                  Office 365 user names should always be specified as email addresses: This error indicates that the specified Office
+                  365 user name is invalid. Office 365 requires users to login with an email address, not a user name as in "John Doe"
+                  or "domain\johndoe".
+              </p>
+          </div>
+          <strong>Resolution:</strong>
+          <div class="solution">
+              <p>
+                  We recommend the following:
+              </p>
+              <ol>
+                  <li>If using administrative credentials for Office 365, check the admin user name specified on your connector</li>
+                  <li>If not using administrative credentials for Office 365, check the mailbox owner user name specified on the mailbox</li>
+                  <li>In all cases, make sure the user name work when logging in at
+          <a href="https://login.microsoftonline.com/" target="_blank">https://login.microsoftonline.com</a></li>
+              </ol>
+          </div>
+      </div>
+
+
+
+
+
+
+        <div class="footer text-right">
+            <a href="#" class="btn btn-default close-modal">Back</a>
+        </div>
+    </div>
+</div>

@@ -160,13 +160,20 @@
             $('.custom-menu a').click(function () {
                 $('.underlay.one').fadeIn();
                 $('.context-panel.left').addClass('open').css('opacity', 1);
-//                $('#wrap').css('overflow-y', 'hidden');
-//                $('#content >').css('overflow-y', 'hidden');
                 $('body').css('overflow-y', 'hidden');
             });
-            $('.underlay, .context-panel a.btn').click(function () {
+            $('.help-modal').click(function () {
+                $('.underlay.two').fadeIn();
+                $('.context-panel.right.errors').addClass('open').css('opacity', 1);
+                $('body').css('overflow-y', 'hidden');
+            });
+            $('.kb-modal').click(function () {
+                $('.underlay.two').fadeIn();
+                $('.context-panel.kb').addClass('open').css('opacity', 1);
+                $('body').css('overflow-y', 'hidden');
+            });
+            $('.underlay, .context-panel a.btn.close-modal').click(function () {
                 $('.underlay').fadeOut();
-//                $('#wrap').css('overflow-y', 'initial');
                 $('.context-panel').removeClass('open').css('opacity', 0);
                 $('body').css('overflow-y', 'initial');
             });
@@ -246,6 +253,10 @@
         {{> left-nav-create-project }}
       {{/if}}
 
+      {{#if purchaseLicenses}}
+        {{> left-nav-purchase-licenses }}
+      {{/if}}
+
       {{#if support}}
         {{> left-nav-support }}
       {{/if}}
@@ -255,7 +266,7 @@
     <!-- #content -->
     <div id="content">
         <!-- inner -->
-        <div class="bg-light lter phx{{#if inner-navbar}} ptxl{{/if}}">
+        <div class="bg-light lter">
 
             <!-- Page Content -->
             {{> body }}
@@ -282,6 +293,9 @@
 {{> live-chat }}
 
 {{> context-panel }}
+
+{{> context-panel-right }}
+{{> context-panel-kb }}
 
 </body>
 </html>

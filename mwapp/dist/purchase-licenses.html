@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard | MigrationWiz Application</title>
+    <title>Purchase Licenses | MigrationWiz Application</title>
 
     <!--IE Compatibility modes-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -348,8 +348,12 @@
     <!-- /#top -->
 
     <!-- #left -->
-    <div id="left" class="">
+    <div id="left" class="open">
         
+
+      
+
+      
 
       
         <style>
@@ -368,59 +372,26 @@
                 <i class="fa fa-thumb-tack toggle-menu" style="padding: 2px 0;"></i>
             </div>
         </div>
-        Dashboard Menu
+        Purchase Licenses
     </li>
     <!--<li class="nav-divider"></li>-->
 
     <li class="">
-        <a href="#">
-            <span class="link-title"><i class="i-plus"></i> &nbsp;Create New Project</span>
+        <a href="purchase-licenses.html">
+            <span class="link-title"><i class="i-creds"></i> &nbsp;Select Licenses</span>
         </a>
-        <ul class="collapse">
-            <li>
-                <a href="create-project.html">
-                    <i class="i-mailbox"></i> &nbsp;Mailbox Project
-                </a>
-            </li>
-            <li>
-                <a href="create-project.html">
-                    <i class="i-public-folder"></i> &nbsp;Public Folder Project
-                </a>
-            </li>
-            <li>
-                <a href="create-project.html">
-                    <i class="i-document"></i> &nbsp;Document Project
-                </a>
-            </li>
-            <li>
-                <a href="create-project.html">
-                    <i class="i-archive"></i> &nbsp;Archive Project
-                </a>
-            </li>
-            <li>
-                <a href="create-project.html">
-                    <i class="i-enterprise-archive"></i> &nbsp;Enterprise Archive Project
-                </a>
-            </li>
-        </ul>
     </li>
 
-    <li class="active">
+    <li class="">
         <a href="#">
-            <span class="link-title"><i class="i-project"></i>&nbsp; My Projects</span>
+            <span class="link-title"><i class="i-source"></i>&nbsp; Billing Information</span>
         </a>
-        <ul class="collapse">
-            <li>
-                <a href="project.html" class="truncate">
-                    <i class="i-archive"></i> &nbsp;BitTitan Archive Migration Project #3245
-                </a>
-            </li>
-            <li>
-                <a href="project.html">
-                    <i class="i-mailbox"></i> &nbsp;Exchange 2007 to Office 365
-                </a>
-            </li>
-        </ul>
+    </li>
+
+    <li class="">
+        <a href="#">
+            <span class="link-title"><i class="i-destination"></i>&nbsp; Submit Payment</span>
+        </a>
     </li>
 
     <!--<li class="">-->
@@ -489,10 +460,6 @@
       
 
       
-
-      
-
-      
     </div>
     <!-- /#left -->
 
@@ -507,490 +474,332 @@
     #content {
         white-space: inherit;
     }
+    a.btn-primary,
+    a.btn-primary:hover {
+        color: #eee;
+    }
+    .hipaa {
+        cursor:pointer;
+    }
 </style>
-<div class="container">
 
+<script>
+    $(document).ready(function () {
+        $('.hipaa').on('mousedown', function () {
+            $(this).find('input[type=checkbox]').prop("checked", !$(this).find('input[type=checkbox]').prop("checked"));
+        });
+        $('.list-group-item').on('click', function () {
+            $(this).find('input[type=number]').focus().select();
+        });
+    });
+</script>
 
-    <div class="row ptl">
-        <div class="col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><i class="i-project"></i> &nbsp;Recent Projects</h3>
-                </div>
-                <div class="panel-body pan">
-                    <table class="table project-list mbn">
-                        <thead>
-                        <tr>
-                            <th>Project Name</th>
-                            <th class="w-30"><i class="i-source" title="Source"></i></th>
-                            <th class="w-30"><i class="i-destination" title="Destination"></i></th>
-                            <th class="w-30">Items</th>
-                            <th class="w-30"><i class="i-stop text-grey" title="Not Migrated"></i></th>
-                            <th class="w-30"><i class="i-user-waiting text-primary" title="Waiting for User"></i></th>
-                            <th class="w-30"><i class="i-play text-info" title="Migrating"></i></th>
-                            <th class="w-30"><i class="i-pause text-warning" title="Paused"></i></th>
-                            <th class="w-30"><i class="i-check text-success" title="Completed"></i></th>
-                            <th class="w-30"><i class="i-danger text-danger" title="Failed"></i></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                            <td>
-                                <i class="i-pst"></i>
-                            </td>
-                            <td>
-                                <i class="i-google"></i>
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                            <td>
-                                <i class="i-pst"></i>
-                            </td>
-                            <td>
-                                <i class="i-google"></i>
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                            <td>
-                                <i class="i-pst"></i>
-                            </td>
-                            <td>
-                                <i class="i-google"></i>
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                            <td>
-                                <i class="i-pst"></i>
-                            </td>
-                            <td>
-                                <i class="i-google"></i>
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                            <td>
-                                <i class="i-pst"></i>
-                            </td>
-                            <td>
-                                <i class="i-google"></i>
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                            </td>
-                            <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="pal">
+    <ul class="nav nav-tabs">
+        <span class="pull-right ptm">Current Subtotal: $324.81</span>
+        <li class="active"><a href="#home" data-toggle="tab">Data Migration</a></li>
+        <li><a href="#profile" data-toggle="tab">UserActivation</a></li>
+        <li><a href="#dropdown1" data-toggle="tab">Premium Support</a></li>
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><i class="i-star"></i> &nbsp;Special Offers</h3>
-                </div>
-                <div class="panel-body bg-white ptl" style="min-height: 213px;">
-                    <a href="#">
-                        <strong><i class="i-office-365"></i> &nbsp;OFFICE 365 ACTIVATION BUNDLE</strong>
-                    </a>
-                    <p class="light pts">
-                        <small>
-                            MigrationWiz and DeploymentPro are now available as a bundle for $13.99.
-                        </small>
-                    </p>
+    </ul>
+    <div class="panel panel-info">
+        <div class="panel-body bg-white" style="border-left: 1px solid #dddddd;border-right: 1px solid #dddddd;">
 
-                    <div class="ptm"></div>
-                    <a href="#">
-                        <strong><i class="i-bittitan" style="position:relative;top:1px"></i> &nbsp;BITTITAN YAMMER NETWORK</strong>
-                    </a>
-                    <p class="light pts">
-                        <small>
-                            Want to have direct access to product owners?
-                            Want to provide feedback and ask questions about our products?
-                            What to get notifications about new features and capabilities?
-                            <br>This is the place for you!
-                        </small>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-            <div class="stat-card">
-                <div class="icon Bg-secondary-3">
-                    <i class="i-numbered"></i>
-                </div>
-                <div class="value ptm">
-                    <h3 class="man Light">1,443</h3>
-                    <p class="Light">Items Migrating</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-            <div class="stat-card">
-                <div class="icon Bg-secondary-5">
-                    <i class="i-project"></i>
-                </div>
-                <div class="value ptm">
-                    <h3 class="man Light">2</h3>
-                    <p class="Light">Active Projects</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="panel panel-danger">
-                <div class="panel-heading Bg-slate">
-                    <h3 class="panel-title"><i class="i-license"></i> &nbsp;No Licenses Remaining</h3>
-                </div>
-                <div class="panel-body bg-white ptl">
-                    <p class="pts pull-right">
-                        <button class="btn btn-primary" href="#"><i class="i-license"></i> &nbsp;Purchase Licenses</button>
-                    </p>
-                    <p class="ptxs">
-                        <small>
-                            <em>
-                                You currently do not have any MigrationWiz licenses.
-                                <br>Without active licenses, you can only perform<br>trial migrations (5mb or less).
-                            </em>
-                        </small>
-                    </p>
-
-                </div>
-            </div>
-        </div>
-
-        <!--<div class="col-sm-6 col-md-3">-->
-        <!--<div class="stat-card">-->
-        <!--<div class="icon red">-->
-        <!--<i class="i-numbered"></i>-->
-        <!--</div>-->
-        <!--<div class="value ptm">-->
-        <!--<h3 class="man Light">1,443</h3>-->
-        <!--<p class="Light">Items Migrating</p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-sm-6 col-md-3">-->
-        <!--<div class="stat-card">-->
-        <!--<div class="icon blue">-->
-        <!--<i class="i-project"></i>-->
-        <!--</div>-->
-        <!--<div class="value ptm">-->
-        <!--<h3 class="man Light">1</h3>-->
-        <!--<p class="Light">Active Projects</p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-
-    </div>
-
-
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="panel panel-success">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><i class="i-check"></i> &nbsp;Recently Completed Migrations</h3>
-                </div>
-                <div class="panel-body pan">
-                    <div class="list-group" style="margin-bottom:1px;">
-                        <script id="metamorph-1429-start" type="text/x-placeholder"></script>
-                        <script id="metamorph-1459-start" type="text/x-placeholder"></script>
-                        <script id="metamorph-1464-start" type="text/x-placeholder"></script><script id="metamorph-1460-start" type="text/x-placeholder"></script>
-                        <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/06931935-6c56-11e4-942a-00155dc71f19" data-bindattr-6345="6345" class="list-group-item">
-                            <div class="text-overflow">
-                                <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6346="6346"></i>
-                                <b>
-                                    <script id="metamorph-1465-start" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1466-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1466-end" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1465-end" type="text/x-placeholder"></script>
-                                </b>
-                                <small><script id="metamorph-1467-start" type="text/x-placeholder"></script>succeeded<script id="metamorph-1467-end" type="text/x-placeholder"></script> <script id="metamorph-1468-start" type="text/x-placeholder"></script>2 months ago<script id="metamorph-1468-end" type="text/x-placeholder"></script></small>
+            <div id="myTabContent" class="tab-content bg-white">
+                <div class="tab-pane fade active in" id="home">
+                    <div class="list-group">
+                        <a class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-8">
+                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                    <p class="list-group-item-text">
+                                        <i class="i-license"></i>&nbsp;
+                                        150 Mailbox Licenses Remaining.
+                                        Migrates up to 50 GB with up to 10 migration passes per license.
+                                    </p>
+                                    <p class="ptm mbn hipaa">
+                                        <input type="checkbox"/>&nbsp;
+                                        Add HIPAA Compliance
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptm text-center">
+                                    <h3 class="text-success man">$11.99</h3>
+                                    <small>Per License</small>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptl">
+                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                </div>
                             </div>
+
+
+
                         </a>
-                        <script id="metamorph-1460-end" type="text/x-placeholder"></script><script id="metamorph-1461-start" type="text/x-placeholder"></script>
-                        <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/5c065a9b-a333-11e4-942c-00155d001986" data-bindattr-6349="6349" class="list-group-item">
-                            <div class="text-overflow">
-                                <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6350="6350"></i>
-                                <b>
-                                    <script id="metamorph-1469-start" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1470-start" type="text/x-placeholder"></script>test10@bittitan.com<script id="metamorph-1470-end" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1469-end" type="text/x-placeholder"></script>
-                                </b>
-                                <small><script id="metamorph-1471-start" type="text/x-placeholder"></script>succeeded<script id="metamorph-1471-end" type="text/x-placeholder"></script> <script id="metamorph-1472-start" type="text/x-placeholder"></script>5 months ago<script id="metamorph-1472-end" type="text/x-placeholder"></script></small>
+                        <a class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-8">
+                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                    <p class="list-group-item-text">
+                                        <i class="i-license"></i>&nbsp;
+                                        150 Mailbox Licenses Remaining.
+                                        Migrates up to 50 GB with up to 10 migration passes per license.
+                                    </p>
+                                    <p class="ptm mbn hipaa">
+                                        <input type="checkbox"/>&nbsp;
+                                        Add HIPAA Compliance
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptm text-center">
+                                    <h3 class="text-success man">$11.99</h3>
+                                    <small>Per License</small>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptl">
+                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                </div>
                             </div>
+
+
+
                         </a>
-                        <script id="metamorph-1461-end" type="text/x-placeholder"></script><script id="metamorph-1462-start" type="text/x-placeholder"></script>
-                        <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/0c937dda-6c56-11e4-942a-00155dc71f19" data-bindattr-6353="6353" class="list-group-item">
-                            <div class="text-overflow">
-                                <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6354="6354"></i>
-                                <b>
-                                    <script id="metamorph-1473-start" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1474-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1474-end" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1473-end" type="text/x-placeholder"></script>
-                                </b>
-                                <small><script id="metamorph-1475-start" type="text/x-placeholder"></script>succeeded<script id="metamorph-1475-end" type="text/x-placeholder"></script> <script id="metamorph-1476-start" type="text/x-placeholder"></script>7 months ago<script id="metamorph-1476-end" type="text/x-placeholder"></script></small>
+                        <a class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-8">
+                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                    <p class="list-group-item-text">
+                                        <i class="i-license"></i>&nbsp;
+                                        150 Mailbox Licenses Remaining.
+                                        Migrates up to 50 GB with up to 10 migration passes per license.
+                                    </p>
+                                    <p class="ptm mbn hipaa">
+                                        <input type="checkbox"/>&nbsp;
+                                        Add HIPAA Compliance
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptm text-center">
+                                    <h3 class="text-success man">$11.99</h3>
+                                    <small>Per License</small>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptl">
+                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                </div>
                             </div>
+
+
+
                         </a>
-                        <script id="metamorph-1462-end" type="text/x-placeholder"></script><script id="metamorph-1463-start" type="text/x-placeholder"></script>
-                        <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/0c937cd7-6c56-11e4-942a-00155dc71f19" data-bindattr-6357="6357" class="list-group-item">
-                            <div class="text-overflow">
-                                <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6358="6358"></i>
-                                <b>
-                                    <script id="metamorph-1477-start" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1478-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1478-end" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1477-end" type="text/x-placeholder"></script>
-                                </b>
-                                <small><script id="metamorph-1479-start" type="text/x-placeholder"></script>succeeded<script id="metamorph-1479-end" type="text/x-placeholder"></script> <script id="metamorph-1480-start" type="text/x-placeholder"></script>8 months ago<script id="metamorph-1480-end" type="text/x-placeholder"></script></small>
-                            </div>
-                        </a>
-                        <script id="metamorph-1463-end" type="text/x-placeholder"></script><script id="metamorph-1464-end" type="text/x-placeholder"></script>
-                        <script id="metamorph-1459-end" type="text/x-placeholder"></script>
-                        <script id="metamorph-1429-end" type="text/x-placeholder"></script>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="panel panel-danger">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><i class="i-danger"></i> &nbsp;Recently Failed Migrations</h3>
+                <div class="tab-pane fade" id="profile">
+                    <div class="list-group">
+                        <a class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-8">
+                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                    <p class="list-group-item-text">
+                                        <i class="i-license"></i>&nbsp;
+                                        150 Mailbox Licenses Remaining.
+                                        Migrates up to 50 GB with up to 10 migration passes per license.
+                                    </p>
+                                    <p class="ptm mbn">
+                                        <input type="checkbox"/>&nbsp;
+                                        Add HIPAA Compliance
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptm text-center">
+                                    <h3 class="text-success man">$11.99</h3>
+                                    <small>Per License</small>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptl">
+                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                </div>
+                            </div>
+
+
+
+                        </a>
+                        <a class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-8">
+                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                    <p class="list-group-item-text">
+                                        <i class="i-license"></i>&nbsp;
+                                        150 Mailbox Licenses Remaining.
+                                        Migrates up to 50 GB with up to 10 migration passes per license.
+                                    </p>
+                                    <p class="ptm mbn">
+                                        <input type="checkbox"/>&nbsp;
+                                        Add HIPAA Compliance
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptm text-center">
+                                    <h3 class="text-success man">$11.99</h3>
+                                    <small>Per License</small>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptl">
+                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                </div>
+                            </div>
+
+
+
+                        </a>
+                        <a class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-8">
+                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                    <p class="list-group-item-text">
+                                        <i class="i-license"></i>&nbsp;
+                                        150 Mailbox Licenses Remaining.
+                                        Migrates up to 50 GB with up to 10 migration passes per license.
+                                    </p>
+                                    <p class="ptm mbn">
+                                        <input type="checkbox"/>&nbsp;
+                                        Add HIPAA Compliance
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptm text-center">
+                                    <h3 class="text-success man">$11.99</h3>
+                                    <small>Per License</small>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptl">
+                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                </div>
+                            </div>
+
+
+
+                        </a>
+                    </div>
                 </div>
-                <div class="panel-body pan">
-                    <div class="list-group" style="margin-bottom:1px;">
-                        <script id="metamorph-1429-start" type="text/x-placeholder"></script>
-                        <script id="metamorph-1459-start" type="text/x-placeholder"></script>
-                        <script id="metamorph-1464-start" type="text/x-placeholder"></script><script id="metamorph-1460-start" type="text/x-placeholder"></script>
-                        <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/06931935-6c56-11e4-942a-00155dc71f19" data-bindattr-6345="6345" class="list-group-item">
-                            <div class="text-overflow">
-                                <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6346="6346"></i>
-                                <b>
-                                    <script id="metamorph-1465-start" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1466-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1466-end" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1465-end" type="text/x-placeholder"></script>
-                                </b>
-                                <small><script id="metamorph-1467-start" type="text/x-placeholder"></script>failed<script id="metamorph-1467-end" type="text/x-placeholder"></script> <script id="metamorph-1468-start" type="text/x-placeholder"></script>2 months ago<script id="metamorph-1468-end" type="text/x-placeholder"></script></small>
+                <div class="tab-pane fade" id="dropdown1">
+                    <div class="list-group">
+                        <a class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-8">
+                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                    <p class="list-group-item-text">
+                                        <i class="i-license"></i>&nbsp;
+                                        150 Mailbox Licenses Remaining.
+                                        Migrates up to 50 GB with up to 10 migration passes per license.
+                                    </p>
+                                    <p class="ptm mbn">
+                                        <input type="checkbox"/>&nbsp;
+                                        Add HIPAA Compliance
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptm text-center">
+                                    <h3 class="text-success man">$11.99</h3>
+                                    <small>Per License</small>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptl">
+                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                </div>
                             </div>
+
+
+
                         </a>
-                        <script id="metamorph-1460-end" type="text/x-placeholder"></script><script id="metamorph-1461-start" type="text/x-placeholder"></script>
-                        <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/5c065a9b-a333-11e4-942c-00155d001986" data-bindattr-6349="6349" class="list-group-item">
-                            <div class="text-overflow">
-                                <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6350="6350"></i>
-                                <b>
-                                    <script id="metamorph-1469-start" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1470-start" type="text/x-placeholder"></script>test10@bittitan.com<script id="metamorph-1470-end" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1469-end" type="text/x-placeholder"></script>
-                                </b>
-                                <small><script id="metamorph-1471-start" type="text/x-placeholder"></script>failed<script id="metamorph-1471-end" type="text/x-placeholder"></script> <script id="metamorph-1472-start" type="text/x-placeholder"></script>5 months ago<script id="metamorph-1472-end" type="text/x-placeholder"></script></small>
+                        <a class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-8">
+                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                    <p class="list-group-item-text">
+                                        <i class="i-license"></i>&nbsp;
+                                        150 Mailbox Licenses Remaining.
+                                        Migrates up to 50 GB with up to 10 migration passes per license.
+                                    </p>
+                                    <p class="ptm mbn">
+                                        <input type="checkbox"/>&nbsp;
+                                        Add HIPAA Compliance
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptm text-center">
+                                    <h3 class="text-success man">$11.99</h3>
+                                    <small>Per License</small>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptl">
+                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                </div>
                             </div>
+
+
+
                         </a>
-                        <script id="metamorph-1461-end" type="text/x-placeholder"></script><script id="metamorph-1462-start" type="text/x-placeholder"></script>
-                        <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/0c937dda-6c56-11e4-942a-00155dc71f19" data-bindattr-6353="6353" class="list-group-item">
-                            <div class="text-overflow">
-                                <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6354="6354"></i>
-                                <b>
-                                    <script id="metamorph-1473-start" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1474-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1474-end" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1473-end" type="text/x-placeholder"></script>
-                                </b>
-                                <small><script id="metamorph-1475-start" type="text/x-placeholder"></script>failed<script id="metamorph-1475-end" type="text/x-placeholder"></script> <script id="metamorph-1476-start" type="text/x-placeholder"></script>7 months ago<script id="metamorph-1476-end" type="text/x-placeholder"></script></small>
+                        <a class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-8">
+                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                    <p class="list-group-item-text">
+                                        <i class="i-license"></i>&nbsp;
+                                        150 Mailbox Licenses Remaining.
+                                        Migrates up to 50 GB with up to 10 migration passes per license.
+                                    </p>
+                                    <p class="ptm mbn">
+                                        <input type="checkbox"/>&nbsp;
+                                        Add HIPAA Compliance
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptm text-center">
+                                    <h3 class="text-success man">$11.99</h3>
+                                    <small>Per License</small>
+                                </div>
+                                <div class="col-xs-3 col-md-2 ptl">
+                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                </div>
                             </div>
+
+
+
                         </a>
-                        <script id="metamorph-1462-end" type="text/x-placeholder"></script><script id="metamorph-1463-start" type="text/x-placeholder"></script>
-                        <a href="/app/projects/0082a1f2-6c56-11e4-942a-00155dc71f19/0c937cd7-6c56-11e4-942a-00155dc71f19" data-bindattr-6357="6357" class="list-group-item">
-                            <div class="text-overflow">
-                                <i class="i-mailbox hidden-xs-inline hidden-sm-inline" data-bindattr-6358="6358"></i>
-                                <b>
-                                    <script id="metamorph-1477-start" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1478-start" type="text/x-placeholder"></script>asdf@af.co<script id="metamorph-1478-end" type="text/x-placeholder"></script>
-                                    <script id="metamorph-1477-end" type="text/x-placeholder"></script>
-                                </b>
-                                <small><script id="metamorph-1479-start" type="text/x-placeholder"></script>failed<script id="metamorph-1479-end" type="text/x-placeholder"></script> <script id="metamorph-1480-start" type="text/x-placeholder"></script>8 months ago<script id="metamorph-1480-end" type="text/x-placeholder"></script></small>
-                            </div>
-                        </a>
-                        <script id="metamorph-1463-end" type="text/x-placeholder"></script><script id="metamorph-1464-end" type="text/x-placeholder"></script>
-                        <script id="metamorph-1459-end" type="text/x-placeholder"></script>
-                        <script id="metamorph-1429-end" type="text/x-placeholder"></script>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Pricing Summary</h3>
+        </div>
+        <div class="panel-body bg-white">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th><script id="metamorph-2303-start" type="text/x-placeholder"></script>License Type<script id="metamorph-2303-end" type="text/x-placeholder"></script></th>
+                    <th class="text-right"><script id="metamorph-2304-start" type="text/x-placeholder"></script>Quantity<script id="metamorph-2304-end" type="text/x-placeholder"></script></th>
+                    <th class="text-right"><script id="metamorph-2305-start" type="text/x-placeholder"></script>Price<script id="metamorph-2305-end" type="text/x-placeholder"></script></th>
+                </tr>
+                </thead>
+                <tbody>
+                <script id="metamorph-2307-start" type="text/x-placeholder"></script><script id="metamorph-2306-start" type="text/x-placeholder"></script>
+                <tr>
+                    <td><script id="metamorph-2308-start" type="text/x-placeholder"></script>Mailbox Migration<script id="metamorph-2308-end" type="text/x-placeholder"></script></td>
+                    <td class="text-right"><script id="metamorph-2309-start" type="text/x-placeholder"></script>1<script id="metamorph-2309-end" type="text/x-placeholder"></script></td>
+                    <td class="text-right"><script id="metamorph-2310-start" type="text/x-placeholder"></script>$11.39<script id="metamorph-2310-end" type="text/x-placeholder"></script></td>
+                </tr>
+                <script id="metamorph-2306-end" type="text/x-placeholder"></script><script id="metamorph-2307-end" type="text/x-placeholder"></script>
+                <tr>
+                    <td><script id="metamorph-2311-start" type="text/x-placeholder"></script>Tax<script id="metamorph-2311-end" type="text/x-placeholder"></script></td>
+                    <td colspan="2" class="text-right"><script id="metamorph-2312-start" type="text/x-placeholder"></script>$0.00<script id="metamorph-2312-end" type="text/x-placeholder"></script></td>
+                </tr>
+                <tr>
+                    <th><script id="metamorph-2313-start" type="text/x-placeholder"></script>Subtotal<script id="metamorph-2313-end" type="text/x-placeholder"></script></th>
+                    <th colspan="2" class="text-right"><script id="metamorph-2314-start" type="text/x-placeholder"></script>$11.39<script id="metamorph-2314-end" type="text/x-placeholder"></script></th>
+                </tr>
+                </tbody>
+            </table>
+            <p class="text-right">
+                <a href="#" class="btn btn-default">Cancel</a>
+                <a href="#" class="btn btn-primary">Next</a>
+            </p>
+        </div>
+    </div>
 
-    <br><br><br><br><br>
-    <br><br><br><br><br>
+
+
+
+
 </div>
+
 
             <!-- /Page Content -->
 
