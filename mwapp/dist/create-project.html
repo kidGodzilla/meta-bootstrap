@@ -567,7 +567,7 @@
         background: #fff;
         padding: 10px 15px;
     }
-    .accordion .list-group-item.open hr{
+    .accordion .list-group-item.open header hr{
         display: block;
     }
     .accordion .list-group-item.open .btn {
@@ -575,6 +575,23 @@
     }
     .accordion header {
         cursor: pointer;
+    }
+    .nudge-down-1 {
+        position: relative;
+        top: 1px;
+    }
+
+    .btn-input {
+        padding: 11px 16px;
+        font-size: 14px;
+        /* margin-left: 0 !important; */
+        border: 1px solid #cccccc;
+        color: #777;
+    }
+    @media (max-width:768px) {
+        .form-horizontal .control-label {
+            padding-bottom: 2px !important;
+        }
     }
     /*.accordion .list-group-item.errors {*/
         /*background: #FFDED8;*/
@@ -606,7 +623,9 @@
         display: none;
     }
     .admin-creds,
-    .admin-creds-2 {
+    .admin-creds-2,
+    hr.admin-creds,
+    hr.admin-creds-2 {
         display: none;
     }
 </style>
@@ -635,15 +654,15 @@
                                 <div class="form-group">
                                     <label for="inputEmail" class="col-lg-2 control-label">Project Type</label>
                                     <div class="col-lg-10">
-                                        <p style="margin-top:-3px">
-                                        <div class="label label-primary">Mailbox</div>
+                                        <p style="margin-top:-2px">
+                                          <div class="label label-primary">Mailbox</div>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputName" class="col-lg-2 control-label">Project Name</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="inputName" placeholder="Enter a name for your project" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;">
+                                        <input type="text" class="form-control" id="inputName" placeholder="Enter a name for your project">
                                     </div>
                                 </div>
 
@@ -718,9 +737,13 @@
                                     <div class="form-group">
                                         <label for="inputPassword" class="col-lg-2 control-label">Administrator Password</label>
                                         <div class="col-lg-10">
-                                            <span class="input-group-btn">
+
+                                            <div class="input-group">
                                                 <input type="password" class="form-control" id="inputPassword" placeholder="Administrator Password">
-                                            </span>
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default btn-input"><i class="i-eye"></i></button>
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -803,11 +826,18 @@
                                     <div class="form-group">
                                         <label for="inputPassword" class="col-lg-2 control-label">Administrator Password</label>
                                         <div class="col-lg-10">
-                                        <span class="input-group-btn">
-                                            <input type="password" class="form-control error" id="inputPassword" placeholder="Administrator Password">
-                                        </span>
-                                            <span class="error">When using admin credentials, You must enter a password</span>
+                                        <!--<span class="input-group-btn">-->
+                                            <!--<input type="password" class="form-control error" id="inputPassword" placeholder="Administrator Password">-->
+                                        <!--</span>-->
 
+                                            <div class="input-group">
+                                                <input type="password" class="form-control" id="inputPassword" placeholder="Administrator Password">
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default btn-input"><i class="i-eye"></i></button>
+                                                </span>
+                                            </div>
+
+                                            <span class="error">When using admin credentials, You must enter a password</span>
                                         </div>
                                     </div>
                                 </div>
