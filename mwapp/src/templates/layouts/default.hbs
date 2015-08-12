@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}} | {{site.title}}</title>
+
+    <!--IE Compatibility modes-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--"Mobile-first"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- MetaBootstrap -->
+    <link rel="stylesheet" type="text/css" href="{{assets}}/css/theme3.css" media="all">
+    <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/meta-bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//www.bittitan.com/css/bittitan-icons.css">
+    <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/style.css" media="all">
+
+    <!-- MetaBootstrap Admin core stylesheet -->
+    <link rel="stylesheet" href="{{assets}}/css/css/main.min.css">
+
+    <!-- metisMenu stylesheet -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
+
+    <link rel="stylesheet" href="{{assets}}/css/style.css">
+
+    <link rel="stylesheet" href="{{assets}}/css/fubar.css">
+    <style>
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+  <script src="assets/lib/html5shiv/html5shiv.js"></script>
+  <script src="assets/lib/respond/respond.min.js"></script>
+    <![endif]-->
+
+    <!--Modernizr-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <!-- Footer Scripts -->
+
+    <!--jQuery -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+
+    <!--Bootstrap -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <!-- MetisMenu -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.min.js"></script>
+
+    <!-- Screenfull -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/screenfull.js/2.0.0/screenfull.min.js"></script>
+
+    <!-- MetaBootstrap core scripts -->
+    <script src="{{assets}}/css/js/core.min.js"></script>
+
+    <!-- MetaBootstrap demo scripts -->
+    <script src="{{assets}}/css/js/app.js"></script>
+
+    <!-- jQuery UI (for Selectable) -->
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('body').addClass('fade-in');
+            $('body').attr('style', '');
+            $('.nav-search input').focus(function () {
+                $('.nav-search').addClass('open');
+            });
+            $('.nav-search .fa-search').click(function () {
+                $('.nav-search').addClass('open');
+                $('.nav-search input').focus();
+            });
+            $('.nav-search input').blur(function () {
+                $('.nav-search').removeClass('open');
+            });
+
+//            $('.live-chat *').mousedown(function () {
+//                $('.live-chat').toggleClass('open');
+//            });
+//
+//            $('.expander, .toggle-menu, .expander-pin, #menu > .nav-header').click(function () {
+//                $('.toggle-menu').toggleClass('active');
+//                $('#left').toggleClass('open');
+//            });
+
+            $('i').delegate('', 'click', function () {
+                var $this = $(this);
+
+                if ($this.hasClass('i-sort')) {
+                    $this.removeClass('i-sort').addClass('i-sort-asc');
+                } else if ($this.hasClass('i-sort-asc')) {
+                    $this.removeClass('i-sort-asc').addClass('i-sort-desc');
+                } else if ($this.hasClass('i-sort-desc')) {
+                    $this.removeClass('i-sort-desc').addClass('i-sort');
+                }
+            });
+
+
+
+
+
+
+
+            $(window).unload(function () {
+                $('body').removeClass('fade-in');
+            });
+
+            $('#checkbox-master').click(function () {
+                if ($('#checkbox-master').is(':checked')) {
+                    $('input[type=checkbox]').prop('checked', true);
+                } else {
+                    $('input[type=checkbox]').prop('checked', false);
+                }
+            });
+
+            $("#selectable").bind("contextmenu", function(event) {
+                event.preventDefault();
+                $('.custom-menu').show().css({top: event.pageY + "px", left: event.pageX + "px"});
+            });
+
+            $("<div class='custom-menu'>" +
+                    "<small class='strong'>MENU</small>" +
+                    "<a href='#'><i class='i-play'></i> &nbsp;Trial Migration</a>" +
+                    "<a href='#'><i class='i-play'></i> &nbsp;Pre-Stage Migration</a>" +
+                    "<a href='#'><i class='i-play'></i> &nbsp;Full Migration</a>" +
+                    "<a href='#'><i class='i-creds'></i> &nbsp;Verify Credentials</a>" +
+                    "<a href='#'><i class='i-play'></i> &nbsp;Retry Errors</a>" +
+                    "<div class='row-divider'></div>" +
+                    "<a href='#'><i class='i-pause'></i> &nbsp;Pause</a>" +
+                    "<a href='#'><i class='i-trash'></i> &nbsp;Delete</a>" +
+                    "<a href='#'><i class='i-reset'></i> &nbsp;Reset</a>" +
+                    "<div class='row-divider'></div>" +
+                    "<a href='#'><i class='i-move'></i> &nbsp;Change Project</a>" +
+                    "<a href='#'><i class='i-creds'></i> &nbsp;Clear Credentials</a>" +
+                    "<div class='row-divider'></div>" +
+                    "<a href=''><i class='i-refresh'></i> &nbsp;Refresh</a>" +
+                    "</div>").appendTo("body");
+
+            $('*').click(function () {
+                $('.custom-menu').hide();
+            });
+
+            $("#selectable").selectable({
+                selecting: function( event, ui ) {
+                    $('input[type=checkbox]').prop('checked', false);
+                },
+                stop: function() {
+                    $( ".ui-selected", this ).each(function() {
+                        $(this).find('input[type=checkbox]').prop('checked', true);
+                    });
+                }
+            });
+
+            $('.custom-menu a').click(function () {
+                $('.underlay.one').fadeIn();
+                $('.context-panel.left').addClass('open').css('opacity', 1);
+                $('body').css('overflow-y', 'hidden');
+            });
+            $('.help-modal').click(function () {
+                $('.underlay.two').fadeIn();
+                $('.context-panel.right.errors').addClass('open').css('opacity', 1);
+                $('body').css('overflow-y', 'hidden');
+            });
+            $('.kb-modal').click(function () {
+                $('.underlay.two').fadeIn();
+                $('.context-panel.kb').addClass('open').css('opacity', 1);
+                $('body').css('overflow-y', 'hidden');
+            });
+            $('.underlay, .context-panel a.btn.close-modal').click(function () {
+                $('.underlay').fadeOut();
+                $('.context-panel').removeClass('open').css('opacity', 0);
+                $('body').css('overflow-y', 'initial');
+            });
+
+            $('.accordion .list-group-item').click(function () {
+                $('.accordion .list-group-item').removeClass('open');
+                $(this).addClass('open');
+            });
+
+
+
+            var $table = $('table.headstuck').first();
+
+            if ($table.length) {
+                console.log($table)
+                $table.clone().addClass('floating-table-header').css('position', 'fixed').css('top', '43px')
+                        .insertAfter('table.headstuck').find('tbody').remove();
+                $table.parent().css('position', 'relative');
+
+                setInterval(function () {
+                    $('.floating-table-header').css('left', $table.offset().left + 'px').css('width', $table.width() + 'px');
+                    // if (scrollTop > (tableOffsetTop + 70)) $('.floating-table-header').show();
+                }, 16);
+            }
+
+            // var tableOffsetTop = $table.offset().top;
+
+            $(window).scroll(function () {
+                var scrollTop = $(window).scrollTop();
+
+                if (scrollTop === 0) {
+                    $('body').removeClass('navbar-collapsed');
+                } else {
+                    $('body').addClass('navbar-collapsed');
+                }
+
+                if (scrollTop > 120) {
+                    $('.floating-table-header').show();
+                } else {
+                    $('.floating-table-header').hide();
+                }
+            });
+
+        });
+    </script>
+</head>
+<body class="{{site.brand}}{{#if inner-navbar}} has-second-navbar{{/if}}{{#if left}} has-left{{/if}}{{#if right}} has-right{{/if}}">
+
+{{!--{{#if left-nav}}
+<!-- .lefty (hover affordance) -->
+<!--<div class="lefty"></div>-->
+<!-- /.lefty -->
+{{/if}}--}}
+
+<!-- #top -->
+<div id="top">
+  {{#if inner-navbar}}
+    {{> inner-navbar }}
+  {{/if}}
+  {{#if inner-navbar-2}}
+    {{> inner-navbar-2 }}
+  {{/if}}
+  {{> navbar-fixed-top }}
+</div>
+<!-- /#top -->
+
+<div id="wrap">
+
+  {{#if left-nav}}
+    <!-- #left -->
+    <div id="left" class="{{#if left-open}}open{{/if}}">
+        {{#if project}}
+          {{> left-nav-project }}
+        {{/if}}
+
+      {{#if default}}
+        {{> left-nav }}
+      {{/if}}
+
+      {{#if createProject}}
+        {{> left-nav-create-project }}
+      {{/if}}
+
+      {{#if purchaseLicenses}}
+        {{> left-nav-purchase-licenses }}
+      {{/if}}
+
+      {{#if support}}
+        {{> left-nav-support }}
+      {{/if}}
+    </div>
+    <!-- /#left -->
+  {{/if}}
+
+    <!-- #content -->
+    <div id="content">
+        <!-- inner -->
+        <div class="bg-light lter">
+
+            <!-- Page Content -->
+            {{> body }}
+            <!-- /Page Content -->
+
+        </div>
+        <!-- /inner -->
+    </div>
+    <!-- /#content -->
+
+  {{# if right}}
+    <!-- #right -->
+    <div id="right" class="bg-light lter">
+      {{!-- {{> body }} --}}
+        {{> create-project-right }}
+    </div>
+    <!-- /#right -->
+  {{/if}}
+
+</div>
+<!-- /#wrap -->
+
+{{!-- {{> footer }} --}}
+
+{{> help-modal }}
+
+{{!--{{> live-chat }}--}}
+
+{{> context-panel }}
+
+{{> context-panel-right }}
+{{> context-panel-kb }}
+
+</body>
+</html>
