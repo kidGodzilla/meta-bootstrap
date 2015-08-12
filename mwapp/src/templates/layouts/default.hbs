@@ -28,8 +28,12 @@
     <link rel="stylesheet" href="{{assets}}/css/style.css">
 
     <style>
+        * {
+            -webkit-backface-visibility: none;
+        }
         body {
             margin: 0 !important;
+            padding-top: 0;
         }
         #content {
             margin-bottom: -21px !important;
@@ -37,7 +41,38 @@
         #content > div {
             min-height: 100vh;
         }
-
+        #left {
+            position: fixed;
+            height: 100vh;
+            background: #212635;
+            top: 50px;
+            overflow-y: auto;
+        }
+        #right {
+            right: 0;
+            top: 50px;
+            padding: 20px 15px;
+            width: 300px;
+        }
+        #content {
+            padding-top: 50px;
+            /*transition: all 300ms ease-in-out;*/
+        }
+        .navbar-collapsed #left,
+        .navbar-collapsed #right,
+        .navbar-collapsed #content {
+            top: 0;
+            padding-top: 0;
+        }
+        #wrap, #content {
+            background: #F1F2F7;
+        }
+        .has-right #content {
+            margin-right: 300px;
+        }
+        .has-left #content {
+            margin-left: 250px;
+        }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -220,25 +255,29 @@
         });
     </script>
 </head>
-<body class="{{site.brand}}{{#if inner-navbar}} has-second-navbar{{/if}}">
+<body class="{{site.brand}}{{#if inner-navbar}} has-second-navbar{{/if}}{{#if left}} has-left{{/if}}{{#if right}} has-right{{/if}}">
 
+{{#if left-nav}}
 <!-- .lefty (hover affordance) -->
 <div class="lefty"></div>
 <!-- /.lefty -->
+{{/if}}
 
-<div class="bg-dark dk" id="wrap">
-    <!-- #top -->
-    <div id="top">
-      {{> navbar-fixed-top }}
-      {{#if inner-navbar}}
-        {{> inner-navbar }}
-      {{/if}}
-      {{#if inner-navbar-2}}
-        {{> inner-navbar-2 }}
-      {{/if}}
-    </div>
-    <!-- /#top -->
+<!-- #top -->
+<div id="top">
+  {{> navbar-fixed-top }}
+  {{#if inner-navbar}}
+    {{> inner-navbar }}
+  {{/if}}
+  {{#if inner-navbar-2}}
+    {{> inner-navbar-2 }}
+  {{/if}}
+</div>
+<!-- /#top -->
 
+<div id="wrap">
+
+  {{#if left-nav}}
     <!-- #left -->
     <div id="left" class="{{#if left-open}}open{{/if}}">
         {{#if project}}
@@ -262,6 +301,7 @@
       {{/if}}
     </div>
     <!-- /#left -->
+  {{/if}}
 
     <!-- #content -->
     <div id="content">
@@ -277,11 +317,14 @@
     </div>
     <!-- /#content -->
 
+  {{# if right}}
     <!-- #right -->
     <div id="right" class="bg-light lter">
       {{!-- {{> body }} --}}
+        {{> create-project-right }}
     </div>
     <!-- /#right -->
+  {{/if}}
 
 </div>
 <!-- /#wrap -->
@@ -290,7 +333,7 @@
 
 {{> help-modal }}
 
-{{> live-chat }}
+{{!--{{> live-chat }}--}}
 
 {{> context-panel }}
 

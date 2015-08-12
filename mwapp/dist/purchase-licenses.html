@@ -28,8 +28,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
+        * {
+            -webkit-backface-visibility: none;
+        }
         body {
             margin: 0 !important;
+            padding-top: 0;
         }
         #content {
             margin-bottom: -21px !important;
@@ -37,7 +41,38 @@
         #content > div {
             min-height: 100vh;
         }
-
+        #left {
+            position: fixed;
+            height: 100vh;
+            background: #212635;
+            top: 50px;
+            overflow-y: auto;
+        }
+        #right {
+            right: 0;
+            top: 50px;
+            padding: 20px 15px;
+            width: 300px;
+        }
+        #content {
+            padding-top: 50px;
+            /*transition: all 300ms ease-in-out;*/
+        }
+        .navbar-collapsed #left,
+        .navbar-collapsed #right,
+        .navbar-collapsed #content {
+            top: 0;
+            padding-top: 0;
+        }
+        #wrap, #content {
+            background: #F1F2F7;
+        }
+        .has-right #content {
+            margin-right: 300px;
+        }
+        .has-left #content {
+            margin-left: 250px;
+        }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -222,14 +257,11 @@
 </head>
 <body class="mw">
 
-<!-- .lefty (hover affordance) -->
-<div class="lefty"></div>
-<!-- /.lefty -->
 
-<div class="bg-dark dk" id="wrap">
-    <!-- #top -->
-    <div id="top">
-      
+
+<!-- #top -->
+<div id="top">
+  
 <!-- .navbar -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -321,12 +353,25 @@
 
             <!-- .nav -->
             <ul class="nav navbar-nav">
-                <li class="nav-search">
+                <!--<li class="nav-search">-->
+                    <!--<a>-->
+                        <!--<input type="text" class="form-control search">-->
+                        <!--<i class="fa fa-search"></i>-->
+                    <!--</a>-->
+                <!--</li>-->
+
+                <li class="">
                     <a>
-                        <input type="text" class="form-control search">
-                        <i class="fa fa-search"></i>
+                        <i class="fa fa-arrow-up"></i>
                     </a>
                 </li>
+
+                <li class="">
+                    <a>
+                        <strong>Purchase Licenses</strong>
+                    </a>
+                </li>
+
                 <!--<li>-->
                 <!--<a href="#">-->
                 <!--<i class="fa fa-arrow-left"></i> &nbsp;Back-->
@@ -342,126 +387,14 @@
     </div><!-- /.container-fluid -->
 </nav><!-- /.navbar -->
 
-      
-      
-    </div>
-    <!-- /#top -->
+  
+  
+</div>
+<!-- /#top -->
 
-    <!-- #left -->
-    <div id="left" class="open">
-        
+<div id="wrap">
 
-      
-
-      
-
-      
-        <style>
-    .expander-pin i {
-        opacity: 0.25;
-    }
-    .expander-pin i.active {
-        opacity: 0.75;
-    }
-</style>
-<!-- #menu -->
-<ul id="menu" class="bg-blue dker">
-    <li class="nav-header cursor-pointer">
-        <div class="expander cursor-pointer">
-            <div class="pull-right expander-pin">
-                <i class="fa fa-thumb-tack active toggle-menu" style="padding: 2px 0;"></i>
-            </div>
-        </div>
-        Purchase Licenses
-    </li>
-    <!--<li class="nav-divider"></li>-->
-
-    <li class="">
-        <a href="purchase-licenses.html">
-            <span class="link-title"><i class="i-creds"></i> &nbsp;Select Licenses</span>
-        </a>
-    </li>
-
-    <li class="">
-        <a href="#">
-            <span class="link-title"><i class="i-source"></i>&nbsp; Billing Information</span>
-        </a>
-    </li>
-
-    <li class="">
-        <a href="#">
-            <span class="link-title"><i class="i-destination"></i>&nbsp; Submit Payment</span>
-        </a>
-    </li>
-
-    <!--<li class="">-->
-        <!--<a href="#">-->
-            <!--<span class="link-title"><i class="i-credit"></i>&nbsp; Billing</span>-->
-        <!--</a>-->
-        <!--<ul class="collapse">-->
-            <!--<li>-->
-                <!--<a href="#">-->
-                    <!--<i class="i-dollar"></i> &nbsp;Purchase Licenses-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<a href="#">-->
-                    <!--<i class="i-license"></i> &nbsp;License Summary-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<a href="#">-->
-                    <!--<i class="i-credit"></i> &nbsp;Purchase History-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<a href="#">-->
-                    <!--<i class="i-discount"></i> &nbsp;Redeem Coupon-->
-                <!--</a>-->
-            <!--</li>-->
-        <!--</ul>-->
-    <!--</li>-->
-    <!--<li class="">-->
-        <!--<a href="#">-->
-            <!--<span class="link-title"><i class="i-support"></i>&nbsp; Support</span>-->
-        <!--</a>-->
-        <!--<ul class="collapse">-->
-            <!--<li>-->
-                <!--<a href="#">-->
-                    <!--<i class="i-at"></i> &nbsp;New Ticket-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<a href="#">-->
-                    <!--<i class="i-phone-24"></i> &nbsp;Phone Support-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<a href="#">-->
-                    <!--<i class="i-phone"></i> &nbsp;Advisor Hours-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<a href="#">-->
-                    <!--<i class="i-communicate"></i> &nbsp;Feedback-->
-                <!--</a>-->
-            <!--</li>-->
-        <!--</ul>-->
-    <!--</li>-->
-    <!--<li class="">-->
-        <!--<a href="#">-->
-            <!--<span class="link-title"><i class="i-user-alt"></i>&nbsp; Account</span>-->
-        <!--</a>-->
-    <!--</li>-->
-</ul>
-<!-- /#menu -->
-
-
-      
-
-      
-    </div>
-    <!-- /#left -->
+  
 
     <!-- #content -->
     <div id="content">
@@ -495,465 +428,468 @@
 </script>
 
 <div class="pal">
-    <ul class="nav nav-tabs">
-        <span class="pull-right ptm">Current Subtotal: $324.81</span>
-        <li class="active"><a href="#home" data-toggle="tab">Data Migration</a></li>
-        <li><a href="#profile" data-toggle="tab">UserActivation</a></li>
-        <li><a href="#dropdown1" data-toggle="tab">Premium Support</a></li>
+    <div class="row">
+        <div class="col-md-9">
+            <ul class="nav nav-tabs">
+                <span class="pull-right ptm">Current Subtotal: $324.81</span>
+                <li class="active"><a href="#home" data-toggle="tab">Select Licenses</a></li>
+                <li><a href="#profile" data-toggle="tab">Billing Information</a></li>
+                <li><a href="#dropdown1" data-toggle="tab">Complete Purchase</a></li>
+            </ul>
+            <div class="panel panel-info">
+                <div class="panel-body bg-white" style="border-left: 1px solid #dddddd;border-right: 1px solid #dddddd;">
 
-    </ul>
-    <div class="panel panel-info">
-        <div class="panel-body bg-white" style="border-left: 1px solid #dddddd;border-right: 1px solid #dddddd;">
+                    <div id="myTabContent" class="tab-content bg-white">
+                        <div class="tab-pane fade active in" id="home">
+                            <div class="list-group">
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn hipaa">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
 
-            <div id="myTabContent" class="tab-content bg-white">
-                <div class="tab-pane fade active in" id="home">
-                    <div class="list-group">
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn hipaa">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
+
+
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn hipaa">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn hipaa">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn hipaa">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn hipaa">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn hipaa">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn hipaa">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn hipaa">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn hipaa">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
                             </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile">
+                            <div class="list-group">
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
 
 
 
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn hipaa">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
                             </div>
+                        </div>
+                        <div class="tab-pane fade" id="dropdown1">
+                            <div class="list-group">
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
 
 
 
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn hipaa">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
+                                <a class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-8">
+                                            <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
+                                            <p class="list-group-item-text">
+                                                <i class="i-license"></i>&nbsp;
+                                                150 Mailbox Licenses Remaining.
+                                                Migrates up to 50 GB with up to 10 migration passes per license.
+                                            </p>
+                                            <p class="ptm mbn">
+                                                <input type="checkbox"/>&nbsp;
+                                                Add HIPAA Compliance
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptm text-center">
+                                            <h3 class="text-success man">$11.99</h3>
+                                            <small>Per License</small>
+                                        </div>
+                                        <div class="col-xs-3 col-md-2 ptl">
+                                            <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
+                                        </div>
+                                    </div>
+
+
+
+                                </a>
                             </div>
-
-
-
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn hipaa">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn hipaa">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn hipaa">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn hipaa">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn hipaa">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn hipaa">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
+                        </div>
+                        <p class="pull-right ptm">
+                            <a href="#" class="btn btn-default">Cancel</a>
+                            <a href="#" class="btn btn-primary">Next</a>
+                        </p>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="profile">
-                    <div class="list-group">
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
-                    </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Pricing Summary</h3>
                 </div>
-                <div class="tab-pane fade" id="dropdown1">
-                    <div class="list-group">
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
-                        <a class="list-group-item">
-                            <div class="row">
-                                <div class="col-xs-6 col-md-8">
-                                    <h4 class="list-group-item-heading"><i class="i-mailbox"></i> &nbsp;Mailbox Migration</h4>
-                                    <p class="list-group-item-text">
-                                        <i class="i-license"></i>&nbsp;
-                                        150 Mailbox Licenses Remaining.
-                                        Migrates up to 50 GB with up to 10 migration passes per license.
-                                    </p>
-                                    <p class="ptm mbn">
-                                        <input type="checkbox"/>&nbsp;
-                                        Add HIPAA Compliance
-                                    </p>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptm text-center">
-                                    <h3 class="text-success man">$11.99</h3>
-                                    <small>Per License</small>
-                                </div>
-                                <div class="col-xs-3 col-md-2 ptl">
-                                    <input class="" type="number" class="form-control" value="0" style="font-size:2rem;width:100%">
-                                </div>
-                            </div>
-
-
-
-                        </a>
+                <div class="panel-body bg-white">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th><script id="metamorph-2303-start" type="text/x-placeholder"></script>License Type<script id="metamorph-2303-end" type="text/x-placeholder"></script></th>
+                            <th class="text-right"><script id="metamorph-2304-start" type="text/x-placeholder"></script>Quantity<script id="metamorph-2304-end" type="text/x-placeholder"></script></th>
+                            <th class="text-right"><script id="metamorph-2305-start" type="text/x-placeholder"></script>Price<script id="metamorph-2305-end" type="text/x-placeholder"></script></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <script id="metamorph-2307-start" type="text/x-placeholder"></script><script id="metamorph-2306-start" type="text/x-placeholder"></script>
+                        <tr>
+                            <td><script id="metamorph-2308-start" type="text/x-placeholder"></script>Mailbox Migration<script id="metamorph-2308-end" type="text/x-placeholder"></script></td>
+                            <td class="text-right"><script id="metamorph-2309-start" type="text/x-placeholder"></script>1<script id="metamorph-2309-end" type="text/x-placeholder"></script></td>
+                            <td class="text-right"><script id="metamorph-2310-start" type="text/x-placeholder"></script>$11.39<script id="metamorph-2310-end" type="text/x-placeholder"></script></td>
+                        </tr>
+                        <script id="metamorph-2306-end" type="text/x-placeholder"></script><script id="metamorph-2307-end" type="text/x-placeholder"></script>
+                        <tr>
+                            <td><script id="metamorph-2311-start" type="text/x-placeholder"></script>Tax<script id="metamorph-2311-end" type="text/x-placeholder"></script></td>
+                            <td colspan="2" class="text-right"><script id="metamorph-2312-start" type="text/x-placeholder"></script>$0.00<script id="metamorph-2312-end" type="text/x-placeholder"></script></td>
+                        </tr>
+                        <tr>
+                            <th><script id="metamorph-2313-start" type="text/x-placeholder"></script>Subtotal<script id="metamorph-2313-end" type="text/x-placeholder"></script></th>
+                            <th colspan="2" class="text-right"><script id="metamorph-2314-start" type="text/x-placeholder"></script>$11.39<script id="metamorph-2314-end" type="text/x-placeholder"></script></th>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="btn-group btn-group-justified">
+                        <a href="#" class="btn btn-default">Cancel</a>
+                        <a href="#" class="btn btn-primary">Next</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="panel panel-info">
-        <div class="panel-heading">
-            <h3 class="panel-title">Pricing Summary</h3>
-        </div>
-        <div class="panel-body bg-white">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th><script id="metamorph-2303-start" type="text/x-placeholder"></script>License Type<script id="metamorph-2303-end" type="text/x-placeholder"></script></th>
-                    <th class="text-right"><script id="metamorph-2304-start" type="text/x-placeholder"></script>Quantity<script id="metamorph-2304-end" type="text/x-placeholder"></script></th>
-                    <th class="text-right"><script id="metamorph-2305-start" type="text/x-placeholder"></script>Price<script id="metamorph-2305-end" type="text/x-placeholder"></script></th>
-                </tr>
-                </thead>
-                <tbody>
-                <script id="metamorph-2307-start" type="text/x-placeholder"></script><script id="metamorph-2306-start" type="text/x-placeholder"></script>
-                <tr>
-                    <td><script id="metamorph-2308-start" type="text/x-placeholder"></script>Mailbox Migration<script id="metamorph-2308-end" type="text/x-placeholder"></script></td>
-                    <td class="text-right"><script id="metamorph-2309-start" type="text/x-placeholder"></script>1<script id="metamorph-2309-end" type="text/x-placeholder"></script></td>
-                    <td class="text-right"><script id="metamorph-2310-start" type="text/x-placeholder"></script>$11.39<script id="metamorph-2310-end" type="text/x-placeholder"></script></td>
-                </tr>
-                <script id="metamorph-2306-end" type="text/x-placeholder"></script><script id="metamorph-2307-end" type="text/x-placeholder"></script>
-                <tr>
-                    <td><script id="metamorph-2311-start" type="text/x-placeholder"></script>Tax<script id="metamorph-2311-end" type="text/x-placeholder"></script></td>
-                    <td colspan="2" class="text-right"><script id="metamorph-2312-start" type="text/x-placeholder"></script>$0.00<script id="metamorph-2312-end" type="text/x-placeholder"></script></td>
-                </tr>
-                <tr>
-                    <th><script id="metamorph-2313-start" type="text/x-placeholder"></script>Subtotal<script id="metamorph-2313-end" type="text/x-placeholder"></script></th>
-                    <th colspan="2" class="text-right"><script id="metamorph-2314-start" type="text/x-placeholder"></script>$11.39<script id="metamorph-2314-end" type="text/x-placeholder"></script></th>
-                </tr>
-                </tbody>
-            </table>
-            <p class="text-right">
-                <a href="#" class="btn btn-default">Cancel</a>
-                <a href="#" class="btn btn-primary">Next</a>
-            </p>
-        </div>
-    </div>
-
-
-
-
-
 </div>
 
 
@@ -964,11 +900,7 @@
     </div>
     <!-- /#content -->
 
-    <!-- #right -->
-    <div id="right" class="bg-light lter">
-      
-    </div>
-    <!-- /#right -->
+  
 
 </div>
 <!-- /#wrap -->
@@ -998,14 +930,6 @@
 <!-- /#helpModal -->
 
 
-<!-- .live-chat -->
-<div class="live-chat">
-    <div class="header">
-        <i class="fa fa-comments"></i>&nbsp; Stuck? We're here to help!&nbsp;&nbsp;&nbsp;&nbsp;
-    </div>
-    <div class="body"></div>
-</div>
-<!-- /.live-chat -->
 
 
 <style>
@@ -1089,16 +1013,16 @@
             </div>
         </div>
 
-        <h4 class="plm mtx">
-            Required Steps
-        </h4>
-
-        <div class="list-group accordion">
+        <div class="list-group accordion mtl">
             <div class="list-group-item open">
                 <header>
                     <div class="row">
                         <div class="col-xs-12">
-                            <h4 class="mtm Light"><i class="i-play Light"></i>&nbsp; Select What to Migrate</h4>
+                            <h4 class="mtm Light">
+                                <i class="i-play Light"></i>&nbsp;
+                                Select What to Migrate
+                            </h4>
+                            <hr>
                         </div>
                     </div>
                 </header>
@@ -1151,16 +1075,16 @@
         </div>
 
 
-        <h4 class="plm mtx">
-            Optional Steps
-        </h4>
-
         <div class="list-group accordion">
             <div class="list-group-item open">
                 <header>
                     <div class="row">
                         <div class="col-xs-12">
-                            <h4 class="mtm Light"><i class="i-project Light"></i>&nbsp; Migration Scheduling</h4>
+                            <h4 class="mtm Light">
+                                <i class="i-project Light"></i>&nbsp;
+                                Migration Scheduling
+                            </h4>
+                            <hr>
                         </div>
                     </div>
                 </header>
