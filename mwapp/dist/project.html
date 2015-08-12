@@ -67,11 +67,49 @@
         #wrap, #content {
             background: #F1F2F7;
         }
-        .has-right #content {
-            margin-right: 300px;
+        #right,
+        #left, .lefty{
+            display: none;
         }
-        .has-left #content {
-            margin-left: 250px;
+        @media (min-width: 1024px) {
+            #right,
+            #left, .lefty {
+                display: block;
+            }
+            #right {
+                padding-left: 0;
+            }
+            .has-right #content {
+                margin-right: 300px;
+            }
+            .has-left #content {
+                margin-left: 250px;
+            }
+        }
+        .navbar-brand img {
+            padding: 5px 0;
+        }
+        .accordion .list-group-item {
+            background: #f3f3f3;
+            padding: 0 15px;
+            transition: all 300ms ease-in-out;
+        }
+        .accordion .list-group-item hr,
+        .accordion .list-group-item .btn {
+            display: none;
+        }
+        .accordion .list-group-item.open {
+            background: #fff;
+            padding: 10px 15px;
+        }
+        .accordion .list-group-item.open header hr{
+            display: block;
+        }
+        .accordion .list-group-item.open .btn {
+            display: inline;
+        }
+        .accordion header {
+            cursor: pointer;
         }
     </style>
 
@@ -367,7 +405,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
 
             <!-- .nav -->
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav hidden-xs hidden-sm">
                 <!--<li class="nav-search">-->
                     <!--<a>-->
                         <!--<input type="text" class="form-control search">-->
@@ -403,14 +441,24 @@
 </nav><!-- /.navbar -->
 
   
-    <nav class="navbar navbar-default navbar-fixed-second navbar-thin">
+    <style>
+    .navbar-fixed-second .text {
+        display: none;
+    }
+    @media (min-width: 1024px) {
+        .navbar-fixed-second .text {
+            display: inline;
+        }
+    }
+</style>
+<nav class="navbar navbar-default navbar-fixed-second navbar-thin">
     <div class="">
         <div class="collapse navbar-collapse" style="margin-left:-15px;margin-right:-15px">
             <ul class="nav navbar-nav">
                 <!--<li><a href="#">Link</a></li>-->
                 <!--<li><a href="#">Link</a></li>-->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-edit"></i> &nbsp;Edit Project <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-edit"></i><span class="text"> &nbsp;Edit Project </span><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Edit Project</a></li>
                         <li><a href="#">Clone Project</a></li>
@@ -419,7 +467,7 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-action-plus"></i> &nbsp;Add <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-action-plus"></i><span class="text"> &nbsp;Add </span><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Quick Add</a></li>
                         <li><a href="#">Bulk Add</a></li>
@@ -427,7 +475,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-play"></i> &nbsp;Start <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-play"></i><span class="text"> &nbsp;Start </span><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Verify Credentials</a></li>
                         <li><a href="#">Trial Migration</a></li>
@@ -436,14 +484,14 @@
                         <li><a href="#">Retry Errors</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><i class="i-pause"></i> &nbsp;Pause</a></li>
+                <li><a href="#"><i class="i-pause"></i><span class="text"> &nbsp;Pause</span></a></li>
                 <li class="divider"></li>
 
-                <li><a href="#"><i class="i-trash"></i> &nbsp;Delete</a></li>
-                <li><a href="#"><i class="i-history"></i> &nbsp;Reset</a></li>
-                <li><a href="#"><i class="i-move"></i> &nbsp;Change Project</a></li>
-                <li><a href="#"><i class="i-creds"></i> &nbsp;Clear Credentials</a></li>
-                <li><a href="#"><i class="i-refresh"></i> &nbsp;Refresh</a></li>
+                <li><a href="#"><i class="i-trash"></i><span class="text"> &nbsp;Delete</span></a></li>
+                <li><a href="#"><i class="i-history"></i><span class="text"> &nbsp;Reset</span></a></li>
+                <li><a href="#"><i class="i-move"></i><span class="text"> &nbsp;Change Project</span></a></li>
+                <li><a href="#"><i class="i-creds"></i><span class="text"> &nbsp;Clear Credentials</span></a></li>
+                <li><a href="#"><i class="i-refresh"></i><span class="text"> &nbsp;Refresh</span></a></li>
 
             </ul>
             <form class="navbar-form navbar-left pull-right" role="search">
@@ -454,14 +502,14 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
 
-                <li class="dropdown">
+                <li class="dropdown hidden-sm">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-sort"></i> &nbsp;Sort <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Action</a></li>
                     </ul>
                 </li>
 
-                <li class="dropdown">
+                <li class="dropdown hidden-sm">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-filter"></i> &nbsp;Filter <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Action</a></li>
@@ -757,7 +805,7 @@
     <div class="col-xs-12">
         <div class="panel panel-default" style="border-radius:0">
             <div class="panel-heading" style="border-radius:0">
-                <h3 class="panel-title"><i class="i-mailbox"></i>&nbsp;
+                <h3 class="panel-title" style="padding-left:2px"><i class="i-mailbox"></i>&nbsp;
                     BitTitan Migration Project #3245
                     &nbsp;<em class=subdued>&mdash;&nbsp; Exchange 2007 to Office 365 Migration</em></h3>
             </div>
@@ -767,7 +815,7 @@
                     <tr>
                         <th class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top: -15px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </th>
                         <th class="w-30">
@@ -800,10 +848,10 @@
                     </tr>
                     </thead>
                     <tbody id="selectable">
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -858,10 +906,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -916,10 +964,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -974,10 +1022,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1032,10 +1080,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1090,10 +1138,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1148,10 +1196,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1206,10 +1254,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1264,10 +1312,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1322,10 +1370,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1380,10 +1428,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1438,10 +1486,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1496,10 +1544,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1554,10 +1602,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1612,10 +1660,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1670,10 +1718,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1728,10 +1776,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1786,10 +1834,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1844,10 +1892,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1902,10 +1950,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -1960,10 +2008,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -2018,10 +2066,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -2076,10 +2124,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -2134,10 +2182,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -2192,10 +2240,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -2250,10 +2298,10 @@
                             <a href="#" class="i-journal" target="_blank" title="View Logs" style="padding: 2px 3px"></a>
                         </td>
                     </tr>
-                    <tr class="tr-row" style="height: 37px"><td class="display-none"></td>
+                    <tr class="tr-row" style="height: 30px"><td class="display-none"></td>
                         <td class="w-30">
                             <label class="checkbox" style="margin:0;padding:0;top:1px;left: -2px;">
-                                <input type="checkbox" style="margin-left:0">
+                                <input type="checkbox" style="margin-left:-2px">
                             </label>
                         </td>
                         <td class="w-30" style="overflow: visible;">
@@ -2448,7 +2496,7 @@
                 <header>
                     <div class="row">
                         <div class="col-xs-12">
-                            <h4 class="mtm Light">
+                            <h4 class="mtm ptxs Light">
                                 <i class="i-play Light"></i>&nbsp;
                                 Select What to Migrate
                             </h4>
@@ -2502,15 +2550,12 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-
-        <div class="list-group accordion">
             <div class="list-group-item open">
                 <header>
                     <div class="row">
                         <div class="col-xs-12">
-                            <h4 class="mtm Light">
+                            <h4 class="mtm ptxs Light">
                                 <i class="i-project Light"></i>&nbsp;
                                 Migration Scheduling
                             </h4>
@@ -2521,7 +2566,7 @@
                 <div class="content phl pts">
                     <div class="row">
                         <div class="box-body">
-                            <div class="checkbox">
+                            <div class="checkbox mtn">
                                 <label>
                                     <input id="ember8114" class="ember-view ember-checkbox" type="checkbox" name="delay-migration">
                                     <script id="metamorph-2545-start" type="text/x-placeholder"></script>Automatically start the migration at<script id="metamorph-2545-end" type="text/x-placeholder"></script>&nbsp;
@@ -2541,7 +2586,7 @@
                                 </div>
                                 <!--<div class="col-xs-1 text-center">-->
                                 <!--<span class="form-control-text">-->
-                                    <!--<small><script id="metamorph-2668-start" type="text/x-placeholder"></script>at<script id="metamorph-2668-end" type="text/x-placeholder"></script></small>-->
+                                <!--<small><script id="metamorph-2668-start" type="text/x-placeholder"></script>at<script id="metamorph-2668-end" type="text/x-placeholder"></script></small>-->
                                 <!--</span>-->
                                 <!--</div>-->
                                 <div class="col-xs-2">

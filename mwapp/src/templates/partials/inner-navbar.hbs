@@ -1,3 +1,13 @@
+<style>
+    .navbar-fixed-second .text {
+        display: none;
+    }
+    @media (min-width: 1024px) {
+        .navbar-fixed-second .text {
+            display: inline;
+        }
+    }
+</style>
 <nav class="navbar navbar-default navbar-fixed-second navbar-thin">
     <div class="">
         <div class="collapse navbar-collapse" style="margin-left:-15px;margin-right:-15px">
@@ -5,7 +15,7 @@
                 <!--<li><a href="#">Link</a></li>-->
                 <!--<li><a href="#">Link</a></li>-->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-edit"></i> &nbsp;Edit Project <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-edit"></i><span class="text"> &nbsp;Edit Project </span><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Edit Project</a></li>
                         <li><a href="#">Clone Project</a></li>
@@ -14,7 +24,7 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-action-plus"></i> &nbsp;Add <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-action-plus"></i><span class="text"> &nbsp;Add </span><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Quick Add</a></li>
                         <li><a href="#">Bulk Add</a></li>
@@ -22,7 +32,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-play"></i> &nbsp;Start <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-play"></i><span class="text"> &nbsp;Start </span><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Verify Credentials</a></li>
                         <li><a href="#">Trial Migration</a></li>
@@ -31,14 +41,14 @@
                         <li><a href="#">Retry Errors</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><i class="i-pause"></i> &nbsp;Pause</a></li>
+                <li><a href="#"><i class="i-pause"></i><span class="text"> &nbsp;Pause</span></a></li>
                 <li class="divider"></li>
 
-                <li><a href="#"><i class="i-trash"></i> &nbsp;Delete</a></li>
-                <li><a href="#"><i class="i-history"></i> &nbsp;Reset</a></li>
-                <li><a href="#"><i class="i-move"></i> &nbsp;Change Project</a></li>
-                <li><a href="#"><i class="i-creds"></i> &nbsp;Clear Credentials</a></li>
-                <li><a href="#"><i class="i-refresh"></i> &nbsp;Refresh</a></li>
+                <li><a href="#"><i class="i-trash"></i><span class="text"> &nbsp;Delete</span></a></li>
+                <li><a href="#"><i class="i-history"></i><span class="text"> &nbsp;Reset</span></a></li>
+                <li><a href="#"><i class="i-move"></i><span class="text"> &nbsp;Change Project</span></a></li>
+                <li><a href="#"><i class="i-creds"></i><span class="text"> &nbsp;Clear Credentials</span></a></li>
+                <li><a href="#"><i class="i-refresh"></i><span class="text"> &nbsp;Refresh</span></a></li>
 
             </ul>
             <form class="navbar-form navbar-left pull-right" role="search">
@@ -49,14 +59,14 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
 
-                <li class="dropdown">
+                <li class="dropdown hidden-sm">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-sort"></i> &nbsp;Sort <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Action</a></li>
                     </ul>
                 </li>
 
-                <li class="dropdown">
+                <li class="dropdown hidden-sm">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-filter"></i> &nbsp;Filter <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Action</a></li>

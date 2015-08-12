@@ -67,11 +67,49 @@
         #wrap, #content {
             background: #F1F2F7;
         }
-        .has-right #content {
-            margin-right: 300px;
+        #right,
+        #left, .lefty{
+            display: none;
         }
-        .has-left #content {
-            margin-left: 250px;
+        @media (min-width: 1024px) {
+            #right,
+            #left, .lefty {
+                display: block;
+            }
+            #right {
+                padding-left: 0;
+            }
+            .has-right #content {
+                margin-right: 300px;
+            }
+            .has-left #content {
+                margin-left: 250px;
+            }
+        }
+        .navbar-brand img {
+            padding: 5px 0;
+        }
+        .accordion .list-group-item {
+            background: #f3f3f3;
+            padding: 0 15px;
+            transition: all 300ms ease-in-out;
+        }
+        .accordion .list-group-item hr,
+        .accordion .list-group-item .btn {
+            display: none;
+        }
+        .accordion .list-group-item.open {
+            background: #fff;
+            padding: 10px 15px;
+        }
+        .accordion .list-group-item.open header hr{
+            display: block;
+        }
+        .accordion .list-group-item.open .btn {
+            display: inline;
+        }
+        .accordion header {
+            cursor: pointer;
         }
     </style>
 
@@ -367,7 +405,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
 
             <!-- .nav -->
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav hidden-xs hidden-sm">
                 <!--<li class="nav-search">-->
                     <!--<a>-->
                         <!--<input type="text" class="form-control search">-->
@@ -691,7 +729,7 @@
                 <header>
                     <div class="row">
                         <div class="col-xs-12">
-                            <h4 class="mtm Light">
+                            <h4 class="mtm ptxs Light">
                                 <i class="i-play Light"></i>&nbsp;
                                 Select What to Migrate
                             </h4>
@@ -745,15 +783,12 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-
-        <div class="list-group accordion">
             <div class="list-group-item open">
                 <header>
                     <div class="row">
                         <div class="col-xs-12">
-                            <h4 class="mtm Light">
+                            <h4 class="mtm ptxs Light">
                                 <i class="i-project Light"></i>&nbsp;
                                 Migration Scheduling
                             </h4>
@@ -764,7 +799,7 @@
                 <div class="content phl pts">
                     <div class="row">
                         <div class="box-body">
-                            <div class="checkbox">
+                            <div class="checkbox mtn">
                                 <label>
                                     <input id="ember8114" class="ember-view ember-checkbox" type="checkbox" name="delay-migration">
                                     <script id="metamorph-2545-start" type="text/x-placeholder"></script>Automatically start the migration at<script id="metamorph-2545-end" type="text/x-placeholder"></script>&nbsp;
@@ -784,7 +819,7 @@
                                 </div>
                                 <!--<div class="col-xs-1 text-center">-->
                                 <!--<span class="form-control-text">-->
-                                    <!--<small><script id="metamorph-2668-start" type="text/x-placeholder"></script>at<script id="metamorph-2668-end" type="text/x-placeholder"></script></small>-->
+                                <!--<small><script id="metamorph-2668-start" type="text/x-placeholder"></script>at<script id="metamorph-2668-end" type="text/x-placeholder"></script></small>-->
                                 <!--</span>-->
                                 <!--</div>-->
                                 <div class="col-xs-2">
