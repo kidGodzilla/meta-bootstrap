@@ -390,7 +390,7 @@ th.checkbox-adjust input[type=checkbox] {
   border-color: transparent !important;
 }
 .navbar-fixed-top {
-  z-index: 9999999;
+  z-index: 99999;
 }
 .toggle-menu {
   padding: 2px 0;
