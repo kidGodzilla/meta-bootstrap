@@ -644,17 +644,6 @@ input[type=text]:focus {
   width: 45px;
   text-align: center;
 }
-.project-list td,
-.project-items td {
-  text-align: center;
-}
-.project-list td:first-of-type {
-  text-align: left;
-}
-.project-items td:nth-of-type(3),
-.project-items td:nth-of-type(4) {
-  text-align: left;
-}
 .expander:hover {
   background: rgba(255, 255, 255, 0.025);
 }
