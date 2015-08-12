@@ -135,6 +135,17 @@
                 $('#left').toggleClass('open');
             });
 
+            $('i').delegate('', 'click', function () {
+                var $this = $(this);
+
+                if ($this.hasClass('i-sort')) {
+                    $this.removeClass('i-sort').addClass('i-sort-asc');
+                } else if ($this.hasClass('i-sort-asc')) {
+                    $this.removeClass('i-sort-asc').addClass('i-sort-desc');
+                } else if ($this.hasClass('i-sort-desc')) {
+                    $this.removeClass('i-sort-desc').addClass('i-sort');
+                }
+            });
 
 
 
@@ -319,7 +330,7 @@
 
   {{# if right}}
     <!-- #right -->
-    <div id="right" class="bg-light lter">
+    <div id="right" class="bg-light lter" style="padding-left:0">
       {{!-- {{> body }} --}}
         {{> create-project-right }}
     </div>

@@ -135,6 +135,17 @@
                 $('#left').toggleClass('open');
             });
 
+            $('i').delegate('', 'click', function () {
+                var $this = $(this);
+
+                if ($this.hasClass('i-sort')) {
+                    $this.removeClass('i-sort').addClass('i-sort-asc');
+                } else if ($this.hasClass('i-sort-asc')) {
+                    $this.removeClass('i-sort-asc').addClass('i-sort-desc');
+                } else if ($this.hasClass('i-sort-desc')) {
+                    $this.removeClass('i-sort-desc').addClass('i-sort');
+                }
+            });
 
 
 
@@ -545,6 +556,8 @@
     }
     .accordion .list-group-item {
         background: #f3f3f3;
+        padding: 0 15px;
+        transition: all 300ms ease-in-out;
     }
     .accordion .list-group-item hr,
     .accordion .list-group-item .btn {
@@ -552,6 +565,7 @@
     }
     .accordion .list-group-item.open {
         background: #fff;
+        padding: 10px 15px;
     }
     .accordion .list-group-item.open hr{
         display: block;
@@ -562,6 +576,39 @@
     .accordion header {
         cursor: pointer;
     }
+    /*.accordion .list-group-item.errors {*/
+        /*background: #FFDED8;*/
+        /*color: #888;*/
+    /*}*/
+    /*.accordion .list-group-item.valid {*/
+        /*background: #ECFFE1;*/
+    /*}*/
+    /*.accordion .list-group-item.errors h4::after {*/
+        /*display: inline;*/
+        /*font: normal normal normal 14px/1 FontAwesome;*/
+        /*content: "\f06a";*/
+        /*padding-left: 10px;*/
+        /*font-size: 19px;*/
+    /*}*/
+    /*span.error {*/
+        /*display: block;*/
+        /*margin-top: 1px;*/
+        /*padding: 0 10px;*/
+        /*background: #FFDED8;*/
+        /*color: #555;*/
+    /*}*/
+    /*input.error,*/
+    /*select.error {*/
+        /*border-color: #FFDED8;*/
+        /*color: #222;*/
+    /*}*/
+    span.error {
+        display: none;
+    }
+    .admin-creds,
+    .admin-creds-2 {
+        display: none;
+    }
 </style>
 
 <div class="pal">
@@ -570,7 +617,7 @@
 
 
             <div class="list-group accordion">
-                <div class="list-group-item open">
+                <div class="list-group-item awesome open">
                     <header>
                         <div class="row">
                             <div class="col-xs-12">
@@ -653,25 +700,28 @@
                                         </select>
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox"> Use Administrator Credentials
+                                                <input class="use-admin-creds" type="checkbox"> Use Administrator Credentials
                                             </label>
+                                            <hr class="admin-creds">
                                         </div>
-                                        <hr>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="inputEmail" class="col-lg-2 control-label">Administrator Username</label>
-                                    <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="inputEmail" placeholder="Administrator Username">
+
+                                <div class="admin-creds">
+                                    <div class="form-group">
+                                        <label for="inputEmail" class="col-lg-2 control-label">Administrator Username</label>
+                                        <div class="col-lg-10">
+                                            <input type="text" class="form-control" id="inputEmail" placeholder="Administrator Username">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPassword" class="col-lg-2 control-label">Administrator Password</label>
-                                    <div class="col-lg-10">
-                            <span class="input-group-btn">
-                                <input type="password" class="form-control" id="inputPassword" placeholder="Administrator Password">
-                            </span>
+                                    <div class="form-group">
+                                        <label for="inputPassword" class="col-lg-2 control-label">Administrator Password</label>
+                                        <div class="col-lg-10">
+                                            <span class="input-group-btn">
+                                                <input type="password" class="form-control" id="inputPassword" placeholder="Administrator Password">
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -693,7 +743,7 @@
                 </div>
 
 
-                <div class="list-group-item">
+                <div class="list-group-item errors">
                     <header>
                         <div class="row">
                             <div class="col-xs-12">
@@ -718,7 +768,7 @@
 
                                     <label for="select" class="col-lg-2 control-label">Server Type</label>
                                     <div class="col-lg-10">
-                                        <select class="form-control" id="select">
+                                        <select class="form-control error" id="select">
                                             <option>Microsoft Office 365</option>
                                             <option>Exchange Server 2003+</option>
                                             <option>Microsoft Office 365 (China)</option>
@@ -732,40 +782,37 @@
                                             <option>Google Apps/Gmail</option>
                                             <option>EML</option>
                                         </select>
+                                        <span class="error">You must select a destination</span>
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox"> Use Administrator Credentials
+                                                <input class="use-admin-creds-2" type="checkbox"> Use Administrator Credentials
                                             </label>
+                                            <hr class="admin-creds-2">
                                         </div>
-                                        <hr>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="inputEmail" class="col-lg-2 control-label">Administrator Username</label>
-                                    <div class="col-lg-10">
-                                        <input type="text" class="form-control" id="inputEmail" placeholder="Administrator Username">
+                                <div class="admin-creds-2">
+                                    <div class="form-group">
+                                        <label for="inputEmail" class="col-lg-2 control-label">Administrator Username</label>
+                                        <div class="col-lg-10">
+                                            <input type="text" class="form-control error" id="inputEmail" placeholder="Administrator Username">
+                                            <span class="error">When using admin credentials, You must enter a username</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword" class="col-lg-2 control-label">Administrator Password</label>
+                                        <div class="col-lg-10">
+                                        <span class="input-group-btn">
+                                            <input type="password" class="form-control error" id="inputPassword" placeholder="Administrator Password">
+                                        </span>
+                                            <span class="error">When using admin credentials, You must enter a password</span>
+
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="inputPassword" class="col-lg-2 control-label">Administrator Password</label>
-                                    <div class="col-lg-10">
-                            <span class="input-group-btn">
-                                <input type="password" class="form-control" id="inputPassword" placeholder="Administrator Password">
-                            </span>
-                                    </div>
-                                </div>
 
 
-
-
-
-                                <!--<div class="form-group">-->
-                                <!--<div class="col-lg-12 text-right">-->
-                                <!--<a href="create-project.html" class="btn btn-default">Back</a>-->
-                                <!--<a href="destination-settings.html" class="btn btn-primary">Next</a>-->
-                                <!--</div>-->
-                                <!--</div>-->
 
 
                                 <br><br><br>
@@ -784,22 +831,6 @@
                 </div>
 
 
-                <!--<div class="list-group-item open">-->
-                    <!--<header>-->
-                        <!--<div class="row">-->
-                            <!--<div class="col-xs-12">-->
-                                <!--<h4 class="mtm Light">-->
-
-                                <!--</h4>-->
-                                <!--<hr>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</header>-->
-                    <!--<div class="content">-->
-
-                    <!--</div>-->
-                <!--</div>-->
-
 
 
 
@@ -808,316 +839,6 @@
 
 
 
-
-            <!--<div class="panel panel-default">-->
-                <!--<div class="panel-heading">-->
-                    <!--<h3 class="panel-title">-->
-                        <!--<i class="i-project"></i> &nbsp;-->
-                        <!--Basic Project Information-->
-                    <!--</h3>-->
-                <!--</div>-->
-                <!--<div class="panel-body bg-white">-->
-                    <!--<form class="form-horizontal">-->
-                        <!--<fieldset>-->
-                            <!--<div class="form-group">-->
-                                <!--<label for="inputEmail" class="col-lg-2 control-label">Project Type</label>-->
-                                <!--<div class="col-lg-10">-->
-                                    <!--<p style="margin-top:-3px">-->
-                                    <!--<div class="label label-primary">Mailbox</div>-->
-                                    <!--</p>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="form-group">-->
-                                <!--<label for="inputName" class="col-lg-2 control-label">Project Name</label>-->
-                                <!--<div class="col-lg-10">-->
-                                    <!--<input type="text" class="form-control" id="inputName" placeholder="Enter a name for your project" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;">-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-                            <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<div class="col-lg-12 text-right">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<a href="projects.html" class="btn btn-default">Cancel</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<a href="source-settings.html" class="btn btn-primary">Next</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                        <!--</fieldset>-->
-                    <!--</form>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="panel panel-default">-->
-                <!--<div class="panel-heading">-->
-                    <!--<h3 class="panel-title">-->
-                        <!--<a href="#" class="pull-right btn mts btn-sm btn-primary" style="position:relative;top:-7px"><i class="i-plus"></i> &nbsp;Select By Service Provider</a>-->
-
-                        <!--<i class="i-source"></i> &nbsp;Configure Source Settings-->
-                    <!--</h3>-->
-                <!--</div>-->
-                <!--<div class="panel-body bg-white">-->
-
-                    <!--<form class="form-horizontal">-->
-
-
-                        <!--<fieldset>-->
-
-
-
-                            <!--<div class="form-group">-->
-
-                                <!--<label for="select" class="col-lg-2 control-label">Server Type</label>-->
-                                <!--<div class="col-lg-10">-->
-                                    <!--<select class="form-control" id="select">-->
-                                        <!--<option>Microsoft Office 365</option>-->
-                                        <!--<option>Exchange Server 2003+</option>-->
-                                        <!--<option>Microsoft Office 365 (China)</option>-->
-                                        <!--<option>IMAP</option>-->
-                                        <!--<option>Groupwise 7+</option>-->
-                                        <!--<option>POP</option>-->
-                                        <!--<option>Zimbra 6+</option>-->
-                                        <!--<option>Lotus Notes 6.5+</option>-->
-                                        <!--<option>Amazon S3 (archive)</option>-->
-                                        <!--<option>Open-Xchange</option>-->
-                                        <!--<option>Google Apps/Gmail</option>-->
-                                        <!--<option>EML</option>-->
-                                    <!--</select>-->
-                                    <!--<div class="checkbox">-->
-                                        <!--<label>-->
-                                            <!--<input type="checkbox"> Use Administrator Credentials-->
-                                        <!--</label>-->
-                                    <!--</div>-->
-                                    <!--<hr>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-                            <!--<div class="form-group">-->
-                                <!--<label for="inputEmail" class="col-lg-2 control-label">Administrator Username</label>-->
-                                <!--<div class="col-lg-10">-->
-                                    <!--<input type="text" class="form-control" id="inputEmail" placeholder="Administrator Username">-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="form-group">-->
-                                <!--<label for="inputPassword" class="col-lg-2 control-label">Administrator Password</label>-->
-                                <!--<div class="col-lg-10">-->
-                            <!--<span class="input-group-btn">-->
-                                <!--<input type="password" class="form-control" id="inputPassword" placeholder="Administrator Password">-->
-                            <!--</span>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-
-
-
-
-                            <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<div class="col-lg-12 text-right">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<a href="create-project.html" class="btn btn-default">Back</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<a href="destination-settings.html" class="btn btn-primary">Next</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-
-                        <!--</fieldset>-->
-                    <!--</form>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="panel panel-default">-->
-                <!--<div class="panel-heading">-->
-                    <!--<h3 class="panel-title">-->
-                        <!--<a href="#" class="pull-right btn mts btn-sm btn-primary" style="position:relative;top:-7px"><i class="i-plus"></i> &nbsp;Select By Service Provider</a>-->
-                        <!--<i class="i-destination"></i>&nbsp;-->
-                        <!--Configure Destination Settings-->
-                    <!--</h3>-->
-                <!--</div>-->
-                <!--<div class="panel-body bg-white">-->
-
-                    <!--<form class="form-horizontal">-->
-
-
-                        <!--<fieldset>-->
-
-
-
-                            <!--<div class="form-group">-->
-
-                                <!--<label for="select" class="col-lg-2 control-label">Server Type</label>-->
-                                <!--<div class="col-lg-10">-->
-                                    <!--<select class="form-control" id="select">-->
-                                        <!--<option>Microsoft Office 365</option>-->
-                                        <!--<option>Exchange Server 2003+</option>-->
-                                        <!--<option>Microsoft Office 365 (China)</option>-->
-                                        <!--<option>IMAP</option>-->
-                                        <!--<option>Groupwise 7+</option>-->
-                                        <!--<option>POP</option>-->
-                                        <!--<option>Zimbra 6+</option>-->
-                                        <!--<option>Lotus Notes 6.5+</option>-->
-                                        <!--<option>Amazon S3 (archive)</option>-->
-                                        <!--<option>Open-Xchange</option>-->
-                                        <!--<option>Google Apps/Gmail</option>-->
-                                        <!--<option>EML</option>-->
-                                    <!--</select>-->
-                                    <!--<div class="checkbox">-->
-                                        <!--<label>-->
-                                            <!--<input type="checkbox"> Use Administrator Credentials-->
-                                        <!--</label>-->
-                                    <!--</div>-->
-                                    <!--<hr>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-                            <!--<div class="form-group">-->
-                                <!--<label for="inputEmail" class="col-lg-2 control-label">Administrator Username</label>-->
-                                <!--<div class="col-lg-10">-->
-                                    <!--<input type="text" class="form-control" id="inputEmail" placeholder="Administrator Username">-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="form-group">-->
-                                <!--<label for="inputPassword" class="col-lg-2 control-label">Administrator Password</label>-->
-                                <!--<div class="col-lg-10">-->
-                            <!--<span class="input-group-btn">-->
-                                <!--<input type="password" class="form-control" id="inputPassword" placeholder="Administrator Password">-->
-                            <!--</span>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-
-
-
-
-                            <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<div class="col-lg-12 text-right">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<a href="create-project.html" class="btn btn-default">Back</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<a href="destination-settings.html" class="btn btn-primary">Next</a>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-
-                            <!--<br><br><br>-->
-                            <!--<p class="text-right">-->
-                                <!--<a href="projects.html" class="btn btn-default">-->
-                                    <!--<i class="i-cog"></i>&nbsp;-->
-                                    <!--Advanced Options</a>-->
-                                <!--<a href="projects.html" class="btn btn-primary">Finish</a>-->
-                            <!--</p>-->
-
-
-
-                        <!--</fieldset>-->
-                    <!--</form>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="panel panel-default">-->
-                <!--<div class="panel-heading">-->
-                    <!--<h3 class="panel-title">-->
-                        <!--<i class="i-destination"></i> &nbsp;Project Summary-->
-                    <!--</h3>-->
-                <!--</div>-->
-                <!--<div class="panel-body bg-white">-->
-
-
-                    <!--<fieldset>-->
-                        <!--<legend>-->
-                            <!--<i class="i-office-365"></i>&nbsp;-->
-                            <!--<strong>Microsoft Office 365</strong>-->
-                            <!--to-->
-                            <!--<i class="i-office-365"></i>&nbsp;-->
-                            <!--<strong>Microsoft Office 365</strong>-->
-                        <!--</legend>-->
-                    <!--</fieldset>-->
-
-
-
-
-                    <!--<h4 class="Strong">Migration Guides</h4>-->
-
-
-                    <!--<a href="http://www.bittitan.com/kb/KB004973" title="Office365 to Office365 Migration Guide - whilst changing domain names"><i class="i-help"></i> &nbsp;Office365 to Office365 Migration Guide - whilst changing domain names</a>-->
-                    <!--<br><a href="http://www.bittitan.com/kb/KB005005" title="Office365 to Office365 Migration Guide - whilst keeping the same domain name"><i class="i-help"></i> &nbsp;Office365 to Office365 Migration Guide - whilst keeping the same domain name</a>-->
-
-
-
-                    <!--<h4 class="Strong">Supported Items</h4>-->
-
-                    <!--<small>Based on your configuration, the following items can be migrated with this project:</small>-->
-
-                    <!--<div id="supported-items-list">-->
-                        <!--<p>-->
-                            <!--<small><script id="metamorph-1772-start" type="text/x-placeholder"></script><script id="metamorph-1772-end" type="text/x-placeholder"></script></small>-->
-                        <!--</p>-->
-                        <!--<div class="potential-migration-list">-->
-                            <!--<div class="box-body">-->
-                                <!--<script id="metamorph-1773-start" type="text/x-placeholder"></script>-->
-                                <!--<span><i class="i-mailbox" data-bindattr-6373="6373"></i>&nbsp;<script id="metamorph-1774-start" type="text/x-placeholder"></script>Mailbox<script id="metamorph-1774-end" type="text/x-placeholder"></script></span>-->
-                                <!--<script id="metamorph-1773-end" type="text/x-placeholder"></script>-->
-                                <!--<div class="hidden-xs"></div>-->
-                                <!--<small>-->
-                                    <!--<script id="metamorph-1775-start" type="text/x-placeholder"></script>-->
-                                    <!--<script id="metamorph-1776-start" type="text/x-placeholder"></script>-->
-                                    <!--<script id="metamorph-1777-start" type="text/x-placeholder"></script>-->
-                                    <!--<script id="metamorph-1805-start" type="text/x-placeholder"></script><script id="metamorph-1798-start" type="text/x-placeholder"></script>-->
-                                    <!--<i class="i-check"></i>&nbsp;<script id="metamorph-1806-start" type="text/x-placeholder"></script>Contacts<script id="metamorph-1806-end" type="text/x-placeholder"></script>&nbsp;&nbsp;-->
-                                    <!--<script id="metamorph-1798-end" type="text/x-placeholder"></script><script id="metamorph-1799-start" type="text/x-placeholder"></script>-->
-                                    <!--<i class="i-check"></i>&nbsp;<script id="metamorph-1807-start" type="text/x-placeholder"></script>Calendars<script id="metamorph-1807-end" type="text/x-placeholder"></script>&nbsp;&nbsp;-->
-                                    <!--<script id="metamorph-1799-end" type="text/x-placeholder"></script><script id="metamorph-1800-start" type="text/x-placeholder"></script>-->
-                                    <!--<i class="i-check"></i>&nbsp;<script id="metamorph-1808-start" type="text/x-placeholder"></script>Mail<script id="metamorph-1808-end" type="text/x-placeholder"></script>&nbsp;&nbsp;-->
-                                    <!--<script id="metamorph-1800-end" type="text/x-placeholder"></script><script id="metamorph-1801-start" type="text/x-placeholder"></script>-->
-                                    <!--<i class="i-check"></i>&nbsp;<script id="metamorph-1809-start" type="text/x-placeholder"></script>Journals<script id="metamorph-1809-end" type="text/x-placeholder"></script>&nbsp;&nbsp;-->
-                                    <!--<script id="metamorph-1801-end" type="text/x-placeholder"></script><script id="metamorph-1802-start" type="text/x-placeholder"></script>-->
-                                    <!--<i class="i-check"></i>&nbsp;<script id="metamorph-1810-start" type="text/x-placeholder"></script>Notes<script id="metamorph-1810-end" type="text/x-placeholder"></script>&nbsp;&nbsp;-->
-                                    <!--<script id="metamorph-1802-end" type="text/x-placeholder"></script><script id="metamorph-1803-start" type="text/x-placeholder"></script>-->
-                                    <!--<i class="i-check"></i>&nbsp;<script id="metamorph-1811-start" type="text/x-placeholder"></script>Tasks<script id="metamorph-1811-end" type="text/x-placeholder"></script>&nbsp;&nbsp;-->
-                                    <!--<script id="metamorph-1803-end" type="text/x-placeholder"></script><script id="metamorph-1804-start" type="text/x-placeholder"></script>-->
-                                    <!--<i class="i-check"></i>&nbsp;<script id="metamorph-1812-start" type="text/x-placeholder"></script>Rules<script id="metamorph-1812-end" type="text/x-placeholder"></script>&nbsp;&nbsp;-->
-                                    <!--<script id="metamorph-1804-end" type="text/x-placeholder"></script><script id="metamorph-1805-end" type="text/x-placeholder"></script>-->
-                                    <!--<script id="metamorph-1777-end" type="text/x-placeholder"></script>-->
-                                    <!--<script id="metamorph-1776-end" type="text/x-placeholder"></script>-->
-                                    <!--<script id="metamorph-1775-end" type="text/x-placeholder"></script>-->
-                                <!--</small>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<script id="metamorph-1779-start" type="text/x-placeholder"></script><script id="metamorph-1779-end" type="text/x-placeholder"></script>-->
-
-                        <!--<script id="metamorph-1780-start" type="text/x-placeholder"></script><script id="metamorph-1780-end" type="text/x-placeholder"></script>-->
-                    <!--</div>-->
-
-
-
-                    <!--<h4 class="Strong">Need Help?</h4>-->
-
-
-                    <!--<div id="kb-article-list" class="hidden-xs">-->
-                        <!--<p>-->
-                            <!--<small><script id="metamorph-1814-start" type="text/x-placeholder"></script>Listed below are some Knowledge Base articles related to your current configuration<script id="metamorph-1814-end" type="text/x-placeholder"></script>.</small>-->
-                        <!--</p>-->
-                        <!--<div>-->
-                            <!--<ul class="kb-articles">-->
-                                <!--<script id="metamorph-1817-start" type="text/x-placeholder"></script><script id="metamorph-1815-start" type="text/x-placeholder"></script>-->
-                                <!--<li><a id="ember6470" class="ember-view" href="http://www.bittitan.com/kb/KB004133" title="How do I migrate from Office 365?"><script id="metamorph-1818-start" type="text/x-placeholder"></script>How do I migrate from Office 365?<script id="metamorph-1818-end" type="text/x-placeholder"></script></a></li>-->
-                                <!--<script id="metamorph-1815-end" type="text/x-placeholder"></script><script id="metamorph-1816-start" type="text/x-placeholder"></script>-->
-                                <!--<li><a id="ember6472" class="ember-view" href="http://www.bittitan.com/kb/KB004134" title="How do I migrate to Office 365?"><script id="metamorph-1819-start" type="text/x-placeholder"></script>How do I migrate to Office 365?<script id="metamorph-1819-end" type="text/x-placeholder"></script></a></li>-->
-                                <!--<script id="metamorph-1816-end" type="text/x-placeholder"></script><script id="metamorph-1817-end" type="text/x-placeholder"></script>-->
-                            <!--</ul>-->
-                        <!--</div>-->
-                        <!--<p>-->
-                            <!--<small>-->
-                                <!--More articles here: <a href="https://community.bittitan.com/kb/SitePages/Knowledge%20Base.aspx?product=MigrationWiz" target="_blank">Knowledge Base</a></small>-->
-                        <!--</p>-->
-                    <!--</div>-->
-
-                    <!--<div class="col-lg-12 text-right ptl">-->
-                        <!--<a href="projects.html" class="btn btn-default">-->
-                            <!--<i class="i-cog"></i>&nbsp;-->
-                            <!--Advanced Options</a>-->
-                        <!--<a href="projects.html" class="btn btn-primary">Finish</a>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-                <!--<br><br><br>-->
-
-
-
-            <!--</div>-->
         </div>
     </div>
 </div>
@@ -1128,6 +849,27 @@
         $('.accordion .list-group-item').removeClass('open');
         $('.accordion .list-group-item').eq(step).addClass('open');
     }
+//    setInterval(function () {
+//        $('.errors').each(function () {
+//            if ($(this).hasClass('open')) $(this).removeClass('errors');
+//        });
+////        if (!$('.awesome').hasClass('open')) $('.awesome').addClass('valid');
+////        if ($('.awesome').hasClass('open')) $('.awesome').removeClass('valid');
+//    });
+    $('.use-admin-creds').click(function () {
+        if ($('.use-admin-creds').is(':checked')) {
+            $('.admin-creds').show();
+        } else {
+            $('.admin-creds').hide();
+        }
+    });
+    $('.use-admin-creds-2').click(function () {
+        if ($('.use-admin-creds-2').is(':checked')) {
+            $('.admin-creds-2').show();
+        } else {
+            $('.admin-creds-2').hide();
+        }
+    });
 </script>
 
             <!-- /Page Content -->
@@ -1139,7 +881,7 @@
 
   
     <!-- #right -->
-    <div id="right" class="bg-light lter">
+    <div id="right" class="bg-light lter" style="padding-left:0">
       
         <style>
     .no-border {
@@ -1147,7 +889,7 @@
     }
 </style>
 <div class="alert alert-dismissible alert-default mbn bg-white">
-    <button type="button" class="close" data-dismiss="alert">×</button>
+    <button type="button" class="close" onclick="$('#right').css('right', '-300px')">×</button>
     <h4>
         <i class="i-mailbox" data-bindattr-6373="6373"></i>&nbsp;
         Mailbox

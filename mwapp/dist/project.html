@@ -135,6 +135,17 @@
                 $('#left').toggleClass('open');
             });
 
+            $('i').delegate('', 'click', function () {
+                var $this = $(this);
+
+                if ($this.hasClass('i-sort')) {
+                    $this.removeClass('i-sort').addClass('i-sort-asc');
+                } else if ($this.hasClass('i-sort-asc')) {
+                    $this.removeClass('i-sort-asc').addClass('i-sort-desc');
+                } else if ($this.hasClass('i-sort-desc')) {
+                    $this.removeClass('i-sort-desc').addClass('i-sort');
+                }
+            });
 
 
 
@@ -764,13 +775,16 @@
                         </th>
                         <th class="">
                             Source Email
+                            <i class="i-sort"></i>
                         </th>
 
                         <th>
                             Destination Email
+                            <i class="i-sort"></i>
                         </th>
                         <th>
                             Last Updated
+                            <i class="i-sort"></i>
                         </th>
                         <th>
                             Migrated
@@ -780,6 +794,7 @@
                         </th>
                         <th class="width-15">
                             Status
+                            <i class="i-sort"></i>
                         </th>
                         <th class="" style="width: 60px">&nbsp;</th>
                     </tr>
