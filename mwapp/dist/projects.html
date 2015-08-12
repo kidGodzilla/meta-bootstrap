@@ -355,6 +355,78 @@
         a.btn-primary:hover {
             color: #eee;
         }
+        .btn-xs-inline {
+            margin-top: -4px;
+            position: relative;
+            top: 2px;
+        }
+        a.text-clouds:hover {
+            color: #ccc;
+        }
+        .nudge-up-5 {
+            position: relative;
+            top: -5px;
+        }
+        .table-inline-button {
+            padding: 2px 3px;
+        }
+        .checkbox-adjust label {
+            margin: 0;
+            padding: 0;
+            top: 1px;
+            left: -2px;
+        }
+        .checkbox-adjust input[type=checkbox] {
+            margin-left: -2px;
+        }
+        th.checkbox-adjust input[type=checkbox] {
+            margin-top: -15px;
+        }
+        .nudge-left-1 {
+            position: relative;
+            left: -1px;
+        }
+        .nudge-down-7 {
+            position: relative;
+            top: 7px;
+        }
+        .nudge-down-3 {
+            position: relative;
+            top: 3px;
+        }
+        .width-78 {
+            width: 78px;
+        }
+        .height-30 {
+            height: 30px;
+        }
+        .pl-2px {
+            padding-left: 2px;
+        }
+        .panel-borders {
+            border-left: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;
+        }
+        .remove-gutters {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .inner-navbar-clear-inverse {
+            color: #fff;
+            margin-top: 3px;
+            background: transparent;
+            border: 0;
+        }
+        .inner-navbar-clear-btn {
+            margin-top: 1px;
+            border-color: transparent !important;
+        }
+        .navbar-fixed-top {
+            z-index: 9999999;
+        }
+        .toggle-menu {
+          padding: 2px 0;
+        }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -555,6 +627,43 @@
 <!-- #top -->
 <div id="top">
   
+  
+    <nav class="navbar navbar-default navbar-fixed-second navbar-thin">
+    <div class="">
+        <div class="collapse navbar-collapse remove-gutters">
+            <ul class="nav navbar-nav">
+                <li><a href="create-project.html"><i class="i-plus"></i> &nbsp;Create Project</a></li>
+                <li><a href="#"><i class="i-refresh"></i> &nbsp;Refresh</a></li>
+
+            </ul>
+            <form class="navbar-form navbar-left pull-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control inner-navbar-clear-inverse" placeholder="Search Project">
+                </div>
+                <button type="submit" class="btn btn-clear inner-navbar-clear-btn"><i class="i-search nudge-down-1"></i></button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-sort"></i> &nbsp;Sort <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-filter"></i> &nbsp;Filter <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  
+  
 <!-- .navbar -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -680,43 +789,6 @@
     </div><!-- /.container-fluid -->
 </nav><!-- /.navbar -->
 
-  
-  
-    <nav class="navbar navbar-default navbar-fixed-second navbar-thin">
-    <div class="">
-        <div class="collapse navbar-collapse" style="margin-left:-15px;margin-right:-15px">
-            <ul class="nav navbar-nav">
-                <li><a href="create-project.html"><i class="i-plus"></i> &nbsp;Create Project</a></li>
-                <li><a href="#"><i class="i-refresh"></i> &nbsp;Refresh</a></li>
-
-            </ul>
-            <form class="navbar-form navbar-left pull-right" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search Project" style="color:#fff;margin-top:3px;background:transparent;border:0;">
-                </div>
-                <button type="submit" class="btn btn-clear" style="margin-top:1px;  border-color: transparent !important"><i class="i-search" style="position: relative;top: 1px;"></i></button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-sort"></i> &nbsp;Sort <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="i-filter"></i> &nbsp;Filter <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-  
 </div>
 <!-- /#top -->
 
@@ -731,9 +803,7 @@
 
             <!-- Page Content -->
             
-
-
-<div class="row" style="padding-top:45px">
+<div class="row ptx">
     <div class="col-xs-12">
         <table class="table bg-white project-list headstuck mbn">
             <thead>
@@ -763,76 +833,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                <td>
-                    <i class="i-pst"></i>
-                </td>
-                <td>
-                    <i class="i-google"></i>
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                </td>
-                <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -847,76 +875,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                <td>
-                    <i class="i-pst"></i>
-                </td>
-                <td>
-                    <i class="i-google"></i>
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                </td>
-                <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -931,76 +917,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                <td>
-                    <i class="i-pst"></i>
-                </td>
-                <td>
-                    <i class="i-google"></i>
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                </td>
-                <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1015,76 +959,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                <td>
-                    <i class="i-pst"></i>
-                </td>
-                <td>
-                    <i class="i-google"></i>
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                </td>
-                <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1099,76 +1001,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                <td>
-                    <i class="i-pst"></i>
-                </td>
-                <td>
-                    <i class="i-google"></i>
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                </td>
-                <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1183,76 +1043,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                <td>
-                    <i class="i-pst"></i>
-                </td>
-                <td>
-                    <i class="i-google"></i>
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                </td>
-                <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1267,76 +1085,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                <td>
-                    <i class="i-pst"></i>
-                </td>
-                <td>
-                    <i class="i-google"></i>
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                </td>
-                <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1351,76 +1127,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                <td>
-                    <i class="i-pst"></i>
-                </td>
-                <td>
-                    <i class="i-google"></i>
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                </td>
-                <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1435,76 +1169,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                <td>
-                    <i class="i-pst"></i>
-                </td>
-                <td>
-                    <i class="i-google"></i>
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                </td>
-                <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1519,76 +1211,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                <td>
-                    <i class="i-pst"></i>
-                </td>
-                <td>
-                    <i class="i-google"></i>
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                </td>
-                <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1603,76 +1253,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
-                <td>
-                    <i class="i-pst"></i>
-                </td>
-                <td>
-                    <i class="i-google"></i>
-                </td>
-                <td>
-                    -
-                </td>
-                <td>
-                      <span class="text-grey" title="Not Migrated">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-primary" title="Waiting for User">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-info" title="Migrating">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-warning" title="Paused">
-                        -
-                      </span>
-                </td>
-                <td>
-                      <span class="text-success" title="Completed">
-                        -
-                      </span>
-                </td>
-                <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1687,34 +1295,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1729,34 +1337,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1771,34 +1379,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1813,34 +1421,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1855,34 +1463,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1897,34 +1505,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1939,34 +1547,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -1981,34 +1589,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -2023,34 +1631,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -2065,34 +1673,34 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             <tr>
@@ -2107,34 +1715,496 @@
                     -
                 </td>
                 <td>
-                      <span class="text-grey" title="Not Migrated">
+                    <span class="text-grey" title="Not Migrated">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-primary" title="Waiting for User">
+                    <span class="text-primary" title="Waiting for User">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-info" title="Migrating">
+                    <span class="text-info" title="Migrating">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-warning" title="Paused">
+                    <span class="text-warning" title="Paused">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                      <span class="text-success" title="Completed">
+                    <span class="text-success" title="Completed">
                         -
-                      </span>
+                    </span>
                 </td>
                 <td>
-                            <span class="text-danger" title="Failed">
-                                4
-                            </span>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
+                <td>
+                    <i class="i-pst"></i>
+                </td>
+                <td>
+                    <i class="i-google"></i>
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <span class="text-grey" title="Not Migrated">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-primary" title="Waiting for User">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-info" title="Migrating">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-warning" title="Paused">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-success" title="Completed">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
+                <td>
+                    <i class="i-pst"></i>
+                </td>
+                <td>
+                    <i class="i-google"></i>
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <span class="text-grey" title="Not Migrated">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-primary" title="Waiting for User">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-info" title="Migrating">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-warning" title="Paused">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-success" title="Completed">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
+                <td>
+                    <i class="i-pst"></i>
+                </td>
+                <td>
+                    <i class="i-google"></i>
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <span class="text-grey" title="Not Migrated">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-primary" title="Waiting for User">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-info" title="Migrating">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-warning" title="Paused">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-success" title="Completed">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
+                <td>
+                    <i class="i-pst"></i>
+                </td>
+                <td>
+                    <i class="i-google"></i>
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <span class="text-grey" title="Not Migrated">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-primary" title="Waiting for User">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-info" title="Migrating">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-warning" title="Paused">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-success" title="Completed">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
+                <td>
+                    <i class="i-pst"></i>
+                </td>
+                <td>
+                    <i class="i-google"></i>
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <span class="text-grey" title="Not Migrated">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-primary" title="Waiting for User">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-info" title="Migrating">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-warning" title="Paused">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-success" title="Completed">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
+                <td>
+                    <i class="i-pst"></i>
+                </td>
+                <td>
+                    <i class="i-google"></i>
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <span class="text-grey" title="Not Migrated">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-primary" title="Waiting for User">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-info" title="Migrating">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-warning" title="Paused">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-success" title="Completed">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
+                <td>
+                    <i class="i-pst"></i>
+                </td>
+                <td>
+                    <i class="i-google"></i>
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <span class="text-grey" title="Not Migrated">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-primary" title="Waiting for User">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-info" title="Migrating">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-warning" title="Paused">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-success" title="Completed">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
+                <td>
+                    <i class="i-pst"></i>
+                </td>
+                <td>
+                    <i class="i-google"></i>
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <span class="text-grey" title="Not Migrated">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-primary" title="Waiting for User">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-info" title="Migrating">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-warning" title="Paused">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-success" title="Completed">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
+                <td>
+                    <i class="i-pst"></i>
+                </td>
+                <td>
+                    <i class="i-google"></i>
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <span class="text-grey" title="Not Migrated">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-primary" title="Waiting for User">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-info" title="Migrating">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-warning" title="Paused">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-success" title="Completed">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
+                <td>
+                    <i class="i-pst"></i>
+                </td>
+                <td>
+                    <i class="i-google"></i>
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <span class="text-grey" title="Not Migrated">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-primary" title="Waiting for User">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-info" title="Migrating">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-warning" title="Paused">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-success" title="Completed">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="project.html" title="BitTitan Storage"><i class="i-archive" title="Archive"></i><span> &nbsp;BitTitan Storage</span></a></td>
+                <td>
+                    <i class="i-pst"></i>
+                </td>
+                <td>
+                    <i class="i-google"></i>
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <span class="text-grey" title="Not Migrated">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-primary" title="Waiting for User">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-info" title="Migrating">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-warning" title="Paused">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-success" title="Completed">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span class="text-danger" title="Failed">
+                        4
+                    </span>
                 </td>
             </tr>
             </tbody>
@@ -2361,8 +2431,7 @@
                                     <select id="ember8333" class="ember-view ember-select input-sm form-control"><script id="metamorph-2721-start" type="text/x-placeholder"></script><option value=""><script id="metamorph-2722-start" type="text/x-placeholder"></script>Minute<script id="metamorph-2722-end" type="text/x-placeholder"></script></option><script id="metamorph-2721-end" type="text/x-placeholder"></script><script id="metamorph-2723-start" type="text/x-placeholder"></script><script id="metamorph-2728-start" type="text/x-placeholder"></script><script id="metamorph-2724-start" type="text/x-placeholder"></script><option id="ember8345" class="ember-view" value="0"><script id="metamorph-2729-start" type="text/x-placeholder"></script>0<script id="metamorph-2729-end" type="text/x-placeholder"></script></option><script id="metamorph-2724-end" type="text/x-placeholder"></script><script id="metamorph-2725-start" type="text/x-placeholder"></script><option id="ember8346" class="ember-view" value="15"><script id="metamorph-2730-start" type="text/x-placeholder"></script>15<script id="metamorph-2730-end" type="text/x-placeholder"></script></option><script id="metamorph-2725-end" type="text/x-placeholder"></script><script id="metamorph-2726-start" type="text/x-placeholder"></script><option id="ember8347" class="ember-view" value="30"><script id="metamorph-2731-start" type="text/x-placeholder"></script>30<script id="metamorph-2731-end" type="text/x-placeholder"></script></option><script id="metamorph-2726-end" type="text/x-placeholder"></script><script id="metamorph-2727-start" type="text/x-placeholder"></script><option id="ember8348" class="ember-view" value="45"><script id="metamorph-2732-start" type="text/x-placeholder"></script>45<script id="metamorph-2732-end" type="text/x-placeholder"></script></option><script id="metamorph-2727-end" type="text/x-placeholder"></script><script id="metamorph-2728-end" type="text/x-placeholder"></script><script id="metamorph-2723-end" type="text/x-placeholder"></script></select>
                                 </div>
                                 <div class="col-xs-2 text-center">
-                                <span class="form-control-text" style="    position: relative;
-    top: 7px;">
+                                <span class="form-control-text nudge-down-7">
                                     <small>(<script id="metamorph-2733-start" type="text/x-placeholder"></script>Local Time<script id="metamorph-2733-end" type="text/x-placeholder"></script>)</small>
                                 </span>
                                 </div>
@@ -2465,7 +2534,7 @@
                     <a class="btn cursor-pointer btn-default back-to-errors">
                         <i class="fa fa-arrow-left"></i>
                     </a>&nbsp;
-                    <span style="position:relative;top:3px">Back to Errors List</span>
+                    <span class="nudge-down-3">Back to Errors List</span>
                 </h3>
             </div>
         </div>
