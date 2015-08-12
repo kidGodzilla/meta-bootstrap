@@ -59,6 +59,28 @@
 
 
 
+
+/* --------------------------------------------------
+ * Body & Transitions
+   -------------------------------------------------- */
+
+* {
+  -webkit-backface-visibility: none;
+}
+body {
+  opacity: 0.65;
+  transition: opacity 200ms ease-in-out;
+  margin: 0 !important;
+  padding-top: 0;
+}
+.fade-in {
+  opacity: 1;
+}
+section {
+  padding: 0 !important;
+}
+
+
 /* --------------------------------------------------
  * Application Styles
    -------------------------------------------------- */
@@ -82,6 +104,13 @@ table thead th {
   border-style: none !important;
 }
 
+/* A */
+a {
+  &.text-clouds:hover {
+    color: #ccc;
+  }
+}
+
 /* Buttons */
 .btn {
   border: none;
@@ -92,24 +121,22 @@ table thead th {
   text-transform: uppercase;
   font-size: 12px;
 }
-
-
-
-/* --------------------------------------------------
- * Body & Transitions
-   -------------------------------------------------- */
-body {
-  opacity: 0.65;
-  transition: opacity 200ms ease-in-out;
-  padding-top: 50px;
+.btn-input {
+  padding: 11px 16px;
+  font-size: 14px;
+  /* margin-left: 0 !important; */
+  border: 1px solid #cccccc;
+  color: #777;
 }
-.fade-in {
-  opacity: 1;
+.btn-xs-inline {
+  margin-top: -4px;
+  position: relative;
+  top: 2px;
 }
-section {
-  padding: 0 !important;
+.btn-primary,
+.btn-primary:hover {
+  color: #eee;
 }
-
 
 
 /* --------------------------------------------------
@@ -146,11 +173,11 @@ section {
 }
 .navbar-brand img {
   height: 32px;
-  padding: 5px;
   position: relative;
   top: 7px;
   margin-left: 15px;
   margin-right: 15px;
+  padding: 5px 0;
 }
 .has-second-navbar #left {
   margin-top: 42px;
@@ -303,6 +330,29 @@ input[type=text]:focus {
 }
 
 
+// Navbars
+.inner-navbar-clear-inverse {
+  color: #fff;
+  margin-top: 3px;
+  background: transparent;
+  border: 0;
+}
+.inner-navbar-clear-btn {
+  margin-top: 1px;
+  border-color: transparent !important;
+}
+.navbar-fixed-top {
+  z-index: 99999;
+}
+.navbar-fixed-second .text {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .navbar-fixed-second .text {
+    display: inline;
+  }
+}
+
 
 /* --------------------------------------------------
  * Left Navigation Menu
@@ -314,6 +364,11 @@ input[type=text]:focus {
   transition: all 300ms ease-in-out;
   width: 0;
   opacity: 0;
+  position: fixed;
+  height: 100vh;
+  background: #212635;
+  top: 50px;
+  overflow-y: auto;
 }
 #left li {
   position: relative;
@@ -356,7 +411,6 @@ input[type=text]:focus {
   margin-left: 0;
 }
 
-
 #menu {
   background-color: @dropdown-hover !important;
 }
@@ -389,6 +443,48 @@ input[type=text]:focus {
   text-shadow: 0 1px 0 rgba(0,0,0,0.5);
   padding: 10px 0 10px 15px;
 }
+// Menu
+#menu {
+  &.projects {
+    li {
+      a,
+      a div > div {
+        width: 245px;
+        margin-right: 5px;
+        padding-right: 8px;
+      }
+      a small {
+        display: block;
+      }
+      a small div {
+        width: 174px;
+        display: inline-block;
+        position: relative;
+        top: 6px;
+        margin-top: -4px;
+      }
+      a .util {
+        display: none;
+      }
+      &.active a .util {
+        display: inline;
+      }
+      a .lb {
+        padding: 0 3px;
+        background: rgba(255,255,255,0.32);
+        color: #303A45;
+        border-radius: 3px;
+      }
+      &:hover a .lb {
+        background: rgba(255,255,255,0.45);
+      }
+      &.tab-project.active,
+      &.tab-project:hover {
+        border-left: 3px solid rgba(255,255,255,0.32);
+      }
+    }
+  }
+}
 
 .sidebar-left-mini #menu > li > a > .link-title {
   background-color: @mw-red !important;
@@ -407,6 +503,33 @@ input[type=text]:focus {
 }
 .bg-dark.dk, .bg-dark>.dk {
   background-color: @bg-dark !important;
+}
+
+
+
+/* --------------------------------------------------
+ * Right
+   -------------------------------------------------- */
+#right {
+  right: 0;
+  top: 50px;
+  padding: 20px 15px;
+  width: 300px;
+}
+
+
+
+/* --------------------------------------------------
+ * Content
+   -------------------------------------------------- */
+#content {
+  margin-bottom: -21px !important;
+  padding-top: 50px;
+  /*transition: all 300ms ease-in-out;*/
+  white-space: inherit;
+  > div {
+    min-height: 100vh;
+  }
 }
 
 
@@ -735,7 +858,7 @@ input[type=text]:focus {
 }
 .w-30 {
   width: 45px;
-  text-align: center;
+  //text-align: center;
 }
 //.project-list td, .project-items td {
 //  text-align: center;
