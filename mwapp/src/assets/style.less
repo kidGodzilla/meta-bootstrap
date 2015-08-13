@@ -11,9 +11,11 @@
 @white: #fff;
 @white-f9: #f9f9f9;
 @white-f6: #f6f6f6;
-  @off-white-2: #f4f8ff;
+  @off-white-2: #F1F4F5;
   @off-white: #f1f2f7;
 @default: #ececec;
+@777: #777;
+@eee: #eee;
 @ccc: #ccc;
 @ddd: #ddd;
 @bbb: #bbb;
@@ -21,20 +23,21 @@
 @black: #000;
 
 @link-color: #428bca;
-@info: #00a8b3;
-@success: #a9d96c;
-@warning: #f3aa3d;
-@danger: #ff6c60;
+@info: #224657;
+@success: #80B856;
+@warning: #FFA62F;
+@danger: #F63723;
 @mw-red: #f63723;
 @default: #2B3145;
 
 @bg-dark: #212635;
 @dark-blue: #2a3542;
+@dark-blue2: #303A45;
 @dropdown-hover: #35404d;
 @live-chat-header: #3f4955;
 @desaturated-blue: desaturate(@dark-blue, 10%);
 @lighter-blue: lighten(@desaturated-blue, 45%);
-@bright-blue: @info;
+@bright-blue: #1E9FB4;
 
 @ui-selected: #ADBEC3; //or #ddd or maybe @lighter-blue
 @ui-selecting: lighten(@ui-selected, 10%);
@@ -56,6 +59,7 @@
 @underlay-two: 100011;
 @context-panel-right: 100012;
 @custom-menu: 999999;
+@navbar-fixed-top: 99999;
 
 
 
@@ -107,7 +111,7 @@ table thead th {
 /* A */
 a {
   &.text-clouds:hover {
-    color: #ccc;
+    color: @ccc;
   }
 }
 
@@ -125,8 +129,8 @@ a {
   padding: 11px 16px;
   font-size: 14px;
   /* margin-left: 0 !important; */
-  border: 1px solid #cccccc;
-  color: #777;
+  border: 1px solid @ccc;
+  color: @777;
 }
 .btn-xs-inline {
   margin-top: -4px;
@@ -135,7 +139,7 @@ a {
 }
 .btn-primary,
 .btn-primary:hover {
-  color: #eee;
+  color: @eee;
 }
 
 
@@ -332,7 +336,7 @@ input[type=text]:focus {
 
 // Navbars
 .inner-navbar-clear-inverse {
-  color: #fff;
+  color: @white;
   margin-top: 3px;
   background: transparent;
   border: 0;
@@ -342,7 +346,7 @@ input[type=text]:focus {
   border-color: transparent !important;
 }
 .navbar-fixed-top {
-  z-index: 99999;
+  z-index: @navbar-fixed-top;
 }
 .navbar-fixed-second .text {
   display: none;
@@ -366,7 +370,7 @@ input[type=text]:focus {
   opacity: 0;
   position: fixed;
   height: 100vh;
-  background: #212635;
+  background: @bg-dark;
   top: 50px;
   overflow-y: auto;
 }
@@ -472,7 +476,7 @@ input[type=text]:focus {
       a .lb {
         padding: 0 3px;
         background: rgba(255,255,255,0.32);
-        color: #303A45;
+        color: @dark-blue2;
         border-radius: 3px;
       }
       &:hover a .lb {
@@ -542,7 +546,7 @@ input[type=text]:focus {
   background-color: @off-white;
 }
 .panel-body,
-.panel-body a {
+.panel-body a:not(.btn) {
   color: @grey-79;
 }
 .panel-body a:hover {
@@ -698,37 +702,38 @@ input[type=text]:focus {
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
   box-shadow: 0 6px 12px rgba(0,0,0,0.175);
   transition: all 400ms ease-in-out;
+  &.left {
+    left: -54%;
+    &.open {
+      left: 0;
+    }
+  }
+  &.right {
+    z-index: @context-panel-right;
+    right: -54%;
+    &.open {
+      right: 0;
+    }
+  }
+  > header {
+    padding: 15px 30px;
+    background-color: @bright-blue;
+    color: @white;
+    height: 93px;
+  }
+  .body {
+    background-color: @off-white-2;
+    padding: 15px;
+    min-height: 100%;
+    > .footer {
+      bottom: 0;
+      position: absolute;
+      width: calc(~"100% - 15px");
+      padding: 10px 15px;
+    }
+  }
 }
-.context-panel.left {
-  left: -54%;
-}
-.context-panel.right {
-  z-index: @context-panel-right;
-  right: -54%;
-}
-.context-panel > header {
-  padding: 15px 30px;
-  background-color: @bright-blue;
-  color: @white;
-  height: 93px;
-}
-.context-panel .body {
-  background-color: @off-white-2;
-  padding: 15px;
-  min-height: 100%;
-}
-.context-panel.left.open {
-  left: 0;
-}
-.context-panel.right.open {
-  right: 0;
-}
-.context-panel .body > .footer {
-  bottom: 0;
-  position: absolute;
-  width: calc(~"100% - 15px");
-  padding: 10px 15px;
-}
+
 
 .underlay {
   display: none;
@@ -739,9 +744,26 @@ input[type=text]:focus {
   bottom: 0;
   left: 0;
   right: 0;
+  .two {
+    z-index: @underlay-two;
+  }
 }
-.underlay.two {
-  z-index: @underlay-two;
+
+@media screen and (max-width: 1280px) {
+  .context-panel {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .context-panel {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .context-panel {
+    width: 100%;
+  }
 }
 
 
@@ -860,12 +882,14 @@ input[type=text]:focus {
   width: 45px;
   //text-align: center;
 }
-//.project-list td, .project-items td {
-//  text-align: center;
-//}
-//.project-list td:first-of-type {
-//  text-align: left;
-//}
+.project-list {
+  th, td {
+    text-align: center;
+  }
+  td:first-of-type {
+    text-align: left;
+  }
+}
 //.project-items td:nth-of-type(3),
 //.project-items td:nth-of-type(4) {
 //  text-align: left;

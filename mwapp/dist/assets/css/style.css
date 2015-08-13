@@ -49,7 +49,7 @@ table thead th {
 }
 /* A */
 a.text-clouds:hover {
-  color: #ccc;
+  color: #cccccc;
 }
 /* Buttons */
 .btn {
@@ -70,7 +70,7 @@ a.text-clouds:hover {
   font-size: 14px;
   /* margin-left: 0 !important; */
   border: 1px solid #cccccc;
-  color: #777;
+  color: #777777;
 }
 .btn-xs-inline {
   margin-top: -4px;
@@ -79,7 +79,7 @@ a.text-clouds:hover {
 }
 .btn-primary,
 .btn-primary:hover {
-  color: #eee;
+  color: #eeeeee;
 }
 /* --------------------------------------------------
  * Top Navigation Menus
@@ -266,7 +266,7 @@ input[type=text]:focus {
   opacity: 0.95;
 }
 .inner-navbar-clear-inverse {
-  color: #fff;
+  color: #ffffff;
   margin-top: 3px;
   background: transparent;
   border: 0;
@@ -401,7 +401,7 @@ input[type=text]:focus {
 #menu.projects li a .lb {
   padding: 0 3px;
   background: rgba(255, 255, 255, 0.32);
-  color: #303A45;
+  color: #303a45;
   border-radius: 3px;
 }
 #menu.projects li:hover a .lb {
@@ -459,7 +459,7 @@ input[type=text]:focus {
   background-color: #f1f2f7;
 }
 .panel-body,
-.panel-body a {
+.panel-body a:not(.btn) {
   color: #797979;
 }
 .panel-body a:hover {
@@ -507,10 +507,10 @@ input[type=text]:focus {
   opacity: 1;
 }
 .stat-card .icon.red {
-  background: #ff6c60;
+  background: #f63723;
 }
 .stat-card .icon.blue {
-  background: #00a8b3;
+  background: #224657;
 }
 .stat-card .icon i {
   color: #ffffff;
@@ -611,26 +611,26 @@ input[type=text]:focus {
 .context-panel.left {
   left: -54%;
 }
+.context-panel.left.open {
+  left: 0;
+}
 .context-panel.right {
   z-index: 100012;
   right: -54%;
 }
+.context-panel.right.open {
+  right: 0;
+}
 .context-panel > header {
   padding: 15px 30px;
-  background-color: #00a8b3;
+  background-color: #1e9fb4;
   color: #ffffff;
   height: 93px;
 }
 .context-panel .body {
-  background-color: #f4f8ff;
+  background-color: #f1f4f5;
   padding: 15px;
   min-height: 100%;
-}
-.context-panel.left.open {
-  left: 0;
-}
-.context-panel.right.open {
-  right: 0;
 }
 .context-panel .body > .footer {
   bottom: 0;
@@ -648,8 +648,23 @@ input[type=text]:focus {
   left: 0;
   right: 0;
 }
-.underlay.two {
+.underlay .two {
   z-index: 100011;
+}
+@media screen and (max-width: 1280px) {
+  .context-panel {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .context-panel {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .context-panel {
+    width: 100%;
+  }
 }
 /* --------------------------------------------------
  * Stat Widgets
@@ -686,7 +701,7 @@ input[type=text]:focus {
   border-radius: 0 5px 5px 0;
 }
 .stat-widget-sm.success .icon {
-  background-color: #a9d96c;
+  background-color: #80b856;
 }
 /* --------------------------------------------------
  * Help
@@ -748,6 +763,13 @@ input[type=text]:focus {
 }
 .w-30 {
   width: 45px;
+}
+.project-list th,
+.project-list td {
+  text-align: center;
+}
+.project-list td:first-of-type {
+  text-align: left;
 }
 .expander:hover {
   background: rgba(255, 255, 255, 0.025);

@@ -52,7 +52,7 @@
   left: -2px;
 }
 .checkbox-adjust input[type=checkbox] {
-  margin-left: -2px;
+  margin-left: 15px;
 }
 th.checkbox-adjust input[type=checkbox] {
   margin-top: -15px;
@@ -193,4 +193,10 @@ hr.admin-creds-2 {
   .form-horizontal .control-label {
     padding-bottom: 2px !important;
   }
+}
+.page-title a {
+  padding-left: 5px !important;
+}
+.page-title a:hover {
+  background: transparent !important;
 }

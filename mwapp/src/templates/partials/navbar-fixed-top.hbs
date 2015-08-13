@@ -99,13 +99,15 @@ component: navbar
                     <!--</a>-->
                 <!--</li>-->
 
+              {{#unless dashboard}}
                 <li class="">
-                    <a>
+                    <a{{#if up-location}} href="{{up-location}}"{{/if}}>
                         <i class="fa fa-arrow-up"></i>
                     </a>
                 </li>
+              {{/unless}}
 
-                <li class="">
+                <li class="page-title">
                     <a>
                         <strong>{{title}}</strong>
                     </a>
