@@ -135,38 +135,13 @@
     cursor: pointer;
   }
 }
-/*.accordion .list-group-item.errors {*/
-/*background: #FFDED8;*/
-/*color: #888;*/
-/*}*/
-/*.accordion .list-group-item.valid {*/
-/*background: #ECFFE1;*/
-/*}*/
-/*.accordion .list-group-item.errors h4::after {*/
-/*display: inline;*/
-/*font: normal normal normal 14px/1 FontAwesome;*/
-/*content: "\f06a";*/
-/*padding-left: 10px;*/
-/*font-size: 19px;*/
-/*}*/
-/*span.error {*/
-/*display: block;*/
-/*margin-top: 1px;*/
-/*padding: 0 10px;*/
-/*background: #FFDED8;*/
-/*color: #555;*/
-/*}*/
-/*input.error,*/
-/*select.error {*/
-/*border-color: #FFDED8;*/
-/*color: #222;*/
-/*}*/
 
 
 
 // Utils
 .nudge {
   position: relative;
+  &.up-2   { top: -2px; }
   &.up-5   { top: -5px; }
   &.down-1 { top: 1px; }
   &.down-3 { top: 3px; }
@@ -224,4 +199,61 @@ hr.admin-creds-2 {
       background: transparent !important;
     }
   }
+}
+
+
+
+
+.nav-tabs .badge {
+  .nudge.up-2;
+  font-weight: bold;
+  background-color: #bbc9cd !important;
+}
+.nav-tabs .active .badge {
+  background-color: #1e9fb4 !important;
+}
+
+
+
+.bottom-bar {
+  position: fixed;
+  height: 32px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999;
+  background-color: #eee;
+  padding: 9px 15px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+
+
+
+.accordion .list-group-item.errors {
+  background: #FFDED8;
+  color: #888;
+}
+.accordion .list-group-item.valid {
+  background: #ECFFE1;
+}
+.accordion .list-group-item.errors h4::after {
+  display: inline;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f06a";
+  padding-left: 10px;
+  font-size: 19px;
+}
+span.error {
+  display: block;
+  margin-top: 1px;
+  padding: 0 10px;
+  background: #FFDED8;
+  color: #555;
+}
+input.error,
+select.error {
+  border-color: #FFDED8;
+  color: #222;
 }

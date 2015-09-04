@@ -693,6 +693,7 @@ input[type=text]:focus {
    -------------------------------------------------- */
 .context-panel {
   opacity: 0;
+  display: none;
   z-index: @context-panel;
   /*padding-top: 50px;*/
   position: fixed;
@@ -705,6 +706,7 @@ input[type=text]:focus {
   &.left {
     left: -54%;
     &.open {
+      display: block;
       left: 0;
     }
   }
@@ -712,6 +714,7 @@ input[type=text]:focus {
     z-index: @context-panel-right;
     right: -54%;
     &.open {
+      display: block;
       right: 0;
     }
   }
@@ -867,6 +870,21 @@ input[type=text]:focus {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+
+
+/* --------------------------------------------------
+ * Color Utilities
+   -------------------------------------------------- */
+.bg-link-color {
+  background-color: @link-color;
+  border-color: @link-color;
+}
+.Bg-link-color {
+  background-color: @link-color !important;
+  border-color: @link-color !important;
+}
+
 
 
 

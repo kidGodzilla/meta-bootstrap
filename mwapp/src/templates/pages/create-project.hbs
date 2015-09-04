@@ -259,13 +259,13 @@ up-location: projects.html
         $('.accordion .list-group-item').removeClass('open');
         $('.accordion .list-group-item').eq(step).addClass('open');
     }
-//    setInterval(function () {
-//        $('.errors').each(function () {
-//            if ($(this).hasClass('open')) $(this).removeClass('errors');
-//        });
-////        if (!$('.awesome').hasClass('open')) $('.awesome').addClass('valid');
-////        if ($('.awesome').hasClass('open')) $('.awesome').removeClass('valid');
-//    });
+    setInterval(function () {
+        $('.errors').each(function () {
+            if ($(this).hasClass('open')) $(this).removeClass('errors');
+        });
+//        if (!$('.awesome').hasClass('open')) $('.awesome').addClass('valid');
+//        if ($('.awesome').hasClass('open')) $('.awesome').removeClass('valid');
+    });
     $('.use-admin-creds').click(function () {
         if ($('.use-admin-creds').is(':checked')) {
             $('.admin-creds').show();

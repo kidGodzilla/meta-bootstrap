@@ -598,6 +598,7 @@ input[type=text]:focus {
    -------------------------------------------------- */
 .context-panel {
   opacity: 0;
+  display: none;
   z-index: 100001;
   /*padding-top: 50px;*/
   position: fixed;
@@ -612,6 +613,7 @@ input[type=text]:focus {
   left: -54%;
 }
 .context-panel.left.open {
+  display: block;
   left: 0;
 }
 .context-panel.right {
@@ -619,6 +621,7 @@ input[type=text]:focus {
   right: -54%;
 }
 .context-panel.right.open {
+  display: block;
   right: 0;
 }
 .context-panel > header {
@@ -752,6 +755,17 @@ input[type=text]:focus {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+/* --------------------------------------------------
+ * Color Utilities
+   -------------------------------------------------- */
+.bg-link-color {
+  background-color: #428bca;
+  border-color: #428bca;
+}
+.Bg-link-color {
+  background-color: #428bca !important;
+  border-color: #428bca !important;
 }
 /* --------------------------------------------------
  * Custom

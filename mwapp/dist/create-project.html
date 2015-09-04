@@ -14,16 +14,19 @@
     <!-- MetaBootstrap -->
     <link rel="stylesheet" type="text/css" href="assets/css/theme3.css" media="all">
     <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/meta-bootstrap.css" media="all">
+    <!--<link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/style.css" media="all">-->
+
+
+    <!-- Icon Fonts -->
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//www.bittitan.com/css/bittitan-icons.css">
-    <link rel="stylesheet" type="text/css" href="//www.metabootstrap.com/css/style.css" media="all">
 
     <!-- MetaBootstrap Admin core stylesheet -->
     <link rel="stylesheet" href="assets/css/css/main.min.css">
 
     <!-- metisMenu stylesheet -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.3/metisMenu.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
+    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">-->
 
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -387,7 +390,9 @@
 
     <li class="">
         <a href="javascript:gotoStep(1)">
-            <span class="link-title"><i class="i-creds"></i> &nbsp;Project Info</span>
+            <span class="link-title">
+                <i class="i-creds"></i> &nbsp;Project Info
+            </span>
         </a>
     </li>
 
@@ -399,7 +404,10 @@
 
     <li class="">
         <a href="javascript:gotoStep(3)">
-            <span class="link-title"><i class="i-destination"></i>&nbsp; Destination Settings</span>
+            <span class="link-title">
+                <i class="i-info pull-right text-danger prm" style="padding-top: 4px;opacity:0.75"></i>
+                <i class="i-destination"></i>&nbsp; Destination Settings
+            </span>
         </a>
     </li>
 
@@ -684,13 +692,13 @@
         $('.accordion .list-group-item').removeClass('open');
         $('.accordion .list-group-item').eq(step).addClass('open');
     }
-//    setInterval(function () {
-//        $('.errors').each(function () {
-//            if ($(this).hasClass('open')) $(this).removeClass('errors');
-//        });
-////        if (!$('.awesome').hasClass('open')) $('.awesome').addClass('valid');
-////        if ($('.awesome').hasClass('open')) $('.awesome').removeClass('valid');
-//    });
+    setInterval(function () {
+        $('.errors').each(function () {
+            if ($(this).hasClass('open')) $(this).removeClass('errors');
+        });
+//        if (!$('.awesome').hasClass('open')) $('.awesome').addClass('valid');
+//        if ($('.awesome').hasClass('open')) $('.awesome').removeClass('valid');
+    });
     $('.use-admin-creds').click(function () {
         if ($('.use-admin-creds').is(':checked')) {
             $('.admin-creds').show();
